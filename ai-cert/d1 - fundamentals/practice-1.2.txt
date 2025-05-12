@@ -1,0 +1,145 @@
+Practice Questions for Task Statement 1.2
+Use Case Identification Questions
+Question 18: A retail company wants to automatically categorize customer complaints into departments. Which AWS service and ML technique would be most appropriate?
+
+A) Amazon Polly with unsupervised learning
+B) Amazon Comprehend with supervised learning
+C) Amazon Lex with reinforcement learning
+D) Amazon Transcribe with clustering
+
+Answer: B (Amazon Comprehend with supervised learning for text classification)
+Question 19: When would an ML solution NOT be appropriate for inventory management?
+
+A) When predicting seasonal demand patterns
+B) When you need exact inventory counts for compliance
+C) When analyzing historical sales data
+D) When optimizing reorder points
+
+Answer: B (Exact counts require deterministic systems, not predictions)
+Question 20: A company wants to build a voice-enabled customer service system. Which combination of AWS services would be most suitable?
+
+A) Lex + Transcribe + Polly
+B) Comprehend + Translate + SageMaker
+C) Rekognition + Textract + Translate
+D) Forecast + Personalize + Kendra
+
+Answer: A (Lex for conversation, Transcribe for speech-to-text, Polly for text-to-speech)
+Real-World Application Questions
+Question 21: A news organization wants to automatically generate article summaries in multiple languages. Which services would they need?
+
+A) Amazon Comprehend for summarization and Amazon Translate for languages
+B) Amazon Lex for conversation and Amazon Polly for narration
+C) Amazon Rekognition for image analysis and Amazon Textract for text extraction
+D) Amazon Forecast for trend prediction and Amazon Personalize for recommendations
+
+Answer: A
+Question 22: True or False: Amazon SageMaker is only suitable for building custom ML models from scratch.
+Answer: False (SageMaker includes built-in algorithms and can also be used for deployment and management)
+Technique Selection Questions
+Question 23: A streaming platform wants to predict how many minutes of video a user will watch. What type of ML problem is this?
+
+A) Binary classification
+B) Multi-class classification
+C) Regression
+D) Clustering
+
+Answer: C (Predicting continuous values like minutes is regression)
+Question 24: A bank wants to identify unusual transaction patterns that might indicate fraud. They don't have labeled fraud examples. Which technique should they use?
+
+A) Supervised classification
+B) Logistic regression
+C) Unsupervised clustering/anomaly detection
+D) Reinforcement learning
+
+Answer: C (Without labeled examples, use unsupervised techniques)
+Cost-Benefit Analysis Questions
+Question 25: A small business with 50 employees wants to automate their monthly expense report processing. They currently process about 200 reports per month. Would AI/ML be appropriate?
+
+A) Yes, AI is always beneficial for automation
+B) No, the volume is too low for AI/ML to be cost-effective
+C) Yes, but only using AWS SageMaker
+D) No, because expense reports require human judgment
+
+Answer: B (Low volume doesn't justify ML development costs; traditional automation might suffice)
+AWS Service Capabilities Questions
+Question 26: Which AWS service would be best for analyzing customer reviews to identify common themes and sentiment?
+
+A) Amazon Polly
+B) Amazon Comprehend
+C) Amazon Lex
+D) Amazon Transcribe
+
+Answer: B (Comprehend specializes in text analysis, sentiment, and entity recognition)
+Question 27: If you need to convert a text document into multiple languages while preserving meaning, which service combination is most appropriate?
+
+A) Amazon Translate alone
+B) Amazon Comprehend + Amazon Translate
+C) Amazon Transcribe + Amazon Polly
+D) Amazon Lex + Amazon Kendra
+
+Answer: A/B (Translate for basic translation, Comprehend can help preserve context for better translations)
+Scenario-Based Application Questions
+Question 28: A medical practice wants to:
+
+Transcribe doctor-patient conversations
+Extract medical entities from transcriptions
+Generate summaries in the patient's preferred language
+
+What services would you recommend and in what order?
+Answer:
+
+Amazon Transcribe (speech to text)
+Amazon Comprehend Medical (extract medical entities)
+Amazon Translate (translate summaries)
+Possibly Amazon Comprehend again (generate summaries)
+
+Question 29: An e-commerce company wants to implement a complete AI solution including:
+
+Product recommendations
+Image-based search
+Virtual shopping assistant
+Fraud detection
+
+Which AWS services would you use for each capability?
+Answer:
+
+Product recommendations: Amazon Personalize or SageMaker
+Image-based search: Amazon Rekognition
+Virtual shopping assistant: Amazon Lex
+Fraud detection: SageMaker with custom models
+
+Question 30: When would you choose Amazon SageMaker over specialized AWS AI services like Comprehend or Rekognition?
+Answer:
+
+When you need custom models specific to your use case
+When built-in services don't meet your specific requirements
+When you need fine-grained control over the ML pipeline
+When you want to combine multiple data types and techniques
+When you need to implement proprietary algorithms
+
+Study Tips for Task Statement 1.2
+
+Map Use Cases to Services: Create a mental map of which AWS services fit different use cases
+Understand Service Limitations: Know when pre-built services aren't sufficient
+Practice Cost-Benefit Analysis: Consider when traditional solutions are better than AI
+Real-World Examples: Familiarize yourself with successful AI implementations
+Service Integration: Understand how AWS AI services work together
+Decision Framework: Develop a systematic approach to choosing between services
+
+Key Decision Framework
+
+Define the Problem Type: Classification, regression, clustering, or NLP task?
+Assess Data Requirements: Labeled vs. unlabeled, volume, variety
+Consider Time Constraints: Real-time vs. batch processing needs
+Evaluate Cost Factors: Development, maintenance, and operational costs
+Check Compliance Requirements: Regulatory and privacy considerations
+Determine Service Fit: Custom vs. managed service capabilities
+Plan Integration: How will it work with existing systems?
+
+Exam Focus Areas
+
+Service Selection: Knowing which AWS service fits which use case
+Problem Classification: Identifying the right ML technique
+Cost-Benefit Trade-offs: Understanding when AI is appropriate
+Real-World Applications: Recognizing practical implementations
+Integration Patterns: How services work together in solutions

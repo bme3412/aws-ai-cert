@@ -1,0 +1,116 @@
+##### 1.
+Which Amazon EC2 instance type is suitable for data warehousing applications?
+
+Memory optimized
+
+Storage optimized
+
+General purpose
+
+Compute optimized
+
+#### 2. 
+Which Amazon EC2 instance type balances compute, memory, and networking resources?
+
+Memory optimized
+
+Correctly unselected
+Storage optimized
+
+Correctly unselected
+General purpose
+
+Correctly selected
+Compute optimized
+
+#### 3. 
+Which Amazon EC2 instance type is ideal for high-performance databases?
+
+Memory optimized
+
+Incorrectly unselected
+Storage optimized
+
+Correctly unselected
+General purpose
+
+Correctly unselected
+Compute optimized
+
+
+#### 4. 
+Which Amazon EC2 instance type is suitable for data warehousing applications?
+
+Memory optimized
+
+Correctly unselected
+Storage optimized
+
+Correctly selected
+General purpose
+
+Correctly unselected
+Compute optimized
+
+Correctly unselected
+SUBMIT
+
+Correct
+Correct!
+
+
+#### 5. 
+Which Amazon EC2 instance type balances compute, memory, and networking resources?
+
+Memory optimized
+
+Correctly unselected
+Storage optimized
+
+Correctly unselected
+General purpose
+
+Correctly selected
+Compute optimized
+
+Correctly unselected
+SUBMIT
+
+Correct
+Correct!
+
+
+##### 6. 
+Which Amazon EC2 instance type is ideal for high-performance databases?
+
+Memory optimized
+
+Incorrectly unselected
+Storage optimized
+
+Correctly unselected
+General purpose
+
+Correctly unselected
+Compute optimized
+
+Incorrectly selected
+SUBMIT
+
+Incorrect
+Incorrect. Memory optimized is the answer.
+
+
+####### 7. 
+Which Amazon EC2 instance type offers high-performance processors?
+
+Memory optimized
+
+Correctly unselected
+Storage optimized
+
+Correctly unselected
+General purpose
+
+Correctly unselected
+Compute optimized

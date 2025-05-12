@@ -1,0 +1,189 @@
+# Domain 1: Fundamentals of AI and ML
+
+## Task Statement 1.1: Explain basic AI concepts and terminologies
+
+### 1. Define basic AI terms
+
+**Artificial Intelligence (AI)**
+- The simulation of human intelligence processes by machines, especially computer systems
+- Encompasses the ability to learn, reason, perceive, and understand
+- Often categorized into narrow AI (specialized) and general AI (human-level across all domains)
+
+**Machine Learning (ML)**
+- A subset of AI that enables computers to learn from data without being explicitly programmed
+- Uses statistical techniques to give computer systems the ability to improve automatically through experience
+- Forms the foundation for most modern AI applications
+
+**Deep Learning**
+- A subset of machine learning that uses artificial neural networks with multiple layers (deep architectures)
+- Particularly effective for processing complex data like images, speech, and text
+- Inspired by the human brain's neural structure
+
+**Neural Networks**
+- Computing systems inspired by biological neural networks
+- Composed of interconnected nodes (neurons) that process information through weighted connections
+- Activation functions determine the output of each node
+
+**Computer Vision**
+- Field of AI that trains computers to interpret and understand visual information from the world
+- Applications include image classification, object detection, facial recognition, and autonomous vehicles
+- Often leverages convolutional neural networks (CNNs)
+
+**Natural Language Processing (NLP)**
+- Branch of AI that helps computers understand, interpret, and manipulate human language
+- Includes tasks like translation, sentiment analysis, text generation, and language understanding
+- Powers applications like chatbots, virtual assistants, and language translation services
+
+**Model**
+- A representation of real-world processes or systems learned from data
+- In ML context, it's the output of a training process that can make predictions on new data
+- Defined by parameters learned during training
+
+**Algorithm**
+- A set of rules or instructions for solving a problem or completing a task
+- In ML, algorithms determine how a model learns from data
+- Examples include linear regression, decision trees, and gradient boosting
+
+**Training**
+- The process of teaching an ML model to make accurate predictions
+- Involves feeding data to the algorithm, which adjusts parameters to minimize errors
+- Results in a model that can generalize to new, unseen data
+
+**Inferencing**
+- The process of using a trained model to make predictions on new data
+- Also called inference or prediction
+- Can be performed in real-time or batch processing
+
+**Bias**
+- Statistical bias: error from overly simplistic assumptions in the learning algorithm
+- Societal bias: unfair discrimination against certain groups in ML predictions
+- Can lead to systematic errors or prejudicial outcomes
+
+**Fairness**
+- Ensuring that ML models do not produce discriminatory outcomes
+- Involves preventing bias against protected groups
+- Critical consideration in AI ethics and responsible AI development
+
+**Fit**
+- Refers to how well a model captures the underlying pattern in training data
+- Overfitting: model memorizes training data but performs poorly on new data
+- Underfitting: model is too simple to capture the underlying patterns
+
+**Large Language Model (LLM)**
+- Neural network models with billions or trillions of parameters
+- Trained on vast amounts of text data to understand and generate human language
+- Examples include GPT-4, BERT, and Claude
+
+### 2. Similarities and Differences between AI, ML, and Deep Learning
+
+**Hierarchy and Relationships:**
+- AI (Artificial Intelligence) is the broadest concept
+- ML (Machine Learning) is a subset of AI
+- Deep Learning is a subset of ML
+
+**AI**
+- Encompasses all computer systems that exhibit intelligent behavior
+- Can include rule-based systems, expert systems, and symbolic reasoning
+- Not all AI requires learning from data
+
+**Machine Learning**
+- Specifically focuses on systems that learn from data
+- Requires statistical methods and algorithms
+- Always involves data and pattern recognition
+
+**Deep Learning**
+- Uses neural networks with multiple hidden layers
+- Requires large amounts of data and computational power
+- Particularly effective for unstructured data like images and text
+
+### 3. Types of Inferencing
+
+**Real-time Inferencing**
+- Processes data immediately as it arrives
+- Low-latency responses (milliseconds to seconds)
+- Examples: fraud detection, recommendation systems, autonomous vehicles
+- Requires optimized models and infrastructure
+
+**Batch Inferencing**
+- Processes large volumes of data periodically
+- Higher latency acceptable (minutes to hours)
+- Examples: monthly sales forecasts, quarterly risk assessments
+- More cost-effective for large volumes
+
+**Other Inferencing Types:**
+- Streaming inference: continuous processing of data streams
+- Edge inference: processing at the data source (IoT devices)
+- Distributed inference: processing across multiple machines
+
+### 4. Types of Data in AI Models
+
+**Labeled Data**
+- Data with known outcomes or targets
+- Essential for supervised learning
+- Examples: images with tags, emails marked as spam/not spam
+
+**Unlabeled Data**
+- Data without predefined outcomes
+- Used in unsupervised learning
+- Often more abundant but less immediately useful
+
+**Tabular Data**
+- Structured data organized in rows and columns
+- Common in traditional ML applications
+- Examples: spreadsheets, databases, CSV files
+
+**Time-series Data**
+- Data points collected over time intervals
+- Order matters; temporal patterns are important
+- Examples: stock prices, sensor readings, web traffic
+
+**Image Data**
+- Visual information in pixel format
+- Requires specialized preprocessing and models (CNNs)
+- Examples: photographs, medical scans, satellite imagery
+
+**Text Data**
+- Unstructured linguistic information
+- Requires tokenization and encoding
+- Examples: documents, social media posts, customer reviews
+
+**Structured Data**
+- Highly organized, easily searchable information
+- Fits into predefined schemas
+- Examples: relational databases, XML files
+
+**Unstructured Data**
+- Information without predefined organization
+- Often contains valuable insights but harder to process
+- Examples: images, videos, natural language text
+
+### 5. Learning Paradigms
+
+**Supervised Learning**
+- Uses labeled data to learn input-output mappings
+- Goal: predict outcomes for new, unseen data
+- Types:
+  - Classification: predicting categories (spam detection, image recognition)
+  - Regression: predicting continuous values (price prediction, demand forecasting)
+- Examples of algorithms: linear regression, decision trees, random forests, SVMs
+
+**Unsupervised Learning**
+- Discovers patterns in data without labeled outcomes
+- Goal: understand data structure and relationships
+- Types:
+  - Clustering: grouping similar data points (customer segmentation)
+  - Dimensionality reduction: simplifying data while preserving information
+  - Association rule learning: finding correlations between variables
+- Examples of algorithms: k-means clustering, hierarchical clustering, PCA
+
+**Reinforcement Learning**
+- Learns optimal behavior through interaction with an environment
+- Receives rewards or penalties for actions
+- Goal: maximize cumulative reward over time
+- Key concepts:
+  - Agent: the learner/decision maker
+  - Environment: what the agent interacts with
+  - State: current situation
+  - Action: choices available to the agent
+  - Reward: feedback from environment
+- Examples: game playing (AlphaGo), robotics, autonomous systems

@@ -1,0 +1,124 @@
+Practice Questions for AWS AI Certification Domain 1
+Multiple Choice Questions
+Question 1: Which of the following best describes the relationship between AI, Machine Learning, and Deep Learning?
+
+A) They are three separate, unrelated technologies
+B) Deep Learning is the broadest concept, encompassing ML and AI
+C) AI is the broadest concept, ML is a subset of AI, and Deep Learning is a subset of ML
+D) ML and Deep Learning are two different types of AI that don't overlap
+
+Answer: C
+Question 2: Which type of learning would be most appropriate for spam email detection?
+
+A) Unsupervised learning
+B) Supervised learning
+C) Reinforcement learning
+D) Transfer learning
+
+Answer: B (Supervised learning, since we have labeled data - emails marked as spam or not spam)
+Question 3: What type of inferencing would be most suitable for processing credit card transactions to detect fraud?
+
+A) Batch inferencing
+B) Real-time inferencing
+C) Monthly inferencing
+D) Annual inferencing
+
+Answer: B (Real-time inferencing for immediate fraud detection)
+Question 4: Which of the following is an example of unstructured data?
+
+A) A customer database with names, addresses, and phone numbers
+B) Daily sales figures in a spreadsheet
+C) Social media posts and comments
+D) A time series of stock prices
+
+Answer: C (Social media posts are unstructured text data)
+Question 5: In the context of Neural Networks, what is a "layer"?
+
+A) A physical component of computer hardware
+B) A collection of neurons that process inputs in parallel
+C) A database table
+D) An API endpoint
+
+Answer: B
+Scenario-Based Questions
+Question 6: Your company wants to predict housing prices based on features like location, size, and number of bedrooms. You have a dataset with 10,000 homes and their selling prices from the last year. What type of learning problem is this?
+
+A) Unsupervised learning - clustering
+B) Supervised learning - classification
+C) Supervised learning - regression
+D) Reinforcement learning
+
+Answer: C (Predicting continuous values like price is regression, and you have labeled data)
+Question 7: You're building a system to automatically categorize customer support tickets into different departments (Sales, Technical, Billing). You have 50,000 historical tickets that were manually categorized. What approach should you use?
+
+A) Unsupervised clustering
+B) Supervised classification
+C) Reinforcement learning
+D) Association rule learning
+
+Answer: B (Supervised classification with labeled training data)
+True/False Questions
+Question 8: True or False: Deep Learning can only be used for image recognition tasks.
+Answer: False (Deep Learning is used for many tasks including NLP, speech recognition, and more)
+Question 9: True or False: Bias in AI refers only to technical errors in the algorithm.
+Answer: False (Bias includes both statistical bias and societal bias/discrimination)
+Question 10: True or False: All AI systems require machine learning.
+Answer: False (Some AI systems use rule-based approaches or expert systems)
+Fill-in-the-Blank Questions
+Question 11: The process of using a trained machine learning model to make predictions on new data is called _______.
+Answer: Inferencing (or inference/prediction)
+Question 12: _______ learning discovers patterns in data without labeled outcomes, while _______ learning uses labeled data to learn input-output mappings.
+Answer: Unsupervised, Supervised
+Short Answer Questions
+Question 13: Explain the difference between overfitting and underfitting in machine learning models.
+Answer:
+
+Overfitting: Model learns the training data too well, memorizing noise and details that don't generalize to new data. Results in high accuracy on training data but poor performance on test data.
+Underfitting: Model is too simple to capture the underlying patterns in the data. Results in poor performance on both training and test data.
+
+Question 14: What are the key components of reinforcement learning?
+Answer:
+
+Agent: the learner/decision maker
+Environment: what the agent interacts with
+State: current situation of the agent
+Action: choices available to the agent
+Reward: feedback from the environment based on actions taken
+
+Question 15: Describe two scenarios where real-time inferencing would be preferred over batch inferencing.
+Answer:
+Examples include:
+
+Fraud detection in financial transactions - need immediate detection and prevention
+Autonomous vehicle navigation - requires split-second decision making
+Real-time language translation - users expect immediate results
+Dynamic content recommendation - personalized suggestions as users browse
+
+Application Questions
+Question 16: Your retail company wants to group customers based on their purchasing behavior to create targeted marketing campaigns. You have transaction data but no predefined customer categories. What type of learning approach should you use and why?
+Answer: Unsupervised learning, specifically clustering. Since there are no predefined categories (unlabeled data), you need to discover natural groupings in the data. Algorithms like k-means clustering would help identify customer segments based on purchasing patterns.
+Question 17: A hospital wants to develop an AI system to help diagnose diseases from medical images. They have 100,000 X-ray images with confirmed diagnoses. What type of inferencing would be most appropriate for this application, and what are the key considerations?
+Answer: Real-time inferencing would be most appropriate for diagnostic applications. Key considerations:
+
+Need for immediate results to aid clinical decision-making
+High accuracy requirements (medical implications)
+Integration with hospital systems
+Regulatory compliance (HIPAA, FDA approval)
+Ability to handle high-resolution medical images efficiently
+
+Study Tips
+
+Create a concept map connecting AI, ML, and Deep Learning
+Practice identifying supervised vs. unsupervised problems in real scenarios
+Memorize key definitions - especially the fundamental terms
+Understand the trade-offs between different approaches (e.g., real-time vs. batch inferencing)
+Review AWS-specific implementations of these concepts in services like SageMaker
+Focus on practical applications rather than just theoretical knowledge
+
+Key Takeaways for the Exam
+
+Hierarchy matters: AI > ML > Deep Learning
+Data types drive approach: Structured data often uses traditional ML, unstructured data benefits from deep learning
+Learning paradigms: Match the problem type (classification/regression = supervised, pattern discovery = unsupervised)
+Inferencing choices: Real-time for immediate decisions, batch for large-scale processing
+Bias and fairness: Increasingly important considerations in AI deployment

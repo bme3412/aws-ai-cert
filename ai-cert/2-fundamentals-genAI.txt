@@ -1,0 +1,39 @@
+Task Statement 2.1: Explain the basic concepts of generative AI.
+Objectives:
+• Understand foundational generative AI concepts (for example, tokens,
+chunking, embeddings, vectors, prompt engineering, transformer-based
+LLMs, foundation models, multi-modal models, diffusion models).
+• Identify potential use cases for generative AI models (for example, image,
+video, and audio generation; summarization; chatbots; translation; code
+generation; customer service agents; search; recommendation engines).
+• Describe the foundation model lifecycle (for example, data selection, model
+selection, pre-training, fine-tuning, evaluation, deployment, feedback). 
+
+Task Statement 2.2: Understand the capabilities and limitations of generative AI for
+solving business problems.
+Objectives:
+• Describe the advantages of generative AI (for example, adaptability,
+responsiveness, simplicity).
+• Identify disadvantages of generative AI solutions (for example,
+hallucinations, interpretability, inaccuracy, nondeterminism).
+• Understand various factors to select appropriate generative AI models (for
+example, model types, performance requirements, capabilities, constraints,
+compliance).
+• Determine business value and metrics for generative AI applications (for
+example, cross-domain performance, efficiency, conversion rate, average
+revenue per user, accuracy, customer lifetime value). 
+
+Task Statement 2.3: Describe AWS infrastructure and technologies for building
+generative AI applications.
+Objectives:
+• Identify AWS services and features to develop generative AI applications
+(for example, Amazon SageMaker JumpStart; Amazon Bedrock; PartyRock,
+an Amazon Bedrock Playground; Amazon Q).
+• Describe the advantages of using AWS generative AI services to build
+applications (for example, accessibility, lower barrier to entry, efficiency,
+cost-effectiveness, speed to market, ability to meet business objectives).
+• Understand the benefits of AWS infrastructure for generative AI
+applications (for example, security, compliance, responsibility, safety).
+• Understand cost tradeoffs of AWS generative AI services (for example,
+responsiveness, availability, redundancy, performance, regional coverage,
+token-based pricing, provision throughput, custom models).
