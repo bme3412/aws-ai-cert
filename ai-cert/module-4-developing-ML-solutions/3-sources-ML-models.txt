@@ -1,0 +1,19 @@
+SageMaker supports pre-trained models, built-in algorithms, and custom Docker images. 
+
+The following are ways to use SageMaker to build your ML model:
+
+Pre-trained models require the least effort and are models ready to deploy or to fine-tune and deploy using SageMaker JumpStart.
+
+Built-in models available in SageMaker require more effort and scale if the dataset is large and significant resources are needed to train and deploy the model.
+
+If there is no built-in solution that works, try to develop one that uses pre-made images for machine learning and deep learning frameworks for supported frameworks such as scikit-learn, TensorFlow, PyTorch, MXNet, or Chainer.
+
+You can build your own custom Docker image that is configured to install the necessary packages or software. 
+
+SageMaker provides several built-in general-purpose algorithms that you can use for either classification or regression problems. 
+SageMaker provides several built-in algorithms that can be used for unsupervised learning tasks such as clustering, dimension reduction, Topic modelling with pattern recognition, and anomaly detection. 
+SageMaker also provides image processing algorithms that are used for image classification, object detection, and computer vision, and time series.
+SageMaker provides algorithms that are tailored to the analysis of textual documents used in natural language processing, document classification or summarization, topic modeling or classification, and language transcription or translation.
+
+With SageMaker Jumpstart, you can deploy, fine-tune, and evaluate pre-trained models from the most popular model hubs.
+SageMaker JumpStart provides pretrained open source models from leading providers for a range of problem types to help you get started with machine learning. You can incrementally train and tune these models before deployment. SageMaker JumpStart also provides solution templates that set up infrastructure for common use cases and runnable example notebooks for machine learning with SageMaker. 

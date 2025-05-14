@@ -1,0 +1,44 @@
+Evaluation occurs after a model is trained. The data you use is partitioned into three parts: training set, validation set, and test set. The training set is used to train the model. The validation and test sets are the ones that you will use to evaluate the trained model performance.
+To begin evaluating how the model responds in a non-training environment, start by looking at the data that was set aside as the validation set. You want to make sure that the model generalizes to data it has not seen. The model still needs to be improved before determining that it’s ready for production.
+
+After you’ve improved the model using that validation data, you’re ready to test it one last time to ensure its predictive quality meets your standards.
+
+Model fit is important for understanding the root cause of poor model accuracy. This understanding will guide you to take corrective steps. You can determine whether a predictive model is underfitting or overfitting the training data by looking at the prediction error on the training data and the evaluation data.
+
+Overfitting is when the model performs well on the training data but does not perform well on the evaluation data. This is because the model memorized the data it has seen and is unable to generalize to unseen examples.
+Underfitting is when the model performs poorly on the training data. This is because the model is unable to capture the relationship between the input examples (often called X) and the target values (often called Y).
+If your model is underfitting and performing poorly on the training data, it could be that the model is too simple (the input features are not expressive enough) to describe the target well.
+
+When evaluating models, both bias and variance contribute to errors the model makes on unseen data, which affects its generalization.
+A bullseye is a nice analogy because, generally speaking, the center of the bullseye is where you aim your darts. The center of the bullseye in this situation is the label or target—it predicts the value of your model—and each dot is a result that your model produced during training.
+
+Think about bias as the gap between your predicted value and the actual value, whereas variance describes how dispersed your predicted values are.
+
+In ML, the ideal algorithm has low bias and can accurately model the true relationship. The ideal algorithm also has low variability, by producing consistent predictions across different datasets.
+
+
+A confusion matrix can help classify why and how a model gets something wrong. It is the building block for running these types of model evaluations for classification problems. Review the following graphic, which is a confusion matrix for the image recognition example. The matrix gives a high-level comparison of how the predicted classes matched up against the actual classes.
+After the model has been applied to the testing data, each of the four boxes in the matrix will include an aggregate number of the unique occurrences of true positives, false positives, false negatives, and true negatives.
+
+Precision removes the negative predictions from the picture. Precision is the proportion of positive predictions that are actually correct. You can calculate it by taking the true positive count and dividing it by the total number of positives.
+When the cost of false positives are high in your particular business situation, precision can be a good metric. Think about a classification model that identifies emails as spam or not. In this case, you do not want your model labeling a legitimate email as spam and preventing your users from seeing that email. 
+
+In addition to precision, there is also recall (or sensitivity). In recall, you are looking at the proportion of correct sets that are identified as positive. Recall is calculated by dividing the true positive count by the sum of the true positives and false negatives. By looking at that ratio, you get an idea of how good the algorithm is at detecting, for example, cats.
+Think about a model that needs to predict whether a patient has a terminal illness or not. In this case, using precision as your evaluation metric does not account for the false negatives in your model. It is extremely important and vital to the success of the model that it not give false negative results. A false negative would be not identifying a patient as having a terminal illness when the patient actually does have a terminal illness. In this situation, recall is a better metric to use.
+
+Area under the curve-receiver operator curve (AUC-ROC) is another evaluation metric. ROC is a probability curve, and AUC represents the degree or measure of separability.
+In general, AUC-ROC can show what the curve for true positive compared to false positive looks like at various thresholds. That means that when you calculate the AUC-ROC curve, you plot multiple confusion matrices at different thresholds and compare them to one another to find out the threshold you need for your business use case.
+
+In case of a regression problem, there are other common metrics you can use to evaluate your model, including mean squared error and R squared. Mean squared error is very commonly used.
+
+Mean squared error
+
+The general purpose of mean squared error (MSE) is the same as the classification metrics. You determine the prediction from the model and compare the difference between the prediction and the actual outcome.
+More specifically, you take the difference between the prediction and actual value, square that difference, and then sum up all the squared differences for all the observations.
+
+The smaller the MSE, the better the model's predictive accuracy.
+
+R squared
+
+R squared is another commonly used metric with linear regression problems. R squared explains the fraction of variance accounted for by the model. It’s like a percentage, reporting a number from 0 to 1. When R squared is close to 1, it usually indicates that a lot of the variance in the data can be explained by the model itself.
+MSE focuses on the average squared error of the model's predictions to provide a measure of model performance. R squared provides a measure of the model's goodness of fit to the data. Both are important but provide different perspectives.
