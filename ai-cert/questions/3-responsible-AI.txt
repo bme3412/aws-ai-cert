@@ -1,0 +1,87 @@
+1. A developer is considering the pros and cons of developing an AI system with a transparent and explainable model compared to using a black box model.
+
+What are the benefits that might convince the developer to use a transparent and explainable model? (Select TWO.)
+
+They are cheaper to develop and maintain.
+
+They are easier to debug and optimize for improvements.
+
+They are less complex to develop.
+
+They are opaque and keep model information secure. 
+
+They can help to build trust.
+
+Correct
+The insight that transparent and explainable models offer makes them easier to debug and optimize for improvements. It also helps to build trust with users.
+Some risks to consider with transparent and explainable models is that they can be more complex and expensive to develop. They are also more susceptible to security breaches. 
+
+2. A developer is in the planning stage of a healthcare AI system. The system needs to be developed with a model that offers transparency and explainability.
+
+Which AWS solution should the developer consider to make the AWS service explainable? 
+
+AWS AI Service Cards
+
+AWS HealthScribe
+
+Amazon SageMaker Autopilot 
+
+Amazon SageMaker Data Wrangler
+
+Correct
+The developer can use SageMaker Autopilot to provide explainable insights into how ML models make predictions.
+AWS AI Service Cards provide transparency for AWS services. SageMaker Data Wrangler is used to balance data in cases of any imbalances. AWS HealthScribe is a HIPAA-eligible service to build clinical applications that automatically generate clinical notes by analyzing patient-clinician conversations. 
+
+3. A developer is planning on building and training a model for a loan application AI system. To satisfy the need for transparency, the developer needs to catalog details such as the intended use and risk rating of the model, training details and metrics, and custom information.
+
+Which AWS solution should the developer consider to make the AWS service to provide transparency for this model? 
+
+AWS AI Service Cards
+
+Amazon SageMaker Clarify
+
+Amazon SageMaker Role Manager
+
+Amazon SageMaker Model Cards
+
+Correct
+The developer can use SageMaker Model Cards to provide transparency to models that they build and train. They can use it to document and catalog information for the sake of transparency.
+
+AWS AI Service Cards are transparent documentation that AWS provides concerning the AI tools that they offer to customers to use. They are not customizable. 
+Amazon Sage Maker Clarify can be used to evaluate models and provide explainability for models. However, it cannot be used to document information about models that the developer will train. Amazon SageMaker Role Manager is a tool that administrators use to provide permissions. 
+
+4. A developer is building an AI application. A specific requirement is that the model must be interpretable.
+
+Which statement best describes interpretability in a model?
+
+A model that you can influence the predictions and behavior by changing aspects of the training data
+
+A model that avoids causing harm in its interactions with the world
+
+A model that provides transparency into a system so a human can explain the model’s output based on the weights and features
+
+A model that uses model agnostic methods to explain the behavior of the model in human terms
+
+
+
+Correct
+A model that provides transparency into a system so a human can explain the model’s output based on the weights and features is an example of interpretability in a model.
+A model that uses model agnostic methods to explain the behavior of the model in human terms is an example of explainability in a model.
+A model that avoids causing harm in its interactions with the world is an example of safety in a model.
+A model that you can influence the predictions and behavior by changing aspects of the training data is an example of controllability in a model. 
+
+5. An organization is concerned about decision-makers making errors in high-stakes situations because of stressful or high-pressure environments. They want to design their AI system to help mitigate errors in these situations with technology. 
+Which design principle should the organization implement to help mitigate potential errors because of stressful or high-pressure environments?
+
+Design for environmental decision-making 
+
+Design for amplified decision-making
+
+Design for unbiased decision-making
+
+Design for human and AI learning
+
+Correct
+Design for amplified decision-making is a design principle that supports decision-makers in making decisions carefully in high-pressure environments by using technology.
+The design for unbiased decision-making principle focuses on reducing bias. 
+The design for human and AI learning focuses on creating better AI systems. 

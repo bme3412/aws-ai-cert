@@ -1,0 +1,15 @@
+Amazon SageMaker Data Wrangler is a low-code no-code (LCNC) tool. It provides an end-to-end solution to import, prepare, transform, featurize, and analyze data by using a web interface. Customers can add their own Python scripts and transformations to customize workflows.
+For more advanced users and data preparation at scale, Amazon SageMaker Studio Classic comes with built-in integration of Amazon EMR and AWS Glue interactive sessions to handle large-scale interactive data preparation and machine learning workflows within your SageMaker Studio Classic notebook.
+Finally, by using the SageMaker Processing API, customers can run scripts and notebooks to process, transform, and analyze datasets . They can also use various ML frameworks such as scikit-learn, MXNet, or PyTorch while benefiting from fully managed machine learning environments.
+
+Amazon SageMaker Feature Store helps data scientists, machine learning engineers, and general practitioners to create, share, and manage features for ML development.
+
+SageMaker provides a training job feature to train and deploy models using built-in algorithms or custom algorithms.
+SageMaker launches the ML compute instances and uses the training code and the training dataset to train the model. It saves the resulting model artifacts in an Amazon Simple Storage Service (Amazon S3) bucket that can be used later for inference.
+
+Amazon SageMaker JumpStart provides pretrained, open source models that customers can use for a wide range of problem types.
+
+Customers can use Amazon SageMaker Experiments to experiment with multiple combinations of data, algorithms, and parameters, all while observing the impact of incremental changes on model accuracy.
+Hyperparameter tuning is a way to find the best version of your models. Amazon SageMaker Automatic Model Tuning does that by running many jobs with different hyperparameters in combination and measuring each of them by a metric that you choose.
+
+With SageMaker, customers can deploy their ML models to make predictions, also known as inference. SageMaker provides a broad selection of ML infrastructure and model deployment options to help meet all your ML inference needs.

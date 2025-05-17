@@ -1,0 +1,21 @@
+Remember, ML is a subset of AI that focuses on developing algorithms and statistical models so that computer systems can learn from data and make predictions or decisions without being explicitly programmed. ML models learn patterns and relationships from data rather than relying on hard-coded rules for instructions. These models are trained on large datasets, and their accuracy and performance improve over time as they process more data. 
+
+ML Techniques:
+1. In supervised learning, the algorithms are trained on labeled data. The goal is to learn a mapping function that can predict the output for new, unseen input data.
+2. Unsupervised learning refers to algorithms that learn from unlabeled data. The goal is to discover inherent patterns, structures, or relationships within the input data. 
+3. In reinforcement learning, the machine is given only a performance score as guidance and semi-supervised learning, where only a portion of training data is labeled. Feedback is provided in the form of rewards or penalties for its actions and the machine learns from this feedback to improve it decision-making over time.
+
+Supervised learning is a popular type of ML because it’s widely applicable. It’s called supervised learning because there needs to be a supervisor. The supervisor is labeled training data. Like any student, a supervised algorithm needs to learn by example. Essentially, this type of algorithm uses training data to help determine the patterns and relationships between the inputs and outputs. For example, pictures of cars labeled by people as cars are provided to the model. Then, when the model receives a new picture of a car that is not labeled, the model can predict that it is a car.
+Supervised learning has two subcategories—classification and regression.
+
+Classification is a supervised learning technique used to assign labels or categories to new, unseen data instances based on a trained model. The model is trained on a labeled dataset, where each instance is already assigned to a known class or category. The goal of classification is to learn patterns from the training data and use them to predict the class or category for new unlabeled data instances.
+Regression is a supervised learning technique used for predicting continuous or numerical values based on one or more input variable. It is used to model the relationship between a dependent variable (the value to be predicted) and one or more independent variables (the features or inputs used for prediction).
+
+In unsupervised learning, the model is trained on unlabeled data. The algorithm tries to discover hidden patterns or structures within the data without any prior information or guidance.
+Unsupervised learning encompasses various techniques and algorithms. Two main subcategories of unsupervised learning are clustering and dimensionality reduction. 
+1. Clustering: A common subcategory of unsupervised learning is clustering. This kind of algorithm groups data into different clusters based on similar features or distances between the data point to better understand the attributes of a specific cluster.
+2. Dimensionality Reduction: Dimensionality reduction is an unsupervised learning technique used to reduce the number of features or dimensions in a dataset while preserving the most important information or patterns.
+
+
+
+

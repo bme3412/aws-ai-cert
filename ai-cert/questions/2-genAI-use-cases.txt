@@ -1,0 +1,171 @@
+1. Which artificial intelligence (AI) application is used to automatically extract structured data from various types of documents, such as invoices, contracts, and forms?
+
+Computer vision
+
+Correctly unselected
+A. Facial recognition
+
+Correctly unselected
+B. Intelligent Document Processing (IDP)
+
+Correctly selected
+C. Fraud detection
+
+D. Correctly unselected
+
+Correct
+IDP is an application that extracts and classifies information from unstructured or structured data, generates summaries, and provides actionable insights.
+
+2. A manufacturing company produces a wide range of industrial equipment. Which scenario would be a suitable application of artificial intelligence and machine learning (AI/ML) technology?
+
+A. Implementing a centralized database to store product specifications and manuals.
+
+B. Using computer vision and machine learning algorithms to automate quality control inspections on the production line.
+
+C. Providing employees with training seminars on the latest manufacturing techniques and safety protocols.
+
+D. Outsourcing the manufacturing of certain components to third-party suppliers to reduce costs.
+
+Correct
+Using computer vision and machine learning algorithms for automated quality control inspections on the production line is an excellent application of AI/ML technology. This approach uses AI/ML systems to detect patterns and anomalies for scalable and consistent quality checks, which ultimately improves product quality and reduces the need for manual inspections.
+
+3. A data engineer is working on a project to predict the sale price of houses based on various features such as square footage, number of bedrooms, location, and age of the property. Which machine learning technique would be appropriate for this task?
+
+A. Clustering
+
+B. Dimensionality reduction
+
+C. Regression
+
+D. Classification
+
+Correct
+Regression is the appropriate machine learning technique for this task because they are trying to predict a continuous numerical value (the sale price) based on various input features.
+
+4. What are some of the capabilities of generative artificial intelligence (generative AI) systems in business applications? (Select THREE.)
+
+Personalization
+
+Scalability
+
+Conversion rate
+
+Simplicity
+
+Accuracy
+
+Cross-domain performance
+
+Correct
+The correct answers are personalization, scalability, simplicity, and responsiveness.
+
+Personalization: Generative AI can create personalized content tailored to individual preferences or characteristics, which enhances user experiences and engagement.
+
+Scalability: When trained, generative AI models can generate large amounts of content quickly, which makes them suitable for tasks that require producing content at scale.
+
+Simplicity: Generative AI can simplify complex tasks by automating content creation processes. For example, AI language models can generate human-like text, which reduces the time and effort required for content generation.
+
+5. A product manager works for a company that uses a generative AI application for content creation. They have noticed that the model often produces different outputs each time it runs with the same input data. What is the challenge this company is encountering?
+
+Nondeterminism
+
+Toxicity
+
+Social risks
+
+Hallucinations
+
+Correct
+This company is facing nondeterminism when the model produces different outputs each time it runs with the same input data.
+
+6. A data engineer is analyzing the performance of a generative AI system used for customer support in a software company. Which business metric would be most appropriate for assessing the system’s effectiveness?
+
+Cross-domain performance
+
+Customer satisfaction
+
+Conversion rate
+
+Average revenue per user (ARPU)
+
+Correct
+Customer satisfaction is a critical metric for evaluating the effectiveness of a customer support system because it directly measures how well the system meets customer needs and expectations.
+
+7. Responsible artificial intelligence (AI) should be incorporated in all phases of the development lifecycle of an AI system.
+
+Which choice best describes responsible AI?
+
+Responsible AI refers the security and compliance that are shared responsibilities between AWS and the customer. 
+
+Responsible AI refers to the standards that uphold responsible practices and mitigate potential risks and negative outcomes of an AI application. 
+
+Responsible AI refers to the ability to create AI systems that add creativity, productivity, and connectivity to your business.
+
+Responsible AI refers to standards of upholding responsible practices that are exclusively needed for generative AI systems.
+
+Correct
+Responsible AI is not exclusive to generative AI. Though creativity, productivity, and connectivity are benefits of responsible AI, they don't define responsible AI. Responsible AI is the standard of upholding responsible practices and mitigating potential risks and negative outcomes of an AI application. 
+
+8. A developer is training a model for a new artificial intelligence (AI) system. The developer wants to be sure that the model is not underfitting the data or overfitting the data.
+
+How should the model be trained on the data?
+
+With low bias and high variance
+
+With low bias and low variance
+
+With high bias and high variance
+
+With high bias and low variance
+
+Correct
+To avoid underfitting and overfitting the data, the model should be trained with low bias and low variance. If either the bias or the variance is high, the model will not perform well.
+
+9. A company is researching how it might benefit from using generative artificial intelligence (generative AI). At the same time, they are very concerned about the generative AI challenges that need to be addressed.
+
+Which options are challenges of responsible artificial intelligence (AI)? (Select TWO.)
+
+Enterprise risk
+
+Toxicity
+
+Intellectual property
+
+Large language models (LLMs)
+
+Unsupervised learning
+
+Correct
+Toxicity and intellectual property are two challenges of responsible AI. Toxicity is explained as a foundation model output that is hateful, threatening, insulting, or demeaning to an individual or a group of individuals. There is a tendency of early LLMs to produce outputs that were verbatim regurgitation of parts of their training data, which resulted in privacy and copyright concerns around intellectual property. Implementing responsible AI best practices can help overcome these challenges.
+
+10. A company is increasing their use of artificial intelligence (AI) and wants to implement processes to help ensure that they define, implement, and enforce compliance.
+
+Which core dimension of responsible AI should they consider? 
+
+Governance
+
+Veracity and robustness
+
+Privacy and security
+
+Fairness
+
+Correct
+AI governance provides the guiding processes and institutional mechanisms to help ensure responsibility, risk mitigation, and oversight for AI from research and development (R&D) to deployment. It encourages maximizing societal benefits while minimizing harm from AI. Governance is crucial for responsible adoption.
+
+11. A government is using a machine learning (ML) model to identify people who qualify for government programs and services. Officials are concerned about the impact on human rights. They need a method to determine how the model performed its analysis.  
+
+Which core dimension of responsible AI should they consider? 
+
+Transparency
+
+Veracity and robustness
+
+Safety
+
+Explainability
+
+Correct
+Explainability empowers users to verify system functionality, check for unwanted biases, increase useful human control, and place appropriate trust in AI systems. This dimension of AI promotes the responsible development and deployment of AI technology for the benefit of society. Without explainability, AI could lose public trust because of inscrutable failures.
+
+1

@@ -1,0 +1,50 @@
+Responsible AI refers to practices and principles that ensure that AI systems are transparent and trustworthy while mitigating potential risks and negative outcomes. These responsible standards should be considered throughout the entire lifecycle of an AI application. This includes the initial design, development, deployment, monitoring, and evaluation phases.
+
+Traditional machine learning models perform tasks based on the data you provide. They can make predictions such as ranking, sentiment analysis, image classification, and more. However, each model can perform only one task. And to successfully do it, the model needs to be carefully trained on the data. As they train, they analyze the data and look for patterns. Then these models make a prediction based on these patterns. 
+Generative artificial intelligence (generative AI) runs on foundation models (FMs). These models are pre-trained on massive amounts of general domain data that is beyond your own data. They can perform multiple tasks. Based on user input, usually in the form of text called a prompt, the model actually generates content. This content comes from learning patterns and relationships that empower the model to predict the desired outcome. 
+
+Biases
+Accuracy - The number one problem that developers face in AI applications is accuracy. Both traditional and generative AI applications are powered by models that are trained on datasets. These models can make predictions or generate content based only on the data they are trained on. If they are not trained properly, you will get inaccurate results. Therefore, it is important to address bias and variance in your model.
+1. Bias is one of the biggest challenges a developer faces in AI systems. Bias in a model means that the model is missing important features of the datasets. This means that the data is too basic. Bias is measured by the difference between the expected predictions of the model and the true values we are trying to predict. If the difference is narrow, then the model has low bias. If the difference is wide, then the model has a high bias.
+2. Variance offers a different challenge for developers. Variance refers to the model's sensitivity to fluctuations or noise in the training data. The problem is that the model might consider noise in the data to be important in the output. When variance is high, the model becomes so familiar with the training data that it can make predictions with high accuracy. This is because it is capturing all the features of the data.
+3. Bias-variance tradeoff is when you optimize your model with the right balance between bias and variance. This means that you need to optimize your model so that it is not underfitted or overfitted. The goal is to achieve a trained model with the lowest bias and lowest variance tradeoff for a given data set.
+
+Underfitted - In the underfitted example, the bias is high and the variance is low. Here the regression is a straight line. This shows us that the model is underfitting the data because it is not capturing all the features of the data
+Overfitted - In the overfitted example, bias is low and the variance is high. Here the regression curve perfectly fits the data. This means that it is capturing noise and is essentially memorizing the data. It won't perform well on new data.
+
+To help overcome bias and variance errors, you can use the following
+1. Cross-validation: Cross-validation is a technique for evaluating ML models by training several ML models on subsets of the available input data and evaluating them on the complementary subset of the data. Cross-validation should be used to detect overfitting
+2. Increase Data; Add more data samples to increase the learning scope of the model.
+3. Regularization: Use regularization. Regularization is a method that penalizes extreme weight values to help prevent linear models from overfitting training data examples. 
+4. Simpler Models: Use simpler model architectures to help with overfitting. If the model is underfitting, the model might be too simple.  
+5. Dimensionality Reduction: Apply dimension reduction. Dimension reduction is an unsupervised machine learning algorithm that attempts to reduce the dimensionality (number of features) within a dataset while still retaining as much information as possible.
+6. End training early so that the model does not memorize the data.
+
+Challenges of generative AI
+1. Toxicity is the possibility of generating content (whether it be text, images, or other modalities) that is offensive, disturbing, or otherwise inappropriate. This is a primary concern with generative AI. It is hard to even define and scope toxicity. The subjectivity involved in determining what constitutes toxic content is an additional challenge, and the boundary between restricting toxic content and censorship can be murky and dependent on context and culture. 
+2. Hallucinations are assertions or claims that sound plausible but are verifiably incorrect. Considering the next-word distribution sampling employed by large language models (LLMs), it is perhaps not surprising that in more objective or factual use cases, LLMs are susceptible to hallucinations.
+3. Protecting intellectual property was a problem with early LLMs. This was because the LLMs had a tendency to occasionally produce text or code passages that were verbatim of parts of their training data, resulting in privacy and other concerns. But even improvements in this regard have not prevented reproductions of training content that are more ambiguous and nuanced.
+4. The creative capabilities of generative AI give rise to worries that it will be used to write college essays, writing samples for job applications, and other forms of cheating or illicit copying. Debates on this topic are happening at universities and many other institutions, and attitudes vary widely. 
+5. The proficiency with which generative AI is able to create compelling text and images, perform well on standardized tests, write entire articles on given topics, and successfully summarize or improve the grammar of provided articles has created some anxiety. There is a concern that some professions might be replaced or seriously disrupted by the technology. 
+
+Core Dimensions of Responsible AI
+The core dimensions of responsible AI include fairness, explainability, privacy and security, robustness, governance, transparency, safety, and controllability. No one dimension is a standalone goal for responsible AI.
+1. Fairness: Fairness is crucial for developing responsible AI systems. With fairness, AI systems promote inclusion, prevent discrimination, uphold responsible values and legal norms, and build trust with society. 
+2. Explainability: Explainability refers to the ability of an AI model to clearly explain or provide justification for its internal mechanisms and decisions so that it is understandable to humans.
+3. Privacy and security in responsible AI refers to data that is protected from theft and exposure. More specifically, this means that at a privacy level, individuals control when and if their data can be used. At the security level, it verifies that no unauthorized systems or unauthorized users will have access to the individual’s data.
+4. Transparency communicates information about an AI system so stakeholders can make informed choices about their use of the system. Some of this information includes development processes, system capabilities, and limitations.
+5. Veracity and robustness in AI refers to the mechanisms to ensure an AI system operates reliably, even with unexpected situations, uncertainty, and errors. 
+    The goal of veracity and robustness in responsible AI is to develop AI models that are resilient to changes in input parameters, data distributions, and external circumstances. 
+6. Governance is a set of processes that are used to define, implement, and enforce responsible AI practices within an organization.
+    Governance addresses various responsible, legal, or societal problems that generative AI might invite. 
+7. Safety in responsible AI refers to the development of algorithms, models, and systems in such a way that they are responsible, safe, and beneficial for individuals and society as a whole. 
+8. Controllability in responsible AI refers to the ability to monitor and guide an AI system's behavior to align with human values and intent. It involves developing architectures that are controllable, so that any unintended issues can be managed and addressed. 
+
+Business benefits of responsible AI
+1. Increased trust and reputation: Customers are more likely to interact with AI applications, if they believe the system is fair and safe. This enhances their reputation and brand value.
+2. Regulatory Compliance: As AI regulations emerge, companies with robust ethical AI frameworks are better positioned to comply with guidelines on data privacy, fairness, accountability, and transparency.
+3. Mitigaating Risks: Responsible AI practices help mitigate risks such as bias, privacy violations, security breaches, and unintended negative impacts on society. This reduces legal liabilities and financial costs.
+4. Competitive Advantage: Companies that prioritize responsible AI can differentiate themselves from competitors and gain a competitive edge, especially as consumer awareness of AI ethics grows.
+5. Improved decision-making: AI systems built with fairness, accountability, and transparency in mind are more reliable and less likely to produce biased or flawed outputs, which leads to better data-driven decisions.
+6. Improved products & business: Responsible AI encourages a diverse and inclusive approach to AI development. Because it draws on varied perspectives and experiences, it can drive more creative and innovative solutions.
+
