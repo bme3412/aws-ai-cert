@@ -1,0 +1,18 @@
+Poisoning, hijacking, and prompt injection
+
+1.Poisoning refers to the intentional introduction of malicious or biased data into the training dataset of a model. This can lead to the model producing biased, offensive, or harmful outputs, either intentionally or unintentionally.
+
+2. Hijacking and prompt injection: Hijacking and prompt injection refer to the technique of influencing the outputs of generative models by embedding specific instructions within the prompts themselves.
+    - For example, a malicious actor could craft prompts for a text generation model that contain harmful, unethical, or biased content. By doing so, the model might generate similar harmful, unethical, or biased text outputs. These generated texts could then be weaponized by the actor to create fake news, propagate disinformation, or produce other types of malicious content at scale.
+    - The goal is to hijack the model's behavior and make it produce outputs that align with the attacker's intentions, such as generating misinformation or running malicious code. 
+
+3. Exposure and prompt leaking
+Exposure refers to the risk of exposing sensitive or confidential information to a generative model during training or inference. An FM can then inadvertently reveal this sensitive data from their training corpus, leading to potential data leaks or privacy violations.
+    - Consider a scenario where a system is trained on private customer data to generate personalized product recommendations. In such a case, there is a possibility that the system might unintentionally disclose details about individual customers' purchases or browsing histories within the recommendations that it generates for new customers. This potential exposure of private user information could undermine customers' privacy and erode their trust in the system.
+Prompt leaking refers to the unintentional disclosure or leakage of the prompts or inputs (regardless of whether these are protected data or not) used within a model. Prompt leaking does not necessarily expose protected data. But it can expose other data used by the model, which can reveal information of how the model works and this can be used against it.
+
+4. Jailbreaking
+Jailbreaking refers to the practice of modifying or circumventing the constraints and safety measures implemented in a generative model or AI assistant to gain unauthorized access or functionality.
+When an AI model is developed, it is typically trained with certain ethical and safety constraints in place to prevent misuse or harmful outputs. These constraints can include filtering out explicit or offensive content, restricting access to sensitive information, or limiting the ability to carry out certain actions or commands.
+Jailbreaking attempts involve crafting carefully constructed prompts or input sequences that aim to bypass or exploit vulnerabilities in the AI system's filtering mechanisms or constraints. The goal is to "break out" of the intended model limitations.
+
