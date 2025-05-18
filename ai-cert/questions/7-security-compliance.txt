@@ -1,0 +1,119 @@
+1. A company has implemented a generative AI solution that a US federal information system will use. The developers need to ensure sufficient protection of confidentiality, integrity, and availability of the information that their solution accesses. 
+Which of the following standards should they comply with for the US government?
+
+National Institute of Standards and Technology (NIST)
+
+General Data Protection Regulation (GDPR)
+
+Payment card industry data security standard (PCI-DSS)
+
+AWS System and Organization Controls (SOC)
+
+Correct
+The National Institute of Standards and Technology (NIST) 800-53 security controls are generally applicable to US Federal Information Systems. Federal Information Systems typically must go through a formal assessment and authorization process to ensure sufficient protection of confidentiality, integrity, and availability of information and information systems.
+ 
+---------
+
+2. A financial institute is exploring artificial intelligence (AI)-based solutions for a customer-facing web application. They are considering some products that are available through the AWS Marketplace. The financial institute needs to perform due diligence of independent software vendors (ISVs) that sell products on AWS Marketplace, and access security and compliance reports.
+Which AWS service can this company use to help with this task?
+
+AWS CloudTrail
+
+AWS Artifact
+
+Amazon Inspector
+
+AWS Config
+
+Incorrect
+AWS Artifact is used to perform due diligence of ISVs that sell products on AWS Marketplace, with on-demand access to their security and compliance reports.
+
+--------
+
+3. An organization has implemented some generative AI workloads and understands the need for data governance strategies.
+What are some key strategies they might consider to manage their data? (Select TWO.)
+
+Data transcription, translation, batch processing
+
+Data monitoring processes, data observation techniques, data retention
+
+Distributed, real-time, and parallel processing
+
+Data lifecycles, data logging processes, data residency
+
+Online transaction processing (OLTP)
+
+Correct
+The following strategies are all important considerations for the successful management and deployment of AI workloads. These include data lifecycles, data logging processes, data residency, data monitoring processes, data observation techniques, and data retention. These are general techniques that apply to most datasets, whereas the other options refer to specific types of data and their applications.
+
+-------
+
+4. A company has several AI systems that involve different levels of generative AI solutions, such as pre-trained models and fine-tuned models. The developers need to follow governance strategies to ensure responsible development and deployment.
+What are some governance strategies that they might consider? (Select TWO.)
+
+Monitor the underlying infrastructure that supports the artificial intelligence (AI) system.
+
+Develop clear policies relating to the organization's approach to generative artificial intelligence (AI).
+
+Implement security controls that are used to mitigate risk.
+
+Monitor the performance of the artificial intelligence (AI) system by tracking metrics, such as model accuracy.
+
+Maintain high standards of transparency in the development of their solutions.
+
+Incorrect
+Two strategies are to develop clear policies relating to the organization's approach to generative AI, and maintain high standards of transparency in the development of their solutions. The other options relate more to performance monitoring and security, rather than governance.
+
+------ 
+5. A company is developing several artificial intelligence (AI) solutions that will be for both internal use and customer facing. The IT security team needs to investigate security threats that are commonly aimed at AI systems. 
+Which security and privacy considerations will they need to address? (Select THREE.)
+
+Phishing attacks
+
+Malicious actors generating fake content
+
+Distributed denial-of-service (DDoS) attacks
+
+Prompt injection by adversaries
+
+Ransomware attacks
+
+AI model weaknesses that make the AI systems vulnerable
+
+Incorrect
+Fake content, prompt injection, and AI model weaknesses should be addressed in the context of AI systems. The other threats are not necessarily unique to AI systems and should be familiar to the IT security team
+
+------
+
+6. AWS provides several services and features for securing artificial intelligence (AI) systems.
+How should a security administrator best approach the planning of a security strategy for new and future AI solutions? 
+
+Begin by understanding the AWS Shared Responsibility Model and consider which security services they will need for their solutions.
+
+Start with Amazon SageMaker Role Manager to determine which preconfigured role personas they will require for their solutions.
+
+First use Amazon Macie to discover sensitive data and identify data security risks.
+
+Review the Generative AI Security Scoping Matrix to identify the scope of each application in the AI solution.
+
+Correct
+Start by understanding the AWS Shared Responsibility Model and then consider the security services needed for the solutions. This ensures that the security administrator has a solid foundation and understanding of their responsibilities in the shared security model before planning the specific security controls.
+
+------
+
+7. A development team needs to train their model with a large collection of data that includes text and images.
+Which best practices are recommended to secure their data? (Select TWO.)
+
+Control access to the data.
+
+Ensure the integrity of the data.
+
+Clean the data to remove errors and duplicates.
+
+Prepare the data using reduction and splitting.
+
+Identify inconsistencies in the data.
+
+Incorrect
+To secure the data, they should control access to the data and ensure the integrity of the data. The other options relate to cleaning and preparing the data for machine learning.
+
