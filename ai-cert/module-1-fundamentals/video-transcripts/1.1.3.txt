@@ -1,0 +1,35 @@
+The training process produces model artifacts, which typically consists of trained parameters, a model definition that describes how to compute inferences and other metadata. The model artifacts, which are normally stored in Amazon S3, are packaged together with inference code to make a deployable model. Inference code is the software that implements the model, by reading the artifacts.
+
+There are two general options for hosting a model. The first is where an endpoint is always available to accept inference requests in real time. And the second is where a batch job is performing inference.
+
+Real-time inference is ideal for online inferences that have low latency and high throughput requirements. For real-time inferencing, your model is deployed on a persistent endpoint to handle a sustained flow of requests. Clients send input data to the model and receive back and inference very quickly.
+
+Another option is batch. Batch is suitable for offline processing when large amounts of data are available upfront, and you don't need a persistent endpoint. When you need a large number of inferences, and it's okay to wait for the results, batch processing can be more cost-effective. For example, you have historical sales data and you want to forecast the needed inventory for the next month for each product in your catalog. Your model input data could be processed all at once on a monthly schedule, and the results could be used to generate a report.
+
+The main difference between real-time and batch is that with batch, the computing resources only run when processing the batch, and then they shut down. With real-time inferencing, some compute resources are always running and available to process requests.
+
+There are several distinct machine learning styles that can be used depending on the expected output and the input type.
+
+The first is supervised learning. With supervised learning, you train your model with data that is pre-labeled. In this example, we show the model pictures of fish, and these are labeled as fish. In the same dataset, we include pictures of other animals like manatees, and these are labeled as not fish. So our training data specifies both, the input and the desired output of the algorithm.
+
+For an image classification problem like this, the model will be looking at the pixels of the image and recognizing clusters and patterns. The internal parameters of the algorithm are adjusted during the training process. It continues until the model is successfully identifying as fish, the images that are labeled as fish, and identifying others as non-fish.
+
+Note that machine learning inferences are not always accurate, so what the model will actually generate is the probability that an image is of a fish. The challenge with supervised learning is in labeling the data. The model might need to be trained on many thousands of pictures of fish before it makes reliable predictions. This involves people who must look at an image and label it.
+
+To address this challenge, Amazon offers a labeling service, Amazon SageMaker Ground Truth. SageMaker Ground Truth can leverage crowdsourcing service called Amazon Mechanical Turk that provides access to a large pool of affordable labor spread across the globe.
+
+Unsupervised learning algorithms train on data that has features but is not labeled. They can spot patterns, group the data into clusters, and split the data into a certain number of groups. Unsupervised learning is useful for use cases such as pattern recognition, anomaly detection, and automatically grouping data into categories.
+
+As the training data does not require labeling, setup is straightforward. These algorithms can also be used to clean and process data for further modeling automatically. An example of clustering is identifying different types of network traffic to predict potential security incidents. Because unsupervised learning can detect abnormalities, it is commonly used for anomaly detection.
+
+For example, an ML model examines data collected from sensors. It can detect that a temperature sensor at an oil well might be failing if it's reported data is well outside of the normal range.
+
+Reinforcement learning is a machine learning method that is focused on autonomous decision making by an agent. The agent takes actions within an environment to achieve specific goals. The model learns through trial and error, and training does not require labeled input. Actions that an agent takes that move it closer to achieving the goal are rewarded.
+
+To encourage learning during training, the learning agent must be allowed to sometimes pursue actions that might not result in rewards.
+
+To teach developers about developing a reinforcement learning model, Amazon offers a model race car called AWS DeepRacer that you can teach to drive on a racetrack.
+
+With AWS DeepRacer, the car is the agent, and the track is the environment. An action is the car moving forward on the track, and the goal is to stay on the track and finish the course as efficiently as possible.
+
+Both unsupervised and reinforcement learning work without labeled data. Unsupervised learning algorithms receive inputs with no specified outputs during the training process. However, reinforcement learning has a predetermined end goal. While it takes an exploratory approach, the explorations are continuously validated and improved to increase the probability of reaching the end goal.

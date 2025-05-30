@@ -1,0 +1,33 @@
+Let's get started with the first task statement from Domain 1, which is to explain basic AI concepts and terminologies. This task statement is split into five lessons.
+
+Let's get started by describing what artificial intelligence is. We'll also give some examples. Artificial intelligence, AI, is the field of computer science dedicated to solving cognitive problems commonly associated with human intelligence, such as learning, creation, and image recognition. The goal with AI is to create self-learning system that derives meaning from data.
+
+As you likely have already experienced Alexa and ChatGPT, AI technology can respond meaningfully when you ask it questions. It can even create original content such as text and images. Because AI systems can quickly process vast quantities of data, they can be used to solve complex problems like real-time fraud detection.
+
+AI also can perform repetitive and monotonous tasks, which increases business efficiency by freeing up employees to do more creative work. AI is exceptionally powerful when it comes to finding patterns in data and forecasting trends. This helps businesses make smarter decisions and react more quickly to problems.
+
+Machine learning is a branch of AI and computer science that focuses on use of data and algorithms to imitate the way humans learn. It gradually improves its accuracy to build computer systems that learn from data. Machine learning models are trained by using large datasets to identify patterns and make predictions. An example would be a product recommendation for a customer who's shopping online.
+
+Deep learning is a type of machine learning model that is inspired by human brains using layers of neural networks to process information. Recognizing human speech and objects and images are some of the things that deep learning models can do.
+
+AI systems provide benefits to many industries and their customers. AI systems are used in the medical industry to help read X-rays and scans and make diagnosis. Agencies such as the Center for Disease Control, CDC, Use AI to predict pandemics and outbreaks across the globe and send needed medical personnel and resources. Manufacturers such as Koch Industries use AI with computer vision to monitor assembly lines and maintain product quality. They also monitor sensor data to predict when equipment needs maintenance before it fails.
+
+Customers have easier access to product and support information with chat and search systems that can recognize their language and direct them to solutions. AI systems use shopping activity history to make product recommendations and help customers buy the things they want. Discovery uses AI to make personalized content recommendations for their viewers based upon their viewing history.
+
+Businesses can be more efficient and better serve their customers by being able to more accurately forecast demand. For example, a taxi company uses AI to position their cars in locations and at times when customers are likely to need them. Financial institutions such as MasterCard can detect fraudulent transactions by using AI to detect anomalous activity. HR departments can use AI to process resumes and match candidates to open roles and help hiring managers to be more productive.
+
+Companies use the understanding of their customers that AI gives them to target the customers with promotions that they will most likely want and avoid spamming. TickeTek uses AI to send, show, and event recommendations to their customers tailored to their unique interests. Using a technique called regression analysis, an AI model can process historical data, also known as time series data and predict future values.
+
+For example, a store needs to know how many salespeople it might need on a given day to serve its customers. An AI model can analyze the patterns in the past and forecast how many customers will be in the store on a given day in the future. Predictions that AI makes are called inferences. Note that an inference is basically an educated guess, so the model gives a probabilistic result.
+
+Because AI can recognize patterns in data, it can also detect when there is a deviation from the expected pattern known as an anomaly. In this example, the number of calls a customer service team receives might vary throughout the day in a predictable manner. When something happens, like the call center application goes offline, AI can detect the drop in calls and notify the IT department.
+
+Computer vision applications use AI to process images and video for object identification and facial recognition, as well as classification, recommendation, monitoring, and detection. In this example, a computer vision model detected scratches on a surface and put a red box around them on the image.
+
+In a more advanced application, the model identified that there is a missing capacitor on a circuit board. AI can translate text from one language to another without human involvement. It goes beyond simple word-to-word translation. It analyzes all text elements and recognizes how the words influence one another to be able to communicate the meaning of the phrase accurately in the target language.
+
+Here is an example of a customer support chat application. The customer is typing in Spanish while the support rep is typing in English. The application is translating between English and Spanish in real time. Natural language processing, NLP, is what allows machines to understand, interpret, and generate human language in a natural-sounding way. This is the technology that powers Alexa devices and those chatbots that let you book a hotel.
+
+In this example, the chatbot is prompting the customer to supply the information that it needs to make the reservation. Generative AI is the next step in artificial intelligence. Generative AI can have seemingly intelligent conversations and generate original content like stories, images, videos, and even music.
+
+Here is an example that uses Amazon Bedrock. When you use generative AI, you typically start with a prompt. My prompt is generate a song from these lyrics. In order to pass the exam, you'll need to know AI. And here is the response. Wow, not bad. From my single prompt, I received complete song lyrics with two verses, a chorus, bridge, and outro, and it mostly rhymes.
