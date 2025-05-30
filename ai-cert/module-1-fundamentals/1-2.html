@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Use Cases and AWS Services Guide</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+        }
+        
+        h2 {
+            color: #34495e;
+            border-left: 4px solid #3498db;
+            padding-left: 20px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        
+        h3 {
+            color: #2980b9;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        .highlight {
+            background-color: #e8f5e8;
+            padding: 15px;
+            border-left: 4px solid #27ae60;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        .example {
+            background-color: #f0f8ff;
+            padding: 15px;
+            border-left: 4px solid #3498db;
+            margin: 20px 0;
+            border-radius: 5px;
+            font-style: italic;
+        }
+        
+        .warning {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-left: 4px solid #ffc107;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        .case-study {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-left: 4px solid #6c757d;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        ul {
+            margin-bottom: 20px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .toc {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        
+        .toc ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .toc li {
+            padding: 5px 0;
+        }
+        
+        .toc a {
+            text-decoration: none;
+            color: #2980b9;
+            font-weight: 500;
+        }
+        
+        .toc a:hover {
+            text-decoration: underline;
+        }
+        
+        .service-card {
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        
+        .service-name {
+            color: #e67e22;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>AI Use Cases and AWS AI Services Guide</h1>
+        
+        <div class="toc">
+            <h3>Table of Contents</h3>
+            <ul>
+                <li><a href="#when-to-use-ai">1. When to Use AI</a></li>
+                <li><a href="#when-not-to-use-ai">2. When Not to Use AI</a></li>
+                <li><a href="#ml-problem-types">3. Machine Learning Problem Types</a></li>
+                <li><a href="#aws-ai-services">4. AWS Pre-trained AI Services</a></li>
+                <li><a href="#custom-ml-solutions">5. Custom ML Solutions with SageMaker</a></li>
+                <li><a href="#case-studies">6. Real-World Case Studies</a></li>
+            </ul>
+        </div>
+
+        <section id="when-to-use-ai">
+            <h2>1. When to Use AI</h2>
+            
+            <p>Unlike humans, AI technology can work continuously without decreasing performance rates. AI excels in specific scenarios where traditional approaches fall short.</p>
+            
+            <div class="highlight">
+                <p><strong>Ideal AI Use Cases:</strong></p>
+                <ul>
+                    <li><strong>Repetitive Tasks:</strong> Focus AI on tedious tasks that employees find boring or struggle with</li>
+                    <li><strong>Complex Problem Solving:</strong> Analyzing vast amounts of data at high velocity that humans cannot process</li>
+                    <li><strong>Pattern Recognition:</strong> Detecting deviations in patterns and uncovering fraud</li>
+                    <li><strong>Demand Forecasting:</strong> Reducing waste by predicting product or resource demand</li>
+                    <li><strong>24/7 Operations:</strong> Continuous monitoring and analysis without fatigue</li>
+                </ul>
+            </div>
+
+            <p>AI helps companies make better choices, become more efficient, and better address customer needs by streamlining business operations and decreasing employee workloads.</p>
+        </section>
+
+        <section id="when-not-to-use-ai">
+            <h2>2. When Not to Use AI</h2>
+            
+            <div class="warning">
+                <p><strong>Cost-Benefit Analysis Required:</strong> Training AI with machine learning consumes vast resources. Processing power can be costly, and models might need frequent retraining. Before starting an AI project, ensure benefits outweigh costs.</p>
+            </div>
+
+            <h3>Interpretability Requirements</h3>
+            <p>Complex neural networks model the human brain, making it impossible to fully understand how inner mechanics impact predictions. This creates interpretability challenges.</p>
+            
+            <div class="example">
+                <strong>Example:</strong> For loan approvals, business or compliance requirements may demand complete transparency. Less complex models or rule-based systems might be necessary, resulting in lower performance but higher interpretability.
+            </div>
+
+            <h3>Deterministic vs. Probabilistic Systems</h3>
+            <p>Machine learning models are probabilistic and incorporate randomness, meaning identical inputs can produce varying results. If determinism is necessary, rule-based systems are better options.</p>
+            
+            <div class="example">
+                <strong>Rule-Based Example:</strong> "People with credit scores above 750 should be automatically approved for loans of $10,000 or less" - this rule is deterministic and transparent.
+            </div>
+        </section>
+
+        <section id="ml-problem-types">
+            <h2>3. Machine Learning Problem Types</h2>
+            
+            <h3>Supervised Learning</h3>
+            <p>When your dataset consists of features or attributes as inputs with labeled target values as outputs, you have a supervised learning problem.</p>
+            
+            <h4>Classification Problems</h4>
+            <p>When target values are categorical (discrete values), you have a classification problem.</p>
+            
+            <ul>
+                <li><strong>Binary Classification:</strong> Assigns input to one of two classes</li>
+                <li><strong>Multiclass Classification:</strong> Assigns input to one of several classes</li>
+            </ul>
+            
+            <div class="example">
+                <strong>Binary Example:</strong> Medical diagnosis - disease or no disease based on diagnostic tests
+                <br>
+                <strong>Multiclass Example:</strong> Document classification - religion, politics, finance, or other topics
+            </div>
+
+            <h4>Regression Problems</h4>
+            <p>When target values are mathematically continuous, you have a regression problem.</p>
+            
+            <ul>
+                <li><strong>Simple Linear Regression:</strong> Single independent variable (e.g., weight to predict height)</li>
+                <li><strong>Multiple Linear Regression:</strong> Multiple variables (e.g., weight and age to predict height)</li>
+                <li><strong>Logistic Regression:</strong> Measures probability of event occurring (value between 0 and 1)</li>
+            </ul>
+            
+            <div class="example">
+                <strong>Linear Regression Example:</strong> Predicting house prices using features like bathrooms, bedrooms, square footage
+                <br>
+                <strong>Logistic Regression Example:</strong> Predicting heart disease probability based on BMI, smoking status, and genetic predisposition
+            </div>
+
+            <h3>Unsupervised Learning</h3>
+            <p>When your dataset has features but no labels or target values, you have an unsupervised learning problem. The goal is to discover patterns within the data.</p>
+            
+            <h4>Clustering Problems</h4>
+            <p>When data needs separation into discrete groups, members should be as similar as possible to each other and as different as possible from other groups.</p>
+            
+            <div class="example">
+                <strong>Example:</strong> Customer segmentation based on purchase history or clickstream activity
+            </div>
+
+            <h4>Anomaly Detection Problems</h4>
+            <p>Identification of rare items, events, or observations that differ significantly from the rest of the data.</p>
+            
+            <div class="example">
+                <strong>Examples:</strong> Detecting failed sensors, medical errors, or fraudulent transactions
+            </div>
+        </section>
+
+        <section id="aws-ai-services">
+            <h2>4. AWS Pre-trained AI Services</h2>
+            
+            <p>For many common use cases, it's unnecessary to build custom models. AWS offers several pre-trained AI services accessible through APIs.</p>
+
+            <div class="service-card">
+                <div class="service-name">Amazon Rekognition</div>
+                <p>Pre-trained deep learning service for computer vision working with images, videos, and streaming video.</p>
+                <ul>
+                    <li>Face recognition and verification</li>
+                    <li>Object detection and labeling</li>
+                    <li>Custom object recognition</li>
+                    <li>Content moderation (explicit, inappropriate, violent content)</li>
+                    <li>Text detection in images</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="service-name">Amazon Textract</div>
+                <p>Extracts text, handwriting, forms, and tabular data from scanned documents - more than just optical character recognition.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-name">Amazon Comprehend</div>
+                <p>Natural language processing service for discovering insights and relationships in text.</p>
+                <ul>
+                    <li>Sentiment analysis of customer feedback</li>
+                    <li>Personal Identifiable Information (PII) detection</li>
+                    <li>Entity recognition with confidence scores</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="service-name">Amazon Lex</div>
+                <p>Builds voice and text interfaces using the same technology that powers Amazon Alexa.</p>
+                <ul>
+                    <li>Customer service chatbots</li>
+                    <li>Interactive voice response systems</li>
+                    <li>Call routing in call centers</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="service-name">Amazon Transcribe</div>
+                <p>Automatic speech recognition supporting over 100 languages for live and recorded audio/video.</p>
+                <ul>
+                    <li>Real-time captioning</li>
+                    <li>Audio transcription for search and analysis</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="service-name">Amazon Polly</div>
+                <p>Converts text into natural-sounding speech in dozens of languages using deep learning technologies.</p>
+                <ul>
+                    <li>Article-to-speech conversion</li>
+                    <li>Interactive voice response prompts</li>
+                    <li>Accessibility for visually impaired customers</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="service-name">Amazon Kendra</div>
+                <p>Intelligent search of enterprise systems using natural language processing to understand questions and provide contextual results.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-name">Amazon Personalize</div>
+                <p>Automatically generates personalized recommendations for customers in retail, media, and entertainment.</p>
+                <ul>
+                    <li>Product recommendations ("You might also like")</li>
+                    <li>Customer segmentation for marketing campaigns</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="service-name">Amazon Translate</div>
+                <p>Fluently translates text between 75 languages using neural networks that consider entire context.</p>
+                <ul>
+                    <li>Real-time chat translation</li>
+                    <li>Document translation</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="service-name">Amazon Fraud Detector</div>
+                <p>Identifies potentially fraudulent online activities with pre-trained models for various fraud types.</p>
+                <ul>
+                    <li>Online payment fraud</li>
+                    <li>Fake account creation</li>
+                    <li>Product review fraud</li>
+                    <li>Account takeovers</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="service-name">Amazon Bedrock</div>
+                <p>Fully managed service for building generative AI applications with foundation models from Amazon, Meta, and leading AI startups.</p>
+                <ul>
+                    <li>Foundation model customization with training data</li>
+                    <li>Knowledge base creation for Retrieval Augmented Generation (RAG)</li>
+                    <li>Image generation capabilities</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="custom-ml-solutions">
+            <h2>5. Custom ML Solutions with Amazon SageMaker</h2>
+            
+            <p>Use the Amazon SageMaker family when you need customized machine learning models or workflows beyond prebuilt AI services.</p>
+
+            <div class="highlight">
+                <p><strong>SageMaker Capabilities:</strong></p>
+                <ul>
+                    <li>Data preparation and labeling</li>
+                    <li>Large-scale parallel training on multiple instances or GPU clusters</li>
+                    <li>Model deployment and real-time inference endpoints</li>
+                    <li>Pre-trained models as starting points</li>
+                    <li>Reduced resources needed for data preparation and model training</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="case-studies">
+            <h2>6. Real-World Case Studies</h2>
+
+            <div class="case-study">
+                <h3>MasterCard - Fraud Detection</h3>
+                <p>The second largest credit card network by purchasing volume uses AI to instantly score each transaction for fraud probability. Using SageMaker, MasterCard:</p>
+                <ul>
+                    <li>Tripled the number of detected fraudulent transactions</li>
+                    <li>Reduced false positives by a factor of 10</li>
+                    <li>Added generative AI in 2024 to improve fraud detection by 20% on average</li>
+                    <li>Uses LLM with customer transaction history to predict if businesses match customer patterns</li>
+                </ul>
+            </div>
+
+            <div class="case-study">
+                <h3>DoorDash - Customer Service Enhancement</h3>
+                <p>Replaced outdated touch-tone IVR system with Amazon Lex natural language processing:</p>
+                <ul>
+                    <li>Customers can speak instead of pressing buttons</li>
+                    <li>Improved customer experience and decreased hold times</li>
+                    <li>Increased self-service adoption</li>
+                    <li>Reduced need for live agent routing</li>
+                </ul>
+            </div>
+
+            <div class="case-study">
+                <h3>Laredo Petroleum - Predictive Maintenance</h3>
+                <p>Operates 1,300+ oil and gas wells with real-time monitoring using AWS and SageMaker:</p>
+                <ul>
+                    <li>Monitors pressure, temperature, and flow rate sensors in real-time</li>
+                    <li>Proactive maintenance focus and issue prevention</li>
+                    <li>Reduces environmental impact by preventing gas flaring/venting</li>
+                    <li>Detects leaks in storage tanks and corridor lines</li>
+                </ul>
+            </div>
+
+            <div class="case-study">
+                <h3>Booking.com - AI Trip Planner</h3>
+                <p>Travel marketplace managing 150+ petabytes of data with 28 million accommodation listings:</p>
+                <ul>
+                    <li>Uses SageMaker for booking recommendation models</li>
+                    <li>AI Trip Planner engages customers with natural language</li>
+                    <li>Implements Retrieval Augmented Generation (RAG)</li>
+                    <li>Retrieves customer reviews before making recommendations</li>
+                </ul>
+            </div>
+
+            <div class="case-study">
+                <h3>Pinterest - Visual Discovery</h3>
+                <p>Visual discovery engine for 450+ million users with billions of images:</p>
+                <ul>
+                    <li>Pinterest Lens feature for object recognition</li>
+                    <li>Shows similar items for sale with direct product links</li>
+                    <li>Maintains massive labeled product image collection in S3</li>
+                    <li>Frequently retrains models with Amazon Mechanical Turk and SageMaker Ground Truth</li>
+                </ul>
+            </div>
+        </section>
+        
+        <footer style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; text-align: center; color: #666;">
+            <p>This guide covers practical AI use cases, AWS AI services, and real-world implementations to help you determine when and how to leverage artificial intelligence for your business needs.</p>
+        </footer>
+    </div>
+</body>
+</html>

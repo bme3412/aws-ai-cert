@@ -1,0 +1,21 @@
+For many common use cases, it isn't necessary to build and train your own custom model. AWS offers several pre-trained AI services that are accessible through APIs. Before embarking on the effort and cost to build a custom model, you should investigate whether an existing service for your use case already exists.
+
+Amazon Rekognition is a pre-trained deep learning service for computer vision. It meets the needs of several common computer vision use cases without requiring customers to train their own models. It works with both images and videos, including streaming videos. One of its capabilities is face recognition. This service can be used to verify someone's identity by comparing their image with a reference image, like an employee's badge or a driver's license.
+
+One of the things you can do with Amazon Rekognition is give it a collection of labeled images of faces. For example, a company's employees. It'll automatically recognize and find them in images or stored in streaming videos. Amazon Rekognition can detect and label objects, which can be used to make an image or video library searchable.
+
+It can also be used in security system to detect and identify objects in real-time streaming video and send out alerts. You can get Amazon Rekognition to recognize custom or proprietary objects by giving it some labeled images to learn from. It can also add labels for any text it sees like street signs. Typically, companies that allow users to upload content to their application need to employ people to screen content before letting it get published. Amazon Rekognition can detect and filter explicit, inappropriate, and violent content in images and videos, and also flag content that should be reviewed by humans.
+
+Here we can see Amazon Rekognition facial recognition in action. We give it the reference image of a face and it can identify that person in other images and videos. Here, it found a match with 99.8% confidence. It also detected other faces in the photo and shows that there are not a match.
+
+More than just optical character recognition, Amazon Textract extracts text, handwriting, forms, and tabular data from scanned documents. Amazon Comprehend is a natural language processing service that helps discover insights and relationships in text. A common use case to classify the sentiment of customer feedback.
+
+For example, AWS uses Amazon Comprehend to analyze the comments left on Certification exams. Frequently, Amazon Textract and Amazon Comprehend are used together. Content extracted by Amazon Textract can be given to Amazon Comprehend for sentiment analysis. A common ML use case is detecting personal identifiable information, PII, in text.
+
+If you were collecting data for training an ML model to detect spam emails, you would want to be able to find PII and remove it from training data. Amazon Comprehend is pre-trained to find PII. In this example, Amazon Comprehend found a person's name, address, email, phone, and credit card number inside an email. Notice it also returns a confidence score.
+
+Suppose you are creating a job to remove PII from the data. You would set a threshold for the minimum confidence level over which you would automatically remove the associated entity. Amazon Lex helps build voice and text interfaces to engage with customers. It uses the same technology that powers Amazon Alexa devices.
+
+Some common use cases are customer service chatbots and interactive voice response systems, that route calls to the proper agent in a call center.
+
+Amazon Transcribe is an automatic speech recognition service that supports over 100 languages. Transcribe is designed to process live and recorded audio or video input to provide high quality transcriptions for search and analysis. A common use case is to caption streaming audio in real time.

@@ -1,0 +1,17 @@
+Amazon Polly turns text into natural-sounding speech in dozens of languages. It uses deep learning technologies to synthesize human speech. Common use cases include converting articles to speech and prompting callers in interactive voice response systems. The ability of AI to create natural-sounding voices is enabling companies to increase engagement with their products and be more accessible to visually impaired customers. For example, media companies like Washington Post and USA Today use Amazon Polly to create audio from breaking news and headlines.
+
+Amazon Kendra uses machine learning to perform an intelligent search of enterprise systems to quickly find content. It uses natural language processing to understand questions like, how do I connect my Echo Plus to my network? It responds with results based on an intelligent understanding of the question.
+
+Amazon Personalize allows businesses to automatically generate personalized recommendations for their customers in industries such as retail, media, and entertainment. For example, an ecommerce app can include a section called "You might also like" with personalized product recommendations to customers who will likely be interested in those products. Businesses can also use Amazon Personalize to run more effective marketing campaigns by segmenting customers according to their preferences.
+
+Amazon Translate fluently translates text between 75 different languages. It is built on a neural network that considers the entire context of the source sentence and the translation it has generated so far. It uses this information to create more accurate and fluent translations. One use case is real-time translation in an online chat application.
+
+Amazon Fraud Detector helps to identify potentially fraudulent online activities such as online payment fraud and creation of fake accounts. It features pre-trained data models to detect fraud in online transactions, product reviews, checkout and payments, new accounts, and account takeovers.
+
+Amazon Bedrock is a fully managed service to build generative AI applications on AWS. Amazon Bedrock lets you choose from high-performing foundation models trained by Amazon, Meta, and leading AI startups.
+
+You can customize a foundation model by providing your own training data or creating a knowledge base for the model to query. When a generative AI model calls an external knowledge system to retrieve information outside its training data, this is called Retrieval Augmented Generation or RAG for short.
+
+This example uses the Titan Image Generator foundation model from Amazon to generate an image in response to a prompt. Use the Amazon SageMaker family of services when you need more customized machine learning models or workflows that go beyond the prebuilt functionalities offered by the core AI services.
+
+Amazon SageMaker provides machine learning capabilities for data scientists and developers to prepare, build, train, and deploy high quality ML models efficiently. It comprises several services that are optimized for building and training custom machine learning models. These include data preparation and labeling, large-scale parallel training on multiple instances or GPU clusters, model deployment, and real-time inference endpoints To accelerate the development process, SageMaker offers pre-trained models that you can use as a starting point and reduce the resources needed for data preparation and model training.
