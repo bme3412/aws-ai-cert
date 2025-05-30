@@ -1,0 +1,28 @@
+Let's begin with describing ML pipelines and some AWS services that are used in the pipeline stages. A machine learning pipeline is a series of interconnected steps that start with a business goal and finish with operating a deployed ML model. It starts with defining the problem, collecting and preparing training data, training the model, deploying, and finally, monitoring it.
+
+As we'll see, some of these steps are an iterative process, and this is repeated until certain objectives are accomplished.
+
+Machine learning models are dynamic by design. They are re-trained with new data, continually evaluated against performance and business metrics, monitoring for drifts and bias, and adjusted or rebuilt as needed. As a result, many prefer to think of the ML pipeline as a lifecycle, where parts, or even all of it, are repeated even after the model is deployed. Let's look at each phase in the ML pipeline in detail.
+
+We'll discuss some of the AWS services that can be used to obtain the objects in each stage.
+
+The development of an ML model should always begin with identifying the business goal. An organization considering ML should have a clear idea of the problem to be solved and the business value to be gained. More than just an idea, you must be able to measure business value against specific business objectives and success criteria. Without clear success criteria, you won't be able to evaluate the model or even determine if ML is the best solution.
+
+You'll need to align stakeholders to gain consensus on what the goal of the project is. After you determine your criteria for success, evaluate your organization's ability to move toward the target. The target should be achievable and provide a clear path to production.
+
+Determine if ML is the appropriate approach for delivering your business goal. Evaluate all the options that you have available for achieving the goal. Determine how accurate the resulting outcomes would be while considering the cost and scalability of each approach.
+
+Ensure that enough relevant high-quality training data is available to the algorithm. Carefully evaluate the data to make sure that the correct data sources are available and accessible. Formulate the ML question in terms of input, desired outputs, and the performance metric to be optimized.
+
+With the ML problem in mind, investigate all available options. Start with the simplest solution before determining that more complexity is required to meet the business objectives.
+
+Remember to perform a cost-benefit analysis to see if the project should move to the next phase. AWS has introduced a number of AI services to democratize ML and make it accessible to anyone. They have identified many common use cases and developed easy, consumable, and fully trained ML models that are fully hosted by them. Because these services are pay as you go, it makes sense to evaluate them to see if they can meet the business goals. Many of these services allow you to customize their outputs.
+
+For example, with Amazon Comprehend, you can create a custom classifier that uses your own categories by supplying it with your training data. If a hosted service doesn't achieve the objectives, the next consideration should be building your own model by starting with an existing one.
+
+For example, for generative AI use cases, Amazon Bedrock lets you start with a fully trained foundation model. You can fine-tune this model with your own data using transfer learning. For other use cases, Amazon SageMaker has a number of open source pre-trained models to jumpstart your model development.
+
+The most difficult and costly approach is to train your own model from scratch. As we will see in later sections, this is not only the most technically challenging, but also requires the most responsibility for security and compliance.
+
+SageMaker JumpStart provides pre-trained AI foundation models and task-specific models for computer vision and natural language processing problem types. These are pre-trained on large public datasets. You have the option of fine-tuning the model with incremental training using your own dataset. This is a process known as transfer learning. Using a pre-trained model is a large savings in cost and development time over creating a custom model from scratch.
+

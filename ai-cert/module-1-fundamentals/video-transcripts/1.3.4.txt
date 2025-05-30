@@ -1,0 +1,27 @@
+Let's continue with the third task statement from Domain 1, which is to describe the ML development lifecycle. Next, let's talk about how we can deploy our model so it can be used for inferences.
+
+Now that we have a fully trained, tuned, and evaluated model, we need to make it available for use. The first decision is whether you need batch or real-time inferencing or something in between. Recall that batch is for when you need a large number of inferences, and it's okay to wait for the results. Perhaps the batch process runs overnight on the data collected from the previous day sales. This is the most cost-effective approach because cloud computing resources are only running once per day.
+
+With real-time inference, you deploy your model so that it can respond to requests immediately. For example, when using generative AI. Clients interact with your model by using a REST application programming interface, API. An API is a set of actions that are made available over an HTTP connection.
+
+For example, a web application can send a POST request containing input data and your endpoint, which will pass the request to a compute resource that is running the model. The resulting model output is sent back to the client in the response to the request.
+
+In this example, Amazon API Gateway can serve as the interface with the clients and forward requests to an AWS Lambda function, which is running the model. In both cases, the inference code and model artifacts are typically deployed as a Docker container.
+
+Docker containers are very versatile and can be run on any compute resource with a container runtime installed. On AWS, this could include AWS Batch, Amazon Elastic Container Service, or Amazon ECS, Amazon Elastic Kubernetes Service, or Amazon EKS, AWS Lambda, Amazon Elastic Compute Cloud, or Amazon EC2, and others.
+
+Depending on the service these options will require you to configure and manage the inference endpoint, which might also include managing updates, patches, scalability, network routing, and security. For reduced operational overhead you can choose to host your model with Amazon SageMaker.
+
+Amazon SageMaker can automatically deploy your model on hosted endpoints that it fully manages on your behalf. To use SageMaker inferencing, you just point SageMaker to your model artifacts in an S3 bucket and a Docker container image in Amazon ECR. You select which inference option such as batch, asynchronous, serverless, or real time, and SageMaker creates the endpoint and installs your model code.
+
+For real-time, asynchronous, and batch inference, SageMaker runs the model on EC2 ML instances, which can be inside an auto scaling group. You select the number and instance type of the ML instances that you want to use.
+
+There is also an inference recommender tool within SageMaker that can test out different configuration options with your model, so you can pick the best one. For the serverless inference option, SageMaker runs your code on Lambda functions.
+
+When you create an endpoint or endpoint configuration, you must choose an inference option. Amazon SageMaker supports four option types. The best choice depends on the business requirements of your ML inference workload. These endpoints are fully managed and support auto scaling. Batch transform provides offline inference for large datasets. It's useful when running inference if a persistent endpoint is not required and you can wait for the results. It can support large datasets that are gigabytes in size.
+
+Asynchronous inference is ideal when you want to queue request and have large payloads with processing times. SageMaker will scale your endpoint down to zero so that you aren't charged for periods without requests.
+
+Serverless inference can be used to serve model inference requests in real time without directly provisioning compute instances, or configuring scaling policies to handle traffic variations. Because it uses Lambda, you only pay when functions are running or pre-provisioned, so it is a good choice if your model has periods without requests.
+
+Real-time inference is ideal for inference workloads where you need real-time interactive responses from your model. Use real-time inference for a persistent and fully managed endpoint REST API that can handle sustained traffic backed by the instance type of your choice. The ML instances remain available to receive requests and return a response in real time. 
