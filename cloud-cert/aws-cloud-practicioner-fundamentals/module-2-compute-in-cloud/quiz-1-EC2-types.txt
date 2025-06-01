@@ -1,0 +1,39 @@
+1. Which Amazon EC2 instance type is suitable for data warehousing applications?
+
+A. Memory optimized
+
+B. Storage optimized
+
+C. General purpose
+
+D. Compute optimized
+
+2. Which Amazon EC2 instance type balances compute, memory, and networking resources?
+
+Memory optimized
+
+Storage optimized
+
+General purpose
+
+Compute optimized
+
+3. Which Amazon EC2 instance type is ideal for high-performance databases?
+
+Memory optimized
+
+Storage optimized
+
+General purpose
+
+Compute optimized
+
+4. Which Amazon EC2 instance type offers high-performance processors?
+
+Memory optimized
+
+Storage optimized
+
+General purpose
+
+Compute optimized

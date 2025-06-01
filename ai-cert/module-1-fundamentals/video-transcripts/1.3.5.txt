@@ -1,0 +1,27 @@
+Let's continue with the third task statement from Domain 1, which is to describe the ML development lifecycle. No matter how great your model performs initially, model performance could degrade over time for reasons such as data quality, model quality, and model bias.
+
+The final stage of the ML pipeline is to monitor your model. The model monitoring system must capture data, compare the data to the training set, define rules to detect issues, and send alerts. This process repeats on a defined schedule when initiated by an event or when initiated by human intervention.
+
+For most ML models, a simple scheduled approach for re-training daily, weekly, or monthly is usually enough. The monitoring system should detect data and concept drifts, initiate an alert, and send it to an alarm manager system, which could automatically start a re-training cycle.
+
+Data drift is when there are significant changes to the data distribution compared to the data used for training. Concept drift is when the properties of the target variables change. Any kind of drift results in model performance degradation.
+
+Amazon SageMaker Model Monitor, which is a capability of Amazon SageMaker, monitors models in production and detects errors so you can take remedial actions. You define a monitoring schedule that collects data from your endpoints and detects changes against the baseline. It analyzes the data based upon built-in rules or rules that you define. You can view the results in Amazon SageMaker Studio and see which rules were violated. The results are also sent to Amazon CloudWatch, where you can configure alarms to take remedial actions, such as starting a re-training process.
+
+Automation is an important part of implementing and operating repeatable and reliable business processes. So let's look at how we can use automation in our ML pipelines.
+
+MLOps is about using these established best practices of software engineering and applying them to machine learning model development. It's about automating manual tasks, testing, and evaluating code before release, and responding automatically to incidents.
+
+MLOps can streamline model delivery across the machine learning development lifecycle. Because the cloud uses API based services, everything is treated as software. This includes the infrastructure used in ML pipelines. The entire infrastructure can be described in software and deployed and redeployed in repeatable fashion. This lets data scientists quickly spin up the infrastructure needed to build and test a model so they can run experiments and make continual improvements.
+
+Like DevOps, version control is critical for tracking lineage and being able to inspect a past configuration. With MLOps, everything gets versioned, including the training data. Other key MLOps principles are monitoring deployments to detect potential issues and automating re-training because of issues or data and code changes.
+
+One of the benefits of MLOps is productivity, automation and providing self-service environments and infrastructure let data engineers and data scientists move forward. Another benefit is repeatability. Automating all the steps in the ML lifecycle helps ensure a repeatable process, including how the model is trained, evaluated, version, and deployed. This also improves reliability because it provides the ability to deploy not only quickly, but with increased quality and consistency.
+
+For compliance, MLOps can improve auditability by versioning all inputs and outputs from data science experiments to source data to trained models. This means that we can demonstrate exactly how the model was built and where it was deployed. The final benefit is improvements to data and model quality.
+
+MLOps lets us enforce policies that guard against model bias and track changes to data statistical properties, and model quality over time. Amazon SageMaker Pipelines offers the ability to orchestrate SageMaker jobs and author reproducible ML pipelines.
+
+SageMaker Pipelines can deploy custom built models for inference in real time with low latency, run offline inferences with batch transform and track lineage of artifacts. They can institute sound operational practices in deploying and monitoring production workflows, deploying model artifacts, and tracking artifact lineage through a simple interface.
+
+You can create a pipeline using the SageMaker SDK for Python or define the pipeline using JSON. The pipeline can contain all the steps to build and deploy a model, and can also include conditional branches based on the output of a previous step. Pipelines can be viewed in SageMaker Studio. This example pipeline is for a model that infers the age of an abalone based on its size. 

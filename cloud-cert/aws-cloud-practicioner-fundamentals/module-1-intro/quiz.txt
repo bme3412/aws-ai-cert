@@ -1,0 +1,29 @@
+1. What is cloud computing?
+
+A. Backing up files that are stored on desktop and mobile devices to prevent data loss
+
+B. Deploying applications connected to on-premises infrastructure
+
+C. Running code without needing to manage or provision servers
+
+D. On-demand delivery of IT resources and applications through the internet with pay-as-you-go pricing
+
+2. What is another name for on-premises deployment?
+
+A. Private cloud deployment
+
+B. Cloud-based application
+
+C. Hybrid deployment
+
+D. WS Cloud
+
+3. How does the scale of cloud computing help you to save costs?
+
+A. You do not have to invest in technology resources before using them.
+
+B. The aggregated cloud usage from a large number of customers results in lower pay-as-you-go prices.
+
+C. Accessing services on-demand helps to prevent excess or limited capacity.
+
+D. You can quickly deploy applications to customers and provide them with low latency.

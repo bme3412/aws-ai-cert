@@ -1,0 +1,19 @@
+1. Which Amazon EC2 pricing option provides a discount when you specify a number of EC2 instances to run a specific OS, instance family and size, and tenancy in one Region?
+
+Convertible Reserved Instances
+
+EC2 Instance Savings Plans
+
+Spot Instances
+
+Standard Reserved Instances
+
+2. Which Amazon EC2 pricing option provides a discount when you make an hourly spend commitment to an instance family and Region for a 1-year or 3-year term?
+
+On-demand
+
+EC2 Instance Savings Plans
+
+Spot Instances
+
+Reserved Instances
