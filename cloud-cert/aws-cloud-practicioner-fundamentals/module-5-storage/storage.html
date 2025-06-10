@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Cloud Practitioner Fundamentals - Module 5: Storage</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; padding: 20px; max-width: 900px; margin: 0 auto; color: #333; }
+        h1, h2, h3 { color: #111; }
+        h1 { border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        h2 { border-bottom: 1px solid #eee; padding-bottom: 5px; margin-top: 40px; }
+        h3 { margin-top: 30px; }
+        .service-card { background-color: #f9f9f9; border: 1px solid #ddd; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
+        .service-card h3 { margin-top: 0; color: #005276; }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 10px; }
+        strong { color: #111; }
+        .quiz-section { margin-top: 40px; background-color: #f0f8ff; padding: 20px; border-radius: 8px; }
+        .quiz-section h2 { margin-top: 0; }
+        .quiz-question { margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <h1>AWS Storage & Databases: Study Guide</h1>
+
+    <h2>Core Storage Concepts</h2>
+
+    <div class="service-card">
+        <h3>Block Storage vs. File Storage vs. Object Storage</h3>
+        <ul>
+            <li><strong>Block Storage (e.g., EBS, Instance Store):</strong> Provides storage volumes (like virtual hard drives) that you attach to a single instance. Data is managed as blocks. Ideal for OS, databases, and applications requiring high performance and low latency.</li>
+            <li><strong>File Storage (e.g., EFS):</strong> Provides a shared file system that multiple instances or clients can access concurrently. Data is organized in a file and folder hierarchy. Ideal for shared content repositories, web serving, and development environments.</li>
+            <li><strong>Object Storage (e.g., S3):</strong> Stores data as objects (files) in a flat address space (buckets). Highly scalable and durable. Accessed via APIs. Ideal for backups, archives, big data analytics, and static website hosting.</li>
+        </ul>
+    </div>
+
+    <h2>AWS Storage Services</h2>
+
+    <div class="service-card">
+        <h3>Amazon EBS (Elastic Block Store) - Block Storage</h3>
+        <ul>
+            <li><strong>What it is:</strong> Persistent block storage volumes for use with Amazon EC2 instances. Think of it as a virtual hard drive in the cloud.</li>
+            <li><strong>Key Feature - Persistence:</strong> Data on an EBS volume persists independently of the life of an EC2 instance. You can detach a volume and re-attach it to another instance.</li>
+            <li><strong>Key Feature - AZ-Scoped:</strong> An EBS volume is tied to a specific Availability Zone (AZ) and can only be attached to an instance in that same AZ.</li>
+            <li><strong>Snapshots:</strong> Incremental backups of EBS volumes stored in S3. Used for data backup, disaster recovery, and creating new volumes.</li>
+        </ul>
+    </div>
+
+    <div class="service-card">
+        <h3>EC2 Instance Store - Block Storage</h3>
+        <ul>
+            <li><strong>What it is:</strong> Temporary (ephemeral) block-level storage for an EC2 instance.</li>
+            <li><strong>Key Feature - Ephemeral:</strong> The storage is physically attached to the host computer. If you stop, hibernate, or terminate the instance, all data on the instance store is lost.</li>
+            <li><strong>Use Case:</strong> Ideal for temporary data, buffers, caches, scratch data, and information that can be easily reproduced.</li>
+        </ul>
+    </div>
+
+    <div class="service-card">
+        <h3>Amazon S3 (Simple Storage Service) - Object Storage</h3>
+        <ul>
+            <li><strong>What it is:</strong> An object storage service that offers industry-leading scalability, data availability, security, and performance.</li>
+            <li><strong>Core Concepts:</strong> You store data as <strong>objects</strong> within resources called <strong>buckets</strong>. A single object can be up to 5TB.</li>
+            <li><strong>Key Features:</strong>
+                <ul>
+                    <li><strong>Durability:</strong> Designed for 99.999999999% (11 nines) of durability.</li>
+                    <li><strong>Static Website Hosting:</strong> Can be configured to host static websites.</li>
+                    <li><strong>Versioning:</strong> Can keep multiple variants of an object in the same bucket.</li>
+                    <li><strong>Lifecycle Policies:</strong> Automate the process of moving objects to different storage classes over time.</li>
+                </ul>
+            </li>
+            <li><strong>S3 Storage Classes:</strong>
+                <ul>
+                    <li><strong>S3 Standard:</strong> For frequently accessed data.</li>
+                    <li><strong>S3 Standard-IA (Infrequent Access):</strong> For data that is less frequently accessed but requires rapid access when needed.</li>
+                    <li><strong>S3 One Zone-IA:</strong> Like Standard-IA, but stored in a single AZ at a lower cost.</li>
+                    <li><strong>S3 Glacier (Instant, Flexible, Deep Archive):</strong> Low-cost storage classes for data archiving with varying retrieval times.</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    
+    <div class="service-card">
+        <h3>Amazon EFS (Elastic File System) - File Storage</h3>
+        <ul>
+            <li><strong>What it is:</strong> A simple, scalable, elastic file system. It grows and shrinks automatically as you add and remove files.</li>
+            <li><strong>Key Feature - Concurrency:</strong> Can be mounted on and accessed by many EC2 instances (and on-premises servers) at the same time.</li>
+            <li><strong>Key Feature - Regional:</strong> EFS is a regional service; it stores data in and across multiple Availability Zones for high availability and durability.</li>
+        </ul>
+    </div>
+
+    <h2>AWS Database Services</h2>
+
+    <div class="service-card">
+        <h3>Amazon RDS (Relational Database Service)</h3>
+        <ul>
+            <li><strong>What it is:</strong> A managed service that makes it easy to set up, operate, and scale a relational database in the cloud.</li>
+            <li><strong>Key Feature - Managed:</strong> Automates time-consuming administration tasks such as hardware provisioning, database setup, patching, and backups.</li>
+            <li><strong>Supported Engines:</strong> Includes Amazon Aurora, PostgreSQL, MySQL, MariaDB, Oracle, and Microsoft SQL Server.</li>
+        </ul>
+    </div>
+
+    <div class="service-card">
+        <h3>Amazon Aurora</h3>
+        <ul>
+            <li><strong>What it is:</strong> A MySQL and PostgreSQL-compatible relational database built for the cloud.</li>
+            <li><strong>Key Features:</strong>
+                <ul>
+                    <li><strong>Performance:</strong> Provides up to 5x the throughput of standard MySQL and 3x the throughput of standard PostgreSQL.</li>
+                    <li><strong>Scalability & Durability:</strong> Replicates six copies of your data across three AZs and continuously backs up your data to S3.</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="service-card">
+        <h3>Amazon DynamoDB - NoSQL Database</h3>
+        <ul>
+            <li><strong>What it is:</strong> A fast and flexible NoSQL key-value and document database service.</li>
+            <li><strong>Key Features:</strong>
+                <ul>
+                    <li><strong>Performance:</strong> Delivers single-digit millisecond performance at any scale.</li>
+                    <li><strong>Serverless:</strong> No servers to provision, patch, or manage.</li>
+                    <li><strong>Scalability:</strong> Automatically scales tables up and down to adjust for capacity and maintain performance.</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="service-card">
+        <h3>Amazon Redshift - Data Warehouse</h3>
+        <ul>
+            <li><strong>What it is:</strong> A fast, fully managed, petabyte-scale data warehouse service.</li>
+            <li><strong>Use Case:</strong> Used for big data analytics. It allows you to run complex analytic queries against large datasets.</li>
+            <li><strong>Key Feature:</strong> Collects data from many sources and helps you understand relationships and trends.</li>
+        </ul>
+    </div>
+
+    <div class="service-card">
+        <h3>AWS DMS (Database Migration Service)</h3>
+        <ul>
+            <li><strong>What it is:</strong> A service to help migrate databases to AWS easily and securely.</li>
+            <li><strong>Key Feature:</strong> The source database remains fully operational during the migration, minimizing downtime.</li>
+            <li><strong>Migration Types:</strong>
+                <ul>
+                    <li><strong>Homogeneous:</strong> Migrating between the same database engines (e.g., on-premises MySQL to RDS for MySQL).</li>
+                    <li><strong>Heterogeneous:</strong> Migrating between different database engines (e.g., Oracle to Aurora). This requires the <strong>AWS Schema Conversion Tool (SCT)</strong>.</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="service-card">
+        <h3>Other Specialized Databases</h3>
+        <ul>
+            <li><strong>Amazon DocumentDB:</strong> A managed NoSQL database service that supports MongoDB workloads.</li>
+            <li><strong>Amazon Neptune:</strong> A managed graph database service for building applications with highly connected datasets.</li>
+            <li><strong>Amazon QLDB (Quantum Ledger Database):</strong> A ledger database providing a transparent, immutable, and verifiable transaction log.</li>
+            <li><strong>Amazon ElastiCache:</strong> An in-memory caching service (supporting Redis and Memcached) to improve application performance.</li>
+            <li><strong>Amazon DAX (DynamoDB Accelerator):</strong> An in-memory cache specifically for DynamoDB.</li>
+        </ul>
+    </div>
+
+    <div class="quiz-section">
+        <h2>Module 5 Quiz</h2>
+        <div class="quiz-question">
+            <p><strong>1. Which Amazon S3 storage classes are optimized for archival data? (Select TWO.)</strong></p>
+            <ul>
+                <li>Amazon S3 Standard</li>
+                <li>Amazon S3 Glacier Flexible Retrieval</li>
+                <li>Amazon S3 Intelligent-Tiering</li>
+                <li>Amazon S3 Standard-IA</li>
+                <li>Amazon S3 Glacier Deep Archive</li>
+            </ul>
+        </div>
+        <div class="quiz-question">
+            <p><strong>2. Which statement or statements are TRUE about Amazon EBS volumes and Amazon EFS file systems?</strong></p>
+            <ul>
+                <li>EBS volumes store data within a single Availability Zone. Amazon EFS file systems store data across multiple Availability Zones.</li>
+                <li>EBS volumes store data across multiple Availability Zones. Amazon EFS file systems store data within a single Availability Zone.</li>
+                <li>EBS volumes and Amazon EFS file systems both store data within a single Availability Zone.</li>
+                <li>EBS volumes and Amazon EFS file systems both store data across multiple Availability Zones.</li>
+            </ul>
+        </div>
+        <div class="quiz-question">
+            <p><strong>3. You want to store data in an object storage service. Which AWS service is best for this type of storage?</strong></p>
+            <ul>
+                <li>Amazon Managed Blockchain</li>
+                <li>Amazon Elastic File System (Amazon EFS)</li>
+                <li>Amazon Elastic Block Store (Amazon EBS)</li>
+                <li>Amazon Simple Storage Service (Amazon S3)</li>
+            </ul>
+        </div>
+        <div class="quiz-question">
+            <p><strong>4. Which statement best describes Amazon DynamoDB?</strong></p>
+            <ul>
+                <li>A service that enables you to run relational databases in the AWS Cloud</li>
+                <li>A serverless key-value database service</li>
+                <li>A service that you can use to migrate relational databases, nonrelational databases, and other types of data stores</li>
+                <li>An enterprise-class relational database</li>
+            </ul>
+        </div>
+        <div class="quiz-question">
+            <p><strong>5. Which service is used to query and analyze data across a data warehouse?</strong></p>
+            <ul>
+                <li>Amazon Redshift</li>
+                <li>Amazon Neptune</li>
+                <li>Amazon DocumentDB</li>
+                <li>Amazon ElastiCache</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,126 @@
+# AWS Module 6: Security Practice Questions (Multiple Choice)
+
+This document contains multiple-choice practice questions based on the AWS security module. The Answer Key is located at the bottom of the file.
+
+---
+
+### Section 1: Shared Responsibility & IAM
+
+**1. According to the AWS Shared Responsibility Model, which of the following is the customer's responsibility?**
+    a) Securing the physical hardware of AWS data centers.
+    b) Managing the underlying hypervisor.
+    c) Configuring security groups and network ACLs.
+    d) Patching the firmware of networking equipment.
+
+**2. Which of the following best describes the AWS account root user?**
+    a) A user with limited permissions for daily tasks, following the principle of least privilege.
+    b) An identity created in IAM that has no permissions by default.
+    c) The original identity for an AWS account that has unrestricted access to all resources.
+    d) A temporary identity assumed to perform a specific task.
+
+**3. What is the primary function of an IAM Policy?**
+    a) To provide temporary credentials for applications running on EC2.
+    b) A JSON document that defines a set of permissions (allow/deny) for actions on AWS resources.
+    c) A collection of IAM users for easier management.
+    d) To enforce multi-factor authentication for all users.
+
+**4. When granting permissions to users, what is the recommended security best practice?**
+    a) Granting full administrative access to all users to ensure they are never blocked.
+    b) Applying the principle of least privilege by granting only the permissions required to perform their tasks.
+    c) Using only the root user for all operational tasks.
+    d) Attaching policies directly to users instead of using groups.
+
+**5. An application running on an EC2 instance needs to access an S3 bucket. What is the most secure way to grant these permissions?**
+    a) Store IAM user access keys directly in the application's source code.
+    b) Create an IAM role with the necessary permissions and attach it to the EC2 instance.
+    c) Open the S3 bucket to public access.
+    d) Create a new IAM user and share its password with the development team.
+
+---
+
+### Section 2: Account Management & Compliance
+
+**6. A company has dozens of AWS accounts and wants to simplify billing and apply consistent security policies. Which service should they use?**
+    a) AWS IAM
+    b) AWS Budgets
+    c) AWS Organizations
+    d) AWS Config
+
+**7. Within AWS Organizations, what can be used to restrict the AWS services and actions that users and roles can access in member accounts?**
+    a) IAM Policies
+    b) Security Groups
+    c) Network ACLs
+    d) Service Control Policies (SCPs)
+
+**8. Where can a customer find and download AWS's third-party audit reports and compliance certifications?**
+    a) AWS Billing Dashboard
+    b) AWS Personal Health Dashboard
+    c) AWS Artifact
+    d) Amazon Inspector
+
+**9. By using AWS, what security responsibility does a customer inherit from AWS?**
+    a) Configuration of their own applications.
+    b) Compliance with physical and environmental controls for AWS data centers.
+    c) Management of user passwords and access keys.
+    d) Patching their own guest operating systems.
+
+**10. What is the purpose of an Organizational Unit (OU) in AWS Organizations?**
+    a) To create a new AWS Region.
+    b) To group accounts together to make it easier to apply policies and manage them.
+    c) A type of IAM role for cross-account access.
+    d) To define the physical location of a specific data center.
+
+---
+
+### Section 3: Threat Detection & Data Protection
+
+**11. Which AWS service provides managed protection against common Distributed Denial of Service (DDoS) attacks?**
+    a) Amazon GuardDuty
+    b) AWS Shield
+    c) Amazon Inspector
+    d) AWS KMS
+
+**12. What is the function of AWS WAF (Web Application Firewall)?**
+    a) To encrypt data at rest in S3 buckets.
+    b) To monitor network traffic within a VPC.
+    c) To protect web applications from common exploits like SQL injection and cross-site scripting.
+    d) To provide threat detection by analyzing AWS logs.
+
+**13. A security team wants to run an automated assessment on their EC2 instances to check for vulnerabilities and deviations from security best practices. Which service should they use?**
+    a) AWS Trusted Advisor
+    b) AWS Shield
+    c) Amazon GuardDuty
+    d) Amazon Inspector
+
+**14. Which service provides intelligent threat detection by continuously monitoring AWS account activity for malicious or unauthorized behavior?**
+    a) AWS WAF
+    b) Amazon Macie
+    c) Amazon GuardDuty
+    d) AWS Config
+
+**15. What is the primary role of AWS Key Management Service (KMS)?**
+    a) To manage and control the use of cryptographic keys for data encryption.
+    b) To manage user passwords and SSH keys for EC2 instances.
+    c) To detect threats by analyzing logs.
+    d) To filter malicious web traffic.
+
+---
+---
+
+# Answer Key
+
+1.  **c)** Configuring security groups and network ACLs.
+2.  **c)** The original identity for an AWS account that has unrestricted access to all resources.
+3.  **b)** A JSON document that defines a set of permissions (allow/deny) for actions on AWS resources.
+4.  **b)** Applying the principle of least privilege by granting only the permissions required to perform their tasks.
+5.  **b)** Create an IAM role with the necessary permissions and attach it to the EC2 instance.
+6.  **c)** AWS Organizations
+7.  **d)** Service Control Policies (SCPs)
+8.  **c)** AWS Artifact
+9.  **b)** Compliance with physical and environmental controls for AWS data centers.
+10. **b)** To group accounts together to make it easier to apply policies and manage them.
+11. **b)** AWS Shield
+12. **c)** To protect web applications from common exploits like SQL injection and cross-site scripting.
+13. **d)** Amazon Inspector
+14. **c)** Amazon GuardDuty
+15. **a)** To manage and control the use of cryptographic keys for data encryption.

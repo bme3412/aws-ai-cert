@@ -1,0 +1,91 @@
+# AWS Module 2: Compute Practice Questions (Multiple Choice)
+
+This document contains multiple-choice practice questions based on the AWS compute module. The Answer Key is located at the bottom of the file.
+
+---
+
+### Section 1: EC2 Fundamentals
+
+**1. A company runs an application that requires high-performance processors for compute-intensive tasks like scientific modeling. Which EC2 instance family is the most appropriate choice?**
+    a) General Purpose
+    b) Memory Optimized
+    c) Compute Optimized
+    d) Storage Optimized
+
+**2. An organization needs to run a critical, steady-state workload on EC2 for the next three years. To get the maximum possible discount, which pricing model should they choose?**
+    a) On-Demand Instances
+    b) Spot Instances
+    c) Savings Plans
+    d) Reserved Instances
+
+**3. A university has a large-scale batch processing job that can be run at any time and can withstand interruptions. Which EC2 pricing model would be the most cost-effective?**
+    a) Dedicated Hosts
+    b) Reserved Instances
+    c) Spot Instances
+    d) On-Demand Instances
+
+---
+
+### Section 2: Scaling and Application Integration
+
+**4. What is the primary function of Amazon EC2 Auto Scaling?**
+    a) To distribute incoming traffic evenly across multiple EC2 instances.
+    b) To automatically adjust the number of EC2 instances in response to demand.
+    c) To run code in response to triggers without managing servers.
+    d) To establish a dedicated network connection to AWS.
+
+**5. A web application is experiencing uneven traffic, causing some EC2 instances to be overloaded while others are idle. Which service should be used to distribute incoming requests evenly across the fleet of instances?**
+    a) Amazon EC2 Auto Scaling
+    b) Elastic Load Balancing (ELB)
+    c) Amazon SQS
+    d) Amazon Route 53
+
+**6. A development team wants to build a loosely coupled application where messages can be stored in a durable queue until they are processed by a downstream service. Which service should they use?**
+    a) Amazon SNS (Simple Notification Service)
+    b) Amazon SQS (Simple Queue Service)
+    c) Elastic Load Balancing
+    d) AWS Lambda
+
+**7. An application needs to send a single notification that will be delivered to multiple different subscriber endpoints, such as an SQS queue, a Lambda function, and an email address. Which service supports this "fan-out" messaging model?**
+    a) Amazon SQS (Simple Queue Service)
+    b) AWS Fargate
+    c) Elastic Load Balancing
+    d) Amazon SNS (Simple Notification Service)
+
+---
+
+### Section 3: Serverless and Containers
+
+**8. What does the term "serverless" mean in the context of AWS services like Lambda?**
+    a) The application runs on servers, but you do not need to provision or manage them.
+    b) The application code runs directly on the client's machine.
+    c) No servers are used at any point in the application's lifecycle.
+    d) The service requires you to use a dedicated physical server.
+
+**9. A company wants to run its Docker container workloads without having to provision or manage the underlying EC2 instances. Which AWS service provides a serverless compute engine for containers?**
+    a) Amazon EC2
+    b) AWS Lambda
+    c) Amazon EKS (Elastic Kubernetes Service)
+    d) AWS Fargate
+
+**10. Which service is designed to run code for short durations (up to 15 minutes) in response to events and triggers, with automatic scaling and no server management?**
+    a) Amazon EC2
+    b) AWS Fargate
+    c) AWS Lambda
+    d) Amazon ECS (Elastic Container Service)
+
+---
+---
+
+# Answer Key
+
+1.  **c)** Compute Optimized
+2.  **d)** Reserved Instances
+3.  **c)** Spot Instances
+4.  **b)** To automatically adjust the number of EC2 instances in response to demand.
+5.  **b)** Elastic Load Balancing (ELB)
+6.  **b)** Amazon SQS (Simple Queue Service)
+7.  **d)** Amazon SNS (Simple Notification Service)
+8.  **a)** The application runs on servers, but you do not need to provision or manage them.
+9.  **d)** AWS Fargate
+10. **c)** AWS Lambda

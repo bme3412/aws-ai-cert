@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Cloud Practitioner Fundamentals - Module 4: Networking</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; padding: 20px; max-width: 900px; margin: 0 auto; color: #333; }
+        h1, h2, h3 { color: #111; }
+        h1 { border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        h2 { border-bottom: 1px solid #eee; padding-bottom: 5px; margin-top: 40px; }
+        h3 { margin-top: 30px; }
+        .service-card { background-color: #f9f9f9; border: 1px solid #ddd; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
+        .service-card h3 { margin-top: 0; color: #005276; }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 10px; }
+        strong { color: #111; }
+    </style>
+</head>
+<body>
+    <h1>AWS Networking: Study Guide</h1>
+
+    <h2>Connectivity to AWS</h2>
+
+    <div class="service-card">
+        <h3>Amazon VPC (Virtual Private Cloud)</h3>
+        <ul>
+            <li><strong>What it is:</strong> A service that lets you provision a logically isolated section of the AWS Cloud where you can launch AWS resources in a virtual network that you define.</li>
+            <li><strong>Your own private network:</strong> You can define your own private IP address range for your AWS resources.</li>
+            <li><strong>Subnets:</strong> Within a VPC, you can organize your resources into subnets. A subnet is a section of a VPC that can contain resources like EC2 instances.</li>
+        </ul>
+    </div>
+
+    <div class="service-card">
+        <h3>Internet Gateway</h3>
+        <ul>
+            <li><strong>What it is:</strong> A horizontally scaled, redundant, and highly available VPC component that allows communication between your VPC and the internet.</li>
+            <li><strong>Use Case:</strong> To allow public traffic from the internet to access your VPC. Think of it as a doorway for public access.</li>
+        </ul>
+    </div>
+
+    <div class="service-card">
+        <h3>Virtual Private Gateway</h3>
+        <ul>
+            <li><strong>What it is:</strong> The component that allows you to establish a VPN connection between your VPC and a private network, like an on-premises data center.</li>
+            <li><strong>Use Case:</strong> To access private resources within your VPC from your own corporate network. It's a private doorway.</li>
+        </ul>
+    </div>
+
+    <div class="service-card">
+        <h3>AWS Direct Connect</h3>
+        <ul>
+            <li><strong>What it is:</strong> A cloud service solution that makes it easy to establish a dedicated network connection from your premises to AWS.</li>
+            <li><strong>Key Feature:</strong> Provides a completely private, dedicated fiber connection. This can reduce network costs, increase bandwidth throughput, and provide a more consistent network experience than internet-based connections.</li>
+            <li><strong>Use Case:</strong> For high-regulatory needs or to bypass potential bandwidth issues with the public internet.</li>
+        </ul>
+    </div>
+
+    <h2>Subnets and Access Control</h2>
+
+    <div class="service-card">
+        <h3>Subnets (Public vs. Private)</h3>
+        <ul>
+            <li><strong>Public Subnet:</strong> A subnet whose traffic is routed to an internet gateway. Resources in a public subnet can be accessed from the internet.</li>
+            <li><strong>Private Subnet:</strong> A subnet that doesn't have a route to the internet gateway. Resources in a private subnet are only accessible from within your private network.</li>
+            <li><strong>Example:</strong> A common practice is to place web servers (EC2 instances) in a public subnet and databases (RDS instances) in a private subnet for security.</li>
+        </ul>
+    </div>
+
+    <div class="service-card">
+        <h3>Network ACLs (Access Control Lists)</h3>
+        <ul>
+            <li><strong>What it is:</strong> A virtual firewall that controls inbound and outbound traffic at the subnet level.</li>
+            <li><strong>Stateless:</strong> They check packets that cross the subnet border each way, inbound and outbound, without considering any previous packets. They don't have memory.</li>
+            <li><strong>Analogy:</strong> Like a passport control officer who checks everyone entering and leaving the country, regardless of whether they were just approved.</li>
+            <li><strong>Default:</strong> By default, a network ACL allows all inbound and outbound traffic.</li>
+        </ul>
+    </div>
+
+    <div class="service-card">
+        <h3>Security Groups</h3>
+        <ul>
+            <li><strong>What it is:</strong> A virtual firewall that controls inbound and outbound traffic for an Amazon EC2 instance.</li>
+            <li><strong>Stateful:</strong> They remember previous decisions made for incoming packets. If you send a request from your instance, the return traffic for that request is automatically allowed, regardless of inbound security group rules.</li>
+             <li><strong>Analogy:</strong> Like a doorman for your building (the EC2 instance) who checks people coming in, but doesn't check them on their way out.</li>
+            <li><strong>Default:</strong> By default, a security group denies all inbound traffic and allows all outbound traffic.</li>
+        </ul>
+    </div>
+    
+    <h2>Global Networking</h2>
+
+    <div class="service-card">
+        <h3>Amazon Route 53</h3>
+        <ul>
+            <li><strong>What it is:</strong> A highly available and scalable cloud Domain Name System (DNS) web service.</li>
+            <li><strong>Function:</strong> Translates human-readable domain names (like www.amazon.com) into machine-readable IP addresses (like 192.0.2.44).</li>
+            <li><strong>Routing Policies:</strong> Can direct traffic based on various policies like latency, geolocation, geoproximity, and weighted round robin.</li>
+            <li><strong>Domain Registration:</strong> You can also buy and manage domain names directly through Route 53.</li>
+        </ul>
+    </div>
+
+    <div class="service-card">
+        <h3>Amazon CloudFront</h3>
+        <ul>
+            <li><strong>What it is:</strong> A fast content delivery network (CDN) service that securely delivers data, videos, applications, and APIs to customers globally with low latency and high transfer speeds.</li>
+            <li><strong>How it works:</strong> It uses a global network of Edge Locations to cache content closer to your users, which improves performance.</li>
+            <li><strong>Example:</strong> If a user in Ireland requests your website, CloudFront can serve images and videos from an Edge Location in Europe, rather than from your web server in North America, reducing latency.</li>
+        </ul>
+    </div>
+
+</body>
+</html>

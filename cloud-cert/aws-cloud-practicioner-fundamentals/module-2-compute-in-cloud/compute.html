@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Cloud Practitioner Fundamentals - Module 2: Compute</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; padding: 20px; max-width: 900px; margin: 0 auto; color: #333; }
+        h1, h2, h3 { color: #111; }
+        h1 { border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        h2 { border-bottom: 1px solid #eee; padding-bottom: 5px; margin-top: 40px; }
+        h3 { margin-top: 30px; }
+        .service-card { background-color: #f9f9f9; border: 1px solid #ddd; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
+        .service-card h3 { margin-top: 0; color: #005276; }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 10px; }
+        strong { color: #111; }
+        .quiz-section { margin-top: 40px; background-color: #f0f8ff; padding: 20px; border-radius: 8px; }
+        .quiz-section h2 { margin-top: 0; }
+        .quiz-question { margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <h1>AWS Compute: Study Guide</h1>
+
+    <h2>Amazon EC2 Fundamentals</h2>
+
+    <div class="service-card">
+        <h3>Amazon EC2 Instance Types</h3>
+        <ul>
+            <li><strong>General Purpose:</strong> Provides a balance of compute, memory, and networking resources. Good for a wide variety of diverse workloads like web servers or code repositories.</li>
+            <li><strong>Compute Optimized:</strong> Ideal for compute-bound applications that benefit from high-performance processors, such as gaming servers, high-performance computing (HPC), and scientific modeling.</li>
+            <li><strong>Memory Optimized:</strong> Designed for workloads that process large data sets in memory, delivering fast performance. Use cases include high-performance databases.</li>
+            <li><strong>Accelerated Computing:</strong> Use hardware accelerators (coprocessors) to perform functions like floating-point number calculations, graphics processing, or data pattern matching more efficiently than software running on CPUs.</li>
+            <li><strong>Storage Optimized:</strong> Designed for workloads that require high, sequential read and write access to very large data sets on local storage. Examples include data warehousing and distributed file systems.</li>
+        </ul>
+    </div>
+
+    <div class="service-card">
+        <h3>Amazon EC2 Pricing Models</h3>
+        <ul>
+            <li><strong>On-Demand:</strong> Pay for compute capacity by the hour or second with no long-term commitments. Ideal for short-term, irregular workloads that cannot be interrupted.</li>
+            <li><strong>Savings Plans:</strong> Flexible pricing model that offers lower prices in exchange for a commitment to a consistent amount of usage (measured in $/hour) for a 1 or 3-year term.</li>
+            <li><strong>Reserved Instances:</strong> Provides a significant discount (up to 75%) compared to On-Demand for a 1 or 3-year term commitment. Best for steady-state or predictable usage.</li>
+            <li><strong>Spot Instances:</strong> Request spare EC2 computing capacity for up to 90% off the On-Demand price. These instances can be reclaimed by AWS with a 2-minute warning, making them suitable for fault-tolerant workloads like batch processing.</li>
+            <li><strong>Dedicated Hosts:</strong> A physical EC2 server dedicated for your use, often to meet compliance requirements.</li>
+        </ul>
+    </div>
+
+    <h2>Scalability and Load Balancing</h2>
+
+    <div class="service-card">
+        <h3>Amazon EC2 Auto Scaling</h3>
+        <ul>
+            <li><strong>What it is:</strong> A service that automatically adds or removes EC2 instances in response to changing application demand.</li>
+            <li><strong>How it works:</strong> You define scaling policies that determine when to scale out (add instances) and when to scale in (remove instances).</li>
+            <li><strong>Benefit:</strong> Helps maintain application availability and allows you to follow the AWS best practice of paying only for the resources you use.</li>
+        </ul>
+    </div>
+
+    <div class="service-card">
+        <h3>Elastic Load Balancing (ELB)</h3>
+        <ul>
+            <li><strong>What it is:</strong> A service that automatically distributes incoming application traffic across multiple resources, such as EC2 instances.</li>
+            <li><strong>Function:</strong> Acts as a single point of contact for traffic. It prevents any single instance from being overloaded by distributing the workload evenly.</li>
+            <li><strong>Key Feature:</strong> ELB is a regional, managed service that is highly available and automatically scalable. It works seamlessly with EC2 Auto Scaling.</li>
+        </ul>
+    </div>
+    
+    <h2>Application Integration & Serverless</h2>
+    
+    <div class="service-card">
+        <h3>Messaging and Queuing (Decoupling Applications)</h3>
+        <ul>
+            <li><strong>Amazon SQS (Simple Queue Service):</strong> A fully managed message queuing service that enables you to decouple and scale microservices, distributed systems, and serverless applications. Messages are placed in a queue and processed asynchronously.</li>
+            <li><strong>Amazon SNS (Simple Notification Service):</strong> A fully managed messaging service for both application-to-application (A2A) and application-to-person (A2P) communication. It uses a publish/subscribe (pub/sub) model where a single message is pushed to multiple subscribers.</li>
+        </ul>
+    </div>
+
+    <div class="service-card">
+        <h3>Serverless and Container Services</h3>
+        <ul>
+            <li><strong>AWS Lambda:</strong> A serverless compute service that lets you run code without provisioning or managing servers. You pay only for the compute time you consume. Code is executed based on triggers and runs for short durations (up to 15 minutes).</li>
+            <li><strong>Containers:</strong> A standard way to package an application's code and dependencies.
+                <ul>
+                    <li><strong>Amazon ECS (Elastic Container Service):</strong> A highly scalable, high-performance container orchestration service to run, stop, and manage Docker containers on a cluster.</li>
+                    <li><strong>Amazon EKS (Elastic Kubernetes Service):</strong> A fully managed service to run Kubernetes on AWS.</li>
+                </ul>
+            </li>
+            <li><strong>AWS Fargate:</strong> A serverless compute engine for containers that works with both Amazon ECS and EKS. It removes the need to provision and manage the underlying EC2 instances for your containers.</li>
+        </ul>
+    </div>
+
+    <div class="quiz-section">
+        <h2>Module 2 Quiz</h2>
+        <div class="quiz-question">
+            <p><strong>1. Which Amazon EC2 instance type is suitable for data warehousing applications?</strong></p>
+            <ul>
+                <li>Memory optimized</li>
+                <li>Storage optimized</li>
+                <li>General purpose</li>
+                <li>Compute optimized</li>
+            </ul>
+        </div>
+        <div class="quiz-question">
+            <p><strong>2. Which Amazon EC2 pricing option provides a discount when you make an hourly spend commitment to an instance family and Region for a 1-year or 3-year term?</strong></p>
+            <ul>
+                <li>On-demand</li>
+                <li>EC2 Instance Savings Plans</li>
+                <li>Spot Instances</li>
+                <li>Reserved Instances</li>
+            </ul>
+        </div>
+        <div class="quiz-question">
+            <p><strong>3. Which AWS service is the best choice for publishing messages to subscribers?</strong></p>
+            <ul>
+                <li>Amazon Simple Queue Service (Amazon SQS)</li>
+                <li>Amazon EC2 Auto Scaling</li>
+                <li>Amazon Simple Notification Service (Amazon SNS)</li>
+                <li>Elastic Load Balancing</li>
+            </ul>
+        </div>
+        <div class="quiz-question">
+            <p><strong>4. You have a workload that will run for a total of 6 months and can withstand interruptions. What would be the most cost-efficient Amazon EC2 purchasing option?</strong></p>
+            <ul>
+                <li>Reserved Instance</li>
+                <li>Spot Instance</li>
+                <li>Dedicated Instance</li>
+                <li>On-Demand Instance</li>
+            </ul>
+        </div>
+        <div class="quiz-question">
+            <p><strong>5. Which process is an example of Elastic Load Balancing?</strong></p>
+            <ul>
+                <li>Ensuring that no single Amazon EC2 instance has to carry the full workload on its own</li>
+                <li>Removing unneeded Amazon EC2 instances when demand is low</li>
+                <li>Adding a second Amazon EC2 instance during an online store's popular sale</li>
+                <li>Automatically adjusting the number of Amazon EC2 instances to meet demand</li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>

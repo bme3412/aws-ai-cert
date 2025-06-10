@@ -1,0 +1,92 @@
+# AWS Module 3: Global Infrastructure & Reliability Practice Questions (Multiple Choice)
+
+This document contains multiple-choice practice questions based on the AWS global infrastructure module. The Answer Key is located at the bottom of the file.
+
+---
+
+### Section 1: Global Infrastructure
+
+**1. What is the relationship between an AWS Region and an Availability Zone?**
+    a) An AWS Region is a collection of one or more Availability Zones.
+    b) An Availability Zone is a collection of one or more AWS Regions.
+    c) A Region and an Availability Zone are completely independent of each other.
+    d) A single data center is called a Region, and a collection of data centers is an Availability Zone.
+
+**2. A company has a legal requirement that all of its data must be stored within the geographical boundaries of the United Kingdom. Which of the following is the most important factor when selecting an AWS Region?**
+    a) Proximity to customers
+    b) Pricing
+    c) Feature availability
+    d) Compliance with data governance
+
+**3. What is the AWS best practice for running a highly available and fault-tolerant application?**
+    a) Deploy your application across multiple Edge Locations.
+    b) Deploy your application in a single, large Availability Zone.
+    c) Deploy your application across at least two Availability Zones within a Region.
+    d) Deploy your application across two different AWS Regions.
+
+---
+
+### Section 2: Edge Infrastructure
+
+**4. What is the primary purpose of an AWS Edge Location?**
+    a) To host EC2 instances for primary application workloads.
+    b) A data center used to meet specific compliance requirements.
+    c) To cache content closer to customers, reducing latency.
+    d) A separate, isolated environment for testing new AWS services.
+
+**5. A company wants to deliver its website content and videos to a global user base with the lowest possible latency. Which AWS service should they use?**
+    a) AWS Direct Connect
+    b) Amazon Route 53
+    c) An AWS Availability Zone
+    d) Amazon CloudFront
+
+**6. Which of the following services is hosted at AWS Edge Locations? (Select TWO)**
+    a) Amazon EC2
+    b) Amazon S3
+    c) Amazon CloudFront
+    d) Amazon Route 53
+    e) AWS Lambda
+
+---
+
+### Section 3: Interacting with AWS
+
+**7. Which tool allows a user to manage their AWS services through a web-based, point-and-click graphical interface?**
+    a) AWS SDK (Software Development Kit)
+    b) AWS CLI (Command Line Interface)
+    c) AWS Management Console
+    d) AWS CloudFormation
+
+**8. A developer wants to programmatically interact with AWS services from within their Python application. Which tool is designed for this purpose?**
+    a) AWS Management Console
+    b) AWS CLI (Command Line Interface)
+    c) AWS SDK (Software Development Kit)
+    d) AWS Elastic Beanstalk
+
+**9. An operations team needs to automate the deployment of a complex environment with many interdependent AWS resources. They want to define the entire infrastructure in a text file to ensure repeatable and error-free deployments. Which service should they use?**
+    a) AWS Management Console
+    b) AWS CloudFormation
+    c) AWS CLI (Command Line Interface)
+    d) AWS Trusted Advisor
+
+**10. A team wants to deploy a standard web application on EC2 but wants to abstract away the underlying provisioning of the load balancer, auto-scaling group, and EC2 instances. They just want to provide their application code. Which service is best suited for this?**
+    a) AWS Lambda
+    b) Amazon S3
+    c) AWS Elastic Beanstalk
+    d) AWS Fargate
+
+---
+---
+
+# Answer Key
+
+1.  **a)** An AWS Region is a collection of one or more Availability Zones.
+2.  **d)** Compliance with data governance
+3.  **c)** Deploy your application across at least two Availability Zones within a Region.
+4.  **c)** To cache content closer to customers, reducing latency.
+5.  **d)** Amazon CloudFront
+6.  **c)** Amazon CloudFront, **d)** Amazon Route 53
+7.  **c)** AWS Management Console
+8.  **c)** AWS SDK (Software Development Kit)
+9.  **b)** AWS CloudFormation
+10. **c)** AWS Elastic Beanstalk

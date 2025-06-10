@@ -1,0 +1,161 @@
+# AWS Module 5: Storage & Databases Practice Questions (Multiple Choice)
+
+This document contains multiple-choice practice questions based on the storage and database modules. The Answer Key is located at the bottom of the file.
+
+---
+
+### Section 1: Core Storage Concepts (EBS, S3, EFS)
+
+**1. What is the fundamental difference between an EC2 Instance Store and an EBS volume regarding data persistence?**
+    a) EBS volumes are ephemeral, while Instance Stores are persistent.
+    b) Data on an Instance Store persists after stopping the instance, while EBS data is deleted.
+    c) Data on an EBS volume persists independently of the instance's lifecycle, while Instance Store data is deleted when the instance is stopped or terminated.
+    d) Both EBS and Instance Stores are persistent, but only EBS supports snapshots.
+
+**2. You are running a critical database on an EC2 instance and cannot tolerate data loss if the instance is stopped. Which storage option is required?**
+    a) Amazon S3
+    b) EC2 Instance Store
+    c) Amazon EFS
+    d) Amazon EBS
+
+**3. How are EBS volumes backed up, and what is a key characteristic of these backups after the initial one?**
+    a) By creating replicas, which are always full copies of the volume.
+    b) By taking snapshots, where every snapshot is a full copy of the volume.
+    c) By taking snapshots, where subsequent snapshots are incremental, only saving changed blocks.
+    d) By copying data to an EFS file system, which is done automatically every hour.
+
+**4. Your application needs to store and distribute large, highly durable media files (like videos and images) globally. Which AWS service is the best fit?**
+    a) Amazon RDS
+    b) Amazon EBS
+    c) Amazon S3
+    d) Amazon EFS
+
+**5. In Amazon S3, what is the relationship between "buckets" and "objects"?**
+    a) Buckets are containers for objects; objects are the actual data files.
+    b) Objects are containers for buckets; buckets are the actual data files.
+    c) Buckets and objects are both terms for the same thing: a data file.
+    d) A bucket is a folder inside an object.
+
+**6. Which S3 feature allows you to automate the process of moving data between different storage classes based on its age?**
+    a) S3 Versioning
+    b) S3 Lifecycle Policies
+    c) S3 Cross-Region Replication
+    d) S3 Access Analyzer
+
+**7. A web application requires multiple EC2 instances to access and modify a shared set of files at the same time. Which service provides a shared file system for this purpose?**
+    a) Amazon EFS
+    b) Amazon EBS
+    c) EC2 Instance Store
+    d) Amazon S3
+
+**8. What is a key architectural difference between an EBS volume and an EFS file system in terms of regional scope?**
+    a) Both EBS and EFS are global services.
+    b) EBS is a regional service (multi-AZ), while EFS is scoped to a single Availability Zone.
+    c) EBS is scoped to a single Availability Zone, while EFS is a regional service that stores data across multiple Availability Zones.
+    d) Both EBS and EFS are scoped to a single Availability Zone.
+
+---
+
+### Section 2: Database Services (RDS, Aurora, DynamoDB)
+
+**9. Amazon RDS is described as a "managed service." What does this mean?**
+    a) You are responsible for all database administration, including patching and backups.
+    b) AWS automates tasks like hardware provisioning and database patching, allowing you to focus on your application.
+    c) It is a serverless database that requires no management at all.
+    d) It only supports a single database engine that you manage yourself.
+
+**10. Amazon Aurora is a proprietary AWS database engine that is compatible with which two open-source relational databases?**
+    a) Oracle and Microsoft SQL Server
+    b) MongoDB and DynamoDB
+    c) MySQL and PostgreSQL
+    d) Redshift and Neptune
+
+**11. What is a primary advantage of using Amazon Aurora over a standard relational database on RDS?**
+    a) It is cheaper but has lower performance.
+    b) It offers significantly higher performance and enhanced durability with six copies of your data across three AZs.
+    c) It can only be used in a single Availability Zone.
+    d) It does not require any backups.
+
+**12. Which AWS database service is a serverless NoSQL database that provides single-digit millisecond latency for key-value workloads?**
+    a) Amazon RDS for MySQL
+    b) Amazon Redshift
+    c) Amazon Aurora
+    d) Amazon DynamoDB
+
+**13. Which statement accurately describes the schema in Amazon DynamoDB?**
+    a) It requires a rigid, predefined schema for all items in a table, similar to SQL databases.
+    b) It has a flexible schema; only the primary key is required, and other attributes can vary between items.
+    c) It does not support schemas at all.
+    d) It requires a schema, but it can be changed at any time, causing significant downtime.
+
+**14. Why is Amazon DynamoDB considered a "serverless" service?**
+    a) Because you must provision and manage the underlying EC2 instances it runs on.
+    b) Because it runs on your local server, not in the AWS cloud.
+    c) Because you do not need to provision, patch, or manage servers; AWS handles all the underlying infrastructure.
+    d) Because it is a relational database.
+
+---
+
+### Section 3: Specialized Data Services (Redshift, DMS, etc.)
+
+**15. Which AWS service is a petabyte-scale data warehouse designed for running complex business intelligence (BI) and analytics queries?**
+    a) Amazon DynamoDB
+    b) Amazon Redshift
+    c) Amazon RDS
+    d) Amazon EFS
+
+**16. What is the primary purpose of the AWS Database Migration Service (DMS)?**
+    a) To automatically back up all AWS databases.
+    b) To help migrate databases to or within AWS with minimal downtime.
+    c) To convert database schemas from SQL to NoSQL.
+    d) To analyze and optimize database query performance.
+
+**17. During a database migration, when is the AWS Schema Conversion Tool (SCT) required?**
+    a) For all migrations, regardless of the database engine.
+    b) For homogeneous migrations (e.g., MySQL to MySQL).
+    c) For heterogeneous migrations (e.g., Oracle to Aurora), where the source and target engines are different.
+    d) The SCT is an optional tool that is never required.
+
+**18. Which AWS service provides a managed graph database for applications that work with highly connected data, such as social networks?**
+    a) Amazon QLDB
+    b) Amazon Neptune
+    c) Amazon DocumentDB
+    d) Amazon RDS
+
+**19. You need to add a caching layer to your relational database to improve read times for common requests. Which service should you use?**
+    a) Amazon S3
+    b) AWS DMS
+    c) Amazon ElastiCache
+    d) Amazon Redshift
+
+**20. What is the name of the in-memory cache designed specifically to accelerate read performance for Amazon DynamoDB?**
+    a) ElastiCache for Redis
+    b) Amazon S3 Glacier
+    c) AWS Schema Conversion Tool (SCT)
+    d) DynamoDB Accelerator (DAX)
+
+---
+---
+
+# Answer Key
+
+1.  **c)** Data on an EBS volume persists independently of the instance's lifecycle, while Instance Store data is deleted when the instance is stopped or terminated.
+2.  **d)** Amazon EBS
+3.  **c)** By taking snapshots, where subsequent snapshots are incremental, only saving changed blocks.
+4.  **c)** Amazon S3
+5.  **a)** Buckets are containers for objects; objects are the actual data files.
+6.  **b)** S3 Lifecycle Policies
+7.  **a)** Amazon EFS
+8.  **c)** EBS is scoped to a single Availability Zone, while EFS is a regional service that stores data across multiple Availability Zones.
+9.  **b)** AWS automates tasks like hardware provisioning and database patching, allowing you to focus on your application.
+10. **c)** MySQL and PostgreSQL
+11. **b)** It offers significantly higher performance and enhanced durability with six copies of your data across three AZs.
+12. **d)** Amazon DynamoDB
+13. **b)** It has a flexible schema; only the primary key is required, and other attributes can vary between items.
+14. **c)** Because you do not need to provision, patch, or manage servers; AWS handles all the underlying infrastructure.
+15. **b)** Amazon Redshift
+16. **b)** To help migrate databases to or within AWS with minimal downtime.
+17. **c)** For heterogeneous migrations (e.g., Oracle to Aurora), where the source and target engines are different.
+18. **b)** Amazon Neptune
+19. **c)** Amazon ElastiCache
+20. **d)** DynamoDB Accelerator (DAX)
