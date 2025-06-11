@@ -1,0 +1,49 @@
+One of the great things about AWS is no matter how big or small your business is, you're never alone. From small startups to large enterprises, private sector and public, all businesses have support options available that are designed to fit your specific needs. 
+
+To begin with, every customer automatically gets AWS Basic Support, no cost at all. Any customer can access support functions like 24/7 access to customer service, documentation, whitepapers, support forums, AWS Trusted Advisor, and the AWS Personal Health Dashboard. It's a personalized view of the health of AWS services and any alerts when your resources might be impacted. These functions are free for everyone. But as you begin to move critical workloads into AWS, we offer higher levels of support to match your levels of need. 
+
+The next Support plan is our AWS Developer Support, which includes everything in the Basic Support level. Plus, you can now email customer support directly with a 24-hour response time on any questions you have. And responses of less than 12 hours in case your systems are impaired. This is a great plan for businesses that are experimenting with AWS or setting up tests or proofs of concept. 
+
+Now, as you begin to take production workloads live, we find customers are more successful advancing to AWS Business Support. Everything in the previous plans is included, plus Trusted Advisor now opens up the entire suite of checks for your account. You are given direct phone access to our support team. They have a 4-hour response time if your production system is impaired, and a 1-hour response time for when you production system is down. Additionally, as part of the Business Support plan, we provide access to infrastructure event management. For an extra fee, we can help you plan for massive events like brand new launches or global advertising blitzes. 
+
+Next, for companies migrating production and business-critical workloads to AWS, we recommend AWS Enterprise On-Ramp. It has everything in the previous plans plus a 30-minute response time for business-critical workloads and access to a pool of technical account managers, or TAMs. They provide proactive guidance and coordinate access to programs and AWS experts as needed.
+
+Finally, for companies running mission-critical workloads, we recommend the AWS Enterprise Support. It has everything in the previous plans, plus a 15-minute response time for business and mission-critical workloads and a designated TAM. Your TAM will proactively monitor your environment and assist with optimization. AWS Enterprise Support also includes access to proactive reviews, workshops, and deep dives.
+
+Let's talk a bit more specifically about the job of a TAM. TAMs are part of the concierge support team that comes with both Enterprise Support options. They provide infrastructure event management, Well-Architected reviews, and operations reviews. In Enterprise On-Ramp, your engagement with TAMs is rate limited, whereas rate limits don’t apply in AWS Enterprise Support.
+
+What's a Well-Architected review, you ask? Well, keeping it simple, TAMs work with customers to review architectures using the Well-Architected Framework. Architectures are checked against the six pillars of the Well-Architected Framework: Operational Excellence, Security, Reliability, Performance Efficiency, Cost Optimization, and Sustainability. As you can see, the job of a TAM is much more than just handling trouble tickets. AWS Support looks at the customer holistically, not just if they have problems, but how can we help them be successful? 
+
+AWS offers four different Support plans(opens in a new tab) to help you troubleshoot issues, lower costs, and efficiently use AWS services. 
+
+You can choose from the following Support plans to meet your company’s needs: 
+
+Basic
+Developer
+Business
+Enterprise On-Ramp
+Enterprise
+
+Basic Support
+
+Basic Support is free for all AWS customers. It includes access to whitepapers, documentation, and support communities. With Basic Support, you can also contact AWS for billing questions and service limit increases.
+
+With Basic Support, you have access to a limited selection of AWS Trusted Advisor checks. Additionally, you can use the AWS Personal Health Dashboard, a tool that provides alerts and remediation guidance when AWS is experiencing events that may affect you. 
+
+If your company needs support beyond the Basic level, you could consider purchasing Developer, Business, Enterprise On-Ramp, and Enterprise Support.
+
+Developer, Business, Enterprise On-Ramp, and Enterprise Support
+
+The Developer, Business, Enterprise On-Ramp, and Enterprise Support plans include all the benefits of Basic Support, in addition to the ability to open an unrestricted number of technical support cases. These Support plans have pay-by-the-month pricing and require no long-term contracts.
+
+The information in this course highlights only a selection of details for each Support plan. A complete overview of what is included in each Support plan, including pricing for each plan, is available on the AWS Support(opens in a new tab) site.
+
+In general, for pricing, the Developer plan has the lowest cost, the Business and Enterprise On-Ramp plans are in the middle, and the Enterprise plan has the highest cost.
+
+Technical Account Manager (TAM)
+
+The Enterprise On-Ramp and Enterprise Support plans include access to a Technical Account Manager (TAM).
+
+The TAM is your primary point of contact at AWS. If your company subscribes to Enterprise Support or Enterprise On-Ramp, your TAM educates, empowers, and evolves your cloud journey across the full range of AWS services. TAMs provide expert engineering guidance, help you design solutions that efficiently integrate AWS services, assist with cost-effective and resilient architectures, and provide direct access to AWS programs and a broad community of experts.
+
+For example, suppose that you are interested in developing an application that uses several AWS services together. Your TAM could provide insights into how to best use the services together. They achieve this, while aligning with the specific needs that your company is hoping to address through the new application.

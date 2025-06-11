@@ -1,0 +1,21 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 800px;
+}
+
+.card.border-success {
+    border-width: 2px;
+}
+
+.card.border-danger {
+    border-width: 2px;
+}
+
+.correct-answer-highlight {
+    background-color: #d1e7dd; /* A light green background */
+    border-radius: 5px;
+    padding: 5px;
+} 

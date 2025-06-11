@@ -1,0 +1,126 @@
+# AWS Module 8: Pricing and Support Practice Questions (Multiple Choice)
+
+This document contains multiple-choice practice questions based on the AWS Pricing and Support module. The Answer Key is located at the bottom of the file.
+
+---
+
+### Section 1: AWS Pricing Fundamentals
+
+**1. What are the three types of offers available under the AWS Free Tier?**
+    a) Always Free, 6 Months Free, and Trials.
+    b) 12 Months Free, Trials, and Pay-As-You-Go.
+    c) Always Free, 12 Months Free, and Trials.
+    d) Always Free, On-Demand, and Spot Instances.
+
+**2. Which AWS service is an example of an "Always Free" offer, allowing 1 million free requests per month?**
+    a) Amazon EC2
+    b) Amazon S3
+    c) AWS Lambda
+    d) Amazon Lightsail
+
+**3. What is the fundamental pricing principle of AWS?**
+    a) Fixed monthly cost for all services.
+    b) Pay-as-you-go, paying only for what you use.
+    c) Long-term contracts are required for all services.
+    d) Discounts are only available for enterprise customers.
+
+**4. How can a company achieve significant cost savings on Amazon EC2 for workloads that can withstand interruptions?**
+    a) By using On-Demand Instances.
+    b) By purchasing Reserved Instances.
+    c) By using Spot Instances.
+    d) By using a dedicated host.
+
+**5. Which of the following is NOT a primary cost component for Amazon S3 pricing?**
+    a) Storage space consumed.
+    b) Number of requests to S3 objects.
+    c) Data transfer into S3 from the internet.
+    d) Data transfer out of S3 to the internet (with some exceptions).
+
+---
+
+### Section 2: Billing and Cost Management
+
+**6. Which AWS feature allows you to manage multiple AWS accounts and receive a single bill?**
+    a) AWS Budgets
+    b) AWS Cost Explorer
+    c) Consolidated billing with AWS Organizations
+    d) AWS Pricing Calculator
+
+**7. What is a key benefit of consolidated billing?**
+    a) Each account gets a separate bill.
+    b) It allows for sharing bulk pricing discounts across accounts.
+    c) It increases the complexity of managing bills.
+    d) It is a paid feature.
+
+**8. What is the primary purpose of the AWS Billing & Cost Management dashboard?**
+    a) To launch and manage AWS resources.
+    b) To monitor usage, analyze costs, and pay the AWS bill.
+    c) To get technical support from AWS engineers.
+    d) To write and deploy code.
+
+**9. Which tool lets you set custom budgets and receive alerts when you exceed or are forecasted to exceed your budgeted amount?**
+    a) AWS Cost Explorer
+    b) AWS Trusted Advisor
+    c) AWS Budgets
+    d) AWS Pricing Calculator
+
+**10. Which tool allows you to visualize, understand, and manage your AWS costs and usage over time with historical data?**
+    a) AWS Budgets
+    b) AWS Cost Explorer
+    c) AWS Personal Health Dashboard
+    d) AWS Marketplace
+
+---
+
+### Section 3: Support and Marketplace
+
+**11. Which AWS Support plan is included for all AWS customers at no additional cost?**
+    a) Developer
+    b) Business
+    c) Enterprise
+    d) Basic
+
+**12. A company is running a mission-critical workload and requires a 15-minute response time for support cases and a designated Technical Account Manager (TAM). Which support plan should they choose?**
+    a) Business
+    b) Enterprise On-Ramp
+    c) Enterprise
+    d) Developer
+
+**13. What is the role of a Technical Account Manager (TAM)?**
+    a) To provide billing support only.
+    b) To be the primary point of contact, providing guidance, and coordinating access to AWS experts.
+    c) To fix bugs in the customer's application code.
+    d) To sell third-party software from the AWS Marketplace.
+
+**14. What is the AWS Marketplace?**
+    a) A physical store to buy AWS hardware.
+    b) A service for managing AWS costs.
+    c) A digital catalog to find, test, and buy third-party software that runs on AWS.
+    d) A forum for AWS developers to share code.
+
+**15. Your company wants to try third-party software before buying. What option do many vendors in the AWS Marketplace offer?**
+    a) Long-term contracts only
+    b) Free trials or Quick Start plans
+    c) Mandatory on-site installation
+    d) Hardware bundles
+
+---
+---
+
+# Answer Key
+
+1.  **c)** Always Free, 12 Months Free, and Trials.
+2.  **c)** AWS Lambda
+3.  **b)** Pay-as-you-go, paying only for what you use.
+4.  **c)** By using Spot Instances.
+5.  **c)** Data transfer into S3 from the internet.
+6.  **c)** Consolidated billing with AWS Organizations
+7.  **b)** It allows for sharing bulk pricing discounts across accounts.
+8.  **b)** To monitor usage, analyze costs, and pay the AWS bill.
+9.  **c)** AWS Budgets
+10. **b)** AWS Cost Explorer
+11. **d)** Basic
+12. **c)** Enterprise
+13. **b)** To be the primary point of contact, providing guidance, and coordinating access to AWS experts.
+14. **c)** A digital catalog to find, test, and buy third-party software that runs on AWS.
+15. **b)** Free trials or Quick Start plans
