@@ -116,8 +116,17 @@ def get_quiz_modules():
     
     if not os.path.exists(base_path):
         return []
+
+    def sort_key(dir_name):
+        match = re.search(r'module-(\d+)', dir_name)
+        if match:
+            return int(match.group(1))
+        return float('inf')  # Put non-matching directories at the end
+
+    all_module_dirs = os.listdir(base_path)
+    sorted_module_dirs = sorted(all_module_dirs, key=sort_key)
         
-    for module_dir in sorted(os.listdir(base_path)):
+    for module_dir in sorted_module_dirs:
         module_path = os.path.join(base_path, module_dir)
         practice_file = os.path.join(module_path, 'practice-questions.txt')
         

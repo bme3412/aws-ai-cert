@@ -1,0 +1,87 @@
+# AWS Module 9: Migration and Innovation Practice Questions (Multiple Choice)
+
+This document contains multiple-choice practice questions based on the AWS Migration and Innovation module. The Answer Key is located at the bottom of the file.
+
+---
+
+### Section 1: Cloud Adoption and Migration
+
+**1. Which AWS Cloud Adoption Framework (CAF) Perspective is responsible for ensuring that IT strategy aligns with business strategy to maximize business value and minimize risks?**
+a) People Perspective
+b) Business Perspective
+c) Governance Perspective
+d) Platform Perspective
+
+**2. A company decides to move an application to AWS with a few cloud optimizations but without changing its core architecture. Which migration strategy is this?**
+a) Rehosting
+b) Replatforming
+c) Refactoring
+d) Retiring
+
+**3. An organization has identified several applications in its portfolio that are no longer used and can be decommissioned. Which of the "6 R's" of migration does this represent?**
+a) Retaining
+b) Rehosting
+c) Retiring
+d) Refactoring
+
+**4. A business wants to move its on-premises database to Amazon RDS. This is an example of which migration strategy?**
+a) Rehosting (Lift and Shift)
+b) Replatforming (Lift, Tinker, and Shift)
+c) Repurchasing
+d) Refactoring
+
+**5. What is the primary focus of the "People Perspective" in the AWS Cloud Adoption Framework?**
+a) Implementing new technical solutions.
+b) Managing the budget for the migration.
+c) Managing change and developing skills for the workforce.
+d) Ensuring security and compliance.
+
+---
+
+### Section 2: Data Transfer and Innovation
+
+**6. Which AWS Snow Family device is a 45-foot long shipping container designed for exabyte-scale data transfer?**
+a) AWS Snowcone
+b) AWS Snowball Edge Storage Optimized
+c) AWS Snowball Edge Compute Optimized
+d) AWS Snowmobile
+
+**7. A research team needs to transfer 8 TB of data from a remote location with limited connectivity. Which AWS Snow Family device is the most suitable and cost-effective choice?**
+a) AWS Snowcone
+b) AWS Snowball Edge
+c) AWS Snowmobile
+d) AWS Direct Connect
+
+**8. Which AWS service allows you to run code without provisioning or managing servers, enabling a serverless architecture?**
+a) Amazon EC2
+b) AWS Lambda
+c) Amazon S3
+d) VMware Cloud on AWS
+
+**9. A developer wants to build a conversational chatbot for a new application. Which AWS AI service should they use?**
+a) Amazon Textract
+b) Amazon Comprehend
+c) Amazon Lex
+d) Amazon SageMaker
+
+**10. What is the primary benefit of using serverless applications, like those built with AWS Lambda?**
+a) It gives developers full control over the underlying server infrastructure.
+b) It eliminates the need to worry about fault tolerance and availability.
+c) It is best suited for long-running, stateful applications.
+d) It requires a fixed monthly payment regardless of usage.
+
+---
+---
+
+# Answer Key
+
+1.  **c)** Governance Perspective
+2.  **b)** Replatforming
+3.  **c)** Retiring
+4.  **b)** Replatforming (Lift, Tinker, and Shift)
+5.  **c)** Managing change and developing skills for the workforce.
+6.  **d)** AWS Snowmobile
+7.  **a)** AWS Snowcone
+8.  **b)** AWS Lambda
+9.  **c)** Amazon Lex
+10. **b)** It eliminates the need to worry about fault tolerance and availability.

@@ -1,0 +1,219 @@
+# AWS Module 12: Final Assessment Practice Questions
+
+### Final Assessment
+
+**1. Which tasks are the responsibilities of AWS? (Select TWO.)**
+a) Training company employees on how to use AWS services
+b) Maintaining virtualization infrastructure
+c) Configuring security groups on Amazon EC2 instances
+d) Configuring AWS infrastructure devices
+e) Creating IAM users and groups
+
+**2. In the S3 Intelligent-Tiering storage class, Amazon S3 moves objects between a frequent access tier and an infrequent access tier. Which storage classes are used for these tiers? (Select TWO.)**
+a) S3 Standard
+b) S3 Standard-IA
+c) S3 Glacier Flexible Retrieval
+d) S3 One Zone-IA
+
+**3. Which service provides review details for user activities and API calls that have occurred within an AWS environment?**
+a) AWS CloudTrail
+b) Amazon Inspector
+c) AWS Trusted Advisor
+d) Amazon CloudWatch
+
+**4. An application developer wants to store data in a key-value database. Which service should they use?**
+a) Amazon DocumentDB
+b) Amazon RDS
+c) Amazon Aurora
+d) Amazon DynamoDB
+
+**5. A cloud architect wants Amazon S3 to monitor object access patterns. Which storage class should they use?**
+a) Amazon S3 Standard-IA
+b) Amazon S3 Glacier Flexible Retrieval
+c) Amazon S3 One Zone-IA
+d) Amazon S3 Intelligent-Tiering
+
+**6. Which Amazon EC2 pricing option reduces costs when a business makes an hourly spend commitment to an instance family and Region for a 1-year or 3-year term?**
+a) EC2 Instance Savings Plans
+b) Spot Instances
+c) Dedicated Hosts
+d) Reserved Instances
+
+**7. Which virtual private cloud (VPC) component controls inbound and outbound traffic for Amazon EC2 instances?**
+a) Subnet
+b) Internet gateway
+c) Security group
+d) Network access control list
+
+**8. Which service consolidates and manages multiple AWS accounts from a central location?**
+a) AWS Organizations
+b) AWS Identity and Access Management (IAM)
+c) AWS Key Management Service (AWS KMS)
+d) AWS Artifact
+
+**9. Which migration strategy involves changing how an application is architected and developed, typically by using cloud-native features?**
+a) Replatforming
+b) Repurchasing
+c) Rehosting
+d) Refactoring
+
+**10. Which pillar of the AWS Well-Architected Framework focuses on using computing resources in ways that meet system requirements?**
+a) Performance Efficiency
+b) Security
+c) Reliability
+d) Operational Excellence
+
+**11. Which Perspective of the AWS Cloud Adoption Framework focuses on recovering IT workloads to meet the requirements of business stakeholders?**
+a) Governance Perspective
+b) Business Perspective
+c) People Perspective
+d) Operations Perspective
+
+**12. Which AWS Trusted Advisor category includes checks for high-utilization EC2 instances?**
+a) Fault Tolerance
+b) Security
+c) Performance
+d) Cost Optimization
+
+**13. Which action can a person perform in Amazon CloudFront?**
+a) Provision resources by using programming languages or a text file.
+b) Deliver content to customers through a global network of edge locations.
+c) Provision an isolated section of the AWS Cloud to launch resources in a virtual network that a person defines.
+d) Run infrastructure in a hybrid cloud approach.
+
+**14. Which service is used to transfer up to 100 PB of data to AWS?**
+a) AWS DeepRacer
+b) Amazon Neptune
+c) AWS Snowmobile
+d) Amazon CloudFront
+
+**15. Which statement best describes Amazon GuardDuty?**
+a) A service that provides intelligent threat detection for AWS infrastructure and resources
+b) A service that checks applications for security vulnerabilities and deviations from security best practices
+c) A service that monitors network requests for web applications
+d) A service that helps protect applications against distributed denial-of-service (DDoS) attacks
+
+**16. An application developer wants to send and receive messages between distributed application components. Which service should they use?**
+a) Amazon Route 53
+b) AWS Snowball
+c) Amazon Simple Queue Service (Amazon SQS)
+d) Amazon ElastiCache
+
+**17. Which statement best describes an Availability Zone?**
+a) The server from which Amazon CloudFront gets files
+b) A fully isolated portion of the AWS global infrastructure
+c) A site that Amazon CloudFront uses to cache copies of content for faster delivery to users at any location
+d) A separate geographical location with multiple locations that are isolated from each other
+
+**18. Which statement best describes Elastic Load Balancing?**
+a) A service that provides data for monitoring applications, optimize resource utilization, and respond to system-wide performance changes
+b) A service that distributes incoming traffic across multiple targets, such as Amazon EC2 instances
+c) A service that monitors applications and automatically adds or removes capacity from resource groups in response to changing demand
+d) A service that provides the capability to create, manage, and scale a distributed in-memory or cache environment in the cloud
+
+**19. Which actions can a person perform in Amazon Route 53? (Select TWO.)**
+a) Monitor applications and respond to system-wide performance changes.
+b) Connect user requests to infrastructure in AWS and outside of AWS.
+c) Manage DNS records for domain names.
+d) Access AWS security and compliance reports and select online agreements.
+e) Automate the deployment of workloads into an AWS environment
+
+**20. A cloud engineer wants to store data in a volume that is attached to an Amazon EC2 instance. Which service should they use?**
+a) Amazon Elastic Block Store (Amazon EBS)
+b) Amazon ElastiCache
+c) Amazon Simple Storage Service (Amazon S3)
+d) AWS Lambda
+
+**21. Which statement is TRUE for AWS Lambda?**
+a) Businesses pay only for compute time while their code is running.
+b) Before using AWS Lambda, a business must prepay for their estimated compute time.
+c) The first step in using AWS Lambda is provisioning a server.
+d) To use AWS Lambda, businesses must configure the servers that run their code.
+
+**22. Which service builds the workflows that are required for human review of machine learning predictions?**
+a) Amazon Lex
+b) Amazon Textract
+c) Amazon Augmented AI
+d) Amazon Aurora
+
+**23. Which tool provides the capability to visualize, understand, and manage AWS costs and usage over time?**
+a) AWS Budgets
+b) AWS Pricing Calculator
+c) AWS Artifact
+d) AWS Cost Explorer
+
+**24. A cloud engineer is running an Amazon EC2 instance and wants to store data in an attached resource. Their data is temporary and will not be kept long term. Which resource should they use?**
+a) Subnet
+b) Amazon Elastic Block Store (Amazon EBS) volume
+c) Amazon S3 bucket
+d) Instance store
+
+**25. Which service provides the capability to quickly deploy and scale applications on AWS?**
+a) Amazon CloudFront
+b) AWS Elastic Beanstalk
+c) AWS Outposts
+d) AWS Snowball
+
+**26. Which tool provides automation actions for AWS services and applications through scripts?**
+a) Amazon Redshift
+b) AWS Snowball
+c) AWS Command Line Interface
+d) Amazon QLDB
+
+**27. Which Support plans include access to all AWS Trusted Advisor checks? (Select TWO.)**
+a) Basic
+b) AWS Free Tier
+c) Business
+d) Developer
+e) Enterprise
+
+**28. Which statement best describes AWS Marketplace?**
+a) A digital catalog that includes thousands of software listings from independent software vendors
+b) An online tool that inspects an AWS environment and provides real-time guidance in accordance with AWS best practices
+c) A resource that can answer questions about best practices and assist with troubleshooting issues
+d) A resource that provides guidance, architectural reviews, and ongoing communication with companies as they plan, deploy, and optimize their applications
+
+**29. Which component or service establishes a dedicated private connection between an on-premises data center and virtual private cloud (VPC)?**
+a) Amazon CloudFront
+b) Virtual private gateway
+c) AWS Direct Connect
+d) Internet gateway
+
+**30. Which service runs containerized applications on AWS?**
+a) Amazon SageMaker
+b) Amazon Aurora
+c) Amazon Redshift
+d) Amazon Elastic Kubernetes Service (Amazon EKS)
+
+--- -----------------
+# Answer Key
+1. *b, d
+2. *a, b
+3. *a
+4. *d
+5. *d
+6. *a
+7. *c
+8. *a
+9. *d
+10. *a
+11. *d
+12. *c
+13. *b
+14. *c
+15. *a
+16. *c
+17. *b
+18. *b
+19. *b, c
+20. *a
+21. *a
+22. *c
+23. *d
+24. *d
+25. *b
+26. *c
+27. *c, e
+28. *a
+29. *c
+30. *d 
