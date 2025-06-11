@@ -63,3 +63,9 @@ Traditional machine learning (ML) development is complex, expensive, time consum
 
 
 You can use ML to analyze data, solve complex problems, and predict outcomes before they happen.
+
+Amazon Q Developer is a machine learning-powered code generator that provides you with code recommendations in real time.
+
+As you write code, Amazon Q Developer analyzes your code and comments as you write code in your integrated development environment (IDE). Amazon Q Developer then automatically generates suggestions based on your existing code and comments.
+
+Additionally, Amazon Q Developer analyzes the surrounding code, ensuring the generated code matches your style, naming conventions, and seamlessly integrates into the existing context.
