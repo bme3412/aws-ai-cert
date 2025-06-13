@@ -1,0 +1,181 @@
+1. A multinational company decides to move all its on-premises infrastructure to the AWS Cloud.Which AWS Support Plan includes access to a Technical Account Manager (TAM)?
+
+
+Enterprise Support
+
+
+Developer Support
+
+
+Basic Support
+
+
+Business Support
+
+
+Business Support does not provide access to a dedicated TAM.
+
+2. Your company is hoping to migrate their on-premises infrastructure to AWS. However, in a recent meeting, the CTO expressed concern about controlling and optimizing the cost of cloud resources. You have been tasked with finding a way to control and automate spending in the cloud.Which AWS service is the most proactive in achieving this goal?
+
+
+AWS Cost and Usage Report
+
+Incorrectly selected
+
+AWS Budgets
+
+
+AWS Cost Explorer
+
+
+AWS Trusted Advisor
+
+3. 14/50
+Your company is considering adopting cloud technology, but your Chief Technology Officer has concerns about data residency and latency issues for certain applications. They would prefer to run these applications on-premises while still being able to take advantage of AWS services and tools such as Amazon EC2.
+ 
+Which option would BEST fulfill these requirements?
+
+
+AWS Outposts
+
+
+Amazon ECS Anywhere
+
+
+AWS Direct Connect
+
+Incorrectly selected
+
+AWS CloudFront
+
+Incorrect
+Direct connect does help with improving connectivity from AWS to on-prem DCs however it will have no effect on Data regulations.
+
+4. Your company is deploying a web application in AWS running on several Amazon EC2 instances. What is the responsibility of AWS under the shared responsibility model?
+
+
+Encrypting the storage volumes
+
+Incorrectly selected
+
+Ensuring the necessary ports on your web server are open
+
+
+Patching the Amazon EC2 instances
+
+
+Securing the EC2 hypervisor
+
+Incorrect
+Customers are responsible for server-side encryption.
+
+5. You have been hired by a company to create a dashboard to visualize and monitor their AWS costs.
+ 
+Which tools could you use to meet this request? (Select TWO)
+
+
+AWS Budgets
+
+
+AWS Cost Anomaly Detection
+
+
+AWS Cost Explorer
+
+
+AWS Cost and Usage Reports
+
+
+Amazon QuickSight
+
+6. 26/50
+Your e-commerce website has been experiencing slow load times and high latency, especially for customers in regions that are far away from your server location.Which AWS service uses Edge Locations to reduce latency?
+
+
+AWS CloudTrail
+
+
+Amazon Elastic Load Balancing
+
+Incorrectly selected
+
+AWS Direct Connect
+
+
+Amazon CloudFront
+
+Incorrect
+ELB helps with distributing traffic across multiple targets, but does not help with scaling up for demand on its own.
+
+7. A healthcare provider plans to migrate its applications and highly sensitive patient data to the AWS Cloud. As a solutions architect, you need to make sure all the data is protected at rest and in transit. Additionally, you need to protect your workload in all layers of the cloud.
+ 
+Which pillar of the AWS Well-Architected Framework includes the guidance to achieve this?
+
+
+Security
+
+
+Reliability
+
+Incorrectly selected
+
+Operational Excellence
+
+
+Sustainability
+
+8. 9/50
+Your company is developing its first application in the cloud. You suggested that the company should leverage the AWS Well-Architected Framework during the process. The CTO is now asking you to provide more details about the framework and its benefits. Which statement would you use to describe the AWS Well-Architected Framework? (Select TWO)
+
+
+It helps organizations track development process while implementing cloud applications.
+
+
+It provides a consistent approach to evaluate the application architecture against best practices.
+
+
+It is a requirement for PCI-DSS security standard.
+
+
+It increases the likelihood of business success by helping the organization having constructive conversations.
+
+
+It is an auditing mechanism that the company must comply prior to deploying into the cloud.
+
+Incorrect
+The AWS Well-Architected Framework helps organizations understand the pros and cons of decisions while building systems on AWS. It helps learn architectural best practices for designing and operating secure, reliable, efficient, cost-effective, and sustainable workloads in the AWS Cloud.
+
+9.our application is running on Amazon EC2 instances.
+ 
+Which component of the AWS global infrastructure will you use to make your application resilient and highly available?
+
+
+AWS Outposts
+
+
+AWS Data Centers
+
+
+AWS Edge Locations
+
+Incorrectly selected
+
+AWS Availability Zones
+
+Incorrect
+AWS Edge Locations are used to globally deliver content to end users with lower latency.
+
+10. A customer would like to design and build a new workload on the AWS Cloud but does not have the AWS expertise to get started.Which AWS program can a customer take advantage of to achieve that outcome?
+
+
+AWS Partner Network (APN) Consulting Partners
+
+
+AWS technical account managers (TAMs)
+
+
+AWS Support
+
+Incorrectly selected
+
+AWS Marketplace

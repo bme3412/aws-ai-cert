@@ -1,0 +1,428 @@
+1. A company needs to move an on-premises IBM Db2 database to the AWS Cloud. The company wants to convert the database to a fully managed Amazon Aurora database.
+Which AWS services or features can the company use to analyze, synchronize, deploy, and monitor the conversion of the database? (Select TWO.)
+
+A
+AWS Database Migration Service (AWS DMS)
+
+Correct. You can use AWS DMS to migrate databases between sources, including between on premises and the cloud.
+
+
+
+B
+Amazon S3 File Gateway
+
+Incorrect. S3 File Gateway connects on-premises software appliances to AWS Cloud storage so that you can store and retrieve objects in Amazon S3.
+
+
+C
+AWS DataSync
+
+Incorrect. You can use DataSync to move data. However, DataSync does not provide the database schema management that is required in the scenario.
+
+
+D
+AWS Schema Conversion Tool (AWS SCT)
+
+Correct. You can use AWS SCT to convert an existing database schema from one database engine to another.
+
+
+E
+AWS Direct Connect
+
+Incorrect. Direct Connect is a network connection from your on-premises data center to the cloud. You can use Direct Connect to move data. However, Direct Connect does not provide the database schema management that is required in the scenario.
+
+2. Which concept in the AWS Cloud value proposition is an example of the ability to horizontally scale Amazon EC2 instances based on demand?
+
+A
+Economies of scale
+
+Incorrect. Economies of scale provide AWS with buying power. With economies of scale, AWS can provide services at a lower cost to the customer. However, economies of scale does not relate to horizontal scaling.
+
+
+B
+Elasticity
+
+Correct. Elasticity is the ability to scale your infrastructure based on changes in user demand.
+
+
+C
+High availability
+
+Incorrect. High availability is the ability to provide redundancy in your architecture. High availability mitigates single points of failure. With high availability, your solution is more resilient to outages. High availability does not relate to horizontal scaling.
+
+
+
+D
+Agility
+
+Incorrect. Agility is the ability to add or to remove new or existing services quickly. Agility does not relate to horizontal scaling.
+
+3. A company that operates in the AWS Cloud wants to test workloads and team responses to simulated events. The company will conduct an exercise to identify potential issues that need to be addressed.
+
+Which design principle of the AWS Well-Architected Framework does this exercise represent?
+
+A
+Anticipate failure.
+
+Correct. Anticipate failure is a principle of the operational excellence pillar of the Well-Architected Framework. To anticipate failure, you can perform test exercises to identify potential sources of failure.
+
+B
+Automatically recover from failure.
+
+Incorrect. Automatic recovery from failure is a principle of the reliability pillar of the Well-Architected Framework. To automatically recover from failure, you should configure automated processes that can detect and repair failures.
+
+
+
+C
+Measure overall cost efficiency.
+
+Incorrect. To measure overall cost efficiency is a principle of the cost optimization pillar of the Well-Architected Framework. To measure cost efficiency, you should ensure that your workloads get the best output at the lowest cost.
+
+
+
+D
+Implement loosely coupled dependencies.
+
+Incorrect. Loose coupling is the practice of removal or reduction of direct dependencies between various resources in your AWS Cloud architecture. Loose coupling is a best practice in architecture design.
+
+
+4. Which on-premises expense will be eliminated if the company migrates their entire application to Amazon EC2?
+
+
+Question
+Which on-premises expense will be eliminated if the company migrates their entire application to Amazon EC2?
+
+Report Content Errors
+
+A
+Server hardware costs
+
+Correct. Server hardware costs are included in EC2 instance costs.
+
+
+B
+Licensing costs
+
+Incorrect. You have the option to bring your own licenses into AWS, but you still need to pay for the licensing costs.
+
+
+
+
+C
+Storage backup costs
+
+Incorrect. Backups from EC2 instances and their Amazon Elastic Block Store (Amazon EBS) snapshots to Amazon S3 are charged separately.
+
+
+D
+Costs of transferring data to the internet
+
+Incorrect. Data transfer for EC2 instances to the internet is charged separately.
+
+
+5. What are valid AWS Cloud Adoption Framework (AWS CAF) perspectives? (Select TWO.)
+
+A
+Performance efficiency
+
+Incorrect. The performance efficiency pillar is part of the AWS Well-Architected Framework and is not a perspective of AWS CAF.
+
+
+B
+Sustainability
+
+Incorrect. The sustainability pillar is part of the AWS Well-Architected Framework and is not a perspective of AWS CAF.
+
+
+C
+Cost optimization
+
+Incorrect. The cost optimization pillar is part of the AWS Well-Architected Framework and is not a perspective of AWS CAF.
+
+
+D
+Governance
+
+Correct. The governance perspective is one of the six AWS CAF perspectives.
+
+
+E
+Platform
+
+Correct. The platform perspective is one of the six AWS CAF perspectives.
+
+6. Which AWS service provides a secure, fast, and cost-effective way to migrate petabyte-scale datasets from on-premises into AWS?
+
+A
+AWS Database Migration Service (AWS DMS)
+
+Incorrect. AWS DMS is used to transpose relational databases from one location to another. However, AWS DMS does not actually transport the data.
+
+
+
+B
+AWS Snowball Edge
+
+Correct. Snowball Edge is a device that can migrate petabyte-scale datasets at fast speed. Snowball Edge devices also have onboard compute capabilities. You can use Snowball Edge to migrate petabyte-scale datasets from on-premises to AWS in a cost-effective way.
+
+
+
+C
+AWS Migration Hub
+
+Incorrect. Migration Hub is used to plan and track the progress of migrations. Migration Hub is not used for the actual data migration.
+
+
+
+D
+AWS Schema Conversion Tool (AWS SCT)
+
+Incorrect. AWS SCT is used to convert existing database schemas from one database engine to a different database engine. The AWS SCT is not used to migrate petabyte-scale datasets into AWS.
+
+
+7. A company wants to migrate its application to AWS. The company wants to replace upfront expenses with variable payment that is based on usage.
+
+What should the company do to meet these requirements?
+
+A
+Use pay-as-you-go pricing.
+
+Correct. AWS offers pay-as-you-go pricing for more than 200 cloud services. Pay-as-you-go pricing requires no upfront payments, and you only pay for what you use.
+
+
+B
+Purchase Reserved Instances.
+
+Incorrect. Reserved Instance pricing is available with no upfront payments. However, the pricing is a fixed model based on the reserved capacity. Reserved Instance pricing is not variable based on usage.
+
+
+
+C
+Pay less by using more.
+
+Incorrect. AWS pricing might decrease on a per-unit basis as you use more resources. However, this solution does not address the requirement for no upfront payments.
+
+
+
+D
+Rightsize instances.
+
+Incorrect. To rightsize might reduce costs. However, this solution does not address the requirement for no upfront payments.
+
+8. What are the benefits of developing and running a new application in the AWS Cloud compared to on-premises? (Select TWO.)
+
+A
+AWS automatically distributes the data globally for higher durability.
+
+Incorrect. AWS does not automatically move data out of the AWS Region where you have placed it. Some services offer features to accomplish this. However, user data and its distribution is the responsibility of the user.
+
+
+B
+AWS operates the application.
+
+Incorrect. AWS does not operate user applications. Based on the AWS shared responsibility model, user applications are the responsibility of the user.
+
+
+
+C
+AWS provides options to architect for high availability.
+
+Correct. By providing multiple Availability Zones within an AWS Region, AWS provides a highly available infrastructure platform for architecting new applications.
+
+
+
+D
+AWS can scale resources of changing application demands.
+
+Correct. By providing an elastic method to provision the right amount of computing resources for your application demand, AWS gives you the ability to focus more on the application and less on its capacity.
+
+E
+AWS patches user applications.
+
+Incorrect. The application and its patching is the responsibility of the customer according to the AWS shared responsibility model.
+
+9. Which of the following is an advantage of AWS Cloud computing?
+A
+Trade security for elasticity.
+
+Incorrect. Elasticity and security are both advantages of the AWS Cloud. You would not trade a security advantage for an elasticity advantage.
+
+
+B
+Trade operational excellence for agility.
+
+Incorrect. Agility and designing for operational excellence are both advantages of the AWS Cloud. You would not trade an advantage of operational excellence for an agility advantage.
+
+
+
+C
+Trade fixed expenses for variable expenses.
+
+Correct. An advantage of the AWS Cloud is to trade fixed expenses for variable expenses. With the AWS Cloud, you only pay for what you use. Therefore, you can move away from fixed expenses. With fixed expenses, you pay upfront, regardless of whether you use the full capacity. For example, to maintain your own data centers and servers would be a fixed expense.
+
+
+
+D
+Trade elasticity for performance.
+
+Incorrect. Performance and elasticity are both advantages of the AWS Cloud. You would not trade an elasticity advantage for a performance advantage.
+
+
+10. A company has on-premises compute resources that are fully utilized at the end of each month. However, during the remainder of the month, those resources are underutilized.
+
+Which AWS Cloud benefit would BEST address this issue?
+
+A
+High availability
+
+Incorrect. High availability focuses on ensuring that your resources are available when needed. It does not focus directly on resource utilization.
+
+
+B
+Elasticity
+
+Correct. The AWS Cloud gives you the ability to stop planning capacity and let it automatically scale up when needed and scale down as demand goes down. This elasticity could stop you from having underutilized resources.
+
+
+C
+Security
+
+Incorrect. Although security is always a prime consideration, it is unrelated to having underutilized resources. Managing resources is more related to elasticity.
+
+
+D
+Loose coupling
+
+Incorrect. Loose coupling, or decoupling, refers to the design principle of separating resources in the design architecture. Decoupling your architecture prevents your entire system from failing if one component fails. Loose coupling is unrelated to having underutilized on-premises resources.
+
+11. A company has an application that has dependencies between its underlying components. When one component fails, the entire application fails.
+
+Which AWS Cloud design principle should be applied to address the current weakness of the application?
+
+A
+Implement elasticity, which enables the application to scale up or scale down as demand changes
+
+Incorrect. Elasticity is the ability to acquire resources as you need them and release resources when you no longer need them. In the cloud, you want to perform this process automatically. However, the question describes an application that will benefit from decoupling. Be aware that the two can be related. When an application has been decoupled, each component benefits from elastic scaling.
+
+B
+Enable several Amazon EC2 instances to run in parallel to achieve better performance
+
+Incorrect. Although running instances in parallel can increase performance, the question describes a monolithic application. The principle that makes this application more resilient and flexible is the decoupling of the application.
+
+C
+Decouple components by isolating them and ensuring that individual components can function when other components fail
+
+Correct. You can decouple an application into component applications, or microservices, to isolate parts of the application. A failure in a component does not cause a failure of the entire application. This solution also presents opportunities to scale the subcomponents independently.
+
+D
+Double Amazon EC2 computing resources to increase system fault tolerance
+
+Incorrect. Doubling computing resources will only affect fault tolerance if the application is already preserving the state of transactions that are being processed. The principle that makes this application more resilient and flexible is the decoupling of the application.
+
+12. A company is starting its migration to the AWS Cloud. The company wants to use AWS experience and best practices to help ensure its success in moving to the AWS Cloud. The company wants a combination of business-oriented and technical points of view.
+
+Which AWS service or guidance will meet these requirements?
+
+A
+AWS Well-Architected Framework
+
+Incorrect. The Well-Architected Framework helps cloud architects to build secure, efficient, high-performing, and resilient infrastructures on AWS. The Well-Architected Framework is primarily focused on the technical point of view, rather than a combination of technical and business points of view.
+
+B
+AWS Control Tower
+
+Incorrect. AWS Control Tower would help the company set up and govern an AWS multi-account environment that follows AWS best practices. However, AWS Control Tower does not provide guidance on moving to the AWS Cloud.
+
+
+C
+AWS Cloud Adoption Framework (AWS CAF)
+
+Correct. AWS CAF identifies capabilities in six perspectives that support successful transitions to the AWS Cloud. The six perspectives include business, people, governance, platform, security, and operations.
+
+D
+AWS Trusted Advisor
+
+Incorrect. Trusted Advisor inspects an AWS environment and makes recommendations about improvements and changes that can be made. The recommendations can help to increase security, reduce costs, and improve system performance and availability. However, Trusted Advisor does not provide guidance on how to move to the AWS Cloud.
+
+13. Question
+Which pillar of the AWS Well-Architected Framework has the design principle "perform operations as code"?
+A
+Performance efficiency
+
+Incorrect. The principle to perform operations as code is not a design principle of the performance efficiency pillar.
+
+
+
+B
+Operational excellence
+
+Correct. The principle to perform operations as code is a design principle of the operational excellence pillar. By performing operations as code, you limit human error and enable consistent responses to events.
+
+
+C
+Reliability
+
+Incorrect. The principle to perform operations as code is not a design principle of the 
+
+
+D
+Security
+
+Incorrect. The principle to perform operations as code is not a design principle of the security pillar.
+
+
+14. A company wants help to design a new cloud content-management application using AWS best practices.
+
+Which service or tool should provide guidance?
+
+A
+AWS AppSync
+
+Incorrect. AWS AppSync is a fully managed GraphQL service that is used to connect applications to data sources. AWS AppSync is not for architectural advice.
+
+B
+AWS AppConfig
+
+Incorrect. AWS AppConfig gives you the ability to create, manage, and quickly deploy application configurations. AWS AppConfig does not assist with best practices in architecture design.
+
+
+
+C
+AWS Well-Architected Tool
+
+Correct. AWS WA Tool is used to improve your architecture using AWS best practices. The AWS WA Tool can provide guidance on architecture design for a new application.
+
+
+D
+Amazon Inspector
+
+Incorrect. You can use Amazon Inspector to scan workloads for software vulnerabilities and unintended network exposure. Amazon Inspector does not provide guidance on architecture design.
+
+15. A user wants the ability to easily scale compute resources in and out, while only paying for the resources used.
+
+Which benefit of the AWS Cloud should the user take advantage of?
+
+A
+Elasticity
+
+Correct. In the AWS Cloud, compute resources are elastic, which means that they can quickly scale to match the requirements of a specific application. Elasticity gives you the ability to match the supply of resources to demand, which gives you the ability to scale compute resources based on demand.
+
+
+
+B
+Fault tolerance
+
+Incorrect. Fault tolerance is the property that gives a system the ability to continue operating properly in the event of the failure. Fault tolerance is not related to the ability to scale compute resources based on usage.
+
+
+C
+Durability
+
+Incorrect. Durability is the ability of a system to remain functional when faced with the challenges of normal operation over its lifetime. Durability is not related to the ability to scale compute resources based on usage.
+
+
+D
+High availability
+
+Incorrect. High availability refers to a system or component that is continuously operational. High availability is not related to the ability to scale compute resources based on usage.
+
