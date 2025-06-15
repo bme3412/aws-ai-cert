@@ -1,0 +1,689 @@
+1. Which AWS service automatically handles application health monitoring?
+
+A
+Amazon API Gateway
+
+
+B
+AWS Elastic Beanstalk
+
+
+C
+AWS Lambda
+
+
+D
+AWS Config
+
+A
+Amazon API Gateway
+
+Incorrect. API Gateway does not handle application health monitoring. It is a service used to create, maintain, and monitor different types of APIs at scale.
+
+
+B
+AWS Elastic Beanstalk
+
+Correct. Elastic Beanstalk gives you the ability to deploy and manage applications in AWS Cloud without you having to understand or manage the underlying infrastructure. Elastic Beanstalk also includes functionality to monitor the health of your application.
+
+
+
+C
+AWS Lambda
+
+Incorrect. Lambda does not automatically handle application health monitoring. Lambda is a serverless compute service that gives you the ability to run code without having to provision and manage servers.
+
+
+
+D
+AWS Config
+
+Incorrect. AWS Config is a service that gives you the ability to assess, audit, and evaluate the configurations of your AWS resources, but does not support application health checks.
+
+2. Which AWS service provides virtually unlimited throughput and scale?
+A
+Amazon DynamoDB
+
+
+B
+Amazon RDS for Oracle
+
+
+C
+Amazon Redshift
+
+
+D
+Amazon OpenSearch Service
+A
+Amazon DynamoDB
+
+Correct. DynamoDB is a serverless, non-relational database that can automatically scale tables for both storage and throughput while still maintaining performance.
+
+
+
+B
+Amazon RDS for Oracle
+
+Incorrect. Amazon RDS for Oracle has limitations on both throughput and storage, and these limits relate to the instance size of the DB instance.
+
+
+C
+Amazon Redshift
+
+Incorrect. Amazon RedShift is a very scalable database. However, there are limits on throughput and scale that can be achieved with an Amazon Redshift cluster.
+
+
+D
+Amazon OpenSearch Service
+
+Incorrect. OpenSearch Service has limitations on both throughput and storage based on the size of the cluster.
+
+3. A company needs to securely deliver data, videos, applications, and APIs to users globally with low latency.
+
+Which AWS service will meet this requirement?
+Amazon EC2
+
+
+B
+Amazon CloudFront
+
+
+C
+Amazon RDS
+
+
+D
+Amazon VPC
+A
+Amazon EC2
+
+Incorrect. Amazon EC2 is a web service that provides secure, resizable compute capacity in the cloud. Amazon EC2 does not directly deliver content to global users with low latency.
+
+
+
+B
+Amazon CloudFront
+
+Correct. CloudFront is a fast content delivery network (CDN) service that securely delivers data, videos, applications, and APIs to users globally with low latency and high transfer speeds.
+
+
+C
+Amazon RDS
+
+Incorrect. Amazon RDS gives you the ability to set up, operate, and scale a relational database in the cloud. Amazon RDS does not deliver content such as data, videos, applications, and APIs to global users with low latency.
+
+
+D
+Amazon VPC
+
+Incorrect. Amazon VPC gives you the ability to provision a logically isolated section of the AWS Cloud. With Amazon VPC, you can launch AWS resources in a virtual network that you define. Amazon VPC does not deliver content to global users with low latency.
+
+4. A company requires an encrypted connection from the company's on-premises data center to AWS. The connection must use the company's existing internet connection.
+
+Which solution will meet these requirements?
+A
+AWS Client VPN
+
+
+B
+Amazon Connect
+
+
+C
+AWS Direct Connect
+
+
+D
+AWS Site-to-Site VPN
+
+A
+AWS Client VPN
+
+Incorrect. Client VPN is a managed, client-based VPN service. Client VPN gives you the ability to securely access your AWS resources and resources in your on-premises network. With Client VPN, you can access your resources from any location by using an OpenVPN-based VPN client. Client VPN provides network connections for individual laptops, not data centers.
+
+
+
+B
+Amazon Connect
+
+Incorrect.  Amazon Connect is an omnichannel cloud contact center. Amazon Connect helps you provide customer service at a low cost. Amazon Connect uses an omnichannel design to provide a seamless experience across voice and chat for your customers and agents. Amazon Connect does not make a network connection from an on-premises data center to the AWS Cloud.
+
+C
+AWS Direct Connect
+
+Incorrect. Direct Connect links your internal network to a Direct Connect location over a standard Ethernet, fiber-optic cable. One end of the cable connects to your router. The other end connects to a Direct Connect router. Direct Connect requires a dedicated network connection and cannot use an existing network connection.
+
+D
+AWS Site-to-Site VPN
+
+Correct. Site-to-Site VPN creates an encrypted network path between your on-premises network and your AWS Cloud network. This connection between your on-premises network and your AWS Cloud network uses the internet. 
+
+5. 
+
+Question
+Which element defines an AWS Availability Zone?
+
+One or more physical data centers with redundant power and network
+
+
+B
+A geographic location that is completely isolated from other AWS locations
+
+
+C
+One or more edge locations based around the world
+
+
+D
+A data center location with a single source of power and networking
+One or more physical data centers with redundant power and network
+
+Correct. The AWS infrastructure is built with redundancy to avoid single points of failure. Availability Zones have low-latency connections between them within an AWS Region.
+
+B
+A geographic location that is completely isolated from other AWS locations
+
+Incorrect. Complete geographical isolation is a feature of AWS Regions.
+
+C
+One or more edge locations based around the world
+
+Incorrect. Edge locations are data centers that AWS services use to perform specific operations.
+
+
+D
+A data center location with a single source of power and networking
+
+Incorrect. The AWS infrastructure is built with redundancy to avoid single points of failure.
+
+6. Which AWS service can be used to decouple applications?
+
+A
+AWS Config
+
+
+B
+Amazon Simple Queue Service (Amazon SQS)
+
+
+C
+AWS Batch
+
+
+D
+Amazon Simple Email Service (Amazon SES)
+
+
+AWS Config
+
+Incorrect. AWS Config provides you with the ability to assess, audit, and evaluate configurations of your AWS resources. AWS Config cannot be used to decouple the application.
+
+
+B
+Amazon Simple Queue Service (Amazon SQS)
+
+Correct. Amazon SQS is a fully managed message queue service that provides you with the ability to decouple and scale microservices, distributed systems, and serverless applications. Amazon SQS eliminates the complexity and overhead associated with managing and operating message-oriented middleware, and empowers developers to focus on differentiating work.
+
+
+
+C
+AWS Batch
+
+Incorrect. AWS Batch is designed to run processing jobs at scale. It is not used to decouple the application.
+
+
+D
+Amazon Simple Email Service (Amazon SES)
+
+Incorrect. Amazon SES is a cloud-based email service designed to help you send and receive emails. Amazon SES cannot be used to decouple the application.
+
+7. 
+
+Question
+Which AWS service can be used to provide an on-demand, cloud-based contact center?
+AWS Direct Connect
+
+
+B
+Amazon Connect
+
+
+C
+AWS Support
+
+
+D
+AWS Managed ServicesAWS Direct Connect
+
+Incorrect. Direct Connect provides direct network connectivity from an internal network to AWS public services. This connectivity gives users with their own data centers the ability to connect directly to services provided by AWS, with no communication going over public internet.
+
+B
+Amazon Connect
+
+Correct. Amazon Connect is a cloud-based contact center service that you can use to set up an on-demand contact center.
+
+
+
+
+C
+AWS Support
+
+Incorrect. AWS Support is the hub used by users to request and manage support requests from AWS.
+
+D
+AWS Managed Services
+
+Incorrect. AWS Managed Services (AMS) provides a number of operational services to manage a customer's AWS infrastructure and services on their behalf.
+
+8. A systems administrator wants to migrate a static website to AWS. The systems administrator wants to stop paying for the compute power necessary to run web servers.
+
+Which AWS service will meet these requirements?
+Amazon EC2
+
+Incorrect. Amazon EC2 provides pay-as-you-go compute capacity that you can use for website hosting. However, the systems administrator wants to migrate away from servers.
+
+
+B
+AWS Lambda
+
+Incorrect. Lambda is a serverless compute service that you can use to run code without the need to provision infrastructure. You can use Lambda for dynamic content, to run functions, or to process requests. However, Lambda is not appropriate to host a static website. Additionally, Lambda is a compute service, and you pay for the compute runtime.
+
+
+C
+Amazon Lightsail
+
+Incorrect. You can use Lightsail to host a static website. However, the website would run on an EC2 instance. Therefore, you would need to pay for the compute charges associated with running the EC2 instance.
+
+
+D
+Amazon S3
+
+Correct. Amazon S3 provides object storage. Additionally, you can use Amazon S3 to host static website content, including HTML, JavaScript, and CSS files. With Amazon S3, you do not need an always-running EC2 instance.
+
+9. Which AWS service can convert text to lifelike speech?
+
+
+Amazon Polly
+
+
+B
+Amazon Textract
+
+
+C
+Amazon Transcribe
+
+
+D
+Amazon Comprehend
+Amazon Polly
+
+Correct. Amazon Polly is a service that turns text into lifelike speech. Amazon Polly gives you the ability to create applications that talk. With Amazon Polly, you can build entirely new categories of speech-enabled products.
+
+
+B
+Amazon Textract
+
+Incorrect. Amazon Textract is a machine learning service that automatically extracts text, handwriting, and data from scanned documents. Amazon Textract goes beyond basic optical character recognition (OCR) to identify, understand, and extract data from forms and tables. Amazon Textract does not convert text to lifelike speech.
+
+
+
+C
+Amazon Transcribe
+
+Incorrect. Amazon Transcribe is a speech recognition service that uses machine learning models to convert audio to text. You can use Amazon Transcribe as a standalone transcription service. Additionally, you can use Amazon Transcribe to add speech-to-text capabilities to any application. Amazon Transcribe does not convert text to lifelike speech.
+
+
+
+
+D
+Amazon Comprehend
+
+Incorrect. Amazon Comprehend is a natural language processing (NLP) service that uses machine learning models to uncover information in unstructured data. Amazon Comprehend develops insights by recognizing the entities, key phrases, language, sentiments, and other common elements in a document. Amazon Comprehend does not convert text to lifelike speech.
+
+10. A business-critical application requires multi-Region deployment to meet availability service level agreements (SLAs).
+
+Which AWS service or feature should be used for network routing and load balancing for this application
+
+Amazon Route 53
+
+Correct. Route 53 is a DNS service that can route traffic to resources. You can use Route 53 to implement traffic routing across multiple Regions to meet availability SLAs.
+
+
+B
+Application Load Balancer (ALB)
+
+Incorrect. ALBs can distribute traffic to different resources within a Region. ALBs are a regional service. ALBs cannot route traffic to different Regions.
+
+
+
+C
+Amazon API Gateway
+
+Incorrect. You can use API Gateway to create and manage REST, HTTP, and WebSocket APIs. API Gateway cannot route traffic to different Regions.
+
+
+
+D
+AWS Site-to-Site VPN
+
+Incorrect. You can use Site-to-Site VPN to establish a secure and private connection from your on-premises networks to the AWS Cloud. Site-to-Site VPN cannot route traffic to different Regions.
+
+11. A company needs a database for queries. The database must summarize columns of data for analytical reports.
+
+Which AWS service will meet these requirements?
+
+
+A
+Amazon Aurora
+
+
+B
+Amazon DynamoDB
+
+
+C
+Amazon Redshift
+
+
+D
+Amazon Neptune
+
+A
+Amazon Aurora
+
+Incorrect. Aurora is a relational database compatible with MySQL and PostgreSQL. Aurora is not suitable for columnar summarization.
+
+B
+Amazon DynamoDB
+
+Incorrect. DynamoDB is a fully managed NoSQL database service. DynamoDB is not suitable for columnar summarization.
+
+C
+Amazon Redshift
+
+Correct. Amazon Redshift is a fully managed, petabyte-scale data warehouse service. You can use Amazon Redshift as a columnar database. Amazon Redshift can provide fast retrieval, which is often necessary in analytical applications.
+
+
+D
+Amazon Neptune
+
+Incorrect. Neptune is a fully managed graph database. Neptune is not suitable for columnar summarization.
+
+12. Which AWS services offer compute capabilities? (Select TWO.)
+
+
+A
+Amazon EC2
+
+
+B
+Amazon S3
+
+
+C
+Amazon Elastic Block Store (Amazon EBS)
+
+
+D
+Amazon Cognito
+
+
+E
+AWS LambdaAmazon EC2
+
+Correct. Amazon EC2 provides you with the ability to provision virtual servers in the AWS Cloud. Amazon EC2 provides compute capabilities.
+
+
+B
+Amazon S3
+
+Incorrect. Amazon S3 provides object storage in the AWS Cloud. Amazon S3 is a storage service and does not provide compute capabilities.
+
+
+
+C
+Amazon Elastic Block Store (Amazon EBS)
+
+Incorrect. Amazon EBS provides block-level storage that can be used with EC2 instances. Amazon EBS is a storage service and does not provide compute capabilities.
+
+
+
+D
+Amazon Cognito
+
+Incorrect. Cognito is used to provide authentication, authorization, and user management for your mobile or web applications. Cognito is an identity and access management service, and does not provide compute capabilities.
+
+
+
+E
+AWS Lambda
+
+Correct. Lambda is a serverless service and provides you with the ability to run code without the need to provision or manage servers. Lambda provides compute capabilities.
+
+13. A web developer has limited knowledge of AWS networking services such as Amazon VPC, Elastic Load Balancing, and Auto Scaling, but wants to host a highly available web application.
+
+Which AWS service would automatically handle the deployment and reduce the complexity for the developer?
+A
+AWS CodeDeploy
+
+
+B
+AWS Resource Access Manager
+
+
+C
+AWS Elastic Beanstalk
+
+
+D
+AWS CloudFormation
+
+Question
+A web developer has limited knowledge of AWS networking services such as Amazon VPC, Elastic Load Balancing, and Auto Scaling, but wants to host a highly available web application.
+
+Which AWS service would automatically handle the deployment and reduce the complexity for the developer?
+
+Report Content Errors
+
+A
+AWS CodeDeploy
+
+Incorrect. CodeDeploy is a deployment service used to automate application deployment on compute resources. However, the developer is still required to have knowledge of how to manage the underlying infrastructure and AWS networking services.
+
+
+
+B
+AWS Resource Access Manager
+
+Incorrect. AWS Resource Access Manager (AWS RAM) is a service that gives you the ability to securely share AWS resources with any AWS account or within your AWS Organization. AWS RAM is not used to host web applications.
+
+
+C
+AWS Elastic Beanstalk
+
+Correct. Elastic Beanstalk gives you the ability to deploy and manage web applications in AWS Cloud without having to understand or manage the underlying infrastructure.
+
+
+
+D
+AWS CloudFormation
+
+Incorrect. CloudFormation is a service used to model, provision, and manage AWS resources with infrastructure as code. CloudFormation requires knowledge of networking services to provision the resources.
+
+14. 
+
+Question
+A company is running an application replicated on six Linux-based Amazon EC2 instances across two Availability Zones in an AWS Region. The application needs shared access to data. The data is going to be frequently changed by the application within existing data files.
+
+Which AWS storage solution would meet the company's needs with the LEAST operational overhead?
+
+Amazon Elastic Block Store (Amazon EBS) Multi-Attach
+
+Incorrect. Amazon EBS Multi-Attach gives multiple EC2 instances the ability to share access to the same EBS volumes. However, all the instances would need to be in the same Availability Zone. This scenario has instances across two Availability Zones.
+
+
+B
+Amazon Elastic File System (Amazon EFS)
+
+Correct. Amazon EFS is a shared file system that gives EC2 instances the ability to share access to data in different Availability Zones in the same AWS Region.
+
+
+C
+Amazon S3
+
+Incorrect. Amazon S3 is an object storage solution. With object storage, you would need to upload an entire file for each data change. This solution requires more operational overhead.
+
+
+D
+Amazon FSx for Lustre
+
+Incorrect. Amazon FSx for Lustre provides a shared storage solution for high-performance compute workloads. However, this solution requires more operational overhead. This solution requires the use of additional services and managing configurations. Additionally, you would need to install a client application on the server to begin to use Lustre.
+
+15. A company would like to host its MySQL databases on AWS and maintain full control over the operating system, database installation, and configuration.
+
+Which AWS service should the company use to host the databases?
+
+A
+Amazon RDS
+
+Incorrect. Amazon RDS is a fully managed relational database service on AWS. Amazon RDS includes an option for MySQL databases. However, this solution would not give the company the ability to maintain full control over the operating system, database installation, and configuration.
+
+B
+Amazon EC2
+
+Correct. Amazon EC2 is a service that provides resizable compute capacity in the AWS Cloud. You can use Amazon EC2 to host a MySQL database similar to one that runs on premises. The company will have full control over the operating system, database installation, and configuration.
+
+C
+Amazon DynamoDB
+
+Incorrect. DynamoDB is an AWS-managed non-relational database service that is fast and scalable. This solution would not meet the company's requirement to host MySQL databases.
+
+D
+Amazon Aurora
+
+Incorrect. Aurora is a fully managed relational database on AWS. Aurora is compatible with MySQL. However, this solution would not give the company the ability to maintain full control over the operating system, database installation, and configuration.
+
+16. Which AWS service can analyze a set of documents to generate valuable insights from text
+A
+Amazon Textract
+
+Incorrect. Amazon Textract uses machine learning to automatically extract text, handwriting, and data from scanned documents. You can use Amazon Textract to extract data from documents. However, Amazon Textract does not analyze documents or generate insights from the text.
+
+B
+Amazon Comprehend
+
+Correct. Amazon Comprehend uses a pre-trained model to gain insights about the content of documents. You can use Amazon Comprehend to analyze documents and generate valuable insights from the text.
+
+C
+Amazon Polly
+
+Incorrect. You can use Amazon Polly to convert text into lifelike speech. Amazon Polly does not analyze documents or generate insights from the text.
+
+D
+Amazon Transcribe
+
+Incorrect. Amazon Transcribe is a speech recognition service that you can use to convert audio to text. Amazon Transcribe does not analyze documents or generate insights from the text.
+
+17. Which AWS services or features support data replication across AWS Regions? (Select TWO.)
+A
+Amazon S3
+
+Correct. Amazon S3 supports Cross-Region Replication. With Cross-Region Replication, you designate a destination S3 bucket in another Region. When Cross-Region Replication is turned on, any new object that is uploaded will be replicated to the destination S3 bucket.
+
+B
+Amazon Elastic Block Store (Amazon EBS)
+
+Incorrect. Amazon EBS automatically replicates data within an Availability Zone. Amazon EBS does not support Cross-Region Replication.
+
+C
+Amazon EC2 instance store
+
+Incorrect. An EC2 instance store is block storage that is attached to an EC2 instance. This storage is located on disks that are physically attached to the host computer. An instance store is ideal for temporary storage of information that changes frequently. The data that is stored on an instance store is temporary. There is no built-in mechanism to replicate data across Regions.
+
+D
+AWS Storage Gateway
+
+Incorrect. Storage Gateway connects an on-premises software appliance with cloud-based storage. Storage Gateway provides integration with data security features between your on-premises IT environment and AWS storage infrastructure such as Amazon S3. Storage Gateway does not directly support Cross-Region Replication.
+
+E
+Amazon RDS
+
+Correct. You can use Amazon RDS to host relational databases on AWS. One RDS DB instance resides in a single Region. With Amazon RDS, you can create read replicas across Regions. Amazon RDS replicates any data from the primary DB instance to the read replica across Regions.
+
+18. What are benefits of running a database on Amazon RDS compared to an on-premises database? (Select TWO.)
+A
+RDS provides backups by default.
+
+Correct. When using Amazon RDS, you can decide how frequently backups are completed. However, AWS manages the backing up of the data and the storing of the backup. Backups are automated based on the frequency that you define.
+
+B
+RDS supports any relational database.
+
+Incorrect. Amazon RDS does not support all relational databases but, instead, supports a variety of popular relational database engines, which include Amazon Aurora, PostgreSQL, MySQL, MariaDB, Oracle Database, and SQL Server.
+
+C
+RDS costs the same regardless of the database engine that is used.
+
+Incorrect. Some third-party database engines have different costs than others because there is a third-party license fee that is incurred for using the database. Therefore, the cost can vary depending on the database engine.
+
+D
+RDS database compute capacity can be easily scaled.
+
+Correct. Amazon RDS database instances can be scaled up or down based on demand. This can often be completed with little to no downtime. A database instance can also be scaled vertically to give it more memory or compute capacity.
+
+E
+RDS security groups are managed by AWS.
+
+Incorrect. Although security groups are used to control traffic inbound and outbound for a database instance, they are managed by the user and are not managed by AWS.
+
+19. A company needs to establish a dedicated and isolated network connection between the company's on-premises data center and AWS.
+
+Which AWS service will meet this requirement?
+A
+AWS Site-to-Site VPN
+
+Incorrect. Site-to-Site VPN can establish connections through tunnels that travel across the internet. Site-to-Site VPN cannot establish secure network connections with dedicated links that are isolated from the internet.
+
+B
+AWS Direct Connect
+
+Correct. Direct Connect can establish a secure and consistent network connection with dedicated links that are isolated from the internet.
+
+C
+Amazon Route 53
+
+Incorrect. Route 53 is a highly available and scalable DNS web service. Route 53 cannot establish secure network connections with dedicated links that are isolated from the internet.
+
+D
+AWS WAF
+
+Incorrect. AWS WAF is a web application firewall that filters traffic at the application layer. AWS WAF cannot establish secure network connections with dedicated links that are isolated from the internet.
+
+20. What should AWS edge locations be used for? (Select TWO.)
+
+A
+Hosting applications and databases
+
+Incorrect. AWS edge locations are used as points of presence around the world for users to connect to the AWS network. Although you can run functions at edge locations using Lambda@Edge, you cannot host applications or databases at the edge locations.
+
+B
+Delivering content closer to users
+
+Correct. AWS edge locations are used to host the content delivery network (CDN) service Amazon CloudFront, which gives you the ability to cache frequently accessed data closer to end users. This ability can reduce latency in data retrieval times for end users all over the world because the edge locations are often closer to the end users than the region in which the data is hosted.
+
+C
+Running NoSQL database caching services
+
+Incorrect. Although you can cache data at edge locations using services such as Amazon S3 as the origin, a different pattern is generally followed for caching information that comes from a NoSQL database. The cache for a NoSQL database would be located inside an AWS Region, not the edge location.
+
+D
+Reducing the load on Amazon EC2 based web servers
+
+Correct. AWS edge locations are used to host the content delivery network (CDN) service Amazon CloudFront, which gives you the ability to cache frequently accessed data closer to end users. When data is cached at an edge location and an end user requests data, the request is first routed to the edge location. If the data is found at the edge location, then the data is returned to the end user and the request never reaches the back-end server. This reduces the load on back-end servers because some requests are being offloaded to the edge location.
+
+E
+Sending notification messages to end users
+
+Incorrect. Edge locations are not used to send notification messages to end users or run applications that send messages to end users, and because of this reason, this answer is incorrect. Notification messages would likely come from a service or program hosted in an AWS Region

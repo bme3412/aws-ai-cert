@@ -1,0 +1,44 @@
+1 What are some of the different pricing models in AWS? 
+Reserved Instances, On-Demand Instances, Spot Instances, Savings Plans, Dedicated Hosts, Dedicated Instances, and Capacity Reservations.
+
+2. Is data traffic that is destined to your on-premises data centers considered data-transfer-out ? And will that transfer of data result in a charge to your monthly bill? 
+Yes, but you can eliminate these charges by using AWS Direct Connect. Direct Connect costs are associated with data traffic through this private connection and are included in the service.
+
+3. What AWS services offer solutions for automatically deleting old Amazon EBS snapshots or backups from other AWS services? And what AWS services could also help to reduce the storage costs within an AWS account? 
+Amazon Data Lifecycle Manager and AWS Backup.
+
+4. Which AWS service offers volume discounts when you enable consolidated billing? 
+AWS Organizations
+
+5. Which support plan allows an unlimited number of technical support cases to be opened? 
+The Developer Support Plan.
+
+6. If you need the most cost-effective AWS Support Plan with access to the AWS Support API for programmatic case management, which support plan do you choose? 
+The Business Support Plan.
+
+7. Where do find guided instructions on how to deploy an AWS service for the first time? 
+AWS documentation.
+
+8. Where do you find AWS best practices?
+The AWS Well-Architected Framework and AWS documentation.
+
+9. What AWS service helps to set coverage targets and receive alerts when your utilization drops below the defined threshold? 
+AWS Budgets.
+
+10. What can you use to track and categorize AWS costs on a detailed level? 
+Cost allocation tags.
+
+11. What is the most cost-effective option to choose when you purchase a reserved instance for a 1-year term? 
+All upfront.
+
+12. Where can you sell a catalog of custom Amazon Machine Images (AMIs) or buy AMIs in AWS? 
+AWS Marketplace.
+
+13. What type of reserved instance can you choose to change the instance family, type, platform, scope, or tenancy? 
+Convertible Reserved Instances (RI).
+
+14. In Amazon S3, what can you use to automatically transfer your infrequently accessed data in your S3 bucket to a more cost-effective storage class? 
+Amazon S3 Lifecycle Policy.
+
+15. Where can you see your forecasted future costs and current usage of your AWS resources? 
+AWS Cost Explorer.
