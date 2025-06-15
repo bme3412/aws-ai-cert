@@ -98,7 +98,7 @@ def parse_quiz_file(file_path):
     for line in answers_text.strip().split('\n'):
         line = line.strip()
         if not line: continue
-        match = re.match(r'^\s*(\d+)\s*\.\s*\*?([a-d])\b', line)
+        match = re.match(r'^\s*(\d+)\s*\.\s*\*\*([a-d])\)', line)
         if match:
             answers[int(match.group(1))] = match.group(2)
 

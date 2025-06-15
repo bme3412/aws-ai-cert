@@ -76,6 +76,60 @@ This document contains multiple-choice practice questions based on the AWS globa
     d) AWS Fargate
 
 ---
+
+### Section 4: AWS Regions and Availability Zones
+
+**11. A company needs to ensure their application can withstand a natural disaster in a single location. What is the AWS best practice for deploying their application?**
+    a) Deploy the application in a single Availability Zone with multiple instances
+    b) Deploy the application across multiple Availability Zones within the same Region
+    c) Deploy the application in multiple Edge Locations
+    d) Deploy the application in a single data center with redundant power
+
+**12. What is the typical distance between AWS Availability Zones within a Region?**
+    a) They are located in the same building
+    b) They are located on the same street
+    c) They are located tens of miles apart
+    d) They are located in different countries
+
+**13. A company has customers in both the United States and Brazil. They notice that running the same workload in São Paulo costs 50% more than in Oregon. What is the primary reason for this price difference?**
+    a) Different hardware specifications
+    b) Different service availability
+    c) Local tax structure
+    d) Network connectivity costs
+
+**14. Which of the following is NOT one of the four main factors to consider when choosing an AWS Region?**
+    a) Compliance with data governance
+    b) Proximity to customers
+    c) Number of available services
+    d) Number of Availability Zones
+
+### Section 5: Edge Locations and Content Delivery
+
+**15. What is the primary purpose of AWS Edge Locations?**
+    a) To host primary application workloads
+    b) To store cached copies of content closer to customers
+    c) To provide additional compute capacity
+    d) To store backup data
+
+**16. A company wants to deliver their website content to users worldwide with minimal latency. Which AWS service should they use?**
+    a) Amazon EC2
+    b) Amazon S3
+    c) Amazon CloudFront
+    d) Amazon Route 53
+
+**17. Which of the following services can be run at AWS Edge Locations? (Select TWO)**
+    a) Amazon EC2
+    b) Amazon CloudFront
+    c) Amazon Route 53
+    d) Amazon S3
+    e) AWS Lambda
+
+**18. A company needs to run AWS services in their own data center while maintaining full AWS functionality. Which AWS service should they use?**
+    a) AWS Direct Connect
+    b) AWS Outposts
+    c) AWS Snow Family
+    d) AWS Local Zones
+
 ---
 
 # Answer Key
@@ -90,3 +144,11 @@ This document contains multiple-choice practice questions based on the AWS globa
 8.  **c)** AWS SDK (Software Development Kit)
 9.  **b)** AWS CloudFormation
 10. **c)** AWS Elastic Beanstalk
+11. **b)** Deploy the application across multiple Availability Zones within the same Region
+12. **c)** They are located tens of miles apart
+13. **c)** Local tax structure
+14. **d)** Number of Availability Zones
+15. **b)** To store cached copies of content closer to customers
+16. **c)** Amazon CloudFront
+17. **b)** Amazon CloudFront, **c)** Amazon Route 53
+18. **b)** AWS Outposts

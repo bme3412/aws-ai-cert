@@ -74,7 +74,52 @@ This document contains multiple-choice practice questions based on the AWS compu
     c) AWS Lambda
     d) Amazon ECS (Elastic Container Service)
 
----
+### Section 4: EC2 Instance Types and Use Cases
+
+**11. A company is running a web application that requires a balanced mix of compute, memory, and networking resources. Which EC2 instance family would be most appropriate?**
+    a) Compute Optimized
+    b) General Purpose
+    c) Memory Optimized
+    d) Storage Optimized
+
+**12. A data analytics company needs to process large datasets that require significant memory capacity. Which EC2 instance family would be most suitable?**
+    a) General Purpose
+    b) Compute Optimized
+    c) Memory Optimized
+    d) Accelerated Computing
+
+**13. A gaming company needs to run high-performance game servers that require powerful processors. Which EC2 instance family would be the best choice?**
+    a) Memory Optimized
+    b) Compute Optimized
+    c) Storage Optimized
+    d) General Purpose
+
+### Section 5: EC2 Pricing Models
+
+**14. A startup company is testing a new application and needs to run EC2 instances for short periods without any long-term commitment. Which pricing model would be most suitable?**
+    a) Reserved Instances
+    b) On-Demand Instances
+    c) Spot Instances
+    d) Dedicated Hosts
+
+**15. A company wants to save up to 72% on their EC2 costs while maintaining flexibility to change instance types within the same family. Which pricing option would be best?**
+    a) Standard Reserved Instances
+    b) Convertible Reserved Instances
+    c) EC2 Instance Savings Plans
+    d) Spot Instances
+
+**16. A company needs to run EC2 instances on physical servers dedicated solely to their use for compliance requirements. Which pricing option should they choose?**
+    a) On-Demand Instances
+    b) Reserved Instances
+    c) Spot Instances
+    d) Dedicated Hosts
+
+**17. A company has batch processing jobs that can be interrupted and resumed later. Which EC2 pricing model would provide the highest cost savings?**
+    a) On-Demand Instances
+    b) Reserved Instances
+    c) Spot Instances
+    d) Dedicated Hosts
+
 ---
 
 # Answer Key
@@ -89,3 +134,10 @@ This document contains multiple-choice practice questions based on the AWS compu
 8.  **a)** The application runs on servers, but you do not need to provision or manage them.
 9.  **d)** AWS Fargate
 10. **c)** AWS Lambda
+11. **b)** General Purpose
+12. **c)** Memory Optimized
+13. **b)** Compute Optimized
+14. **b)** On-Demand Instances
+15. **c)** EC2 Instance Savings Plans
+16. **d)** Dedicated Hosts
+17. **c)** Spot Instances
