@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Global Infrastructure</title>
+    <style>
+        :root {
+            --aws-orange: #FF9900;
+            --aws-blue: #232F3E;
+            --aws-light-blue: #37475A;
+            --aws-green: #2E7D32;
+            --aws-red: #D32F2F;
+            --aws-yellow: #FFC107;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        h1 {
+            color: var(--aws-blue);
+            border-bottom: 3px solid var(--aws-orange);
+            padding-bottom: 15px;
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: var(--aws-blue);
+            margin-top: 30px;
+            padding: 10px;
+            border-radius: 5px;
+            background: linear-gradient(to right, var(--aws-orange), transparent);
+            padding-left: 20px;
+        }
+
+        h3 {
+            color: var(--aws-light-blue);
+            border-left: 4px solid var(--aws-orange);
+            padding-left: 15px;
+            margin-top: 25px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+            padding: 25px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+        }
+
+        .key-points {
+            background: linear-gradient(135deg, #e8f0fe 0%, #c2d7fe 100%);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #4285f4;
+        }
+
+        .note {
+            background: linear-gradient(135deg, #fff3cd 0%, #ffe69c 100%);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid var(--aws-yellow);
+        }
+
+        .infrastructure-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .infrastructure-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+
+        .infrastructure-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .region-feature {
+            display: inline-block;
+            background-color: #e8f0fe;
+            padding: 8px 15px;
+            margin: 5px;
+            border-radius: 20px;
+            border: 1px solid #4285f4;
+            font-size: 0.9em;
+        }
+
+        .region-feature:hover {
+            background-color: #4285f4;
+            color: white;
+            cursor: pointer;
+        }
+
+        .method-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border-left: 4px solid var(--aws-orange);
+        }
+
+        .method-card:hover {
+            background-color: #fff3cd;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        li:before {
+            content: "•";
+            color: var(--aws-orange);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            font-size: 1.2em;
+        }
+
+        .important-note {
+            background-color: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .best-practice {
+            background-color: #e8f5e9;
+            border-left: 4px solid var(--aws-green);
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 5px 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>AWS Global Infrastructure</h1>
+
+    <div class="section">
+        <h2>1. AWS Regions</h2>
+        <p>AWS Regions are fundamental building blocks of the AWS global infrastructure. They are designed to address the critical business need of running applications and storing data in a reliable, secure, and scalable manner.</p>
+
+        <div class="infrastructure-grid">
+            <div class="infrastructure-card">
+                <h3>Key Concepts</h3>
+                <ul>
+                    <li>Regions are geographically isolated areas containing multiple data centers</li>
+                    <li>Each Region is completely independent and isolated from other Regions</li>
+                    <li>Data sovereignty is maintained within each Region</li>
+                    <li>Regions are connected through high-speed fiber networks</li>
+                </ul>
+            </div>
+
+            <div class="infrastructure-card">
+                <h3>Region Selection Factors</h3>
+                <div class="region-feature">Compliance</div>
+                <div class="region-feature">Proximity</div>
+                <div class="region-feature">Feature Availability</div>
+                <div class="region-feature">Pricing</div>
+                <p>Choose based on regulatory requirements, customer location, service availability, and cost considerations.</p>
+            </div>
+        </div>
+
+        <div class="key-points">
+            <h3>Availability Zones (AZs)</h3>
+            <div class="infrastructure-grid">
+                <div class="infrastructure-card">
+                    <h4>Physical Characteristics</h4>
+                    <ul>
+                        <li>Physically separate data centers within a Region</li>
+                        <li>Located tens of miles apart for disaster protection</li>
+                        <li>Low latency communication between AZs</li>
+                    </ul>
+                </div>
+                <div class="infrastructure-card">
+                    <h4>Best Practices</h4>
+                    <ul>
+                        <li>Deploy across at least two AZs for high availability</li>
+                        <li>Use multiple AZs for disaster recovery</li>
+                        <li>Distribute resources across AZs for fault tolerance</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>2. Edge Locations</h2>
+        <p>Edge Locations are separate from Regions and are used to deliver content closer to customers worldwide, reducing latency and improving performance.</p>
+
+        <div class="infrastructure-grid">
+            <div class="infrastructure-card">
+                <h3>Key Services</h3>
+                <ul>
+                    <li><strong>Amazon CloudFront:</strong> Content Delivery Network (CDN) service</li>
+                    <li><strong>Amazon Route 53:</strong> Domain Name Service (DNS)</li>
+                </ul>
+            </div>
+
+            <div class="infrastructure-card">
+                <h3>AWS Outposts</h3>
+                <p>AWS Outposts allows you to run AWS infrastructure and services in your own data center, providing a fully operational mini-Region within your premises.</p>
+                <div class="important-note">
+                    <p><strong>Note:</strong> Outposts bring AWS services, infrastructure, and operating models to virtually any data center, co-location space, or on-premises facility.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>3. Provisioning AWS Resources</h2>
+        <p>AWS provides multiple ways to interact with and provision resources through APIs.</p>
+
+        <div class="method-card">
+            <h3>AWS Management Console</h3>
+            <ul>
+                <li>Browser-based interface</li>
+                <li>Visual management of resources</li>
+                <li>Great for learning and non-technical tasks</li>
+            </ul>
+        </div>
+
+        <div class="method-card">
+            <h3>AWS Command Line Interface (CLI)</h3>
+            <ul>
+                <li>Terminal-based interface</li>
+                <li>Scriptable and repeatable actions</li>
+                <li>Reduces human error</li>
+            </ul>
+        </div>
+
+        <div class="method-card">
+            <h3>AWS Software Development Kits (SDKs)</h3>
+            <ul>
+                <li>Programmatic access to AWS services</li>
+                <li>Available for multiple programming languages</li>
+                <li>Simplifies integration with existing applications</li>
+            </ul>
+        </div>
+
+        <h3>Managed Tools</h3>
+        <div class="infrastructure-grid">
+            <div class="infrastructure-card">
+                <h4>AWS Elastic Beanstalk</h4>
+                <ul>
+                    <li>Automates EC2-based environment provisioning</li>
+                    <li>Manages infrastructure while maintaining control</li>
+                    <li>Focus on application code rather than infrastructure</li>
+                </ul>
+            </div>
+
+            <div class="infrastructure-card">
+                <h4>AWS CloudFormation</h4>
+                <ul>
+                    <li>Infrastructure as Code (IaC) tool</li>
+                    <li>Uses JSON or YAML templates</li>
+                    <li>Automated, repeatable deployments</li>
+                    <li>Supports multiple AWS services</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="best-practice">
+            <h4>Best Practice</h4>
+            <p>Use Infrastructure as Code (IaC) tools like AWS CloudFormation to ensure consistent, repeatable deployments and maintain version control of your infrastructure.</p>
+        </div>
+    </div>
+</body>
+</html>

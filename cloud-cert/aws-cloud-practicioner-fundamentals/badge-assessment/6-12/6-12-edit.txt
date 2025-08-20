@@ -1,0 +1,79 @@
+1. A multinational company decides to move all its on-premises infrastructure to the AWS Cloud. Which AWS Support Plan includes access to a Technical Account Manager (TAM)?
+
+Enterprise Support
+
+Explanation: Only the AWS Enterprise Support plan provides a dedicated Technical Account Manager (TAM). The Enterprise On-Ramp plan provides access to a pool of TAMs, not a dedicated one. Business and Developer plans do not include TAMs.
+
+---
+
+2. Your company is hoping to migrate their on-premises infrastructure to AWS. However, in a recent meeting, the CTO expressed concern about controlling and optimizing the cost of cloud resources. You have been tasked with finding a way to control and automate spending in the cloud. Which AWS service is the most proactive in achieving this goal?
+
+AWS Budgets
+
+Explanation: AWS Budgets allows you to set custom cost and usage budgets that alert you when you exceed your thresholds, making it the most proactive tool for controlling and automating spending.
+
+---
+
+3. Your company is considering adopting cloud technology, but your Chief Technology Officer has concerns about data residency and latency issues for certain applications. They would prefer to run these applications on-premises while still being able to take advantage of AWS services and tools such as Amazon EC2. Which option would BEST fulfill these requirements?
+
+AWS Outposts
+
+Explanation: AWS Outposts extends AWS infrastructure, services, APIs, and tools to virtually any on-premises or edge location for a truly consistent hybrid experience. It is designed for workloads that require low latency, local data processing, or data residency.
+
+---
+
+4. Your company is deploying a web application in AWS running on several Amazon EC2 instances. What is the responsibility of AWS under the shared responsibility model?
+
+Securing the EC2 hypervisor
+
+Explanation: AWS is responsible for the security of the underlying infrastructure, including the EC2 hypervisor. Customers are responsible for managing the guest OS, including patching and security group configuration.
+
+---
+
+5. You have been hired by a company to create a dashboard to visualize and monitor their AWS costs. Which tools could you use to meet this request? (Select TWO)
+
+AWS Cost Explorer
+AWS Budgets
+
+Explanation: AWS Cost Explorer provides visualization and analysis of your AWS spending. AWS Budgets allows you to set and track budgets for your AWS costs and usage. Both are key tools for cost monitoring and visualization.
+
+---
+
+6. Your e-commerce website has been experiencing slow load times and high latency, especially for customers in regions that are far away from your server location. Which AWS service uses Edge Locations to reduce latency?
+
+Amazon CloudFront
+
+Explanation: Amazon CloudFront is a content delivery network (CDN) that uses Edge Locations to cache and deliver content closer to users, reducing latency.
+
+---
+
+7. A healthcare provider plans to migrate its applications and highly sensitive patient data to the AWS Cloud. As a solutions architect, you need to make sure all the data is protected at rest and in transit. Additionally, you need to protect your workload in all layers of the cloud. Which pillar of the AWS Well-Architected Framework includes the guidance to achieve this?
+
+Security
+
+Explanation: The Security pillar of the AWS Well-Architected Framework includes guidance for protecting data at rest and in transit, as well as other security best practices.
+
+---
+
+8. Your company is developing its first application in the cloud. You suggested that the company should leverage the AWS Well-Architected Framework during the process. The CTO is now asking you to provide more details about the framework and its benefits. Which statement would you use to describe the AWS Well-Architected Framework? (Select TWO)
+
+- It provides a consistent approach to evaluate the application architecture against best practices.
+- It increases the likelihood of business success by helping the organization have constructive conversations.
+
+Explanation: The AWS Well-Architected Framework helps organizations understand the pros and cons of decisions while building systems on AWS. It is not a PCI-DSS requirement or an auditing mechanism.
+
+---
+
+9. Your application is running on Amazon EC2 instances. Which component of the AWS global infrastructure will you use to make your application resilient and highly available?
+
+AWS Availability Zones
+
+Explanation: Availability Zones are physically separate locations within an AWS Region that are engineered to be isolated from failures in other Availability Zones. They are the key component for high availability and resilience.
+
+---
+
+10. A customer would like to design and build a new workload on the AWS Cloud but does not have the AWS expertise to get started. Which AWS program can a customer take advantage of to achieve that outcome?
+
+AWS Partner Network (APN) Consulting Partners
+
+Explanation: The AWS Partner Network (APN) Consulting Partners program is designed to help customers design, architect, build, migrate, and manage their workloads and applications on AWS.

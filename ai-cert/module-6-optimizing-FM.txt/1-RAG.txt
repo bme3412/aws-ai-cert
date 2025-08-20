@@ -1,0 +1,32 @@
+From dataset to vector embeddings
+
+Enterprise datasets
+Although LLMs can generate human-like text, image, audio, and more from prompts, this capability might not meet the specific needs of enterprises. Customized enterprise applications require these models to process relevant data from enterprise datasets.
+Enterprises gather vast amounts of internal data, including documents, presentations, user manuals, reports, and transaction summaries, all unfamiliar to the FM. When these models ingest and use enterprise data sources, they acquire domain-specific knowledge, enabling them to produce tailored, highly relevant outputs that meet enterprise needs.
+To provide the relevant enterprise data as additional context to the language model, along with the prompt, this addition helps the model deliver more accurate outputs. Determining the right context involves searching enterprise datasets using the prompt text. Vector embeddings play a crucial role in this process.
+
+Vector embeddings
+Embedding is the process by which text, images, and audio are given numerical representation in a vector space. Embedding is usually performed by a machine learning (ML) model.
+Enterprise datasets, such as documents, images and audio, are passed to ML models as tokens and are vectorized. These vectors in an n-dimensional space, along with the metadata about them, are stored in purpose-built vector databases for faster retrieval.
+
+Storing vectors
+The core function of vector databases is to compactly store billions of high-dimensional vectors representing words and entities. Vector databases provide ultra-fast similarity searches across these billions of vectors in real time. 
+The most common algorithms used to perform the similarity search are k-nearest neighbors (k-NN) or cosine similarity.
+
+Key functions of agents
+Intermediary operations: Agents can act as intermediaries, facilitating communication between the generative AI model and various backend systems. The generative AI model handles language understanding and response generation. The various backend systems include items such as databases, CRM platforms, or service management tools.
+Actions launch: Agents can be used to run a wide variety of tasks. These tasks might include adjusting service settings, processing transactions, retrieving documents, and more. These actions are based on the users' specific needs understood by the generative AI model.
+Feedback integration: Agents can also contribute to the AI system's learning process by collecting data on the outcomes of their actions. This feedback helps refine the AI model, enhancing its accuracy and effectiveness in future interactions.
+
+Evaluating the performance of generative AI models is critical for understanding their effectiveness and ensuring they meet indented objectives. Two of the most common evaluation methods are human evaluation and the use of benchmark datasets. Each method provides unique insights and is suitable for different aspects of model performance assessment.
+
+Human evaluation
+Human evaluation involves real users interacting with the AI model to provide feedback based on their experience. 
+
+Benchmark datasets
+Benchmark datasets, on the other hand, provide a quantitative way to evaluate generative AI models. These datasets consist of predefined datasets and associated metrics that offer a consistent, objective means to measure model performances
+Benchmark datasets are particularly useful for initial testing phases to ensure that the model meets certain technical specifications before it is put through more subjective human evaluations. They are also essential for comparing performance across different models or different iterations of the same model.
+
+The evaluation of LLM performance using a benchmark dataset can be automated using an LLM as a judge approach.
+
+In practice, a combination of both human evaluation and benchmark datasets is often used to provide a comprehensive overview of a model's performance. Although benchmark datasets can quantify the model's technical capabilities, human evaluation brings an essential human-centric perspective that benchmarks cannot capture alone. This combined approach ensures that the model is not only technically proficient but also effective and engaging in real-world scenarios.

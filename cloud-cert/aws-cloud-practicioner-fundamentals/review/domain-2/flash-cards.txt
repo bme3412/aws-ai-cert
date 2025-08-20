@@ -1,0 +1,24 @@
+1. You are hosting a MySQL database on Amazon RDS. Are you responsible for patching the database engine on an Amazon RDS database instance or is AWS responsible for this security patching?
+
+AWS is responsible for patching on Amazon RDS.
+
+2. You have a database running on Amazon EC2? Who would be responsible for patching of the Amazon EC2 instance? 
+You are responsible for the patching of your Amazon EC2 instance.
+
+3. Where can you find information about compliance on AWS? 
+AWS compliance programs such as AWS Artifact, the Security Center, and the AWS Knowledge Center.
+
+4. What AWS service helps to identify an IAM user who deleted an Amazon EC2 instance in your production environment? 
+AWS CloudTrail is a service for governance, compliance, operational auditing, and risk auditing of your AWS account that continuously monitors, and retains account activity related to actions across your AWS infrastructure.
+
+5. What are some actions you can perform as the account root user of your AWS account? 
+As the account root user, you can change your account settings, restore IAM user permissions, activate access to the AWS Billing and Cost Management console, register as a seller, configure an S3 bucket to enable multi-factor authentication, close your AWS account, and more.
+
+6. What identity in AWS has associated usernames and passwords? 
+IAM users.
+
+7. What AWS service would you choose if you need to create rules to filter web traffic based on conditions such as IP addresses, HTTP headers, or custom URLs? 
+AWS WAF helps to control traffic with rules that you define that block common attack patterns such as SQL injections or cross-site scripting
+
+8. Can you conduct security assessments and penetration testing without prior approval against your AWS resources?
+Yes, but only for certain services. 

@@ -1,0 +1,402 @@
+1. Which service should someone use to turn on single sign-on (SSO) to the AWS Management Console?
+
+A
+Amazon Cognito
+
+Incorrect. Cognito is used as an authentication and user management service for web and mobile applications. Cognito provides users the ability to sign in to their web or mobile applications. Cognito does not provide the ability for SSO integration to access the AWS Management Console.
+
+
+
+B
+AWS Directory Service
+
+Incorrect. Directory Service is a managed directory service that provides a way to organize information related to your company. Directory Service does not provide the ability for SSO integration to access the AWS Management Console.
+
+
+C
+AWS IAM Identity Center
+
+Correct. IAM Identity Center provides you with the ability to manage sign-in security for your workforce users. IAM Identity Center can be used for SSO integration to access the AWS Management Console.
+
+
+
+D
+Amazon API Gateway
+
+Incorrect. API Gateway is used to create and manage REST, HTTP, and WebSocket APIs. Although you can create APIs that access AWS or other web services or applications, API Gateway does not provide SSO functionality for signing in to the AWS Management Console.
+
+2. A
+Amazon QuickSight
+
+Incorrect. QuickSight is a business analytics service to build visualizations, perform one-time analysis, and quickly get business insights from data. QuickSight is not used for account creation and management.
+
+
+B
+Amazon Lightsail
+
+Incorrect. Lightsail is a virtual private server that you use to build and host applications in the AWS Cloud. Lightsail is not used for account creation and management.
+
+
+C
+AWS Organizations
+
+Correct. Organizations offers an API to create and manage AWS accounts. Organizations can control permissions that are available to accounts and can consolidate billing.
+
+
+D
+Amazon Connect
+
+Incorrect. Amazon Connect is a cloud contact center. Amazon Connect is not used for account creation and management.
+
+3. A cloud practitioner must define the AWS shared responsibility model.
+
+What is the customer's responsibility? (Select TWO.)
+
+A
+Configure IAM users for least-privilege access
+
+Correct. AWS provides the functionality of AWS Identity and Access Management (IAM). However, the customer determines who receives specific access rights. The customer defines IAM users and assigns policies to those users.
+
+
+B
+Install patches to the database of Amazon RDS DB instances
+
+Incorrect. Amazon RDS is a fully managed database service. AWS manages patching of the RDS engine. However, the customer can choose a time window when the patching will occur.
+
+
+C
+Determine which services have access to an Amazon DynamoDB table
+
+Correct. The customer is responsible for controlling access between services. Access between services represents security in the cloud.
+
+
+
+D
+Patch the physical AWS network equipment
+
+Incorrect. AWS exclusively maintains all physical network equipment.
+
+
+
+E
+Patch the operating system used by AWS Lambda functions
+
+Incorrect. Lambda is a fully managed service. Therefore, the customer is not responsible for patching the operating system.
+
+5. A company has a new requirement to log actions taken in a production account.
+
+Which AWS service should meet that requirement?
+
+A
+AWS CloudTrail
+
+Correct. Actions performed in AWS are recorded as events in CloudTrail. You can use CloudTrail to log actions taken in a production account, such as actions taken in the AWS Management Console, AWS CLI, and AWS SDKs.
+
+
+
+B
+Amazon CloudWatch
+
+Incorrect. CloudWatch is used to monitor resources and applications that you run on AWS in near real time. CloudWatch can collect and track metrics to measure specific resource concerns, but it does not log actions taken in an account.
+
+
+C
+Amazon Inspector
+
+Incorrect. Amazon Inspector is used to scan AWS workloads for software vulnerabilities and unintended network exposure based on industry standards. Amazon Inspector does not log actions taken in an account.
+
+
+D
+AWS Application Discovery Service
+
+Incorrect. Application Discovery Service collects usage and configuration data about your on-premises servers to help plan a migration. Application Discovery Service does not log actions taken in an account.
+
+5. A company wants to add a virtual firewall to an Amazon VPC. The company wants all instances inside a specific subnet to be automatically covered under this firewall.
+
+Which feature meets these requirements?
+
+A
+IAM role
+
+Incorrect. An IAM role is an IAM identity used to apply specific permissions. You can use an IAM role to apply permission policies that specify what the identity can and cannot access. An IAM role does not filter network traffic.
+
+
+B
+Security groups
+
+Incorrect. Security groups are applied at the interface level of resources that are deployed within a VPC. Although a security group can be applied to all resources within a subnet, each resource must be explicitly configured to use the security group.
+
+
+C
+Network ACLs
+
+Correct. Network ACLs are used to allow or deny specific traffic to a VPC at the subnet level. Network ACLs operate at the subnet level and meet the requirements to add a layer of security that acts as a firewall.
+
+
+D
+VPC Flow Logs
+
+Incorrect. VPC Flow Logs are used to capture information about IP traffic going to and from network interfaces in your VPC. VPC Flow Logs do not act as a firewall to filter network traffic for a subnet.
+
+6. 
+
+Question
+Which task is AWS responsible for in the AWS shared responsibility model for security and compliance?
+
+A
+Granting access to individuals and services
+
+
+B
+Ensuring payment card industry (PCI) compliance of user applications hosted on AWS
+
+
+C
+Updating Amazon EC2 hardware
+
+Correct. It is the responsibility of AWS to update EC2 hardware based on the AWS shared responsibility model.
+
+
+D
+Updating a guest operating system deployed on Amazon EC2
+
+Incorrect. It is the users' responsibility to update guest operating systems that are deployed on Amazon EC2.
+
+7. Which task is the customer's responsibility for AWS Lambda, according to the AWS shared responsibility model?
+
+A
+Encryption of the application data at rest
+
+Correct. Although Lambda is a fully managed service, customers are still responsible for application data. Therefore, the customer is responsible for protection and encryption of application data at rest.
+
+B
+Management of the application platform
+
+Incorrect. AWS is responsible for the management of the underlying infrastructure, operating system, and application platform for Lambda.
+
+C
+Patching of the guest operating system
+
+Incorrect. AWS is responsible for the management of the underlying infrastructure, operating system, and application platform for Lambda.
+
+D
+Security of the physical infrastructure
+
+Incorrect. According to the shared responsibility model, AWS is responsible for the physical security of facilities where the service operates. AWS is responsible for the physical infrastructure that hosts compute storage and networking resources.
+
+8.Which AWS service provides managed threat detection that will identify compromised instances and accounts?
+
+A
+Amazon Macie
+
+Incorrect. Macie is a security service that uses machine learning to automatically discover, classify, and protect sensitive data that is stored in Amazon S3 buckets. Macie does not identify compromised instances and accounts.
+
+
+
+B
+Amazon Inspector
+
+Incorrect. Amazon Inspector is an automated security assessment service that helps improve the security and compliance of workloads on AWS. Amazon Inspector monitors workloads for software vulnerabilities or network exposure. Amazon Inspector does not identify compromised instances and accounts.
+
+C
+Amazon GuardDuty
+
+Correct. GuardDuty provides continuous monitoring and threat detection services. GuardDuty uses threat intelligence feeds and machine learning to identify unauthorized and malicious activity within your AWS environment. You can use GuardDuty to identify compromised instances and accounts.
+
+
+
+D
+AWS Shield
+
+Incorrect. Shield is a managed DDoS protection service for applications that run on AWS. You can use Shield to help protect applications from DDoS attacks. Shield does not identify compromised instances and accounts.
+
+9. Which service or feature will enhance the security of access to the AWS Management Console? (Select TWO.)
+
+A
+AWS Secrets Manager
+
+Incorrect. Secrets Manager stores and maintains sensitive parameters, such as credentials, that can be used by applications when calling other applications or services. However, it does not enhance the security to the AWS Management Console.
+
+Learn more about Secrets Manager.
+
+
+B
+AWS Certificate Manager (ACM)
+
+Incorrect. ACM handles SSL/TLS certificates for your AWS-based websites and applications. It does not enhance the security to the AWS Management Console.
+
+
+C
+Multi-factor authentication (MFA)
+
+Correct. MFA is a simple best practice that adds an extra layer of protection on top of your username and password. When you configure MFA, a user who signs in to the AWS Management Console will be prompted for their username and password. This is the first factor of what they know. The user will then be prompted for an authentication code from their MFA device. This is the second factor of what they have. MFA provides increased security for your AWS account settings and resources.
+
+
+
+D
+Security groups
+
+Incorrect. Security groups enhance the security of instances or services within a Virtual Private Cloud (VPC). They do not enhance the security to the AWS Management Console.
+
+
+E
+Complex password requirements
+
+Correct. Complex password requirements help protect against improper access to the AWS Management Console by making passwords more difficult to guess.
+
+10. Which service provides risk auditing by continuously monitoring and logging API requests to resources in an account, which includes user actions in the AWS Management Console and AWS SDKs?
+A
+Amazon CloudWatch
+
+Incorrect. CloudWatch monitors your AWS resources and the applications that you run on AWS in real time. You can use CloudWatch to collect and track metrics, which are variables that you can measure for your resources and applications. However, CloudWatch does not record API activity.
+
+
+B
+AWS CloudTrail
+
+Correct. CloudTrail helps to provide governance, compliance, and operational risk auditing of your AWS account. Actions taken by a user, role, or an AWS service are recorded as events in CloudTrail. Events include actions taken in the AWS Management Console, AWS Command Line Interface (AWS CLI), and AWS SDKs and APIs.
+
+
+C
+AWS Config
+
+Incorrect. AWS Config provides a detailed view of the configuration of AWS resources in your AWS account. This view includes how the resources are related to one another and how they were configured in the past so that you can see how the configurations and relationships change over time. However, AWS Config does not log API calls to resources.
+
+
+D
+AWS Health
+
+Incorrect. AWS Health provides ongoing visibility into your resource performance and the availability of your AWS services and accounts. You can use AWS Health events to learn how service and resource changes might affect your applications that run on AWS. AWS Health provides relevant and timely information to help you manage events in progress. However, AWS Health does not log API calls to resources.
+
+11. A cloud practitioner wants to explicitly deny network traffic to a subnet inside of an Amazon VPC.
+
+Which solution will meet this requirement?
+
+A
+Network ACLs
+
+Correct. Network ACLs are firewalls that you can use to deny traffic on the VPC subnet level.
+
+B
+Security groups
+
+Incorrect. Security groups are firewalls that you can use on the resource level inside of a VPC subnet. You can use security groups to control inbound and outbound traffic to a resource.
+
+
+C
+Transit gateway
+
+Incorrect. You can use a transit gateway to interconnect your VPC and on-premises networks through a central hub. You cannot use transit gateways to deny traffic on the subnet level.
+
+D
+Route table
+
+Incorrect. You can use a route table to direct traffic from your subnet and gateway. Route tables cannot explicitly block network traffic inside of a VPC.
+
+12. Which security-related services or features does AWS offer? (Select TWO.)
+
+A
+Complete PCI compliance for customer applications that run on AWS
+
+Incorrect. Customers are responsible for the certification of PCI compliance of their applications. Some AWS services are certified to be PCI compliant.
+
+Learn more about AWS Security Competency Partners.
+
+
+B
+AWS Trusted Advisor security checks
+
+Correct. Trusted Advisor draws upon best practices learned from serving hundreds of thousands of AWS customers. These best practices include security checks.
+
+
+C
+Data encryption
+
+Correct. Many AWS services support data encryption, including Amazon Elastic Block Store (Amazon EBS) and Amazon S3. Encryption adds another layer of security to your data.
+
+
+D
+Automated penetration testing
+
+Incorrect. AWS does not provide automated penetration testing. AWS customers can carry out security assessments or penetration tests on their AWS infrastructure without prior approval for some services.
+
+
+E
+Amazon S3 copyrighted content detection
+
+Incorrect. Amazon S3 does not provide copyrighted content detection.
+
+13. During a compliance review, one of the auditors requires a copy of the AWS SOC 2 report.
+
+Which service should be used to submit this request?
+
+A
+AWS Health Dashboard
+
+Incorrect. The AWS Health Dashboard provides alerts and remediation guidance when AWS is experiencing events that might impact you and the performance of your AWS services and accounts. It does not provide Service Organization Control (SOC) reports.
+
+
+B
+AWS Trusted Advisor
+
+Incorrect. Trusted Advisor is an online tool that provides you with real-time guidance to help you provision your resources by following AWS best practices, but it does not provide SOC reports.
+
+
+C
+AWS Artifact
+
+Correct. AWS Artifact is a web service that allows you to download AWS security and compliance documents such as ISO certifications and SOC reports.
+
+
+
+D
+Amazon S3
+
+Incorrect. Amazon S3 is an object storage service that offers scalability, data availability, security, and performance, but it does not provide SOC reports.
+
+14. Which AWS service uses machine learning to help discover, monitor, and protect sensitive data that is stored in Amazon S3 buckets?
+A
+AWS Shield
+
+Incorrect. Shield Standard and Shield Advanced are DDoS protection services that operate at the network layers. Shield does not provide sensitive data discovery or protection for data that is stored in Amazon S3.
+
+
+B
+Amazon Macie
+
+Correct. Macie provides data security by using machine learning to discover, monitor, and provide automated protection of sensitive data that is stored in Amazon S3.
+
+
+
+C
+AWS Network Firewall
+
+Incorrect. Network Firewall is a managed network firewall service that provides intrusion detection and prevention for your VPC. Network Firewall does not provide sensitive data discovery or protection for data that is stored in Amazon S3.
+
+
+D
+Amazon Cognito
+
+Incorrect. Amazon Cognito provides user management and authentication for web and mobile applications. Amazon Cognito does not provide sensitive data discovery or protection for data that is stored in Amazon S3
+
+15. Which of the following is the customer responsible for updating and patching, according to the AWS shared responsibility model?
+A
+Amazon FSx for Windows File Server
+
+Incorrect. FSx for Windows File Server is a fully managed service that provides shared storage built on a Windows Server. AWS is responsible for updates and patches of the server.
+
+B
+Amazon WorkSpaces virtual Windows desktop
+
+Correct. WorkSpaces provides a managed Desktop as a Service offering. WorkSpaces gives users the ability to interact with a virtual desktop. It is the responsibility of the customer to update and patch the operating system and any software installed by the customer in WorkSpaces. You can schedule maintenance windows or manually make the update yourself.
+
+C
+AWS Directory Service for Microsoft Active Directory
+
+Incorrect. AWS Managed Microsoft AD is a managed service that gives you the ability to connect to your existing active directory or to migrate workloads. AWS is responsible for updates and patches for AWS Managed Microsoft AD.
+
+
+D
+Amazon RDS for Microsoft SQL Server
+
+Incorrect. RDS for Microsoft SQL Server is a managed service that gives you the ability to set up and scale SQL Server deployments. AWS is responsible for updates and patches. You do not need to self-manage the database on your own.

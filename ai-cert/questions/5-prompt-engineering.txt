@@ -1,0 +1,78 @@
+1. Which option correctly describes the concept of negative prompts in prompt engineering?
+Negative prompts are additional instructions provided to the language model to guide it towards generating undesired outputs.
+
+Negative prompts are examples of incorrect or undesirable outputs that the language model should avoid generating.
+
+Negative prompts are context or background information that the language model should ignore while generating responses.
+
+Negative prompts are techniques used to reduce the dimensionality of the language model's latent space.
+
+Correct
+That’s correct! Negative prompts are examples of incorrect or undesirable outputs that the language model should avoid generating. 
+
+-------
+
+2. A data scientist at AnyCompany wants to influence a model's responses by adjusting various inference parameters to achieve the desired level of diversity, coherence, and relevance in the generated outputs.
+Which statement correctly describes the effect of increasing the temperature parameter during inference?
+
+Increasing the temperature parameter will make the model's responses more deterministic and less diverse, favoring the most probable outputs.
+
+Increasing the temperature parameter will make the model's responses more diverse and less deterministic, exploring a wider range of possible outputs.
+
+Increasing the temperature parameter will have no effect on the diversity of the model's responses, because it only impacts the length of the generated outputs.
+
+Increasing the temperature parameter will make the model's responses shorter and more concise, because it reduces the probability of generating longer sequences.
+
+Correct
+That’s correct! The temperature parameter in generative models is a scaling factor that controls the randomness or diversity of the generated outputs. A higher temperature value increases the probability of sampling from less likely or lower-probability output tokens, resulting in more diverse and unpredictable responses. Conversely, a lower temperature value favors the most probable outputs, leading to more deterministic and repetitive responses.
+
+-------
+
+3. AnyCompany is developing a generative artificial intelligence (generative AI) system to assist customers in filing their tax returns. The process of filing taxes involves several complex steps, such as gathering relevant documents, calculating income and deductions, and completing various forms and schedules.
+Which approach to prompt engineering would be most effective for this tax filing assistance system?
+
+Use a single, comprehensive prompt that covers the entire tax filing process.
+
+Provide the language model with a detailed prompt that explains the tax filing process from start to finish.
+
+Rely solely on the language model's pretraining on tax-related data, without any additional prompt engineering.
+
+Break down the tax filing process into smaller, more manageable tasks, and craft separate prompts for each task.
+
+Correct
+That’s correct! Breaking up complex tasks into smaller, more manageable subtasks and crafting separate prompts for each subtask is a best practice in prompt engineering. This approach helps the language model better understand and handle the complexity of the overall task by focusing on specific, well-defined steps
+
+-------
+
+4. An organization is using a generative model to solve complex mathematical word problems. The prompt used must break down the problem, identify relevant information, and apply appropriate problem-solving strategies and calculations.
+Which prompt engineering technique would be most effective for this mathematical problem-solving?
+
+Zero-shot prompting: Provide the language model with a single prompt containing the word problem and ask it to solve it.
+
+Few-shot prompting: Include a small number of examples of solved word problems in the prompt.
+
+Chain-of-thought prompting: Prompt the language model to break down the problem-solving process into a series of logical steps and show its step-by-step reasoning.
+
+Chain-of-thought prompting combined with few-shot prompting: Prompt the model to break down the problem-solving process into a series of logical steps, and include a few examples of solved word problems.
+
+Incorrect
+That’s incorrect. Chain-of-thought prompting can be combined with the few-shot prompting technique to break down tasks into a step-by-step process. Including examples of solved word problems can help the model to generate more informed outputs.
+
+------
+
+5. A company notices that a customer-facing generative artificial intelligence (generative AI) chatbot is inadvertently outputting sensitive personally identifiable information from its training data.
+Which risk is being illustrated in this scenario?
+
+Jailbreaking: The chatbot is being "jailbroken" by prompts that trick it into bypassing its ethical constraints and content filters, permitting it to generate explicit or offensive content.
+
+Prompt leaking: The chatbot's prompts and conversational context are being "leaked" to external sources, potentially exposing sensitive information or allowing unauthorized access.
+
+Exposure: The model's sensitive training data has been leaked or made publicly accessible, leading to data leaks and privacy violations.
+
+Hijacking: Malicious actors crafted prompts that have persuaded the model to generate harmful, unethical, or biased text outputs.
+
+Correct
+That’s correct! This chatbot has shown the risk of exposure. In this scenario, sensitive training data was included in the chatbot's outputs, leading to data leaks and privacy violations.
+
+-------
+

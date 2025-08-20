@@ -1,0 +1,80 @@
+1. What is the goal of feature engineering in the machine learning lifecycle?
+
+To collect and clean data
+
+To transform data and create variables for the model
+
+To calculate the model performance
+
+To maintain the desired level of performance
+
+Correct
+Feature engineering transforms data into features or inputs that will be valuable for the model.
+
+2. A small e-commerce company wants to use machine learning to improve their churn prediction. However, the company does not have a dedicated data science team and is looking for a low-code or no-code solution to get started with machine learning. 
+Which Amazon SageMaker feature would be the most suitable for the company's requirements?
+
+Amazon SageMaker Canvas
+
+Amazon SageMaker JumpStart 
+
+Amazon SageMaker Data Wrangler
+
+Amazon SageMaker Feature Store
+
+Correct
+SageMaker Canvas gives the ability to use machine learning to generate predictions without needing to write any code. 
+
+3. A company wants to implement a proof of concept about price predictions for a set of items. They are starting from scratch and want a solution with minimal operational overhead.
+Which implementation should the company use?
+
+Amazon SageMaker JumpStart 
+
+A custom docker image
+
+A custom script using a supported third-party framework
+
+A custom script using a built-in SageMaker algorithm
+
+Correct
+This is the correct option because a notebook with a regression example will contain a lot of reusable code.
+
+4. A company develops a machine learning model to predict the price of a house based on its features, such as the number of bedrooms, bathrooms, square footage, and location. The model is trained on a dataset of historical house sales, and its performance is evaluated using various metrics. However, the model is found to perform well on the training data but poorly on new, unseen data.
+Which option describes the fit of model?
+
+It overfits.
+
+It underfits. 
+
+It has a low variance.
+
+It has a high bias.
+
+Correct
+The model learned the patterns of the training data but can't generalize. It overfits.
+
+5. A real-time object detection model has been developed by a team of developers for a self-driving car company to identify various objects in the environment for their autonomous vehicle. The model must be deployed in a way that ensures minimal latency and must be capable of interacting with the vehicle's onboard systems. 
+Which AWS deployment options should the team choose to deploy the model to achieve minimal latency while enabling real-time interactions with the onboard systems?
+
+Real-time
+
+Asynchronous
+
+Batch
+
+Serverless
+
+Correct
+Real-time inference is ideal for inference workloads where you have real-time, interactive, and low latency requirements.
+
+6. Which option best describes machine learning operations (MLOps)?
+MLOps is a framework that focuses solely on the development and training of ML models. 
+
+MLOps is a process that involves deploying ML models in a production environment and maintaining them over time.
+
+MLOps is a set of practices that aims to manage the end-to-end lifecycle of machine learning (ML) systems, including development, deployment, monitoring, and maintenance.
+
+MLOps is a tool used for visualizing and analyzing the performance of machine learning (ML) models.
+
+Correct
+MLOps is a set of practices and principles that aims to manage the entire lifecycle of machine learning systems, from model development and training to deployment, monitoring, and maintenance. It provides a structured approach to streamlining the ML workflow, ensuring reliability, scalability, and reproducibility.

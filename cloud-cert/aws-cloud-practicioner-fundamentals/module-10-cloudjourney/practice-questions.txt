@@ -1,0 +1,87 @@
+# AWS Module 10: The Cloud Journey Practice Questions (Multiple Choice)
+
+This document contains multiple-choice practice questions based on the AWS Cloud Journey module. The Answer Key is located at the bottom of the file.
+
+---
+
+### Section 1: The AWS Well-Architected Framework
+
+**1. Which pillar of the AWS Well-Architected Framework focuses on the ability of a system to recover from disruptions and dynamically acquire resources to meet demand?**
+    a) Operational Excellence
+    b) Security
+    c) Reliability
+    d) Performance Efficiency
+
+**2. A company wants to ensure they are using the most appropriately sized and cost-effective EC2 instances for their workloads. Which pillar of the Well-Architected Framework does this directly support?**
+    a) Reliability
+    b) Cost Optimization
+    c) Performance Efficiency
+    d) Sustainability
+
+**3. The principle of protecting systems and data through methods like encryption and managing permissions is central to which Well-Architected Framework pillar?**
+    a) Security
+    b) Operational Excellence
+    c) Cost Optimization
+    d) Reliability
+
+**4. The ability to run and monitor systems to deliver business value and to continually improve supporting processes is part of which pillar?**
+    a) Performance Efficiency
+    b) Sustainability
+    c) Operational Excellence
+    d) Security
+
+**5. Which pillar focuses on minimizing the environmental impacts of running cloud workloads by reducing energy consumption and increasing efficiency?**
+    a) Cost Optimization
+    b) Performance Efficiency
+    c) Sustainability
+    d) Reliability
+
+---
+
+### Section 2: Benefits of the AWS Cloud
+
+**6. Which benefit of the AWS Cloud eliminates the need for large upfront hardware purchases and allows businesses to pay only for the resources they use?**
+    a) Go global in minutes
+    b) Stop guessing capacity
+    c) Trade upfront expense for variable expense
+    d) Benefit from massive economies of scale
+
+**7. By aggregating usage from hundreds of thousands of customers, AWS can offer lower pay-as-you-go prices. What is this benefit called?**
+    a) Increase speed and agility
+    b) Benefit from massive economies of scale
+    c) Go global in minutes
+    d) Stop spending money on data centers
+
+**8. What is the primary advantage of the cloud's ability to "Stop guessing capacity"?**
+    a) It allows you to deploy applications globally in minutes.
+    b) It prevents over-provisioning or under-provisioning of resources.
+    c) It lets you focus on your business, not on running data centers.
+    d) It reduces the total cost of ownership through volume discounts.
+
+**9. The ability to quickly spin up test environments and innovate without the high cost of hardware investment is an example of which cloud benefit?**
+    a) Increase speed and agility
+    b) Go global in minutes
+    c) Benefit from massive economies of scale
+    d) Trade upfront expense for variable expense
+
+**10. Deploying your application to multiple AWS Regions around the world is an example of which key cloud benefit?**
+    a) Stop guessing capacity
+    b) Stop spending money running and maintaining data centers
+    c) Benefit from massive economies of scale
+    d) Go global in minutes
+
+---
+---
+
+# Answer Key
+
+1.  **c)** Reliability
+2.  **b)** Cost Optimization
+3.  **a)** Security
+4.  **c)** Operational Excellence
+5.  **c)** Sustainability
+6.  **c)** Trade upfront expense for variable expense
+7.  **b)** Benefit from massive economies of scale
+8.  **b)** It prevents over-provisioning or under-provisioning of resources.
+9.  **a)** Increase speed and agility
+10. **d)** Go global in minutes

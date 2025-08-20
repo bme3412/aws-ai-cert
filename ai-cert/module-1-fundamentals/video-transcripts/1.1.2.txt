@@ -1,0 +1,33 @@
+And let's concentrate on a specific type of artificial intelligence, machine learning. Machine learning is the science of developing algorithms and statistical models that computer systems use to perform complex tasks without explicit instructions.
+
+Computer systems use ML algorithms to process large quantities of historical data, and identify data patterns. Machine learning starts with a mathematical algorithm that takes data as inputs, and generates an output. To train the algorithm to produce the output we expect, we give it known data, which consists of features.
+
+You can think of features as the columns in a table, or the pixels in an image. We continue to train the algorithm by giving it more known data to analyze. Its task is to find the correlation between the input data features and the known expected output, if available.
+
+Adjustments are made to the model by changing internal parameter values until the model reliably produces the expected output. A trained model is then able to make accurate predictions and produce output from new data that it hasn't seen during training.
+
+This is known as inference. ML models can be trained on different types of data from various sources. One type of data is structured data, which is the easiest to understand and to process.
+
+This type of data is stored as rows in a table with columns, which can serve as the features for an ML model. As an example, structured data can be text files like CSV, or stored in relational databases like Amazon Relational Database Service, Amazon RDS, or Amazon Redshift. It can be queried using structured query language, or SQL for short.
+
+For model training, it would be exported into Amazon Simple Storage Service, or Amazon S3. Amazon S3 is the primary source for training data because it can store any type of data, is lower cost, and has virtually unlimited storage capacity.
+
+Another type of data is semi-structured. Semi-structured data doesn't completely follow the rules of structured tabular data. Unlike data in a table, semi-structured data elements can have different attributes or missing attributes. An example of semi-structured data is a text file that contains JSON, which stands for JavaScript Object Notation.
+
+In a document like this, the features are represented as key-value pairs. Amazon DynamoDB and Amazon DocumentDB with MongoDB compatibility, are two examples of transactional databases built specifically for semi-structured data.
+
+For training ML models, that data would be exported into Amazon S3.
+
+Unstructured data is data that doesn't conform to any specific data model and can't be stored in table format. Some examples include images, video, and text files, or social media posts. Unstructured data is typically stored as objects in an object storage system like Amazon S3. The features for machine learning are derived from the objects by using processing techniques like tokenization, which breaks down text into individual units of words or phrases.
+
+Time series data is important for training models that need to predict future trends. Each data record is labeled with a timestamp, and stored sequentially. This example shows the performance metrics for microservice, including the used memory, CPU percentage, and transactions per second.
+
+A machine learning model could discover the patterns in this data. It could then use it to proactively scale out the infrastructure for the service before load is expected to increase. Depending on the sampling rate, time series data captured for long periods can get quite large and be stored in Amazon S3 for model training.
+
+To create a machine learning model, we need to start with an algorithm which defines the mathematical relationship between outputs and inputs. In this simple example of linear regression, we want to find the best fit for a line to match the input data. In this case, we have the height and weight of several people to use for our training data.
+
+The simple linear equation y=mx+b, or in this case, h=mw+b, defines the linear relationship between our independent variable, w, and the dependent variable, h. The slope, m, and intercept, b, are the model parameters that are adjusted iteratively during the training process to find the best-fitting model.
+
+To determine the best fit, we look for the parameter values that minimize the errors. In this case, the errors are distances between the data points and the line. When the model training is complete, it's ready to begin making inferences.
+
+For this example, our model will infer the person's height from their weight.

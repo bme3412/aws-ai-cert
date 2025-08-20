@@ -1,0 +1,28 @@
+The AWS Certified Cloud Practitioner exam includes four domains:
+
+1 Cloud Concepts
+
+2 Security and Compliance
+
+3 Technology
+
+4 Billing and Pricing
+
+Domain	Percentage of exam
+Domain 1: Cloud Concepts	24%
+Domain 2: Security and Compliance	30%
+Domain 3: Technology	34%
+Domain 4: Billing and Pricing	12%
+Total	100%
+
+Exam details
+
+The AWS Certified Cloud Practitioner exam consists of 65 questions to be completed in 90 minutes. The minimum passing score is 700 (the maximum score is 1,000).
+
+Two types of questions are included on the exam: multiple choice and multiple response.
+
+A multiple-choice question has one correct response and three incorrect responses, or distractors.
+A multiple-response question has two or more correct responses out of five or more options.
+On the exam, there is no penalty for guessing. Any questions that you do not answer are scored as incorrect. If you are not sure of what the correct answer is, it’s always best for you to guess instead of leaving any questions unanswered.
+
+The exam enables you to flag any questions that you’d like to review before submitting the exam. This helps you to use your time during the exam efficiently, knowing that you can always go back and review any questions that you were initially unsure of.

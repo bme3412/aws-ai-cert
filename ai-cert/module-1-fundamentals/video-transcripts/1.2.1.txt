@@ -1,0 +1,21 @@
+Let's start by reviewing some use cases and scenarios for which AI and ML should be considered. Unlike humans, AI technology can work all day every day without decreasing rates of performance.
+
+You can use AI to focus on repetitive, tedious tasks that employees struggle with or find boring. AI can decrease employees' workloads while streamlining all business-related operations. AI technology can use ML and deep learning networks to solve complex problems with humanlike intelligence.
+
+AI is a great choice for solving complex problems that involve analyzing vast amounts of data at high velocity that humans could not be able to do. Because AI is very good at recognizing patterns, it is great at detecting deviations in patterns and uncovering fraud. It helps reduce waste by forecasting the demand for products or resources.
+
+Companies can make better choices, become more efficient, and better address their customer needs. We have seen that there are a lot of useful applications for artificial intelligence. However, it isn't the solution to every problem.
+
+Let's go over some use cases where AI is not the best option. Training AI with machine learning consumes vast resources. Processing power can be costly, and models might need to be re-trained frequently. Before embarking on a costly AI project, you should be certain that the benefits to the business will outweigh the cost of the AI solution.
+
+For example, have targets for the dollar amounts of fraud and waste reduction, and then estimate the cost to build a model to meet those targets. If the costs exceed the savings, then you probably shouldn't proceed.
+
+AI models can be used to make decisions that impact customers.
+
+For example, when someone applies for a loan, it's important to make sure that models are trustworthy and understandable. However, complex neural networks model the human brain. You cannot fully understand how and why the inner mechanics impact the prediction, which is known as models' interpretability.
+
+Complex models generally present a tradeoff of compatibility compared with interpretability. If these are business or compliance requirements for complete transparency, then less complex models will need to be used, which will usually result in lower performance. An alternative is to use a rule-based system that doesn't require AI.
+
+For example, a rule might be that people with a credit score about 750 should be automatically approved for a loan of $10,000 or less. If a software application always produces the same output for the same input, it is said to be deterministic. A rule-based application is deterministic unless someone changes the rules.
+
+Machine learning models, however, are probabilistic. That is, they determine the likelihood of something. They learn and adapt over time and incorporate randomness into their approach. As a result, identical sets of input values will result in a variety of results that aren't consistent. If determinism is necessary, then a rule-based system is a better option.

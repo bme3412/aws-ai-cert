@@ -1,0 +1,12 @@
+1. Which AWS service is the best choice for publishing messages to subscribers?
+
+Amazon Simple Queue Service (Amazon SQS)
+
+Correctly unselected
+Amazon EC2 Auto Scaling
+
+Correctly unselected
+Amazon Simple Notification Service (Amazon SNS)
+
+Correctly selected
+Elastic Load Balancing

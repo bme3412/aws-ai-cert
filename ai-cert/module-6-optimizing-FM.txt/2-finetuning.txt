@@ -1,0 +1,44 @@
+Fine-Tuning
+
+Although foundation models are highly versatile, they often require fine-tuning to tailor their broad capabilities to specific applications or to enhance their performance in particular domains. Fine-tuning is critical because it helps to do the following:
+1. Increase specificity: Adapt the model’s responses or predictions to the nuances of a specific domain or task that were not adequately covered in the initial training.
+2. Improve accuracy: Enhance the model's performance on specialized tasks by training on domain-specific data, thereby reducing errors that occur due to the generic nature of foundational training.
+3. Reduce biases: Address and mitigate any biases inherent in the initial training data, making the model more fair and appropriate for different applications.
+4. Boost efficiency: Streamline the model’s operations within specific contexts, potentially reducing computational requirements and speeding up response times.
+
+Instruction tuning: This approach involves retraining the model on a new dataset that consists of prompts followed by the desired outputs. This is structured in a way that the model learns to follow specific instructions better. This method is particularly useful for improving the model's ability to understand and execute user commands accurately, making it highly effective for interactive applications like virtual assistants and chatbots. 
+Reinforcement learning from human feedback (RLHF): This approach is a fine-tuning technique where the model is initially trained using supervised learning to predict human-like responses. Then, it is further refined through a reinforcement learning process, where a reward model built from human feedback guides the model toward generating more preferable outputs. This method is effective in aligning the model’s outputs with human values and preferences, thereby increasing its practical utility in sensitive applications.
+
+Adapting models for specific domains: This approach involves fine-tuning the model on a corpus of text or data that is specific to a particular industry or sector.  An example of this would be legal documents for a legal AI or medical records for a healthcare AI. This specificity enables the model to perform with a higher degree of relevance and accuracy in domain-specific tasks, providing more useful and context-aware responses.
+Transfer learning: This approach is a method where a model developed for one task is reused as the starting point for a model on a second task. For foundational models, this often means taking a model that has been trained on a vast, general dataset, then fine-tuning it on a smaller, specific dataset. This method is highly efficient in using learned features and knowledge from the general training phase and applying them to a narrower scope with less additional training required.
+Continuous pretraining: This approach involves extending the training phase of a pre-trained model by continuously feeding it new and emerging data. This approach is used to keep the model updated with the latest information, vocabulary, trends, or research findings, ensuring its outputs remain relevant and accurate over time. 
+
+Preparing the data for the fine-tuning step
+During the initial training phase, a foundational model is trained on a vast and diverse dataset. This dataset typically encompasses a wide range of topics to develop a broad understanding and general capabilities.
+Data preparation for this phase involves collecting as much data as possible. The data is often from publicly available sources, curated datasets, and sometimes proprietary data, depending on the model's intended usage. The data needs thorough cleaning and possibly anonymization to ensure privacy and compliance with regulations.
+
+Data preparation for fine-tuning
+Fine-tuning, on the other hand, is a more targeted process where a pretrained model is adapted to perform well on a specific task or within a particular domain. The data preparation for fine-tuning is distinct from initial training due to the following reasons:
+1. Specificity: The dataset for fine-tuning is much more focused, containing examples that are directly relevant to the specific tasks or problems the model needs to solve.
+2. High relevance: Data must be highly relevant to the desired outputs. Examples include legal documents for a legal AI or customer service interactions for a customer support AI.
+3. Quality over quantity: Although the initial training requires massive amounts of data, fine-tuning can often achieve significant improvements with much smaller, but well-curated datasets.
+
+The following list walks through the key steps in fine-tuning data preparation:
+1. Data curation: Although it is a continuation, this involves a more rigorous selection process to ensure every piece of data is highly relevant. This step also ensures the data contributes to the model's learning in the specific context.
+2. Labeling: In fine-tuning, the accuracy and relevance of labels are paramount. They guide the model's adjustments to specialize in the target domain.
+3. Governance and compliance: Considering fine-tuning often uses more specialized data, ensuring data governance and compliance with industry-specific regulations is critical.
+4. Representativeness and bias checking: It is essential to ensure that the fine-tuning dataset does not introduce or perpetuate biases that could skew the model's performance in undesirable ways.
+5. Feedback integration: For methods like RLHF, incorporating user or expert feedback directly into the training process is crucial. This is more nuanced and interactive than the initial training phase.
+
+Model evaluation
+When evaluating the performance of language models, especially those involved in generating or transforming text, specific metrics can be used. These metrics are made to assess the quality of the output, compared to a human-written standard. Three commonly used metrics for this purpose are Recall-Oriented Understudy for Gisting Evaluation (ROUGE), Bilingual Evaluation Understudy (BLEU), and BERTScore.
+
+1. ROUGE: ROUGE is a set of metrics used to evaluate automatic summarization of texts, in addition to machine translation quality in NLP. The main idea behind ROUGE is to count the number of overlapping units. This includes words, N-grams, or sentence fragments between the computer-generated output and a set of reference (human-created) texts.
+ROUGE is widely used because it is not complex. It is interpretable, and correlates reasonably well with human judgment, especially when evaluating the recall aspect of summaries. The evaluations assess how much of the important information in the source texts is captured by the generated summaries.
+
+2. BLEU: BLEU is a metric used to evaluate the quality of text that has been machine-translated from one natural language to another. Quality is calculated by comparing the machine-generated text to one or more high-quality human translations. BLEU measures the precision of N-grams in the machine-generated text that appears in the reference texts and applies a penalty for overly short translations (brevity penalty).
+Unlike ROUGE, which focuses on recall, BLEU is fundamentally a precision metric. It checks how many words or phrases in the machine translation appear in the reference translations. BLEU evaluates the quality at the level of the sentence, typically using a combination of unigrams, bigrams, trigrams, and quadrigrams. A brevity penalty discourages overly concise translations that might influence the precision score.
+
+3. The BERTScore: BERTScore uses the pretrained contextual embeddings from models like BERT to evaluate the quality of text-generation tasks. BERTScore computes the cosine similarity between the contextual embeddings of words in the candidate and the reference texts. This is unlike traditional metrics that rely on exact matches of N-grams or words.
+Because BERTScore evaluates the semantic similarity rather than relying on exact lexical matches, it is capable of capturing meaning in a more nuanced manner. BERTScore is less prone to some of the pitfalls of BLEU and ROUGE. An example of this is their sensitivity to minor paraphrasing or synonym usage that does not affect the overall meaning conveyed by the text.
+BERTScore is increasingly used alongside traditional metrics like BLEU and ROUGE for a more comprehensive assessment of language generation models. This is especially true in cases where capturing the deeper semantic meaning of the text is important.

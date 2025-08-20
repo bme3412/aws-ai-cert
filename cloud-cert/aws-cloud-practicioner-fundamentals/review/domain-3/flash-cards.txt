@@ -1,0 +1,59 @@
+1. What are benefits in accessing a service such as Amazon S3 from the console or running the commands in the AWS CLI? 
+Using aws s3 commands in the AWS CLI helps to manage S3 objects.
+
+2. What do you use to connect public Amazon EC2 instances in a public subnet to the public internet? 
+Internet gateway.
+
+3. If you needed to use your existing server-bound software licenses, would you choose a dedicated host or shared host? 
+A dedicated host.
+
+4. Are Amazon EC2 instances an Availability Zone resilient service or a Regional resilient service? 
+Amazon EC2 instances are an Availability Zone resilient service. 
+
+5. What is the local storage of an Amazon EC2 instance? 
+Instance Store.
+
+6. What type of storage would you choose if you needed persistent storage for your Amazon EC2 instance? 
+Amazon Elastic Block Store (Amazon EBS).
+
+7. Where would you check to find the Amazon EC2 instance ID, instance profile permissions, and kernel information? 
+You can get the instance ID, public keys, public IP address, and other information from the instance metadata using http://169.254.169.254/latest/meta-data/.
+
+8. Which AWS Snow Family service would you choose to transfer hundreds of petabytes of data and exabyte scale data sets into AWS? 
+AWS Snowmobile.
+
+9. Is an Amazon Virtual Private Cloud (Amazon VPC) a globally resilient service or a Regional resilient service? 
+Amazon VPC is a regional resilient service.
+
+10. Are network access control lists (network ACLs) stateful or stateless? Network ACLs are stateless.
+
+11. Are security groups stateful or stateless? 
+Security groups are stateful.
+
+12. Can you use a NAT gateway in a private subnet? 
+No, NAT gateways sit in a public subnet to allow private resources access to the internet or the AWS public zones.
+
+13. What type of storage does Amazon S3 offer? Block, file, or object? 
+Object storage.
+
+14. What type of storage does Amazon EBS offer? Block, file, or object? 
+Block storage.
+
+15. What type of storage does Amazon EFS offer? Block, file, or object? 
+File storage.
+
+16. What type of level service is Amazon Rekogintion? 
+Amazon Rekognition is an artificial intelligence (AI) service level.
+
+17. What type of level service is Amazon Sagemaker? 
+Amazon Sagemaker is a machine learning service level.
+
+18. What AWS analytic service can help you identify personable identifiable information (PII)? 
+Amazon Macie.
+
+19. What AWS analytic service is a query service? 
+Amazon Athena.
+
+20. Which AWS service would you use for inter-process and services messaging? 
+Amazon SQS.
+

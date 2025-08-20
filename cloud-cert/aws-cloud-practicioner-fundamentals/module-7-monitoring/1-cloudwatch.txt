@@ -1,0 +1,25 @@
+Now we're making lots of coffee, serving customers and everything seems to be going spiffy in our coffee shop. But as we run espresso machines more and more, use mugs, constantly open and close the fridge, we want to be able to make sure we're alerted to something which might have gone awry. Maybe an espresso machine needs to be cleaned or repaired. The point is, as a business owner, you need visibility into the state of your systems. Are things running well? Do you see a degraded customer experience? Are you frequently delivering the wrong drink to customers or is everyone getting their orders as expected. You have all sorts of questions about the success of your operations. 
+
+And the same idea applies to systems built on AWS. You need a way to monitor the health and operations of your solutions. Luckily, you don't need to build out your own monitoring platform. We have done this for you. 
+
+Introducing Amazon CloudWatch. CloudWatch allows you to monitor your AWS infrastructure and the applications you run on AWS in real time. It works by tracking and monitoring metrics. Think of metrics as variables that are tied to your resources. For example, the amount of espressos made by an espresso machine or the CPU utilization of an EC2 instance. 
+
+Let's take a customer approach for our coffee shop. Say we have an espresso machine and it needs to be cleaned after it makes 100 espressos. CloudWatch allows us to create a custom metric called Espresso Count. And once it hits 100, we want to alert staff to clean the machine. Simple, right? Well with CloudWatch, you can accomplish this by creating what is called a CloudWatch alarm. You set a threshold for a metric, and when that threshold is reached CloudWatch can generate an alert and trigger an action. This means we can alert on the custom metric, in this case, hitting 100, and then perform an action. 
+
+Even better, CloudWatch alarms are integrated with SNS. So we can then send an SMS to the manager to say, clean the machine. You can create all sorts of custom alarms for metrics from all different types of AWS resources. 
+
+Now, what if we want to aggregate all those metrics in a single pane of glass? Well, we can use CloudWatch's dashboard feature. Think of a dashboard as a screen, which lists out metrics in near real time. In our case, we can create a CloudWatch dashboard which will show us all our espresso machines and their espresso counts so we can proactively monitor them. These dashboards would auto refresh when they are open so we can see an up-to-date view of our resources. 
+
+Finally, what are the benefits of using a service such as CloudWatch? Well, the first one is that you can have access to all your metrics from a central location. This enables you to collect metrics and logs from all your AWS resources applications, and services that run on AWS and on-premises servers, helping you break down silos so that you can easily gain system-wide visibility. 
+
+You can also get visibility across your applications, infrastructure, and services, which means you gain insights across your distributed stack so you can correlate and visualize metrics and logs to quickly pinpoint and resolve issues. This in turn means you can reduce mean time to resolution, or MTTR, and improve total cost of ownership, or TCO. So in our coffee shop, if the MTTR of cleaning hours restaurant machines is shorter then we can save on TCO with them. This means freeing up important resources like developers to focus on adding business value. 
+
+Lastly, you can drive insights to optimize applications and operational resources. By, for example, aggregating usage across an entire fleet of EC2 instances to derive operational and utilization insights. And now our staff can focus on serving coffee versus constantly cleaning machines before they are due to be cleaned. 
+
+Amazon CloudWatch is a web service that enables you to monitor and manage various metrics and configure alarm actions based on data from those metrics.
+
+CloudWatch uses metrics to represent the data points for your resources. AWS services send metrics to CloudWatch. CloudWatch then uses these metrics to create graphs automatically that show how performance has changed over time. 
+
+With CloudWatch, you can create alarms that automatically perform actions if the value of your metric has gone above or below a predefined threshold. 
+
+The CloudWatch dashboard feature enables you to access all the metrics for your resources from a single location. For example, you can use a CloudWatch dashboard to monitor the CPU utilization of an Amazon EC2 instance, the total number of requests made to an Amazon S3 bucket, and more. You can even customize separate dashboards for different business purposes, applications, or resources.

@@ -1,0 +1,143 @@
+# AWS Module 2: Compute Practice Questions (Multiple Choice)
+
+This document contains multiple-choice practice questions based on the AWS compute module. The Answer Key is located at the bottom of the file.
+
+---
+
+### Section 1: EC2 Fundamentals
+
+**1. A company runs an application that requires high-performance processors for compute-intensive tasks like scientific modeling. Which EC2 instance family is the most appropriate choice?**
+    a) General Purpose
+    b) Memory Optimized
+    c) Compute Optimized
+    d) Storage Optimized
+
+**2. An organization needs to run a critical, steady-state workload on EC2 for the next three years. To get the maximum possible discount, which pricing model should they choose?**
+    a) On-Demand Instances
+    b) Spot Instances
+    c) Savings Plans
+    d) Reserved Instances
+
+**3. A university has a large-scale batch processing job that can be run at any time and can withstand interruptions. Which EC2 pricing model would be the most cost-effective?**
+    a) Dedicated Hosts
+    b) Reserved Instances
+    c) Spot Instances
+    d) On-Demand Instances
+
+---
+
+### Section 2: Scaling and Application Integration
+
+**4. What is the primary function of Amazon EC2 Auto Scaling?**
+    a) To distribute incoming traffic evenly across multiple EC2 instances.
+    b) To automatically adjust the number of EC2 instances in response to demand.
+    c) To run code in response to triggers without managing servers.
+    d) To establish a dedicated network connection to AWS.
+
+**5. A web application is experiencing uneven traffic, causing some EC2 instances to be overloaded while others are idle. Which service should be used to distribute incoming requests evenly across the fleet of instances?**
+    a) Amazon EC2 Auto Scaling
+    b) Elastic Load Balancing (ELB)
+    c) Amazon SQS
+    d) Amazon Route 53
+
+**6. A development team wants to build a loosely coupled application where messages can be stored in a durable queue until they are processed by a downstream service. Which service should they use?**
+    a) Amazon SNS (Simple Notification Service)
+    b) Amazon SQS (Simple Queue Service)
+    c) Elastic Load Balancing
+    d) AWS Lambda
+
+**7. An application needs to send a single notification that will be delivered to multiple different subscriber endpoints, such as an SQS queue, a Lambda function, and an email address. Which service supports this "fan-out" messaging model?**
+    a) Amazon SQS (Simple Queue Service)
+    b) AWS Fargate
+    c) Elastic Load Balancing
+    d) Amazon SNS (Simple Notification Service)
+
+---
+
+### Section 3: Serverless and Containers
+
+**8. What does the term "serverless" mean in the context of AWS services like Lambda?**
+    a) The application runs on servers, but you do not need to provision or manage them.
+    b) The application code runs directly on the client's machine.
+    c) No servers are used at any point in the application's lifecycle.
+    d) The service requires you to use a dedicated physical server.
+
+**9. A company wants to run its Docker container workloads without having to provision or manage the underlying EC2 instances. Which AWS service provides a serverless compute engine for containers?**
+    a) Amazon EC2
+    b) AWS Lambda
+    c) Amazon EKS (Elastic Kubernetes Service)
+    d) AWS Fargate
+
+**10. Which service is designed to run code for short durations (up to 15 minutes) in response to events and triggers, with automatic scaling and no server management?**
+    a) Amazon EC2
+    b) AWS Fargate
+    c) AWS Lambda
+    d) Amazon ECS (Elastic Container Service)
+
+### Section 4: EC2 Instance Types and Use Cases
+
+**11. A company is running a web application that requires a balanced mix of compute, memory, and networking resources. Which EC2 instance family would be most appropriate?**
+    a) Compute Optimized
+    b) General Purpose
+    c) Memory Optimized
+    d) Storage Optimized
+
+**12. A data analytics company needs to process large datasets that require significant memory capacity. Which EC2 instance family would be most suitable?**
+    a) General Purpose
+    b) Compute Optimized
+    c) Memory Optimized
+    d) Accelerated Computing
+
+**13. A gaming company needs to run high-performance game servers that require powerful processors. Which EC2 instance family would be the best choice?**
+    a) Memory Optimized
+    b) Compute Optimized
+    c) Storage Optimized
+    d) General Purpose
+
+### Section 5: EC2 Pricing Models
+
+**14. A startup company is testing a new application and needs to run EC2 instances for short periods without any long-term commitment. Which pricing model would be most suitable?**
+    a) Reserved Instances
+    b) On-Demand Instances
+    c) Spot Instances
+    d) Dedicated Hosts
+
+**15. A company wants to save up to 72% on their EC2 costs while maintaining flexibility to change instance types within the same family. Which pricing option would be best?**
+    a) Standard Reserved Instances
+    b) Convertible Reserved Instances
+    c) EC2 Instance Savings Plans
+    d) Spot Instances
+
+**16. A company needs to run EC2 instances on physical servers dedicated solely to their use for compliance requirements. Which pricing option should they choose?**
+    a) On-Demand Instances
+    b) Reserved Instances
+    c) Spot Instances
+    d) Dedicated Hosts
+
+**17. A company has batch processing jobs that can be interrupted and resumed later. Which EC2 pricing model would provide the highest cost savings?**
+    a) On-Demand Instances
+    b) Reserved Instances
+    c) Spot Instances
+    d) Dedicated Hosts
+
+---
+
+# Answer Key
+
+1.  **c)** Compute Optimized
+2.  **d)** Reserved Instances
+3.  **c)** Spot Instances
+4.  **b)** To automatically adjust the number of EC2 instances in response to demand.
+5.  **b)** Elastic Load Balancing (ELB)
+6.  **b)** Amazon SQS (Simple Queue Service)
+7.  **d)** Amazon SNS (Simple Notification Service)
+8.  **a)** The application runs on servers, but you do not need to provision or manage them.
+9.  **d)** AWS Fargate
+10. **c)** AWS Lambda
+11. **b)** General Purpose
+12. **c)** Memory Optimized
+13. **b)** Compute Optimized
+14. **b)** On-Demand Instances
+15. **c)** EC2 Instance Savings Plans
+16. **d)** Dedicated Hosts
+17. **c)** Spot Instances

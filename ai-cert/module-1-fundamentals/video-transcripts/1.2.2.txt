@@ -1,0 +1,27 @@
+Let's continue with task statement 1.2, which is to identify practical use cases for AI, and talk about different ML problem types and how to identify them.
+
+If your dataset consists of features or attributes as inputs with labeled target values as outputs, then you have a supervised learning problem. In this type of problem, you train your model with data containing known inputs and outputs.
+
+If your target values are categorical, for example, one or more discrete values, then you have a classification problem. If these target values you're trying to predict are mathematically continuous, then you have a regression problem.
+
+If your dataset consists of features or attributes as inputs that do not contain labels or target values, then you have an unsupervised learning problem. In this type of problem, the output must be predicted based on the pattern discovered in the input data.
+
+The goal in unsupervised learning problems is to discover patterns, such as groupings, within the data. When your data needs to be separated into discrete groups, you have a clustering problem. If you are seeking to spot outliers in your data, then you have an anomaly detection problem.
+
+Classification problems are normally distinguished as binary or multiclass. Binary classification assigns an input to one of two predefined and mutually exclusive classes based on its attributes. A medical diagnosis for whether an individual has a disease or not, based on the results of diagnostic tests is an example of binary classification.
+
+We also saw an example of binary classification earlier with our fish or not fish example. Multiclass classification assigns an input to one of several classes based on the input attributes. An example is the prediction of the topic most relevant to a tax document. A document might be classified as being about religion, politics, or finance, or as about one of several other predefined topic classes. If we extend our fish example to identify multiple categories of sea creatures, then we have made it into a multiclass classification problem.
+
+When your target values are mathematically continuous, then you have a regression problem. Regression estimates the value of dependent target variable based on one or more other variables, or attributes that are correlated with it. Linear regression is when there is a direct linear relationship between the inputs and output.
+
+Simple linear regression uses a single independent variable, such as weight, to predict someone's height. If we have multiple independent variables, such as weight and age, then we have a multiple linear regression problem. Another example is the prediction of house prices using features like the number of bathrooms, bedrooms, the square footage of the house and garden.
+
+Regression analysis can create a model that takes one or more of these features as an input to predict the price of a house. Logistic regression is used to measure the probability of an event occurring. The prediction is a value between zero and one, where zero indicates an event that is unlikely to happen, and one indicates a maximum likelihood that it will happen.
+
+Logistic equations use logarithmic functions to compute the regression line. It can use one or multiple independent variables. An example is predicting if a person will get heart disease based on body mass index, BMI, smoking status, and genetic predisposition. Another example would be predicting whether a financial transaction is fraud when there are transactions labeled as fraud and not fraud used for training.
+
+Both logistic regression and linear regression require a significant amount of labeled data for the models to become accurate in predictions. Cluster analysis is a class of techniques that are used to classify data objects into groups, called clusters. It attempts to find discrete groupings within data. Members of a group are similar as possible to one another, and as different as possible from members of other groups.
+
+You define the features or attributes that you want the algorithm to use to determine similarity. Then you select a distance function to measure similarity and specify the number of clusters, or groups, you want for the analysis. An example of clustering is segmenting customers into groups by purchase history or clickstream activity.
+
+Anomaly detection is the identification of rare items, events, or observations in the data, which raise suspicions, because they differ significantly from the rest of the data. The identification of anomalous items can be used, for example, to detect failed sensors or medical errors.

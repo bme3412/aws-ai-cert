@@ -1,0 +1,39 @@
+Let's continue with a third task statement from Domain 1, which is to describe the ML development lifecycle.
+
+Let's proceed to the next stages of the pipeline, which is collecting and processing training data. Start by identifying the data needed and determining the options for collecting the data. You'll need to know what training data you will need to develop your model and where it is generated and stored.
+
+To collect the data, you'll need to know if it's streaming data or whether you can load it in batch process. You'll need to configure a process known as extract, transform, and load, ETL, to collect the data from possibly multiple sources and store it in a centralized repository. Remember that models should be re-trained frequently with new data, so your process needs to be repeatable.
+
+You will need to know if the data is labeled or how you will be able to label it. This can be one of the longest parts of the process because accurately labeled data likely does not already exist.
+
+Data preparation includes data pre-processing and feature engineering. Exploratory data analysis, EDA, with visualization tools can help to quickly gain a deeper understanding of data. You can use data wrangling tools for interactive data analysis and to prepare data for model building.
+
+Data with missing or anomalous values might need to be filtered out or repaired. PII data should be masked or removed. After reprocessing your data, you are almost ready to start training. But first, you need to decide how best to split up your data. Typically, you will need to create three datasets from the available data. A common recommendation is that about 80% of the data should be used for training the model, 10% should be set aside for model evaluation, and 10% for performing the final test before deploying the model to production.
+
+Finally, you need to determine which characteristics of the dataset should be used as features to train the model. This is the subset that is relevant and contributes to minimizing the error rate of a trained model. You should reduce the features in your training data to only those that are needed for inference.
+
+Features can be combined to further reduce the number of features. Reducing the number of features reduces the amount of memory and computing power required for training. Now let's look at some of the many AWS services available for data ingestion and preparation.
+
+AWS Glue is a fully managed ETL service. You can create and run an ETL job with a few clicks in the AWS Management Console. You simply point AWS Glue to your data stored on AWS. Then AWS Glue discovers your data and stores the associated metadata, the table definition and schema, in the AWS Glue Data Catalog.
+
+After it's cataloged, your data is immediately searchable, queryable, and available for ETL. AWS Glue generates the code to execute your data transformations and data loading processes. In addition to defining your own data transformation, AWS Glue has built-in transformations for things like dropping duplicate records, filling in missing values, and splitting your dataset. AWS Glue can extract, transform, and load data from a large variety of data stores. These include relational databases, data warehouses, and other cloud, or even streaming services, such as Amazon Managed Streaming for Apache Kafka, or Amazon MSK, and Amazon Kinesis.
+
+The AWS Glue Data Catalog contains references to data that is used as sources and targets of your ETL jobs in AWS Glue. The AWS Glue Data Catalog tables include an index to the location, schema, and runtime metrics of your data. You use the information in the Data Catalog to create and monitor your ETL jobs. Typically, you run a crawler to take inventory of the data in your data stores, but you can also enter the information in the tables manually.
+
+AWS Glue can crawl your data sources and automatically determine the data schema by using classifiers. It writes the schema to tables in the Data Catalog. It's important to understand that the source data itself is not written to the data. Only metadata, such as the location and schema, are stored in the Data Catalog.
+
+The AWS Glue ETL jobs use this information to collect, transform, and store the data in the target data store, which is typically an S3 bucket.
+
+AWS Glue DataBrew is a visual data preparation tool that enables users to clean and normalize data without writing any code. You can interactively discover, visualize, clean, and transform raw data. DataBrew makes smart suggestions to help you identify data quality issues that can be difficult to find and time-consuming to fix. You can save transformation steps in a recipe, which you can update or reuse later with other datasets and deploy on a continuing basis.
+
+DataBrew provides more than 250 built-in transformations, with a visual point-and-click interface for creating and managing data transformation jobs. These include removing nulls, replacing missing values, fixing schema inconsistencies, creating column-based functions and more. You can also use DataBrew to evaluate the quality of your data by defining rule sets and running profiling jobs.
+
+To train a supervised machine learning model, you need a large, high-quality labeled dataset. SageMaker Ground Truth helps you build high-quality training datasets for your machine learning models. SageMaker Ground Truth active learning uses machine learning model to label your training data. It will automatically label data that it can label, and the rest is given to a human workforce. You can use human workers from Amazon Mechanical Turk, a workforce with over 500,000 independent contractors. Or use an internal private workforce that uses your own employees or contractors.
+
+You can use Amazon SageMaker Canvas to prepare, featurize, and analyze your data. With Amazon SageMaker Canvas, you can simplify the feature engineering process by using a single visual interface. Using the SageMaker Data Wrangler data selection tool, you can choose the raw data that you want from various data sources and import it with a single click.
+
+SageMaker Canvas contains over 300 built-in transformations so that you can quickly normalize, transform, and combine features without having to write any code.
+
+Amazon SageMaker Feature Store is a centralized store for features and associated metadata, so features can be easily discovered and reused. Feature Store makes it easy to create, share, and manage features for ML development.
+
+Feature Store accelerates this process by reducing repetitive data processing and curation work required to convert raw data into features for training an ML algorithm. You can create workflow pipelines that convert raw data into features and add them to feature groups.

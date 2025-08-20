@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Cloud Practitioner Fundamentals - Module 7: Monitoring & Analytics</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; padding: 20px; max-width: 900px; margin: 0 auto; color: #333; }
+        h1, h2, h3 { color: #111; }
+        h1 { border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        h2 { border-bottom: 1px solid #eee; padding-bottom: 5px; margin-top: 40px; }
+        h3 { margin-top: 30px; }
+        .service-card { background-color: #f9f9f9; border: 1px solid #ddd; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
+        .service-card h3 { margin-top: 0; color: #005276; }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 10px; }
+        strong { color: #111; }
+        .quiz-section { margin-top: 40px; background-color: #f0f8ff; padding: 20px; border-radius: 8px; }
+        .quiz-section h2 { margin-top: 0; }
+        .quiz-question { margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <h1>AWS Monitoring & Analytics: Study Guide</h1>
+
+    <h2>Core Monitoring Services</h2>
+
+    <div class="service-card">
+        <h3>Amazon CloudWatch</h3>
+        <ul>
+            <li><strong>What it is:</strong> A monitoring and observability service that provides data and actionable insights to monitor your applications, respond to system-wide performance changes, optimize resource utilization, and get a unified view of operational health.</li>
+            <li><strong>Key Concepts:</strong>
+                <ul>
+                    <li><strong>Metrics:</strong> Collects monitoring and operational data in the form of logs, metrics, and events. A metric is a variable tied to your resources (e.g., EC2 CPU utilization).</li>
+                    <li><strong>Alarms:</strong> You can set alarms to trigger actions when a metric crosses a threshold. For example, send an SMS notification via SNS if CPU usage is too high.</li>
+                    <li><strong>Dashboards:</strong> Create custom dashboards to get a single-pane-of-glass view of your AWS resources, applications, and services.</li>
+                </ul>
+            </li>
+            <li><strong>Benefits:</strong> Provides system-wide visibility, helps reduce Mean Time To Resolution (MTTR), and optimizes resource utilization.</li>
+        </ul>
+    </div>
+
+    <div class="service-card">
+        <h3>AWS CloudTrail</h3>
+        <ul>
+            <li><strong>What it is:</strong> A service that enables governance, compliance, operational auditing, and risk auditing of your AWS account. It logs every API call made in your account.</li>
+            <li><strong>Key Information Logged:</strong> Records who made the request, when, from what IP address, and what the response was. Think of it as a "trail" of breadcrumbs for all account activity.</li>
+            <li><strong>Use Case - Auditing:</strong> Essential for security analysis and compliance. You can prove to an auditor that security settings (like a security group configuration) have not been changed.</li>
+            <li><strong>CloudTrail Insights:</strong> An optional feature that automatically detects unusual or anomalous API activity in your account.</li>
+        </ul>
+    </div>
+
+    <div class="service-card">
+        <h3>AWS Trusted Advisor</h3>
+        <ul>
+            <li><strong>What it is:</strong> An online tool that provides you with real-time guidance to help you provision your resources following AWS best practices.</li>
+            <li><strong>Five Pillars:</strong> It inspects your AWS environment and makes recommendations across five categories:
+                <ol>
+                    <li>Cost Optimization</li>
+                    <li>Performance</li>
+                    <li>Security</li>
+                    <li>Fault Tolerance</li>
+                    <li>Service Limits</li>
+                </ol>
+            </li>
+            <li><strong>How it Helps:</strong> Identifies issues like S3 buckets with open access permissions, underutilized EC2 instances, root accounts without MFA, and resources not deployed across multiple Availability Zones.</li>
+            <li><strong>Support Plans:</strong> Some checks are available to all users, while a more comprehensive set of checks is available for customers with a Business, Enterprise On-Ramp, or Enterprise support plan.</li>
+        </ul>
+    </div>
+
+    <div class="quiz-section">
+        <h2>Module 7 Quiz</h2>
+        <div class="quiz-question">
+            <p><strong>1. Which actions can you perform using Amazon CloudWatch? (Select TWO.)</strong></p>
+            <ul>
+                <li>Monitor your resources' utilization and performance</li>
+                <li>Receive real-time guidance for improving your AWS environment</li>
+                <li>Compare your infrastructure to AWS best practices in five categories</li>
+                <li>Access metrics from a single dashboard</li>
+                <li>Automatically detect unusual account activity</li>
+            </ul>
+        </div>
+        <div class="quiz-question">
+            <p><strong>2. Which service enables you to review the security of your Amazon S3 buckets by checking for open access permissions?</strong></p>
+            <ul>
+                <li>Amazon CloudWatch</li>
+                <li>AWS CloudTrail</li>
+                <li>AWS Trusted Advisor</li>
+                <li>Amazon GuardDuty</li>
+            </ul>
+        </div>
+        <div class="quiz-question">
+            <p><strong>3. Which categories are included in the AWS Trusted Advisor dashboard? (Select TWO.)</strong></p>
+            <ul>
+                <li>Reliability</li>
+                <li>Performance</li>
+                <li>Scalability</li>
+                <li>Elasticity</li>
+                <li>Fault tolerance</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

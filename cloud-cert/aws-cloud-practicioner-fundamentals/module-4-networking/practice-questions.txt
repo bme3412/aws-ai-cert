@@ -1,0 +1,98 @@
+# AWS Module 4: Networking Practice Questions (Multiple Choice)
+
+This document contains multiple-choice practice questions based on the AWS networking module. The Answer Key is located at the bottom of the file.
+
+---
+
+### Section 1: VPC and Connectivity
+
+**1. What is the primary purpose of an Amazon VPC?**
+    a) To provide a content delivery network for faster content distribution.
+    b) To provision a logically isolated section of the AWS Cloud for your resources.
+    c) To establish a dedicated fiber connection from your data center to AWS.
+    d) To manage DNS records for your domain names.
+
+**2. A company needs to allow resources in its VPC to access the public internet. Which VPC component must be created and attached?**
+    a) Virtual Private Gateway
+    b) AWS Direct Connect
+    c) Internet Gateway
+    d) Network ACL
+
+**3. An organization requires a private, dedicated, high-bandwidth connection between their on-premises data center and their AWS VPC. Which AWS service is designed for this purpose?**
+    a) Virtual Private Gateway
+    b) AWS Direct Connect
+    c) Amazon CloudFront
+    d) Internet Gateway
+
+**4. What is the function of a Virtual Private Gateway?**
+    a) To allow public traffic from the internet to access a VPC.
+    b) To enable a secure VPN connection between a VPC and an on-premises network.
+    c) To cache content at edge locations for lower latency.
+    d) To translate domain names into IP addresses.
+
+---
+
+### Section 2: Subnets and Security
+
+**5. According to security best practices, how should you configure a VPC for a public-facing web application that uses a backend database?**
+    a) Place both the web servers and the database in a public subnet.
+    b) Place both the web servers and the database in a private subnet.
+    c) Place the web servers in a private subnet and the database in a public subnet.
+    d) Place the web servers in a public subnet and the database in a private subnet.
+
+**6. Which statement accurately describes a key difference between Security Groups and Network ACLs?**
+    a) Security Groups are stateless and operate at the subnet level.
+    b) Network ACLs are stateful and operate at the instance level.
+    c) Security Groups are stateful; Network ACLs are stateless.
+    d) Security Groups control outbound traffic only; Network ACLs control inbound traffic only.
+
+**7. By default, what traffic does a newly created Security Group allow?**
+    a) All inbound traffic and all outbound traffic.
+    b) No inbound traffic and no outbound traffic.
+    c) All inbound traffic and no outbound traffic.
+    d) No inbound traffic and all outbound traffic.
+
+**8. Which firewall operates at the subnet level, checking traffic both entering and leaving the subnet?**
+    a) Security Group
+    b) AWS WAF
+    c) Network Access Control List (ACL)
+    d) AWS Shield
+
+---
+
+### Section 3: Global Networking
+
+**9. Which AWS service functions as a Domain Name System (DNS), translating human-readable names into IP addresses?**
+    a) Amazon VPC
+    b) Amazon CloudFront
+    c) Amazon Route 53
+    d) AWS Direct Connect
+
+**10. A company wants to improve the load times of its website for a global user base by caching content at locations closer to the users. Which service should they use?**
+    a) Amazon S3 Transfer Acceleration
+    b) Amazon CloudFront
+    c) AWS Direct Connect
+    d) Amazon Route 53 Geolocation Routing
+
+**11. Which of the following is a primary benefit of using Amazon CloudFront?**
+    a) It establishes a secure and private connection to the AWS cloud.
+    b) It provides a firewall at the instance level.
+    c) It reduces latency by delivering content from edge locations near the user.
+    d) It automatically scales EC2 instances based on demand.
+
+---
+---
+
+# Answer Key
+
+1.  **b)** To provision a logically isolated section of the AWS Cloud for your resources.
+2.  **c)** Internet Gateway
+3.  **b)** AWS Direct Connect
+4.  **b)** To enable a secure VPN connection between a VPC and an on-premises network.
+5.  **d)** Place the web servers in a public subnet and the database in a private subnet.
+6.  **c)** Security Groups are stateful; Network ACLs are stateless.
+7.  **d)** No inbound traffic and all outbound traffic.
+8.  **c)** Network Access Control List (ACL)
+9.  **c)** Amazon Route 53
+10. **b)** Amazon CloudFront
+11. **c)** It reduces latency by delivering content from edge locations near the user.

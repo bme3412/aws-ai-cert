@@ -1,0 +1,29 @@
+Let's continue with the third task statement from domain 1, which is to describe the ML development lifecycle.
+
+It's important to mention a few other services for MLOps. Repositories are where you keep versions of your code and models.
+
+SageMaker Feature Store is a repository for the feature definitions of your training data and SageMaker Model Registry is a centralized repository for your trained models and history. We've already seen how SageMaker Pipelines can orchestrate your ML pipeline, but there are a few other options.
+
+One is AWS Step Functions, which lets you define a workflow with a visual drag-and-drop interface. It gives you the ability to build serverless workflows that integrate various AWS services and custom application logic.
+
+Apache Airflow is an open source tool used to programmatically author, schedule, and monitor sequences of processes and tasks referred to as workflows. With Amazon Managed Workflows for Apache Airflow, you can use Apache Airflow and Python to create workflows without having to manage the underlying infrastructure for scalability, availability, and security.
+
+We've mentioned how models need to be evaluated against target metrics. Let's describe some of these in more detail. A confusion matrix is used to summarize the performance of a classification model when it's evaluated against test data. The simplest way would be a binary classification model where the output is a simple binary result, yes or a no, positive or a negative.
+
+A confusion matrix is a table with actual data typically across the top and the predicted values on the left. Let's continue to use our fish classification model to illustrate. If the model sees a picture of a fish and accurately predicts that it is a fish, it is called a true positive. If the model sees a picture of something that is not a fish and accurately predicts that is not a fish, that is called a true negative. If the model sees a picture of something that is a fish and incorrectly predicts that it's not a fish, that is called a false negative. If the model sees a picture of something that is not a fish and incorrectly predicts that it is a fish, it is called a false positive.
+
+Let's make up an example where we ran 100 labeled test images through the model. The confusion matrix shows the number of true and false positives and negatives. One metric that is sometimes used to judge a model's performance is accuracy, which is simply the percentage of correct predictions.
+
+Accuracy measures how close the predicted class values are to the actual values. Values for accuracy metrics vary between zero and one. A value of one indicates perfect accuracy and zero indicates complete inaccuracy. The formula for accuracy is the number of true positives plus true negatives divided by the total number of predictions.
+
+Using our confusion matrix, that works out to 25 plus 40, which is 65, divided by 100, which gives us an accuracy of 0.65 or 65%. Though accuracy is understandable, it is not a good metric when the dataset is imbalanced. For example, suppose that 90 of 100 of our test images are fish, then the model only has to predict that all our images are fish and it'll get an accuracy of 0.9 or 90%.
+
+Precision measures how well an algorithm predicts true positives out of all the positives that it identifies. The formula is the number of true positives divided by the number of true positives, plus the number of false positives. This is a good quality metric to use when your goal is to minimize the number of false positives.
+
+For example, we don't want to label a legitimate email as spam. Using our confusion matrix, we at a precision of 0.55 or 55% for our fish model. If we want to minimize the false negatives, then we can use a metric known as recall. For example, we want to make sure that we don't miss if someone has a disease and we say they don't. The formula is the number of true positives divided by the number of true positives, plus the number of false negatives. Using our confusion matrix, we arrive at a recall of 0.625 for the model.
+
+There is a tradeoff between precision and recall because you can't optimize a model for both. For example, suppose we want to make sure we diagnose everyone who has a disease and not miss anyone. Then we're going to increase the likelihood of diagnosing people who don't have the disease as having it.
+
+Recall, is also known as sensitivity or the true positive rate. However, if recall and precision are both important to us, the F1 score balances precision and recall by combining them in a single metric. Our fish model has better recall than precision, which means it'll be better at detecting true positives, but it will also have some false negatives. In this scenario, optimizing the F1 score is the best compromise.
+
+I'm going to pause this lesson here and in the next lesson we'll wrap up task statement 1.3.

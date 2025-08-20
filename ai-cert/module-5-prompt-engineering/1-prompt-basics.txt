@@ -1,0 +1,35 @@
+Improving the way that you prompt a foundation model is the fastest way to harness the power of generative artificial intelligence (generative AI). By interacting with a model through a series of questions, statements, or instructions, you can adjust model output behavior based on the specific context of the output that you want to achieve.
+
+A prompt's form depends on the task that you are giving to a model. As you explore prompt engineering examples, you will review prompts containing some or all of the following elements:
+Instructions: This is a task for the large language model to do. It provides a task description or instruction for how the model should perform.
+Context: This is external information to guide the model.
+Input data: This is the input for which you want a response.
+Output indicator: This is the output type or format.
+
+Sometimes it's easier to guide a model toward a desired output by including what you don't want included in the output. Negative prompting is used to guide the model away from producing certain types of content or exhibiting specific behaviors. It involves providing the model with examples or instructions about what it should not generate or do.
+
+Modifying Prompts
+Although foundation models (FMs) are generally highly capable, their outputs can be greatly influenced by the prompts provided. 
+
+Inference parameters
+When interacting with FMs, you can often configure inference parameters to limit or influence the model response. The parameters available to you will vary based on the model that you are using. Inference parameters fit into a range of categories, with the most common being randomness and diversity and length
+
+Randomness and diversity
+This is the most common category of inference parameter. Randomness and diversity parameters influence the variation in generated responses by limiting the outputs to more likely outcomes or by changing the shape of the probability distribution of outputs. Three of the more common parameters are temperature, top k, and top p
+
+Temperature: This parameter controls the randomness or creativity of the model's output. A higher temperature makes the output more diverse and unpredictable, and a lower temperature makes it more focused and predictable. Temperature is set between 0 and 1.
+
+Top p: Top p is a setting that controls the diversity of the text by limiting the number of words that the model can choose from based on their probabilities. Top p is also set on a scale from 0 to 1. 
+- With a low top p setting, like 0.250, the model will only consider words that make up the top 25 percent of the total probability distribution. This can help the output be more focused and coherent, because the model is limited to choosing from the most probable words given the context.
+- With a high top p setting, like 0.990, the model will consider a broad range of possible words for the next word in the sequence, because it will include words that make up the top 99 percent of the total probability distribution. This can lead to more diverse and creative output, because the model has a wider pool of words to choose from.
+
+Length
+The length inference parameter category refers to the settings that control the maximum length of the generated output and specify the stop sequences that signal the end of the generation process.
+- The maximum length setting determines the maximum number of tokens that the model can generate during the inference process. This parameter helps to prevent the model from generating excessive or infinite output, which could lead to resource exhaustion or undesirable behavior. The appropriate value for this setting depends on the specific task and the desired output length. For instance, in natural language generation tasks like text summarization or translation, the maximum length can be set based on the typical length of the target text. In open-ended generation tasks, such as creative writing or dialogue systems, a higher maximum length might be desirable to allow for more extended outputs.
+- Stop sequences are special tokens or sequences of tokens that signal the model to stop generating further output. When the model encounters a stop sequence during the inference process, it will terminate the generation regardless of the maximum length setting. Stop sequences are particularly useful in tasks where the desired output length is variable or difficult to predict in advance. For example, in conversational artificial intelligence (AI) systems, the stop sequence could be an end-of-conversation token or a specific phrase that indicates the end of the response.
+
+Prompt Engineering Techniques
+1. Zero-shot prompting: Zero-shot prompting is a technique where a user presents a task to a generative model without providing any examples or explicit training for that specific task. In this approach, the user relies on the model's general knowledge and capabilities to understand and carry out the task without any prior exposure, or shots, of similar tasks. Remarkably, modern FMs have demonstrated impressive zero-shot performance, effectively tackling tasks thatthey were not explicitly trained for.
+2. Few-shot prompting: Few-shot prompting is a technique that involves providing a language model with contextual examples to guide its understanding and expected output for a specific task. In this approach, you supplement the prompt with sample inputs and their corresponding desired outputs, effectively giving the model a few shots or demonstrations to condition it for the requested task. Although few-shot prompting provides a model with multiple examples, you can also use single-shot or one-shot prompting by providing just one example.
+3. Chain-of-thought prompting: Chain-of-thought (CoT) prompting is a technique that divides intricate reasoning tasks into smaller, intermediary steps. This approach can be employed using either zero-shot or few-shot prompting techniques.  CoT prompts are tailored to specific problem types. To initiate the chain-of-thought reasoning process in a machine learning model, you can use the phrase "Think step by step." It is recommended to use CoT prompting when the task requires multiple steps or a series of logical reasoning.
+

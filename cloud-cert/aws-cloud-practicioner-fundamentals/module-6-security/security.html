@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Cloud Practitioner Fundamentals - Module 6: Security</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; padding: 20px; max-width: 900px; margin: 0 auto; color: #333; }
+        h1, h2, h3 { color: #111; }
+        h1 { border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        h2 { border-bottom: 1px solid #eee; padding-bottom: 5px; margin-top: 40px; }
+        h3 { margin-top: 30px; }
+        .service-card { background-color: #f9f9f9; border: 1px solid #ddd; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
+        .service-card h3 { margin-top: 0; color: #005276; }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 10px; }
+        strong { color: #111; }
+        .quiz-section { margin-top: 40px; background-color: #f0f8ff; padding: 20px; border-radius: 8px; }
+        .quiz-section h2 { margin-top: 0; }
+        .quiz-question { margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <h1>AWS Security: Study Guide</h1>
+
+    <h2>The Shared Responsibility Model</h2>
+    <div class="service-card">
+        <h3>Customer and AWS Responsibilities</h3>
+        <ul>
+            <li>AWS is responsible for the security <strong>of</strong> the cloud. This includes the physical security of data centers, hardware, software, networking, and facilities that run AWS services.</li>
+            <li>The customer is responsible for security <strong>in</strong> the cloud. This includes managing data, configuring operating systems, network and firewall rules, and managing user access and permissions.</li>
+            <li><strong>Example:</strong> For EC2, AWS manages the hypervisor and physical infrastructure. The customer is responsible for the guest operating system, applications, and data.</li>
+        </ul>
+    </div>
+
+    <h2>Identity & Access Management (IAM)</h2>
+    <div class="service-card">
+        <h3>Root User</h3>
+        <ul>
+            <li>The root user is created when you first open your AWS account and has complete access to all services and resources.</li>
+            <li>It is highly recommended to secure the root user with <strong>Multi-Factor Authentication (MFA)</strong> and not use it for everyday tasks.</li>
+        </ul>
+        <h3>IAM Users, Groups, and Roles</h3>
+        <ul>
+            <li><strong>IAM Users:</strong> An identity with specific permissions. By default, new users have no permissions.</li>
+            <li><strong>IAM Groups:</strong> A collection of IAM users. Permissions are applied to the group, and all users in the group inherit those permissions.</li>
+            <li><strong>IAM Roles:</strong> An identity with temporary permissions that can be assumed by users, applications, or services. Roles are useful for granting temporary access without sharing long-term credentials.</li>
+        </ul>
+        <h3>IAM Policies</h3>
+        <ul>
+            <li>Policies are JSON documents that explicitly define permissions. They state what actions are allowed or denied on which AWS resources.</li>
+            <li>The <strong>Principle of Least Privilege</strong> is a key concept: grant only the permissions necessary to perform a task.</li>
+        </ul>
+    </div>
+
+    <h2>Managing Multiple Accounts</h2>
+    <div class="service-card">
+        <h3>AWS Organizations</h3>
+        <ul>
+            <li>Allows you to centrally manage and govern multiple AWS accounts.</li>
+            <li><strong>Consolidated Billing:</strong> Combines billing for all accounts into a single payment, often providing access to bulk discounts.</li>
+            <li><strong>Organizational Units (OUs):</strong> Group accounts with similar business or security requirements to simplify management.</li>
+            <li><strong>Service Control Policies (SCPs):</strong> Centrally control permissions for accounts in your organization, setting maximum permissions for member accounts.</li>
+        </ul>
+    </div>
+
+    <h2>Security, Compliance, and Data Protection</h2>
+    <div class="service-card">
+        <h3>Encryption</h3>
+        <ul>
+            <li><strong>Encryption at Rest:</strong> Encrypts data that is stored. AWS KMS can be used to manage encryption keys for services like S3, EBS, and DynamoDB.</li>
+            <li><strong>Encryption in Transit:</strong> Encrypts data that is moving between locations, typically using SSL/TLS.</li>
+            <li><strong>AWS Key Management Service (KMS):</strong> A managed service that makes it easy to create and control cryptographic keys.</li>
+        </ul>
+        <h3>Compliance</h3>
+        <ul>
+            <li>AWS maintains compliance with many global and regional standards. Customers inherit these controls.</li>
+            <li><strong>AWS Artifact:</strong> Provides on-demand access to AWS's security and compliance reports from third-party auditors.</li>
+            <li><strong>Customer Compliance Center:</strong> A resource to find information and documentation about AWS compliance.</li>
+        </ul>
+    </div>
+
+    <h2>Threat Detection and Mitigation</h2>
+    <div class="service-card">
+        <h3>DDoS Protection</h3>
+        <ul>
+            <li>A Distributed Denial-of-Service (DDoS) attack aims to make an application unavailable by overwhelming it with traffic.</li>
+            <li><strong>AWS Shield:</strong> A managed DDoS protection service. Shield Standard is enabled automatically for all customers at no extra cost. Shield Advanced provides additional protections for a fee.</li>
+            <li><strong>AWS WAF (Web Application Firewall):</strong> Helps protect web applications from common web exploits by filtering and monitoring HTTP/HTTPS requests.</li>
+        </ul>
+    </div>
+    <div class="service-card">
+        <h3>Security Assessment & Threat Detection</h3>
+        <ul>
+            <li><strong>Amazon Inspector:</strong> An automated security assessment service that helps improve the security and compliance of applications deployed on AWS. It checks for vulnerabilities and deviations from best practices.</li>
+            <li><strong>Amazon GuardDuty:</strong> A threat detection service that continuously monitors for malicious activity and unauthorized behavior to protect your AWS accounts and workloads. It analyzes VPC Flow Logs, CloudTrail event logs, and DNS logs.</li>
+        </ul>
+    </div>
+
+    <div class="quiz-section">
+        <h2>Module 6 Quiz</h2>
+        <div class="quiz-question">
+            <p><strong>1. Which statement best describes an IAM policy?</strong></p>
+            <ul>
+                <li>An authentication process that provides an extra layer of protection for your AWS account</li>
+                <li>A document that grants or denies permissions to AWS services and resources</li>
+                <li>An identity that you can assume to gain temporary access to permissions</li>
+                <li>The identity that is established when you first create an AWS account</li>
+            </ul>
+        </div>
+        <div class="quiz-question">
+            <p><strong>2. An employee requires temporary access to create several Amazon S3 buckets. Which option would be the best choice for this task?</strong></p>
+            <ul>
+                <li>AWS account root user</li>
+                <li>IAM group</li>
+                <li>IAM role</li>
+                <li>Service control policy (SCP)</li>
+            </ul>
+        </div>
+        <div class="quiz-question">
+            <p><strong>3. Which statement best describes the principle of least privilege?</strong></p>
+            <ul>
+                <li>Adding an IAM user into at least one IAM group</li>
+                <li>Checking a packet's permissions against an access control list</li>
+                <li>Granting only the permissions that are needed to perform specific tasks</li>
+                <li>Performing a denial of service attack that originates from at least one device</li>
+            </ul>
+        </div>
+        <div class="quiz-question">
+            <p><strong>4. Which service helps protect your applications against distributed denial-of-service (DDoS) attacks?</strong></p>
+            <ul>
+                <li>Amazon GuardDuty</li>
+                <li>Amazon Inspector</li>
+                <li>AWS Artifact</li>
+                <li>AWS Shield</li>
+            </ul>
+        </div>
+        <div class="quiz-question">
+            <p><strong>5. Which task can AWS Key Management Service (AWS KMS) perform?</strong></p>
+            <ul>
+                <li>Configure multi-factor authentication (MFA).</li>
+                <li>Update the AWS account root user password.</li>
+                <li>Create cryptographic keys.</li>
+                <li>Assign permissions to users and groups.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

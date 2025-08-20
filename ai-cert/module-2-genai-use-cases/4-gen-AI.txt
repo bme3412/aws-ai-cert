@@ -1,0 +1,56 @@
+Generative AI is a subset of deep learning. It can adapt models that are built using deep learning without needing to retrain or fine-tune them. Generative AI is capable of generating new data based on the patterns and structures learned from training data. Generative AI can create new content, including conversations, stories, images, videos, music, and code. 
+
+Adaptability - Generative AI models can adapt to various tasks and domains by learning from data and generating content tailored to specific contexts or requirements. Because generative AI is flexible, it can be used for a wide range of applications across different industries.
+Responsiveness - Generative AI models can generate content in real-time, which results in rapid response times and dynamic interactions. This is particularly useful for chatbots, virtual assistants, and other interactive applications that require immediate responses.
+Simplicity - Generative AI can simplify complex tasks by automating content creation processes. For example, AI language models can generate human-like text, which reduces the time and effort required for content generation.
+Creativity & Exploration - Generative AI models can generate novel ideas, designs, or solutions by combining and recombining elements in unique ways. This can foster creativity and exploration of new possibilities.
+Data Efficiency - Some generative AI models can learn from relatively small amounts of data and generate new samples consistent with the training data. This can be useful when data is scarce or difficult to obtain.
+Personalization - Generative AI can create personalized content tailored to individual preferences or characteristics, which enhances user experiences and engagement.
+Scalaibltiy - When trained, generative AI models can generate large amounts of content quickly. This makes the models suitable for tasks that require producing content at scale.
+
+While AI offers many capabilities, some challenges include regulatory violations, social risks, privacy concerns, toxicity, hallucination, and interpretability.
+
+Regulatory
+Risk - Generative AI models trained on sensitive data might inadvertently generate an output that violates regulations, such as exposing personally identifiable information (PII).
+Mitigation - To minimize the risk of privacy violations, implement strict data anonymization and privacy-preserving techniques during model training. To ensure compliance with privacy regulations, conduct thorough audits and assessment of the data used to train the model.
+
+Social risk
+Risk - The possibility of unwanted content that might reflect negatively on your organization is a social risk.
+Mitigation - Test and evaluate all models before deploying them in production.
+
+Data security and privacy concerns
+Risk - The information shared with your model can include personal information and can potentially violate privacy laws.
+Mitigation - To protect sensitive data, implement cybersecurity measures, such as encryption and firewalls.
+
+Toxicity
+Risk - Generative AI models can generate content that is inflammatory, offensive, or inappropriate.
+Mitigation - Curate the training data by identifying these phrases in advance and removing them from the training data. This prevents them from being generated as output.
+
+Hallucinations
+Risk - The model generates inaccurate responses that are not consistent with the training data. These are called hallucinations.
+Mitigation - Teach users that everything must be checked. Foundation models (FM) can’t be trusted to verify their own stories are based in reality and on facts. Hallucinations could be further mitigated by checking that content is verified with independent sources. Also, generated content can be marked as unverified to alert the user that verification will be necessary.
+
+Interpretability
+Risk - Users might misinterpret the model’s output, which could lead to incorrect conclusions or decisions.
+Mitigtion - Use specific domain knowledge for model development and performance by providing key information for data model inputs. 
+
+Nondeterminism
+Risk - The model might generate different outputs for the same input, which can cause problems in applications where reliability is key.  
+Mitigation - Perform tests on the model to identify any sources of nondeterminism. Run the model multiple times and compare the output to ensure consistency.
+
+
+Factors to Consider When Selecting a Generative AI Model
+When selecting a generative AI model, there are several important factors to consider. First, it's essential to define the specific task or application you want the model to perform, such as text generation, image creation, or code generation. Models are optimized for different tasks, so choosing the right one is crucial for achieving the desired results.
+
+1. Performance requirements are another factor to consider when selecting a generative AI model. These requirements include accuracy, reliability of the output, and others. Assess the overall performance of the model to evaluate its suitability for a particular task. You should also test the model against different datasets to ensure reliability. Finally, monitor its performance over time to ensure it remains consistent.
+
+2. Another factor to consider is the model's capabilities. Generative AI encompasses a wide range of capabilities. It can perform different tasks with varying degrees of output quality and levels of control or customization. For instance, some models might be better at generating text, whereas others might excel at generating images or performing multimodal tasks such as text-to-image generation. Therefore, it is important to understand the specific capabilities required for your application before selecting a generative AI model.
+
+3. Compliance is another factor. Generative AI models can pose moral concerns, including biases, privacy issues, and potential misuse. When evaluating a particular model, consider its compliance and moral implications, particularly in sensitive domains like healthcare, finance, and legal applications. One should consider factors such as fairness, transparency or traceability, accountability, hallucination, and toxicity. Additionally, the model should adhere to relevant regulation guidelines.
+
+4. Cost - Another key factor is cost. Generative AI models can vary in terms of cost. Consider the trade-off between the size and the speed of the model. Larger models are usually more precise, but they are expensive and offer few deployment options. Conversely, smaller models are cheaper and faster, and they offer more deployment alternatives.
+    By using generative AI for content creation, you can reduce labor costs and increase efficiency, especially for repetitive tasks that require significant human effort.
+    Remember to evaluate all expenses related to deployment, maintenance, hardware, software, and other associated costs.
+
+Business Metrics for Generative AI
+By quantifying the performance, effectiveness, and return on investment (ROI) of AI applications through relevant business metrics, organizations can gain valuable insights into the value delivered. They can also identify areas of improvement and make informed decisions to optimize resource allocation and strategy.

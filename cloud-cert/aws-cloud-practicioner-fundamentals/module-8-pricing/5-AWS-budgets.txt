@@ -1,0 +1,13 @@
+As you're ramping up your AWS deployments, you probably want to make sure you're not spending an unbudgeted amount. As with most companies, you want to track costs and make sure you keep within your limits. Introducing AWS Budgets. 
+
+Think of a budget for your personal expenses, and you'll be most familiar with AWS Budgets. It allows you to set custom budgets for a variety of scenarios like cost and usage. You will then receive an alert when your costs or usage exceed or are forecasted to exceed your budgeted amount. 
+
+Say my budget was a thousand dollars and I want to be notified when I reach 80% of that amount. Well, with Budgets, you can do just that. That means you can be proactively notified if you're going to exceed your budgeted amount for resources. 
+
+So let me show you what I'm talking about here with a demo. To get started, you navigate to the billing section of your AWS console, click Budgets, then click Create Budget. Choose a type for your budget. I'll pick Cost. Give your budget a name. Enter an amount. Let's say a thousand dollars as I mentioned earlier, and then click Configure Alert. Next, we set an alert threshold. Let's take that 80%, which means we'll get an alert if we've reached 80% of our budgeted amount. Now let's add an email address. Gotta make sure to blur this out, folks. I get enough spam as it is. Now we click Confirm Budget and Create. 
+
+In AWS Budgets, you can create budgets to plan your service usage, service costs, and instance reservations.
+
+The information in AWS Budgets updates three times a day. This helps you to accurately determine how close your usage is to your budgeted amounts or to the AWS Free Tier limits.
+
+In AWS Budgets, you can also set custom alerts when your usage exceeds (or is forecasted to exceed) the budgeted amount.

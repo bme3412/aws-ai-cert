@@ -1,0 +1,101 @@
+1. A company wants to develop a system that can accurately recognize and classify handwritten digits from images.
+
+Which of the following options best describes the use of neural networks for this task?
+
+Neural networks are a type of decision tree algorithm that can be trained on image data to create a set of rules for classifying handwritten digits.
+
+Correctly unselected
+Neural networks are a form of linear regression that can be used to map pixel values from images to corresponding digit labels.
+
+Correctly unselected
+Neural networks are a type of deep learning model inspired by the structure and function of the human brain. They consist of interconnected nodes that can learn to recognize patterns in data, such as images of handwritten digits.
+
+Correctly selected
+Neural networks are a type of database system that can store and retrieve images of handwritten digits based on their pixel values and associated labels.
+
+Correctly unselected
+
+2. A company is developing an artificial intelligence (AI) system to control a self-driving car. The system learns through trial-and-error interactions with the driving environment, receiving rewards for safe and efficient actions.
+
+Which machine learning (ML) approach is being used in this scenario?
+
+Supervised learning
+
+Correctly unselected
+Reinforcement learning
+
+Correctly selected
+Unsupervised learning
+
+Correctly unselected
+Self-supervised learning
+
+Correctly unselected
+SUBMIT
+
+Correct
+That’s correct! In this scenario, the AI system interacts with a dynamic environment and must learn the optimal actions to take based on reinforcement learning. For example, the system could receive positive rewards for safe and efficient driving, and negative penalties for collisions or traffic violations.
+
+3. A company is developing a large language model (LLM) for natural language processing tasks, such as text generation, summarization, and question answering.
+
+Which of the following best describes the role of embeddings, in the context of LLMs?
+
+Embeddings are numerical representations of words or tokens, where semantically similar words have similar vector representations.
+
+Correctly selected
+Embeddings are the preprocessing techniques used to clean and tokenize the text data before feeding it into the LLM for training or inference.
+
+Correctly unselected
+Embeddings are the ensemble methods used to combine multiple LLMs to improve the overall performance and robustness of the system.
+
+Correctly unselected
+Embeddings are the linguistic rules and grammar patterns extracted from the text data to aid the LLM in understanding and generating language.
+
+Correctly unselected
+SUBMIT
+
+Correct
+That’s correct! Embeddings play a crucial role in representing and understanding the meaning of words and language. LLMs are typically trained on vast amounts of text data, and embeddings are used to represent the words or tokens in this data as numerical vectors.
+
+4. A company has pre-trained a large language model on a vast corpus of text data. They want to adapt this pre-trained model to perform specific tasks such as sentiment analysis and document summarization.
+
+Which of the following best describes the process of fine-tuning?
+
+Fine-tuning involves training the pre-trained language model from scratch.
+
+Correctly unselected
+Fine-tuning refers to the process of further training the pre-trained language model on labeled data for the specific tasks.
+
+Correctly selected
+Fine-tuning is a technique used to preprocess and clean the task-specific data before feeding it into the pre-trained language model.
+
+Correctly unselected
+Fine-tuning is an ensemble method that combines the pre-trained language model with task-specific models to improve the overall performance.
+
+Correctly unselected
+SUBMIT
+
+Correct
+That’s correct! Fine-tuning is the process of adapting a pre-trained language model to perform specific tasks by further training it on labeled data for those tasks.
+
+5. A team is tasked with choosing a generative artificial intelligence (AI) model that can recognize and interpret different forms of input data, such as text, images, and audio.
+
+Which of the following model architectures is best suited for this task?
+
+Large language model
+
+Correctly unselected
+Diffusion model
+
+Incorrectly selected
+Multimodal model
+
+Incorrectly unselected
+Foundation model
+
+Correctly unselected
+SUBMIT
+
+Incorrect
+That’s incorrect. Multimodal models are specifically designed to handle inputs from multiple modalities, such as text, images, audio, and video. These models can fuse and process information from different input sources.
+

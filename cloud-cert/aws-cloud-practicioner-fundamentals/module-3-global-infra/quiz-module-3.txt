@@ -1,0 +1,30 @@
+1. Which statement is TRUE for the AWS global infrastructure?
+
+A Region consists of a single Availability Zone.
+
+An Availability Zone consists of two or more Regions.
+
+A Region consists of three or more Availability Zones.
+
+An Availability Zone consists of a single Region.
+
+2. Which statement best describes Amazon CloudFront?
+
+A service that enables you to run infrastructure in a hybrid cloud approach
+
+A serverless compute engine for containers
+
+A service that enables you to send and receive messages between software components through a queue
+
+A global content delivery service
+
+3. Which action can you perform with AWS Outposts?
+
+Automate actions for AWS services and applications through scripts.
+
+Access wizards and automated workflows to perform tasks in AWS services.
+
+Develop AWS applications in supported programming languages.
+
+Extend AWS infrastructure and services to different locations including your on-premises data center.
+

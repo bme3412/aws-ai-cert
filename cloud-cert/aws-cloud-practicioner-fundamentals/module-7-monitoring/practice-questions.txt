@@ -1,0 +1,87 @@
+# AWS Module 7: Monitoring & Analytics Practice Questions (Multiple Choice)
+
+This document contains multiple-choice practice questions based on the AWS monitoring and analytics module. The Answer Key is located at the bottom of the file.
+
+---
+
+### Section 1: Monitoring and Observability
+
+**1. Which AWS service provides data and actionable insights to monitor applications, understand system-wide performance changes, and get a unified view of operational health?**
+    a) AWS CloudTrail
+    b) AWS Trusted Advisor
+    c) Amazon CloudWatch
+    d) AWS Config
+
+**2. In Amazon CloudWatch, what feature allows you to trigger a notification or an action when a specific metric crosses a certain threshold?**
+    a) A Dashboard
+    b) An Alarm
+    c) A Log
+    d) An Event
+
+**3. A developer wants to create a single view to monitor the CPU utilization of their EC2 fleet and the number of requests to their S3 buckets. Which CloudWatch feature should they use?**
+    a) Alarms
+    b) Metrics
+    c) Logs
+    d) Dashboards
+
+---
+
+### Section 2: Auditing and Governance
+
+**4. Which service is primarily used for operational auditing and risk auditing by recording a history of API calls made within an AWS account?**
+    a) Amazon Inspector
+    b) AWS Trusted Advisor
+    c) Amazon CloudWatch
+    d) AWS CloudTrail
+
+**5. A security auditor needs to verify that the security group for a production database has not been modified. Which service provides the logs necessary to prove this?**
+    a) AWS CloudTrail
+    b) Amazon GuardDuty
+    c) AWS Shield
+    d) Amazon CloudWatch Logs
+
+**6. What is the primary function of the CloudTrail Insights feature?**
+    a) To provide real-time recommendations on cost optimization.
+    b) To visualize metrics and logs on a custom dashboard.
+    c) To automatically detect unusual or anomalous API activity.
+    d) To log all user activity from outside the AWS Management Console.
+
+---
+
+### Section 3: Optimization and Best Practices
+
+**7. Which AWS service acts as an online expert, inspecting your AWS environment and providing real-time guidance based on AWS best practices across several categories?**
+    a) AWS Personal Health Dashboard
+    b) Amazon Inspector
+    c) AWS Trusted Advisor
+    d) AWS Service Catalog
+
+**8. AWS Trusted Advisor provides recommendations across which of the following categories? (Select TWO)**
+    a) Performance
+    b) Scalability
+    c) Agility
+    d) Cost Optimization
+    e) Usability
+
+**9. A user runs an AWS Trusted Advisor check and receives a red "action recommended" alert. Which of the following is a likely cause for such an alert?**
+    a) An EC2 instance is approaching its service limit.
+    b) The root user account does not have multi-factor authentication (MFA) enabled.
+    c) An S3 bucket has versioning enabled.
+    d) An EBS volume is slightly underutilized.
+
+---
+---
+
+# Answer Key
+
+1.  **c)** Amazon CloudWatch
+2.  **b)** An Alarm
+3.  **d)** Dashboards
+4.  **d)** AWS CloudTrail
+5.  **a)** AWS CloudTrail
+6.  **c)** To automatically detect unusual or anomalous API activity.
+7.  **c)** AWS Trusted Advisor
+8.  **a)** Performance, **d)** Cost Optimization
+9.  **b)** The root user account does not have multi-factor authentication (MFA) enabled.
+
+</rewritten_file>

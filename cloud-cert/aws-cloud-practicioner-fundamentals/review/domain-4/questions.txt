@@ -1,0 +1,338 @@
+1. How should one AWS account use Reserved Instances from another AWS account?
+A
+By using Dedicated Instances
+
+Incorrect. Dedicated Instances are EC2 instances that run in a virtual private cloud (VPC) on hardware that is dedicated to a single user. Dedicated Instances does not provide the ability to share Reserved Instances.
+
+B
+By using consolidated billing
+
+Correct. Consolidated Billing gives users the ability within the same bill to take advantage of discounts, such as Amazon S3 or Reserved Instances.
+
+C
+By using the AWS Cost Explorer tool
+
+Incorrect. Cost Explorer gives you the ability to view and analyze your AWS costs and usage. You can use Cost Explorer to identify areas that need further inquiry and see trends that you can use to understand your costs. However, Cost Explorer does not provide the ability to share Reserved Instances.
+
+D
+By using AWS Budgets
+
+Incorrect. AWS Budgets is used to track and act on your AWS cost and usage. You can use AWS Budgets to set alerts and be notified when your actual or forecasted budget is exceeded. AWS Budgets does not provide the ability to share Reserved Instances.
+
+2. Which AWS Support plan provides access to all AWS Trusted Advisor checks with the LEAST cost?
+A
+AWS Basic Support
+
+Incorrect. Basic Support gives customers access to the seven core Trusted Advisor checks.
+
+B
+AWS Developer Support
+
+Incorrect. Developer Support gives customers access to the seven core Trusted Advisor checks.
+
+C
+AWS Business Support
+
+Correct. Business Support is the least costly support plan that provides access to the complete list of Trusted Advisor checks.
+
+D
+AWS Enterprise Support
+
+Incorrect. Enterprise Support gives customers access to the full list of Trusted Advisor checks. However, Business Support provides this access at a lower cost.
+
+3. A company needs phone, email, and chat access 24 hours a day, 7 days a week. The response time must be less than 1 hour if a production system has a service interruption.
+
+Which AWS Support plan meets these requirements at the LOWEST cost?
+
+A
+AWS Basic Support
+
+Incorrect. The Basic Support plan does not include chat access and phone calls.
+
+B
+AWS Developer Support
+
+Incorrect. The Developer Support plan does not include chat access and phone calls. It provides email support during business hours only.
+
+C
+AWS Business Support
+
+Correct. The Business Support plan provides phone, email, and chat access 24 hours a day, 7 days a week. The Business Support plan has a response time of less than 1 hour if a production system has a service interruption.
+
+D
+AWS Enterprise Support
+
+Incorrect. The Enterprise Support plan provides phone, email, and chat access 24 hours a day, 7 days a week. The Enterprise Support plan has a response time of less than 15 minutes if a production system has a service interruption. However, the Enterprise Support plan is more expensive than the Business Support plan.
+
+4. What does AWS Marketplace allow users to do? (Select TWO.)
+A
+Sell unused Amazon EC2 Spot Instances.
+
+Incorrect. AWS Marketplace allows customers to sell unused Standard Reserved Instances. Spot Instances cannot be resold.
+
+B
+Sell solutions to other AWS users.
+
+Correct. AWS Marketplace provides the sales channel to sell software and solutions to other AWS customers.
+
+C
+Buy third-party software that runs on AWS.
+
+Correct. You can use AWS Marketplace to deploy third-party software that runs in the AWS environment.
+
+D
+Purchase AWS security and compliance documents.
+
+Incorrect. You can request AWS security and compliance documents from the AWS Compliance site. These documents are free of charge.
+
+E
+Order AWS Snowball Edge.
+
+Incorrect. You can order devices from the AWS Snow Family by using the AWS Management Console, not AWS Marketplace.
+
+5. Which term lengths are available when a company purchases Amazon EC2 Reserved Instances directly from AWS? (Select TWO.)
+A
+6 months
+
+Incorrect. Reserved Instances are available only in 1-year or 3-year terms when you purchase them directly from AWS. However, you can purchase instances through the AWS Management Console from third-party resellers for other terms.
+
+B
+1 year
+
+Correct. Users can purchase a Reserved Instance directly from AWS for a 1-year or 3-year commitment. The 3-year commitment offers a larger discount.
+
+C
+3 years
+
+Correct. Users can purchase a Reserved Instance directly from AWS for a 1-year or 3-year commitment. The 3-year commitment offers a larger discount.
+
+D
+4 years
+
+Incorrect. Reserved Instances are available only in 1-year or 3-year terms when you purchase them directly from AWS. However, you can purchase instances through the AWS Management Console from third-party resellers for other terms.
+
+E
+5 years
+
+Incorrect. Reserved Instances are available only in 1-year or 3-year terms when you purchase them directly from AWS. However, you can purchase instances through the AWS Management Console from third-party resellers for other terms.
+
+6. Which AWS tool or feature compares prices of different services, creates rough estimates of the total monthly costs, and exports the estimates to a .csv file?
+A
+Cost Explorer
+
+Incorrect. With Cost Explorer, users can view and analyze their current costs and usage. Users can view data for up to the last 12 months, forecast how much they are likely to spend for the next 3 months, and get recommendations for what Reserved Instances to purchase. However, Cost Explorer does not compare prices of different services.
+
+B
+AWS Pricing Calculator
+
+Correct. With AWS Pricing Calculator, users can explore AWS services and create an estimate for the cost of their use cases on AWS. Users can model their solutions before building them, explore the price points and calculations behind the estimates, and find the available instance types and contract terms that meet their needs.
+
+C
+Consolidated billing
+
+Incorrect. The consolidated billing feature in AWS Organizations enables users to consolidate billing and payment for multiple AWS accounts. Every organization in Organizations has a management account that pays the charges of all the member accounts. However, consolidated billing does not compare prices of different services.
+
+D
+AWS Budgets
+
+Incorrect. You can use AWS Budgets to track and take action on your AWS cost and usage. You can use AWS Budgets to monitor your aggregate utilization and coverage metrics for your Reserved Instances or Savings Plans. However, AWS Budgets does not compare prices of different services.
+
+7. Which AWS Organizations feature can be used to track charges across multiple accounts and report the combined cost?
+A
+Service control policies (SCPs)
+
+Incorrect. You can use SCPs to manage permissions for all accounts in your organization. You would not use SCPs to track charges across multiple accounts.
+
+B
+AWS Budgets
+
+Incorrect. You can use AWS Budgets to monitor spending and usage. You can configure alerts in AWS Budgets to identify if your spending or usage is high. You cannot use AWS Budgets to track charges across multiple accounts.
+
+C
+Consolidated billing
+
+Correct. You can use the consolidated billing feature in Organizations to consolidate billing and payment for multiple AWS accounts. Consolidated billing gives you the ability to track charges across multiple accounts. Then, you can download the combined cost and usage data.
+
+D
+AWS Identity and Access Management (IAM)
+
+Incorrect. IAM provides granular control over users and roles in individual accounts. IAM does not provide the ability to track charges across multiple accounts. IAM does not relate to charges and cost.
+
+8. Which of the following can a company do by using AWS Billing and Cost Management tools? (Select TWO.)
+A
+Terminate all AWS resources automatically if budget thresholds are exceeded.
+
+Incorrect. You can use a combination of AWS Lambda and Amazon CloudWatch to terminate all AWS resources automatically if budget thresholds are exceeded. However, these services are not Billing and Cost Management tools. Billing and Cost Management tools will not terminate resources.
+
+B
+Break down AWS costs by day, service, and the linked AWS account.
+
+Correct. Billing and Cost Management tools include tools such as Cost Explorer and AWS Budgets. Cost Explorer provides an interface that you can use to visualize, understand, and manage your AWS costs and usage over time. Cost Explorer can break down costs by day, service, and linked accounts.
+
+C
+Create budgets and receive notifications if current usage or forecasted usage exceeds those budgets.
+
+Correct. AWS Budgets can notify you if your current usage or forecasted usage exceeds your budget.
+
+D
+Switch to Reserved Instances or Spot Instances automatically, based on which instance is the most cost-effective.
+
+Incorrect. Billing and Cost Management tools will not change your EC2 instance purchasing selection.
+
+E
+Move data that is stored in Amazon S3 to a more cost-effective storage class.
+
+Incorrect. Billing and Cost Management tools will not change your S3 storage class. This functionality is available from the S3 section of the AWS Management Console by using S3 Lifecycle rules.
+
+9. Where should users find a catalog of free or purchasable AWS-recognized providers of third-party solutions?
+A
+AWS Service Catalog
+
+B
+AWS Marketplace
+
+C
+AWS Partner Solutions
+
+D
+AWS CodeDeploy
+
+10. What can be used to reduce the cost of running Amazon EC2 instances? (Select TWO.)
+A
+Spot Instances for stateless and flexible workloads
+
+Correct. Spot Instances use spare EC2 capacity. Spot Instances are available at up to a 90% discount compared to On-Demand prices. You can use Spot Instances for various stateless, fault-tolerant, or flexible applications.
+
+B
+Memory optimized instances for high-compute workloads
+
+Incorrect. Memory optimized instances deliver fast performance for workloads that process large datasets in memory. Memory optimized instances do not reduce cost for a compute intensive workload.
+
+C
+On-Demand Instances for high-cost and sustained workloads
+
+Incorrect. With On-Demand Instances, you pay for compute capacity by the second with no long-term commitments. With a long-term commitment, there are less expensive purchase options such as Reserved Instances and Savings Plans.
+
+D
+Reserved Instances for sustained workloads
+
+Correct. Reserved Instances provide you with significant savings on your EC2 costs compared to On-Demand Instance pricing when you commit to the long-term purchase of EC2 instances. You can purchase a Reserved Instance for a 1-year or 3-year commitment. The 3-year commitment to purchase a Reserved Instance offers a larger discount.
+
+E
+Spend limits set using AWS Budgets
+
+Incorrect. AWS Budgets helps you create custom budgets to track your cost and usage. AWS Budgets can alert you when costs exceed the budget. However, AWS Budgets does not directly reduce costs.
+
+11. Which tool will identify cost savings by locating idle Amazon EC2 resources?
+A
+AWS Trusted Advisor
+
+Correct. Trusted Advisor inspects your AWS environment to identify cost savings, performance, and security enhancements that you can make. Trusted Advisor can identify EC2 instances that ran over the last 14 days and alert you if the daily CPU utilization was 10% or less. This check can help locate idle EC2 resources and estimate cost savings.
+
+B
+AWS CloudTrail
+
+Incorrect. CloudTrail records events that occur in your AWS account to implement operational and risk auditing, governance, and compliance. CloudTrail does not track cost, spend, and resource consumption for AWS resources.
+
+C
+Amazon CloudWatch
+
+Incorrect. Although CloudWatch can gather metrics, such as CPU utilization on Amazon EC2, it does not provide estimates in cost savings.
+
+D
+Amazon QuickSight
+
+Incorrect. QuickSight is a business intelligence service that you can use to deliver insights. Although you could set up dashboards to better understand Amazon EC2 utilization, the services itself does not provide cost savings recommendations.
+
+12. Which of the following allows AWS users to manage cost allocations for billing?
+A
+Tagging resources
+
+Correct. Users can tag resources to allocate costs.
+
+B
+Limiting who can create resources
+
+Incorrect. This solution does not provide the granularity of cost breakdown, such as environment, business unit, company, and customer.
+
+C
+Adding a secondary payment method
+
+Incorrect. You cannot use the form of payment to manage cost allocations for resources in an AWS account.
+
+D
+Running all operations on a single AWS account
+
+Incorrect. This solution will put everything on one bill, but the use of one account is not a strategy to identify and break down associated costs.
+
+13. Which Amazon EC2 pricing model adjusts the cost based on supply and demand of EC2 instances?
+A
+On-Demand Instances
+
+Incorrect. On-Demand Instances are offered at a set price by AWS Region.
+
+B
+Reserved Instances
+
+Incorrect. Reserved Instances reserve capacity at a discounted rate. The user commits to purchase a certain amount of compute.
+
+C
+Spot Instances
+
+Correct. Spot Instances are discounted more heavily when there is more capacity available in the Availability Zones.
+
+D
+Convertible Reserved Instances
+
+Incorrect. Reserved Instances reserve capacity at a discounted rate. The user commits to purchase a certain amount of compute. With Convertible Reserved Instances, you can change the instance family, operating system, and tenancies, but the price does not change.
+
+14. A company is migrating to the AWS Cloud from on-premises data centers and wants hands-on help with the project.
+
+How can the company get this support? (Select TWO.)
+A
+Ask for a quote from the AWS Marketplace team to perform a migration into the company's AWS account.
+
+Incorrect. AWS Marketplace is not a migration service. AWS Marketplace is a catalog of listings from the independent software vendors that work with AWS.
+
+B
+Contact AWS Training and open a case for assistance.
+
+Incorrect. AWS Training focuses on building individual skills and corporate competency. AWS Training does not provide hands-on assistance for a project.
+
+C
+Use AWS Professional Services.
+
+Correct. AWS Professional Services can help you with migrations to the AWS Cloud.
+
+D
+Select a partner from the AWS Partner Network (APN) to assist with the migration.
+
+Correct. APN partners can help customers with cloud migrations.
+
+E
+Use Amazon Connect to create a new request for proposal (RFP) for expert assistance in migrating to the AWS Cloud.
+
+Incorrect. Amazon Connect is a call center and workforce management software, not an RFP tool.
+
+15. A company is building a system that will collect large amounts of data during the day and analyze the data at night. If necessary, the analysis can occur at any time of day. The analysis requires hundreds of Amazon EC2 instances to process the data and deliver the results. The company needs a solution that will minimize costs.
+
+Which Amazon EC2 purchase option will meet these requirements?
+A
+Reserved Instances
+
+Incorrect. Due to the flexible timing and the number of instances, Reserved Instances are not the best choice. Reserved Instances are for well-defined and consistent processing needs.
+
+B
+Spot Instances
+
+Correct. The flexible timing and large number of instances make Spot Instances the best choice for this situation.
+
+C
+On-Demand Instances
+
+Incorrect. On-Demand Instances are not the least expensive choice.
+
+D
+Dedicated Instances
+
+Incorrect. Dedicated Instances are best suited for situations that involve security compliance or licensing requirements. Dedicated Instances do not reduce costs.
