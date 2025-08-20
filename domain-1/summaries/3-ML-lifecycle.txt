@@ -1,0 +1,210 @@
+Domain 1.3: Describe the ML Development Lifecycle
+
+1.3.1: ML Pipeline Overview and Business Goal Definition
+
+ML Pipeline Fundamentals
+- Machine learning pipeline is a series of interconnected steps from business goal to deployed ML model
+- Steps include: defining problem, collecting/preparing training data, training model, deploying, monitoring
+- Pipeline is iterative and cyclical - parts or all are repeated even after deployment
+- Models are dynamic by design, requiring re-training with new data and continuous evaluation
+
+Business Goal Definition Process
+- Start with clear business problem identification and measurable business value
+- Align stakeholders and gain consensus on project goals
+- Define specific success criteria and performance metrics
+- Evaluate organization's ability to achieve targets
+- Determine if ML is appropriate approach for business goal
+- Perform cost-benefit analysis before proceeding to next phase
+
+AI Service Evaluation Strategy
+- Start with simplest solution before adding complexity
+- Evaluate AWS pre-trained AI services first (pay-as-you-go, fully hosted)
+- Consider customization options (e.g., Amazon Comprehend custom classifier)
+- Use transfer learning with existing models (Amazon Bedrock foundation models)
+- SageMaker JumpStart provides pre-trained models for computer vision and NLP
+- Training from scratch is most difficult, costly, and requires most responsibility
+
+1.3.2: Data Collection, Processing, and Preparation
+
+Data Collection Strategy
+- Identify required training data and data sources
+- Determine if data is streaming or batch-loadable
+- Configure ETL (Extract, Transform, Load) process for multiple sources
+- Ensure process is repeatable for frequent model re-training
+- Address data labeling requirements (often longest part of process)
+
+Data Preparation Process
+- Data pre-processing and feature engineering
+- Exploratory Data Analysis (EDA) with visualization tools
+- Data wrangling for interactive analysis and preparation
+- Handle missing/anomalous values (filter or repair)
+- Remove or mask PII data
+- Create three datasets: 80% training, 10% evaluation, 10% final testing
+
+Feature Engineering
+- Select relevant characteristics that contribute to minimizing error rate
+- Reduce features to only those needed for inference
+- Combine features to further reduce number
+- Fewer features reduce memory and computing power requirements
+
+AWS Data Services
+- AWS Glue: Fully managed ETL service with built-in transformations
+- AWS Glue Data Catalog: Metadata storage for data discovery and querying
+- AWS Glue DataBrew: Visual data preparation tool with 250+ built-in transformations
+- SageMaker Ground Truth: Build high-quality labeled datasets with active learning
+- SageMaker Canvas: Visual interface for data preparation and feature engineering
+- SageMaker Feature Store: Centralized repository for features and metadata
+
+1.3.3: Model Training, Tuning, and Evaluation
+
+Model Training Process
+- Iterative process of training, tuning, and evaluating
+- Algorithm updates parameters/weights to match expected output
+- Process continues until defined iterations or error threshold reached
+- Run multiple training jobs in parallel with different algorithms and settings
+- Hyperparameters set before training (e.g., neural layers and nodes)
+
+SageMaker Training Infrastructure
+- Create training jobs that run on ML compute instances
+- Specify S3 bucket URLs for training data and model artifacts
+- Use Docker container images from Amazon ECR for algorithms
+- SageMaker launches instances, trains model, saves artifacts to S3
+
+Experiment Management
+- SageMaker Experiments: Create, manage, analyze, and compare ML experiments
+- Group training runs with different inputs, parameters, and configurations
+- Visual interface for browsing experiments and comparing performance metrics
+- Identify best-performing models across multiple runs
+
+Automatic Model Tuning (AMT)
+- Also known as hyperparameter tuning
+- Runs many training jobs to find best hyperparameter combinations
+- Specify algorithm and hyperparameter ranges
+- Choose metric to optimize (e.g., AUC for binary classification)
+- Runs until completion criteria satisfied (no longer improving metric)
+
+1.3.4: Model Deployment and Inference Options
+
+Deployment Decision Factors
+- Choose between batch, real-time, or intermediate inference
+- Batch: Cost-effective for large datasets, runs periodically
+- Real-time: Immediate responses via REST API
+- Consider business requirements and cost implications
+
+Deployment Architecture
+- API Gateway serves as client interface
+- Lambda functions or containers run inference code
+- Docker containers deployable on various AWS services
+- SageMaker provides fully managed deployment with reduced operational overhead
+
+SageMaker Inference Options
+- Batch Transform: Offline inference for large datasets
+- Asynchronous: Queue requests, large payloads, scales to zero
+- Serverless: Lambda-based, pay-per-use, no instance provisioning
+- Real-time: Persistent endpoints, sustained traffic, auto-scaling
+
+SageMaker Deployment Process
+- Point to model artifacts in S3 and Docker container in ECR
+- Select inference option based on workload requirements
+- SageMaker creates endpoint and installs model code
+- Inference recommender tool tests different configurations
+- Auto-scaling groups for real-time, asynchronous, and batch inference
+
+1.3.5: Model Monitoring and MLOps
+
+Model Monitoring Requirements
+- Capture data and compare to training set
+- Define rules to detect issues and send alerts
+- Monitor for data drift and concept drift
+- Simple scheduled approach usually sufficient (daily, weekly, monthly)
+- Automatic re-training cycles when issues detected
+
+SageMaker Model Monitor
+- Monitors production models and detects errors
+- Defines monitoring schedules for endpoint data collection
+- Built-in rules or custom rules for analysis
+- Results viewable in SageMaker Studio and CloudWatch
+- Configure alarms for automatic remedial actions
+
+MLOps Fundamentals
+- Apply software engineering best practices to ML development
+- Automate manual tasks, testing, and evaluation
+- Version control for tracking lineage and configurations
+- Monitor deployments and automate re-training
+- Everything treated as software (infrastructure as code)
+
+MLOps Benefits
+- Productivity: Self-service environments and infrastructure
+- Repeatability: Automated, consistent ML lifecycle processes
+- Reliability: Quick deployment with increased quality
+- Compliance: Version all inputs/outputs for auditability
+- Quality: Enforce policies against bias and track changes
+
+SageMaker Pipelines
+- Orchestrate SageMaker jobs and create reproducible ML pipelines
+- Deploy custom models for real-time inference
+- Run offline inferences with batch transform
+- Track artifact lineage through simple interface
+- Create using Python SDK or JSON definition
+- Include conditional branches based on previous step outputs
+
+1.3.6: Additional MLOps Services and Model Evaluation Metrics
+
+MLOps Repository Services
+- SageMaker Feature Store: Repository for feature definitions
+- SageMaker Model Registry: Centralized repository for trained models
+- AWS Step Functions: Visual workflow builder for serverless workflows
+- Apache Airflow: Open source workflow orchestration tool
+- Amazon Managed Workflows for Apache Airflow: Managed Airflow infrastructure
+
+Classification Model Evaluation Metrics
+- Confusion Matrix: Summarizes classification model performance
+- True Positive (TP): Correctly predicted positive
+- True Negative (TN): Correctly predicted negative
+- False Positive (FP): Incorrectly predicted positive
+- False Negative (FN): Incorrectly predicted negative
+
+Accuracy Metrics
+- Accuracy: Percentage of correct predictions (TP + TN) / Total
+- Precision: TP / (TP + FP) - minimizes false positives
+- Recall: TP / (TP + FN) - minimizes false negatives
+- F1 Score: Balances precision and recall in single metric
+- Tradeoff exists between precision and recall
+
+1.3.7: Advanced Metrics and Business Value Measurement
+
+Advanced Classification Metrics
+- False Positive Rate: FP / (FP + TN)
+- True Negative Rate: TN / (FP + TN)
+- Area Under Curve (AUC): Performance across all threshold values
+- Receiver Operating Characteristic (ROC) curve
+- AUC score ranges: 1.0 (perfect), 0.5 (random), 0.0 (worst)
+
+Regression Model Metrics
+- Mean Squared Error (MSE): Average of squared differences
+- Root Mean Squared Error (RMSE): Square root of MSE
+- Mean Absolute Error (MAE): Average of absolute differences
+- MSE/RMSE emphasize outliers, MAE treats all errors equally
+
+Business Metrics and ROI
+- Quantify business value: cost reduction, user/sales increase, customer feedback
+- Estimate risks and potential costs from errors
+- Collect production data to support metrics
+- Compare actual results with original business goals
+- Calculate return on investment (ROI)
+
+Cost Management
+- AWS cost allocation tags for ML project resources
+- Filter cost reports in AWS Cost Explorer
+- Track actual AWS charges for projects
+- Compare building/operating costs with initial cost-benefit analysis
+- Monitor ongoing costs and business value
+
+Key Takeaways
+- ML pipeline is iterative lifecycle requiring continuous monitoring and improvement
+- Start with business goals and evaluate pre-trained services before custom development
+- Data quality and preparation are critical for model success
+- MLOps automates and standardizes ML development processes
+- Multiple deployment options available based on business requirements
+- Comprehensive evaluation metrics needed for both technical and business success
+- Cost management and ROI tracking essential for sustainable ML operations

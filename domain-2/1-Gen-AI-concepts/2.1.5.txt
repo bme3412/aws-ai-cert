@@ -1,0 +1,30 @@
+This framework maps out the tasks required to take your project from conception to launch. The stages are: identify use case; experiment and select; adapt, align, and augment; evaluate; deploy and iterate; and monitor.
+
+The first stage of the AI cycle is to define objectives, collect data, process data, select your model, and train and develop your model.
+
+The next stage is to develop your model by using feature engineering, building, testing, validating, optimizing, and scaling.
+
+Last is the stage to deploy and maintain, which includes model evaluation, deployment, feedback, updates, security, and scalability.
+
+The exam guide lists the foundation model lifecycle as data selection, model selection, pre-training, fine-tuning, evaluation, deployment, and feedback. The most important step in any project is to define the scope as accurately and narrowly as you can. You should think about what function the LLM will have in your specific application.
+
+Do you need the model to be able to carry out many different tasks, including long-form text generation, or is the task much more specific, like named entity recognition, so that your model only needs to be good at one thing.
+
+Getting specific about what you need your model to do, You can save time and perhaps more importantly, compute costs. As soon as you are happy and you have scoped your model requirements enough to begin development, you are ready to get started.
+
+Your first decision will be whether to train your own model from scratch or work with an existing base model.
+
+The next step is to assess the model's performance and complete any additional training if needed for your application. Prompt engineering can sometimes be good to get your model to perform well. Therefore, you'll likely start by trying in-context learning, using examples suited to your task and your use case.
+
+In some cases, however, the model might not perform as well as you need, even with one- or few-shot inferences. In that case, you can try fine-tuning your model. This process is a supervised learning process.
+
+As models become more capable, it's becoming increasingly important to ensure that they behave well in a way that aligns with human preferences in deployment. So include an additional fine-tuning technique called reinforcement learning from human feedback, which can help make sure that your model behaves well.
+
+An important aspect of all of these techniques is evaluation. Also, try different metrics and benchmarks that can determine how well your model is performing and how well it aligns with your preferences. This stage of development with adapting and aligning is usually highly iterative.
+
+I prefer to start by trying prompt engineering and evaluating the outputs, and then using fine-tuning to improve performance. And of course, always revisit and evaluate the prompt engineering to get the performance that you need.
+
+Finally, when you've got a model that is meeting your performance needs and is well aligned, you can deploy it. Your model can be deployed to your infrastructure and integrated with your application. Ensure that you are optimizing your model for deployment and your compute resources too, and that application provides great experience to users.
+
+The last but very important step is to consider any additional infrastructure that your application will require to work. Remember that some fundamental limitations of LLMs can be difficult to overcome through training alone. These issues might include hallucinations, inventing information when the answer is unknown, and the limited ability with complex reasoning and mathematics.
+

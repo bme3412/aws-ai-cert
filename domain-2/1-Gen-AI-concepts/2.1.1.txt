@@ -1,0 +1,29 @@
+Let's get started with the first task statement from Domain 2, which is to explain the basic concepts of generative AI. This task statement is split into five lessons.
+
+Let's pick up from task statement 1.1 and talk about the concepts of generative AI. What is generative AI? Generative AI is a subset of deep learning. Like deep learning, generative AI is a multipurpose technology that helps to generate new original content rather than finding or classifying existing content.
+
+Generative AI focuses on creating new content, such as text, images, audio, video, and even code. Remember that AI is focused on classifying or making predictions based on data that you input to make predictions. The models of generative AI learn patterns and representations from a large amount of training data. They then use that knowledge to generate outputs that resemble the training data.
+
+In Domain 1, we talked about how generative AI uses foundation models that have been trained on vast amounts of data. They look for statistical patterns in modalities, such as natural language and images. These foundation models are very large and complex neural network models with billions of parameters that are learned during the training phase or pre-training.
+
+The size of the models have increased by increasing the number of trainable parameters. And the more parameters a model has, the more memory it has, so the model can perform more advanced tasks. You can either use these models as they are or apply fine-tuning techniques to adopt them to your specific use case.
+
+Models are at the core of generative AI. And again, models are built with neural networks, system resources, data, and prompts, all working together. When you build a model, you train it with the knowledge it needs to generate unique output based on what it has learned. The models take the data or text that you input and provide an output. This output is a guess of what the next word or token should be.
+
+Let's dive deeper into how the models work. The current core element of generative AI is the transformer network. Transformers were introduced in a 2017 paper called "Attention Is All You Need." Some LLMs, such as ChatGPT, are built on the transformer architecture. These LLMs are pre-trained on massive amounts of the text data from the internet. They can use this pre-training process to build up a broad knowledge base. And they can be fine-tuned for specific tasks with relatively little additional data.
+
+Generative AI can be used for multiple content tasks and use cases, which we'll cover in a few minutes. Generative AI large language models can take natural language or human-written instructions and perform those tasks as a human would.
+
+For the exam, ensure you understand generative AI concepts, such as prompt, inference, completion, context window, tokens, LLMs' vocabulary, tokenizer, prompt engineering, and more. Most ML models, AI models, and generative AI models rely on statistics and linear algebra for their computations, including probability modeling, loss function, and matrix multiplication. These calculations are used in deep learning operations because machine learning prefers to work with numbers and not raw text, images, or videos.
+
+Remember, in Domain 1, we used a prompt to generate a song and we included lyrics with a prompt. You might encounter situations where the model doesn't produce the outcome that you want on the first try, and you can use prompt engineering to understand and apply generative models to your tasks and use cases.
+
+One strategy you can use to get the model to produce better completions is to include examples of the task that you want the model to carry out. These examples can be incorporated inside the prompt. Providing examples inside the context window is called in-context learning.
+
+With in-context learning, you can help LLMs learn more about the task being asked by including examples or additional data in the prompt.
+
+The input that you sent into your generative model is called the prompt. A text prompt is used for LLMs and other modalities, such as images, videos, and more.
+
+The prompt is passed into the model during the inference time to generate an output or completion.
+
+The inference configuration parameters influence the model's completion to the prompt. So the prompt consists of instruction and content, but you can add in-context learning with few-shot, zero-shot, and one-shot inference.

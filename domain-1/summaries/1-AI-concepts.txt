@@ -1,0 +1,171 @@
+Domain 1.1: Basic AI Concepts and Terminologies
+
+1.1.1: Introduction to Artificial Intelligence
+
+What is AI?
+- Artificial Intelligence (AI): Field of computer science dedicated to solving cognitive problems associated with human intelligence (learning, creation, image recognition)
+- Goal: Create self-learning systems that derive meaning from data
+- Examples: Alexa, ChatGPT, real-time fraud detection
+
+AI Capabilities
+- Respond meaningfully to questions and create original content (text, images)
+- Process vast quantities of data quickly
+- Perform repetitive tasks to increase business efficiency
+- Find patterns in data and forecast trends
+- Help businesses make smarter decisions and react quickly to problems
+
+Machine Learning
+- Definition: Branch of AI that focuses on using data and algorithms to imitate human learning
+- Process: Models trained on large datasets to identify patterns and make predictions
+- Example: Product recommendations for online shoppers
+
+Deep Learning
+- Definition: Type of machine learning inspired by human brain structure
+- Technology: Uses layers of neural networks to process information
+- Capabilities: Speech recognition, object and image recognition
+
+AI Applications Across Industries
+- Healthcare: X-ray analysis, pandemic prediction, medical diagnosis
+- Manufacturing: Computer vision for quality control, predictive maintenance
+- Customer Service: Chat systems, language recognition, product recommendations
+- Finance: Fraud detection, demand forecasting
+- HR: Resume processing, candidate matching
+
+AI Techniques
+- Regression Analysis: Processes historical data to predict future values
+- Inference: AI predictions (probabilistic results, educated guesses)
+- Anomaly Detection: Identifies deviations from expected patterns
+- Computer Vision: Image/video processing for object identification, facial recognition
+- Natural Language Processing (NLP): Enables machines to understand and generate human language
+- Generative AI: Creates original content (stories, images, videos, music)
+
+1.1.2: Machine Learning Fundamentals
+
+Core Concepts
+- Definition: Science of developing algorithms and statistical models for complex tasks without explicit instructions
+- Process: Mathematical algorithms take data inputs and generate outputs
+- Training: Uses known data (features) to find correlations between inputs and expected outputs
+
+Data Types for ML
+- Structured Data: Tabular data (CSV files, relational databases like Amazon RDS, Redshift)
+- Semi-structured Data: Data with varying attributes (JSON files, DynamoDB, DocumentDB)
+- Unstructured Data: Images, video, text files, social media posts
+- Time Series Data: Sequential data with timestamps for trend prediction
+
+Model Training Process
+- Algorithm Selection: Defines mathematical relationship between outputs and inputs
+- Parameter Adjustment: Internal parameters adjusted iteratively during training
+- Best Fit: Parameters optimized to minimize errors
+- Inference: Trained model makes predictions on new data
+
+Data Storage
+- Primary Storage: Amazon S3 for training data (low cost, unlimited capacity)
+- Export Process: Data exported from source databases to S3 for model training
+
+1.1.3: Machine Learning Deployment and Styles
+
+Model Deployment
+- Model Artifacts: Trained parameters, model definition, metadata stored in S3
+- Inference Code: Software that implements the model by reading artifacts
+- Deployment Options: Real-time endpoints vs. batch processing
+
+Deployment Types
+- Real-time Inference: 
+  - Persistent endpoints for low latency, high throughput
+  - Always available computing resources
+  - Ideal for online applications
+- Batch Processing:
+  - Offline processing for large datasets
+  - Computing resources run only during processing
+  - More cost-effective for large-scale inference
+
+Machine Learning Styles
+
+Supervised Learning
+- Process: Training with pre-labeled data
+- Example: Image classification (fish vs. non-fish)
+- Challenge: Requires extensive data labeling
+- Solution: Amazon SageMaker Ground Truth with Mechanical Turk
+
+Unsupervised Learning
+- Process: Training on unlabeled data with features
+- Capabilities: Pattern recognition, anomaly detection, automatic clustering
+- Use Cases: Network traffic analysis, sensor data monitoring
+- Advantage: No labeling required, straightforward setup
+
+Reinforcement Learning
+- Process: Autonomous decision-making through trial and error
+- Method: Agent takes actions in environment to achieve goals
+- Learning: Rewards for actions that move toward goals
+- Example: AWS DeepRacer for teaching RL concepts
+
+1.1.4: Model Performance and Bias
+
+Model Performance Issues
+
+Overfitting
+- Definition: Model performs better on training data than new data
+- Cause: Model fits training data too well, doesn't generalize
+- Solution: Train with more diverse data
+- Risk: Overemphasizing unimportant features (noise)
+
+Underfitting
+- Definition: Model cannot determine meaningful relationship between input and output
+- Causes: Insufficient training time or dataset size
+- Solution: Find optimal training duration (sweet spot)
+
+Bias in Machine Learning
+- Definition: Disparities in model performance across different groups
+- Example: Loan application model biased against certain demographics
+- Causes: Insufficient diverse training data
+- Mitigation:
+  - Identify fairness constraints early
+  - Inspect training data for potential bias
+  - Adjust feature weights
+  - Remove sensitive attributes (e.g., gender)
+  - Continuous evaluation for fairness
+
+1.1.5: Deep Learning and Neural Networks
+
+Deep Learning Fundamentals
+- Definition: Type of machine learning using neural network structures
+- Inspiration: Based on human brain structure and function
+- Components: Software nodes simulating neuron behavior
+
+Neural Network Architecture
+- Structure: Input layer, hidden layers, output layer
+- Process: Information flows forward from input to output
+- Training: Weights adjusted to minimize prediction errors
+- Capabilities: Image classification, natural language processing
+
+Deep Learning vs. Traditional ML
+
+Traditional Machine Learning
+- Best For: Structured data, labeled data
+- Examples: Classification, recommendation systems
+- Use Case: Customer churn prediction
+- Efficiency: Generally performs well and is efficient
+
+Deep Learning
+- Best For: Unstructured data (images, videos, text)
+- Examples: Image classification, NLP, sentiment analysis
+- Advantages: Self-learns patterns, minimal feature engineering
+- Disadvantages: Higher infrastructure costs, requires large datasets
+
+Generative AI
+- Technology: Deep learning models pre-trained on extremely large datasets
+- Architecture: Transformer neural networks
+- Processing: Parallel sequence processing (vs. sequential)
+- Capabilities:
+  - Understanding and summarizing long articles
+  - Generating human-like text
+  - Language translation
+  - Creative writing (stories, letters, articles, poetry)
+  - Computer programming and code generation
+
+Key Takeaways
+- Deep learning excels at complex pattern recognition in unstructured data
+- Traditional ML is more efficient for structured data problems
+- Generative AI represents the cutting edge of AI capabilities
+- Cloud computing made neural networks accessible to businesses
+- Both approaches use statistical algorithms, but only deep learning uses neural networks

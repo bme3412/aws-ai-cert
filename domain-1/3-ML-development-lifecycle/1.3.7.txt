@@ -1,0 +1,27 @@
+Let's continue with the third task statement from Domain 1, which is to describe the ML development lifecycle and jump back into talking about metrics to evaluate your models.
+
+Another metric we can calculate from our confusion matrix is the false positive rate, which is the false positives divided by the sum of the false positives and true negatives. In our example, this metric shows us how the model is handling the images that are not fish. It is a measure of how many of the predictions were of fish out of the images that were not fish.
+
+Closely related to the false positive rate is the true negative rate, which is the ratio of the true negatives to the sum of the false positives and true negatives. It is a measure of how many of the predictions were of not fish out of the images that were not fish.
+
+The area under the curve, also known as AUC metric, is used to compare and evaluate binary classification by algorithms that return probabilities, such as logistic regression. To map the probabilities into discrete predictions such as true or false, these are compared against a threshold value.
+
+A threshold is a value that the model uses to make a decision between the two possible classes. It can converts the probability of a sample being part of a class into a binary decision. For example, when the threshold is set to 0.6, anytime the model is 60% confident that the image is of a fish, it will classify it as a fish.
+
+The true positive rate is plotted against the false positive rate for increasing threshold values. The threshold values are represented by the red dashed line in the graph. The relevant curve is called the receiver operating characteristic curve. You can see that increasing the threshold results in fewer false positives, but more false negatives. AUC is the area under this receiver operating characteristic curve.
+
+AUC provides an aggregated measure of the model performance across the full range of thresholds. AUC scores vary between zero and one. A score of one indicates perfect accuracy and a score of one half, or 0.5, indicates that the prediction is no better than a random classifier.
+
+Recall that in linear regression, we're fitting a line to the points in a dataset. The distance between the line and the actual values is the error. A metric that we can use to evaluate a linear regression model is called the mean squared error, MSE. To compute it, we take the difference between the prediction and actual value, square the difference, and then compute the average of all square differences. MSE values are always positive. The better a model is at predicting the actual values, the smaller the MSE value is.
+
+Another metric that is commonly used is the root mean squared error, which is the square root of the mean squared error. The advantage of using this square root of the MSE is that the units match the dependent variable. In our example, if the height is measured in inches, then the MSE will be in square inches, but the RMSE is in inches, so the RMSE is easier for us to interpret.
+
+Because the errors are squared, the mean squared error and root means squared error metrics emphasize the impact of outliers. These are good metrics, but incorrect predictions can be very costly. If that is not desired, a different metric called mean absolute error averages the absolute values of the errors, so it doesn't emphasize the large errors.
+
+We've seen that ML solutions need to be rooted in solving business problems, so let's end this domain by discussing business metrics. Recall that the first step in the ML pipeline is to define the business goal. From there, we determine how to measure successful achievement of the goal.
+
+Business metrics help us quantify the value of a machine learning model to the business. Good metrics could be cost reduction, a percentage increase in users or sales, a measurable improvement in customer feedback, or any measurable metric that is important to the business. It is important to also estimate the risks of using AI and ML and potential costs incurred from errors.
+
+For example, one potential cost could be the loss of sales or customers. After the model is in production, you need to be able to collect the data to support the metrics and compare the actual results with the original business goals. Also, consider the actual cost of building and operating the model and compare this cost with the initial cost benefit model. This way you'll be able to calculate the return on investment.
+
+AWS allows you to define cost allocation tags that are assigned to the resources that you create. For example, you can define a tag with the name of ML project and the name of your project as the value. You add that tag to all the resources used in your pipeline. Then you can filter the cost reports in AWS Cost Explorer to determine the actual AWS charges incurred for the project.

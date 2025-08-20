@@ -1,0 +1,204 @@
+Domain 2.1: Explain the Basic Concepts of Generative AI
+
+2.1.1: Generative AI Fundamentals and Core Concepts
+
+What is Generative AI?
+- Subset of deep learning focused on creating new original content
+- Generates new content rather than classifying or predicting existing content
+- Creates text, images, audio, video, and code
+- Models learn patterns from vast training data to generate similar outputs
+
+Foundation Models
+- Very large and complex neural network models with billions of parameters
+- Pre-trained on vast amounts of data (internet, large texts)
+- Size increases with number of trainable parameters
+- More parameters = more memory = more advanced task capabilities
+- Can be used as-is or fine-tuned for specific use cases
+
+Transformer Architecture
+- Core element of generative AI introduced in 2017 "Attention Is All You Need" paper
+- LLMs like ChatGPT built on transformer architecture
+- Pre-trained on massive text data to build broad knowledge base
+- Fine-tuned for specific tasks with minimal additional data
+
+Key Generative AI Concepts
+- Prompt: Input sent to generative model (text, images, videos)
+- Inference: Process of generating output from prompt
+- Completion: Generated output from the model
+- Context Window: Amount of input data model can process
+- Tokens: Units of text processed by the model
+- LLM Vocabulary: Model's understanding of language patterns
+- Tokenizer: Converts human text to vector representations
+
+In-Context Learning
+- Strategy to improve model completions
+- Include examples of desired task in the prompt
+- Helps LLMs learn more about the task being asked
+- Supports few-shot, zero-shot, and one-shot inference
+
+2.1.2: Vector Representations and Transformer Architecture
+
+Vector Fundamentals
+- Vector: Ordered list of numbers representing features/attributes
+- In generative AI: represents words, phrases, sentences, or other units
+- Encodes relationships, analogies, and hierarchies between items
+- Similar to Excel spreadsheet with specific locations in vector space
+
+Tokenization and Embeddings
+- Every language-based generative AI model has a tokenizer
+- Converts human text into vectors containing token IDs
+- Embedding vectors: high-dimensional representation of tokens
+- Embeddings capture semantic meaning of text, image, video, or audio
+- Closer tokens in vector space = more similar semantic meaning
+
+Self-Attention Mechanism
+- Key innovation of transformer architecture
+- Helps model weigh importance of different input parts
+- Captures long-range dependencies and contextual relationships
+- Computes query, key, and value vectors for each input token
+- Uses dot products to determine attention weights
+- Output is weighted sum of value vectors based on attention scores
+
+Position Embeddings
+- Encode relative position of each token in sequence
+- Help model distinguish identical tokens in different positions
+- Important for understanding sentence structure and word order
+- Enables parallelized computation
+
+Transformer Architecture Details
+- Consists of encoder and decoder, each with several layers
+- Each layer has two sublayers with residual connections
+- Uses layer normalization to prevent overfitting
+- Positional encoding scheme captures sequence order
+- No need for recurrent or convolutional operations
+
+2.1.3: Model Scaling, Pre-training, and Multimodal Capabilities
+
+Model Scaling and Performance
+- Larger models more likely to work without additional training
+- Model capability increases with size
+- Supported by scalable transformer architecture and massive data access
+- Training large models is difficult and expensive
+- Continuous growth may have limitations
+
+Pre-training Process
+- LLMs encode deep statistical representation of language
+- Learns from vast amounts of unstructured data (GBs to PBs)
+- Self-supervised learning internalizes language patterns
+- Model weights updated to minimize training objective loss
+- Requires large compute resources and GPUs
+- Data quality curation: only 1-3% of tokens used after processing
+
+Multimodal Generative AI
+- Unimodal: Works with one data modality (e.g., text-only LLMs)
+- Multimodal: Processes multiple data types (text, image, video, audio)
+- Provides more robust forecasts and cross-modal reasoning
+- Use cases: marketing, image captioning, product design, customer service
+
+Multimodal Tasks
+- Image captioning: Generate text descriptions of images
+- Visual question answering: Answer questions about image content
+- Text-to-image synthesis: Generate images from text descriptions
+- Examples: DALL-E, Stable Diffusion, Midjourney
+
+Diffusion Models
+- Class of generative models that reverse gradual noising process
+- Start with random noise, iteratively de-noise to produce coherent output
+- Three main components: forward diffusion, reverse diffusion, stable diffusion
+- Higher degree of control in quality and diversity of generated images
+- More stable and easier to train than GANs and VAEs
+
+Stable Diffusion
+- Uses reduced definition latent space instead of pixel space
+- Gaussian noise encoding with noise predictor
+- Reverse diffusion process recreates images
+- Available through Amazon SageMaker JumpStart
+
+2.1.4: Generative AI Use Cases and Applications
+
+Text Generation and Adaptation
+- Writing and rewriting text for different audiences
+- Adapting technical documents to beginner levels
+- Text summarization: condensing long content while retaining main ideas
+- Examples: technical docs, financial reports, legal documents, news articles
+
+Content Creation Services
+- Amazon Bedrock and Amazon Titan: Pre-trained models for text, image, audio
+- SageMaker and Amazon Q Developer: Code generation and completion
+- Amazon Sumerian: Virtual production and 3D content creation
+
+Information Processing Use Cases
+- Information extraction and question answering
+- Classification and harmful content identification
+- Translation and recommendation engines
+- Personalized marketing and advertisements
+- Chatbots and customer service agents
+- Search functionality
+
+Code Generation
+- Accelerates software development
+- Generates functional code snippets and programs
+- Natural language descriptions to code
+- Code completion and translation between languages
+- Amazon Q Developer: Real-time code suggestions
+- AWS handles infrastructure, data management, model training, and inference
+
+Architecture Selection
+- Various architectures: GANs, VAEs, transformers
+- Each has unique advantages and limitations
+- Evaluate objective and dataset before selecting appropriate architecture
+
+2.1.5: Generative AI Project Lifecycle and Development Framework
+
+AI Project Lifecycle Stages
+- Identify use case and define objectives
+- Experiment and select appropriate models
+- Adapt, align, and augment models
+- Evaluate performance and alignment
+- Deploy and iterate
+- Monitor and maintain
+
+Foundation Model Lifecycle
+- Data selection and processing
+- Model selection and pre-training
+- Fine-tuning and evaluation
+- Deployment and feedback
+- Continuous monitoring and updates
+
+Project Scoping
+- Define scope accurately and narrowly
+- Determine model's specific function in application
+- Consider task complexity: general purpose vs. specific tasks
+- Specific scoping saves time and compute costs
+
+Model Development Approach
+- Decision: Train from scratch or work with existing base model
+- Start with in-context learning and prompt engineering
+- Evaluate performance and complete additional training if needed
+- Fine-tuning as supervised learning process when needed
+
+Alignment and Safety
+- Ensure models behave well and align with human preferences
+- Reinforcement Learning from Human Feedback (RLHF)
+- Evaluation with different metrics and benchmarks
+- Iterative development process
+
+Deployment Considerations
+- Optimize model for deployment and compute resources
+- Integrate with application infrastructure
+- Provide great user experience
+- Consider additional infrastructure requirements
+
+LLM Limitations
+- Hallucinations: inventing information when answer unknown
+- Limited complex reasoning and mathematical abilities
+- Difficult to overcome through training alone
+- Important to understand fundamental limitations
+
+Key Takeaways
+- Generative AI creates new content using foundation models and transformer architecture
+- Vector representations and self-attention enable understanding of language patterns
+- Multimodal capabilities extend beyond text to images, video, and audio
+- Comprehensive use cases across content creation, code generation, and information processing
+- Systematic development lifecycle from scoping through deployment and monitoring
+- Understanding limitations and alignment crucial for successful deployment

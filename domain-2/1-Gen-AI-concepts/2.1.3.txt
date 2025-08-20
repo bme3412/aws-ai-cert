@@ -1,0 +1,33 @@
+Let's continue with task statement 2.1. Researchers have found that the larger a model is, the more likely it is to work without additional in-context learning or further training. Because the model's capability increases with size, it has supported the development of larger and larger models. The result is the introduction of highly scalable transformer architecture, access to enormous amounts of data for training, and development of more powerful compute resources.
+
+You might be asking, can we just keep adding parameters to increase performance and make models smarter? Well, training these large models is difficult and expensive. It might be hard to continuously train larger and larger models. Another interesting question is, where might this model growth lead?
+
+Let's step back and repeat a few key points. LLMs encode a deep statistical representation of a language. This understanding is developed during the pre-training phase when the model learns from vast amounts of unstructured data. This data can be gigabytes, terabytes, and even petabytes of text. This data is pulled from many sources, including the internet and larger texts that have been assembled specifically for training language models.
+
+In this self-supervised learning step, the model internalizes the patterns and structures in the language. These patterns then help the model to complete its training objective, which depends on the architecture of the model.
+
+During pre-training, the model weights get updated to minimize the loss of the training objective. The encoder generates an embedding or vector representation for each token. Pre-training also requires a large amount of compute and the use of graphic processing units, GPUs.
+
+Remember that when you collect training data from public sites such as the internet, you'll need to process the data. The processing is to increase quality, address bias, or remove other harmful content. From what I could find, 1% to 3% of tokens are used for pre-training after the data quality curation step. This estimate is important to include when you are trying to determine how much data you need to collect to pre-train your model.
+
+Generative AI can be unimodal or multimodal. Unimodal models work with one data modality. LLMs are an example of unimodal generative AI because the input and the output, or completion, are text. Multimodal is adding another modality such as image, video, or audio.
+
+Multimodal models can understand diverse data sources and can provide more robust forecasts. Multimodal generative AI use cases are marketing, image captioning, product design, customer service, chatbots, and avatars. Multimodal models and diffusion models are two important classes of generative AI that go beyond text-only applications.
+
+Multimodal models can process and generate multiple types of data, but they can also do this type of operation in combination with each other. This collaborative capability adds cross-model reasoning, translation, search, and creation that more closely mirrors human intelligence.
+
+What are some examples of multimodal tasks? These are image captioning, where the model is generating text descriptions of images, visual question answering, where the model answers questions about image content.
+
+Another example is text to image synthesis, which is generating images from textual descriptions. Models such as DALL-E, Stable Diffusion, and Midjourney can create realistic and diverse images from natural language prompts.
+
+There are also diffusion models, which support a variety of tasks for multimodal models such as image generation, upscaling, and inpainting. Diffusion models are a class of generative models that learn to reverse a gradual noising process.
+
+Diffusion-based architectures offer a higher degree of control in quality and diversity of images generated. For the exam, ensure you understand the three main components, forward diffusion, reverse diffusion, and stable diffusion.
+
+The idea is to start with random noise and iteratively de-noise it to produce a coherent output, such as high-quality image or audio clip. The model is trying to predict the noise that was added at each step conditioned on the partially denoised output from the previous step.
+
+Stable diffusion differs from many other image generation models. In principle, diffusion models use Gaussian noise to encode an image, then they use a noise predictor together with a reverse diffusion process to recreate the image. Stable diffusion doesn't use the pixel space of the image. Instead, it uses a reduced definition latent space. You can easily generate images from text using stable diffusion models through Amazon SageMaker JumpStart.
+
+What are advantages that diffusion models have over other generative approaches, such as generative adversarial networks and variational autoencoders? Diffusion models tend to produce higher quality outputs with more diversity and consistency, and they're more stable and easier to train. Some examples of diffusion models are Stable Diffusion for image generation, Whisper for speech recognition and translation, and AudioLM for audio generation. AWS provides a range of services and tools for building and deploying multimodal and diffusion models.
+
+For example, SageMaker supports deep learning frameworks such as TensorFlow and PyTorch, which have prebuilt modules for working with multimodal data. AWS also offers pre-trained models like Stable Diffusion that can be fine-tuned and deployed with just a few lines of code.

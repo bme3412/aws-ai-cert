@@ -1,0 +1,33 @@
+Let's step back to the beginning of our AI project and the data selection stage. There are publicly available pre-trained foundation models such as SageMaker JumpStart. We'll talk about them more in task statement 2.3.
+
+Remember that every language-based generative AI model has a tokenizer that converts human text into a vector that contains token IDs or input IDs. Each input ID represents a token in the model's vocabulary.
+
+Let's pause and ask a question. What is a vector? A vector is an ordered list of numbers that represent features or attributes of some entity or concept. In the context of generative AI, vectors might represent words, phrases, sentences, or other units. The power of vector representations is in the ability to encode related relationships between the items and capture meaningful associations, analogies, and hierarchies.
+
+For example, the vector difference between a manatee and dugong might be similar to the difference between a great hammerhead shark and a hammerhead shark. Let's dive deeper here. We said that a vector is a list of numbers, but it also indicates where that list of numbers is located within a space.
+
+I like to think of a vector as an Excel spreadsheet, so the list of numbers or vector would indicate a specific location in a particular space or in a vector database. In the same way, the column and row number in the Excel spreadsheet indicate a certain cell in that spreadsheet.
+
+The model uses the tokenizer to convert the input text into a vector. The embedding vector is this set of input IDs necessary to obtain each token's high dimensional representation. Embedding vectors are also called embeddings. Embeddings are a numerical vectorized representation of any entity. Embeddings capture the semantic meaning of tokens such as text, image, video, or audio.
+
+For example, the vectors encode the meaning and context of tokens within a large body of text. In this way, the model can statistically represent and understand human language. The closer the tokens are to each other in the vector space, the more similar they are in the semantic meaning.
+
+In this way, the model can generate text based on relationships between these vectors. Embeddings are passed to this self-attention layers, which are another key component of the transformer.
+
+At the beginning of this lesson, I said that current core element of generative AI is the transformer network. At its core, generative AI is a machine learning technique that creates content that mimics what a human could do.
+
+An innovation of transformers is this self-attention mechanism. This mechanism helps the model to weigh the importance of different parts of the input when generating each output token. As a result, the model can capture long-range dependencies and contextual relationships that were difficult to learn with previous architectures, such as recurrent neural networks, or RNNs.
+
+Self-attention works by computing a set of query, key and value vectors for each input token. Then it uses the dot products between these vectors to determine the attention weights. The output for each token is a weighted sum of the value vectors where the weights come from the attention scores. This process is repeated in multiple layers so that the model can build up complex representations of the input.
+
+Transformers also introduce the concept of position embeddings, which encode the relative position of each token in the sequence. They help the model to distinguish between identical tokens that appear in different positions, which is important for understanding sentence structure and word order.
+
+During the model inference, the transformer aims to help the model generate the completion to an input prompt. The transformer model uses self-attention to compute representations of input sequences, which helps the model to capture long-term dependencies and parallelized computation.
+
+I have added a link to an article, "Attention is all you need." The authors demonstrate that their model achieves excellent performance on several machine translation tasks and outperforms previous models that rely on RNNs or convolutional neural networks, CNNs. The article talks about how the transformer architecture consists of an encoder and a decoder, each of which has several layers.
+
+Each layer consists of two sublayers. The transformer model uses residual connections and layer normalization to facilitate training and prevent overfitting. In addition, the authors introduce the positional encoding scheme that encodes the position of each token in the input sequence.
+
+In this way, it helps the model to capture the order of the sequence without the need for recurrent or convolutional operations. During the model pre-training and fine-tuning, the transformer is helping the model gain contextual understanding of the language from the input training or tuning.
+
+You don't need to understand the low-level details of the transformer architecture, but it helps to understand that the complex implementation has occurred behind the scenes. And again, I added flashcards to cover more concepts such as input, context window, embedding layer, encoder, self-attention, decoder, soft max output, and more.

@@ -1,0 +1,15 @@
+Large language models, LLMs, are a type of generative AI that can be applied to many different problem domains or tasks without being fine tuned. What are the main use cases for generative AI models?
+
+First, generative AI generates text and might be useful for writing or rewriting pieces of text to adapt to different audiences. For example, you could adapt or convert a technical document that is written about the design and specifications for a scuba diving buoyancy device. To be more specific, you could have it use less technical terms for people who are beginning their scuba diving certifications.
+
+Generative AI is also good at text summarization. You can give it a relatively long piece of information and have it generate a short output while retaining the main idea. Examples could include summarizing technical documentation, financial reports, legal documents, news articles, and more.
+
+AWS provides a range of services and tools for building generative AI applications for content creation. For example, Amazon Bedrock and Amazon Titan offer pre-trained models for text, image, audio generation that could be fine-tuned for specific use cases. SageMaker and Amazon Q Developer, formerly known as Amazon CodeWhisperer, support code generation and completion. Amazon Sumerian offer virtual production and 3D content creation.
+
+There are more examples of other use cases such as information extraction, question answering, classification, identifying harmful content, translation, recommendation engines, personalized marketing and ads, chatbots, customer service agents, and search.
+
+Another use case is the use of generative AI as a developer tool for source code generation. Code generation is an application of generative AI to accelerate software development. Models can generate functional code snippets and even entire programs from natural language descriptions or examples to help automate routine programming tasks, such as code completions, and even translate code between different languages.
+
+Amazon Q Developer generates real-time code suggestions that range from snippets to full functions based on your comments and existing code. AWS handles the underlying infrastructure, data management, model training, and inference. You can focus on your specific use cases and applications.
+
+For the exam, ensure that you understand that various architectures exist such as generative adversarial networks, GANs, variational autoencoders, VAEs, and transformers. Each architecture has unique advantages and limitations, so evaluate the objective and dataset before selecting the appropriate one.

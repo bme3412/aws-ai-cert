@@ -1,0 +1,175 @@
+Domain 1.2: Identify Practical Use Cases for AI
+
+1.2.1: When to Use AI and When Not to Use AI
+
+When AI Should Be Considered
+- AI can work continuously without performance degradation
+- Ideal for repetitive, tedious tasks that employees find boring
+- Can decrease employee workloads while streamlining business operations
+- Excellent for solving complex problems involving vast amounts of data at high velocity
+- Great at recognizing patterns and detecting deviations (fraud detection)
+- Helps reduce waste through demand forecasting
+- Enables companies to make better choices and address customer needs more effectively
+
+When AI Is NOT the Best Option
+- Training AI with machine learning consumes vast resources
+- Processing power can be costly
+- Models may need frequent re-training
+- Benefits must outweigh costs before proceeding
+- Example: Set targets for fraud/waste reduction, estimate model costs, compare with savings
+
+AI Model Decision-Making Considerations
+- AI models can impact customers (e.g., loan applications)
+- Complex neural networks lack full interpretability
+- Tradeoff between complexity and interpretability
+- If business requires complete transparency, use simpler models (lower performance)
+- Alternative: Rule-based systems for deterministic outcomes
+
+Deterministic vs. Probabilistic Systems
+- Rule-based systems: Deterministic (same input = same output)
+- Machine learning models: Probabilistic (incorporate randomness, varied results)
+- Choose rule-based systems when determinism is necessary
+
+1.2.2: Machine Learning Problem Types
+
+Supervised Learning Problems
+- Dataset contains features/attributes as inputs with labeled target values as outputs
+- Model trained with known inputs and outputs
+
+Classification Problems
+- Target values are categorical (discrete values)
+- Binary Classification: Two mutually exclusive classes (e.g., disease/no disease, fish/not fish)
+- Multiclass Classification: Several classes (e.g., document topics: religion, politics, finance)
+
+Regression Problems
+- Target values are mathematically continuous
+- Linear Regression: Direct linear relationship between inputs and output
+- Simple Linear Regression: Single independent variable (e.g., weight predicting height)
+- Multiple Linear Regression: Multiple independent variables (e.g., house price prediction using bathrooms, bedrooms, square footage)
+- Logistic Regression: Measures probability of event occurring (0-1 scale)
+
+Unsupervised Learning Problems
+- Dataset contains features/attributes without labels or target values
+- Output predicted based on patterns discovered in input data
+
+Clustering Problems
+- Data separated into discrete groups
+- Members similar within groups, different between groups
+- Example: Customer segmentation by purchase history or clickstream activity
+
+Anomaly Detection Problems
+- Identification of rare items/events that differ significantly from rest of data
+- Examples: Failed sensors, medical errors
+
+1.2.3: Pre-trained AI Services
+
+Amazon Rekognition (Computer Vision)
+- Pre-trained deep learning service for computer vision
+- Works with images and videos (including streaming)
+- Capabilities:
+  - Face recognition and identity verification
+  - Object detection and labeling
+  - Custom object recognition with labeled training images
+  - Text detection (street signs)
+  - Content moderation (explicit, inappropriate, violent content)
+  - Real-time security monitoring
+
+Amazon Textract
+- Extracts text, handwriting, forms, and tabular data from scanned documents
+- More than just optical character recognition
+
+Amazon Comprehend (Natural Language Processing)
+- Discovers insights and relationships in text
+- Common use cases:
+  - Sentiment analysis of customer feedback
+  - PII detection in text
+  - Content classification
+- Often used with Amazon Textract (extract → analyze)
+
+Amazon Lex
+- Builds voice and text interfaces
+- Same technology powering Amazon Alexa
+- Use cases: Customer service chatbots, interactive voice response systems
+
+Amazon Transcribe
+- Automatic speech recognition supporting 100+ languages
+- Processes live and recorded audio/video
+- Common use case: Real-time captioning of streaming audio
+
+1.2.4: Additional AWS AI Services
+
+Amazon Polly
+- Text-to-speech service in dozens of languages
+- Uses deep learning for natural-sounding speech
+- Use cases: Article-to-speech conversion, IVR systems
+- Companies: Washington Post, USA Today for audio news
+
+Amazon Kendra
+- Intelligent search of enterprise systems
+- Uses NLP to understand natural language questions
+- Example: "How do I connect my Echo Plus to my network?"
+
+Amazon Personalize
+- Automatic personalized recommendations
+- Industries: Retail, media, entertainment
+- Use cases: "You might also like" sections, marketing campaign segmentation
+
+Amazon Translate
+- Translates between 75 languages
+- Neural network considers full context for accurate translations
+- Use case: Real-time chat translation
+
+Amazon Fraud Detector
+- Identifies fraudulent online activities
+- Pre-trained models for: Online payment fraud, fake accounts, product reviews, account takeovers
+
+Amazon Bedrock
+- Fully managed service for generative AI applications
+- Access to foundation models from Amazon, Meta, and AI startups
+- Customization through training data or knowledge bases
+- Retrieval Augmented Generation (RAG): Models query external knowledge systems
+
+Amazon SageMaker
+- Custom machine learning models and workflows
+- Services: Data preparation, labeling, large-scale training, model deployment
+- Pre-trained models available to accelerate development
+
+1.2.5: Real-World AI Implementation Examples
+
+MasterCard
+- Second largest credit card network
+- AI fraud detection using SageMaker
+- Results: Tripled detected fraudulent transactions, reduced false positives by 10x
+- 2024: Added generative AI for 20% fraud detection improvement
+- LLM analyzes customer transaction history to predict likely business visits
+
+DoorDash
+- Replaced outdated IVR system with Amazon Lex
+- Customers speak naturally instead of pressing buttons
+- Results: Improved customer experience, decreased hold times, increased self-service
+
+Laredo Petroleum
+- 1,300+ oil and gas wells in West Texas
+- Real-time sensor monitoring (pressure, temperature, flow rate)
+- ML models built with SageMaker for proactive maintenance
+- Environmental impact reduction through leak detection
+
+Booking.com
+- Travel marketplace managing 150+ petabytes of data
+- SageMaker for booking recommendations
+- AI Trip Planner: Generative AI for natural language customer engagement
+- Retrieval Augmented Generation: Calls booking API and retrieves customer reviews
+
+Pinterest
+- Visual discovery engine with billions of images
+- Pinterest Lens: Object recognition for product discovery
+- Massive labeled product image collection in Amazon S3
+- Frequent model re-training with new objects
+- Image labeling using Mechanical Turk and SageMaker Ground Truth
+
+Key Takeaways
+- Pre-trained services solve common use cases without custom model development
+- Custom models needed when pre-trained services don't meet requirements
+- AI implementation requires careful cost-benefit analysis
+- Real-world examples show significant business value from AI adoption
+- Combination of pre-trained services and custom models provides optimal solutions
