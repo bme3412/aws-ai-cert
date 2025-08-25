@@ -1,0 +1,31 @@
+Now, let's talk about the challenges and risks of working with generative AI models. Though all AI models are only as reliable as the data they're trained on, generative AI involves a risk of hallucination. This outcome occurs when the model makes up something that might sound factual, but is actually fiction.
+
+Hallucination is the result of the AI model attempting to fill in the gaps when something is missing in its training data. Depending on how the generated content is used, hallucinations can be disastrous.
+
+In 2023, lawyers submitted a brief that contained extract and case citations, which they got from generative AI to a New York court. However, the case and citations were fake. The court dismissed the client's case, sanctioned the lawyers, and fined them and their firm. Interestingly, AI-generated works cannot be copyrighted because they are not the work of a human.
+
+However, a generative AI model might have been trained with data that's protected by copyrights, patents, or trademarks, which can then be included in outputs. Also, a user can submit a copyrighted work as an input, and the generative AI can create an unlicensed derivative.
+
+In 2023, Getty Images filed a lawsuit against the creators of Stable Diffusion, a text-to-image generative AI model. The lawsuit was for allegedly infringing on the use of more than 12 million photographs, their associated captions, and metadata in building the model. Biased model outputs can lead to discriminatory or unfair treatment of individuals or groups, which can become a major legal risk.
+
+The Equal Employment Opportunity Commission sued three companies for using an AI hiring program that discriminated against older applicants. The program automatically rejected applicants if the person was a female over age 55 or a male over age 60.
+
+Generative AI models are capable of generating content that is offensive, disturbing, or even obscene if that of content was in their training data. Toxic content can cause real-world harm to users, such as mental and emotional health problems. It can even cause increased propensity toward violence against specific individuals or marginalized groups.
+
+Data privacy is a risk because sensitive data that makes its way into a large language model can leak and be incorporated into its output. This output could include PII, intellectual property, trade secrets, and healthcare records, to name a few. This information could end up in the model by being present in training data or input as a prompt by a user.
+
+One problem is that as soon as an FM is trained or sees some data, you can't make it forget by deleting the data. Any of these risks can result in the loss of customer trust and with reputational damage because of irresponsible AI practices or unintended consequences.
+
+Fortunately, for foundation models in Amazon Bedrock, you can configure guardrails to filter and block inappropriate content. You can use guardrails to define threshold for content filters for hate, insults, sexual content, or violence. You can also block topics altogether.
+
+For these topics, you can use plaintext to describe the topics that should be denied. When a user submits a prompt, it must pass through guardrails first. If the prompt is not allowed by guardrails, the user receives a violation response that you configure. The prompt never makes it to the model. Guardrails can be set on both the prompt and the model response.
+
+So, if a prompt passes the guardrail, the response can still be blocked. Otherwise, it passes through as is. Another feature in SageMaker Clarify is the ability to run evaluation jobs of large language models so that you can compare models.
+
+It can run four different types of tasks, including text generation, text classification, question and answering, and text summarization. It can then evaluate the performance for five different dimensions. Prompt stereotyping measures the probability of your model, including biases in its response. It includes biases for race, gender, sexual orientation, religion, age, nationality, disability, physical appearance, and socioeconomic status.
+
+Toxicity checks your model for sexual references, rude, unreasonable, hateful, or aggressive comments, profanity, insults, flirtations, attacks on identities, and threats. Factual knowledge checks the veracity of the model responses.
+
+Semantic robustness checks whether your model output changes because of keyword typos, random changes to uppercase, and random additions or deletions of white spaces. Accuracy compares the model output to the expected responses, such as classifying and summarizing the data correctly.
+
+You can use a built-in prompt dataset or supply your own. You can also get a human workforce, such as employees or subject matter experts, to provide their feedback. If you are using Amazon Bedrock, the same capabilities are available in the Bedrock console to help evaluate the pre-trained LLMs in Amazon Bedrock.

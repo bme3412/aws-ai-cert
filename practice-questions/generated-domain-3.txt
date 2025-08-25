@@ -1,0 +1,464 @@
+23. A team wants the model to show its step-by-step reasoning for complex tasks like multi-part math word problems.
+
+Which prompting technique is MOST appropriate?
+
+A
+Zero-shot prompting
+
+B
+Chain-of-thought prompting
+
+C
+Self-consistency by sampling multiple temperatures
+
+D
+Constrained decoding with a JSON schema
+
+A
+Zero-shot prompting
+
+Incorrect. Zero-shot can work but does not reliably elicit step-by-step reasoning.
+
+B
+Chain-of-thought prompting
+
+Correct. Chain-of-thought encourages the model to decompose problems and show intermediate steps.
+
+C
+Self-consistency by sampling multiple temperatures
+
+Incorrect. Sampling multiple outputs can improve final answers but is not itself a reasoning prompt.
+
+D
+Constrained decoding with a JSON schema
+
+Incorrect. Schemas constrain output format, not reasoning traces.
+
+
+24. A product team requires the LLM to return well-formed JSON that matches a specific schema for downstream ingestion.
+
+Which approach will MOST reliably meet the requirement?
+
+A
+Lower the temperature and ask for JSON
+
+B
+Provide explicit JSON schema and few-shot examples; validate responses; enforce format with structured prompting/tooling
+
+C
+Increase max_tokens and let the model elaborate
+
+D
+Use chain-of-thought to improve formatting
+
+A
+Lower the temperature and ask for JSON
+
+Incorrect. Lower temperature helps stability but does not guarantee schema conformance.
+
+B
+Provide explicit JSON schema and few-shot examples; validate responses; enforce format with structured prompting/tooling
+
+Correct. Showing a schema and exemplars plus validation (and function/tool calling where available) yields consistent structured outputs.
+
+C
+Increase max_tokens and let the model elaborate
+
+Incorrect. More tokens does not ensure valid JSON.
+
+D
+Use chain-of-thought to improve formatting
+
+Incorrect. CoT targets reasoning, not strict formatting.
+
+
+25. A company wants responses in a consistent brand tone across long-form outputs and has a small curated set of instruction examples.
+
+Which method is MOST appropriate to achieve this at scale?
+
+A
+Zero-shot prompting with a style instruction
+
+B
+Instruction-based fine-tuning on prompt–response pairs
+
+C
+RAG with an external knowledge base
+
+D
+Continued pre-training on unlabeled web data
+
+A
+Zero-shot prompting with a style instruction
+
+Incorrect. Zero-shot may drift over long outputs and across prompts.
+
+B
+Instruction-based fine-tuning on prompt–response pairs
+
+Correct. Instruction tuning aligns outputs with desired tone and behavior using paired instruction–response data.
+
+C
+RAG with an external knowledge base
+
+Incorrect. RAG improves factual grounding, not tone alignment per se.
+
+D
+Continued pre-training on unlabeled web data
+
+Incorrect. Unlabeled data does not encode brand tone requirements.
+
+
+26. A safety team needs to evaluate a model for sensitivity to typos, random capitalization, and whitespace changes in prompts.
+
+Which evaluation dimension BEST matches this need?
+
+A
+Toxicity
+
+B
+Factuality
+
+C
+Semantic robustness
+
+D
+Bias/fairness
+
+A
+Toxicity
+
+Incorrect. Toxicity measures harmful language categories.
+
+B
+Factuality
+
+Incorrect. Factuality measures truthfulness relative to references.
+
+C
+Semantic robustness
+
+Correct. Semantic robustness checks output stability under harmless input perturbations.
+
+D
+Bias/fairness
+
+Incorrect. Bias covers demographic disparities, not perturbation sensitivity.
+
+
+27. A team must broaden the model’s domain knowledge on a specific topic using a large unlabeled corpus without changing downstream task formats.
+
+Which approach is MOST suitable?
+
+A
+Instruction fine-tuning on labeled pairs
+
+B
+Continued pre-training on the unlabeled corpus
+
+C
+RAG with enterprise search
+
+D
+Hyperparameter tuning of decoding settings
+
+A
+Instruction fine-tuning on labeled pairs
+
+Incorrect. Requires labeled pairs and targets behavior/tone following.
+
+B
+Continued pre-training on the unlabeled corpus
+
+Correct. Continued pre-training adapts base knowledge using raw text in the target domain.
+
+C
+RAG with enterprise search
+
+Incorrect. RAG augments prompts at inference and does not update base knowledge.
+
+D
+Hyperparameter tuning of decoding settings
+
+Incorrect. Decoding settings affect style/diversity, not knowledge.
+
+
+28. A data team needs a practical, low-effort evaluation plan for a summarization feature before launch.
+
+Which plan is MOST appropriate?
+
+A
+Only manual spot checks by one reviewer
+
+B
+Hybrid: automatic metrics (e.g., ROUGE) + human evaluation with clear rubrics + A/B on task KPIs
+
+C
+Only automatic metrics against synthetic references
+
+D
+Production launch without evaluation; rely on user feedback
+
+A
+Only manual spot checks by one reviewer
+
+Incorrect. Too subjective and low coverage.
+
+B
+Hybrid: automatic metrics (e.g., ROUGE) + human evaluation with clear rubrics + A/B on task KPIs
+
+Correct. Combining automatic, human, and online evaluation gives comprehensive signal at reasonable cost.
+
+C
+Only automatic metrics against synthetic references
+
+Incorrect. Synthetic references and metrics alone are insufficient for quality.
+
+D
+Production launch without evaluation; rely on user feedback
+
+Incorrect. Risks quality and trust.
+
+
+29. Which actions help reduce verbosity and enforce concise responses for an LLM? (Select TWO.)
+
+A
+Include explicit length/style constraints and an example of the desired brevity
+
+B
+Increase temperature to encourage diverse responses
+
+C
+Set a low max_tokens and use stop sequences
+
+D
+Use chain-of-thought to generate more intermediate steps
+
+E
+Remove few-shot examples to simplify the prompt
+
+A
+Include explicit length/style constraints and an example of the desired brevity
+
+Correct. Direct, concrete constraints with exemplars improve compliance.
+
+B
+Increase temperature to encourage diverse responses
+
+Incorrect. Higher temperature increases variability and can increase verbosity.
+
+C
+Set a low max_tokens and use stop sequences
+
+Correct. Hard limits and stops enforce brevity and formatting.
+
+D
+Use chain-of-thought to generate more intermediate steps
+
+Incorrect. CoT typically increases verbosity.
+
+E
+Remove few-shot examples to simplify the prompt
+
+Incorrect. Few-shot examples help establish the desired style.
+
+
+30. A company is building a Bedrock-based app and wants to prevent harmful content and evaluate model behavior on text generation and Q&A tasks.
+
+Which combination meets the need? (Select TWO.)
+
+A
+Amazon Bedrock Guardrails
+
+B
+AWS Artifact
+
+C
+SageMaker Clarify LLM evaluation jobs
+
+D
+Amazon Rekognition
+
+E
+AWS Config
+
+A
+Amazon Bedrock Guardrails
+
+Correct. Guardrails filter/block unsafe prompts/responses and enforce topic and toxicity thresholds.
+
+B
+AWS Artifact
+
+Incorrect. Artifact provides compliance reports, not content safety or eval.
+
+C
+SageMaker Clarify LLM evaluation jobs
+
+Correct. Clarify can evaluate LLMs for text generation/classification/Q&A/summarization across safety and quality dimensions.
+
+D
+Amazon Rekognition
+
+Incorrect. Image/video analysis, not LLM safety evaluation.
+
+E
+AWS Config
+
+Incorrect. Resource configuration tracking, not LLM evaluation.
+
+
+31. A privacy team requires that PII must not be sent to external models.
+
+Which actions are MOST appropriate? (Select TWO.)
+
+A
+Redact or mask PII during ETL and at request time before prompting
+
+B
+Use VPC interface endpoints/PrivateLink to keep traffic private to AWS services
+
+C
+Increase max_tokens to reduce truncation risk
+
+D
+Rely solely on user training to avoid entering PII
+
+E
+Disable TLS to reduce latency for API calls
+
+A
+Redact or mask PII during ETL and at request time before prompting
+
+Correct. Proactive redaction prevents PII egress.
+
+B
+Use VPC interface endpoints/PrivateLink to keep traffic private to AWS services
+
+Correct. Private connectivity reduces exposure and keeps traffic within AWS networking.
+
+C
+Increase max_tokens to reduce truncation risk
+
+Incorrect. Token limits do not address PII exposure.
+
+D
+Rely solely on user training to avoid entering PII
+
+Incorrect. Technical controls are needed in addition to training.
+
+E
+Disable TLS to reduce latency for API calls
+
+Incorrect. TLS must remain enabled for encryption in transit.
+
+
+32. A team wants to adapt a foundation model efficiently with limited GPU budget.
+
+Which method is MOST cost-efficient?
+
+A
+Full fine-tuning of all model parameters
+
+B
+Parameter-efficient fine-tuning (e.g., LoRA/PEFT)
+
+C
+Continued pre-training on generic web data
+
+D
+Only adjust decoding parameters (temperature, top-p)
+
+A
+Full fine-tuning of all model parameters
+
+Incorrect. Full FT is expensive in compute and memory.
+
+B
+Parameter-efficient fine-tuning (e.g., LoRA/PEFT)
+
+Correct. PEFT adapts models by training small adapter layers, reducing cost and footprint.
+
+C
+Continued pre-training on generic web data
+
+Incorrect. Costly and may dilute domain behavior.
+
+D
+Only adjust decoding parameters (temperature, top-p)
+
+Incorrect. Decoding parameters do not adapt model knowledge/skills.
+
+
+33. A prompt engineering guideline is proposed for consistent outputs across teams.
+
+Which structure is MOST effective?
+
+A
+Role + Task + Constraints + Examples + Output format
+
+B
+Task only; keep prompts as short as possible
+
+C
+Provide system prompt only; no examples to avoid biasing
+
+D
+Ask for chain-of-thought in every prompt
+
+A
+Role + Task + Constraints + Examples + Output format
+
+Correct. Clear roles, explicit constraints, exemplars, and required format improve reliability and consistency.
+
+B
+Task only; keep prompts as short as possible
+
+Incorrect. Missing constraints/examples reduces reliability.
+
+C
+Provide system prompt only; no examples to avoid biasing
+
+Incorrect. Examples help establish style and format.
+
+D
+Ask for chain-of-thought in every prompt
+
+Incorrect. CoT is not always necessary and can increase verbosity and latency.
+
+
+34. A team considers three options to improve factual accuracy: (1) few-shot prompting, (2) RAG, (3) fine-tuning on internal facts.
+
+Which ordering from LEAST to MOST engineering effort is MOST accurate?
+
+A
+(2) RAG, (1) few-shot, (3) fine-tuning
+
+B
+(1) few-shot, (2) RAG, (3) fine-tuning
+
+C
+(3) fine-tuning, (2) RAG, (1) few-shot
+
+D
+(1) few-shot, (3) fine-tuning, (2) RAG
+
+A
+(2) RAG, (1) few-shot, (3) fine-tuning
+
+Incorrect. Few-shot is generally less effort than building RAG.
+
+B
+(1) few-shot, (2) RAG, (3) fine-tuning
+
+Correct. Start with prompt examples, then add retrieval, with fine-tuning as the most involved.
+
+C
+(3) fine-tuning, (2) RAG, (1) few-shot
+
+Incorrect. Fine-tuning typically requires the most effort.
+
+D
+(1) few-shot, (3) fine-tuning, (2) RAG
+
+Incorrect. RAG generally requires less effort than full fine-tuning while providing strong factual grounding.

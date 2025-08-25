@@ -1,0 +1,163 @@
+Domain 4.2: Transparent Models and Explainability
+
+4.2.1: Understanding Model Transparency and Tradeoffs
+
+What is Model Transparency?
+- Measures degree to which ML owners and stakeholders understand how model works
+- Explains why model produces specific outputs
+- Often required by regulatory requirements to protect consumers against bias and unfairness
+- Two key measures: interpretability and explainability
+
+Transparency Measures
+
+Interpretability
+- Model uses algorithm that is straightforward to interpret
+- Examples: linear regression (slope and intercept), decision trees (basic rules)
+- Can document how inner mechanisms impact output
+- Provides complete understanding of model behavior
+
+Explainability
+- Ability to describe what model is doing without knowing exactly how
+- Treats model as black box
+- Every model can be observed and explained
+- Uses model agnostic approaches to answer real-world questions
+- Examples: Why email flagged as spam, why loan application rejected
+
+Business Requirements Assessment
+- Determine if interpretability is hard business requirement
+- Consider regulatory and business requirements for complete transparency
+- If required, select interpretable model
+- Explainability often sufficient to meet business objectives
+
+Transparency Tradeoffs
+
+Performance vs. Transparency
+- Models with low complexity easier to interpret
+- Simple models limited in capabilities and performance
+- Example: Basic language translation vs. neural network translation
+- Choosing less complex algorithm usually involves compromise in performance
+- Graph shows inverse relationship between transparency and performance
+
+Security Considerations
+- Transparent models more susceptible to attacks
+- Hackers have more information about inner mechanisms
+- Can find vulnerabilities in model
+- Opaque models limit attackers to studying outputs only
+- Properly securing model artifacts crucial for transparent models
+
+Proprietary Algorithm Protection
+- More explanations of AI model behavior = easier reverse engineering
+- Balancing transparency with protecting intellectual property
+- Ensuring customer data privacy while maintaining transparency
+- May require sharing training data details, raising privacy concerns
+
+4.2.2: Tools and Techniques for Model Transparency
+
+Open Source AI Projects
+
+Benefits of Open Source
+- Developed collaboratively and openly
+- Platforms like GitHub serve as repositories
+- Everything shared, maximizing transparency
+- Users understand model construction and inner workings
+- Instills confidence in fairness
+- Global developer diversity reduces bias
+- More people involved = more likely to catch bias or coding issues
+
+Open Source Concerns
+- Some companies block employees from using open source code
+- Concerns about model safety
+- Prefer proprietary development
+- Limit transparency for safety reasons
+
+AWS Transparency Tools
+
+AI Service Cards
+- Form of responsible AI documentation
+- Single place to learn about intended use cases and limitations
+- Documents responsible AI design choices
+- Provides deployment and performance optimization best practices
+- Available for several AI service APIs:
+  - Amazon Rekognition (face matching)
+  - Amazon Textract (ID analysis)
+  - Amazon Comprehend (PII detection)
+  - Amazon Titan Text (foundation model in Bedrock)
+
+SageMaker Model Cards
+- Document model lifecycle from design to evaluation
+- Autopopulates details about SageMaker trained models
+- Includes training information, datasets, and containers used
+- Helps maintain transparency for custom models
+
+SageMaker Clarify Explainability
+
+Feature Attributions
+- Based on concept of Shapley values
+- Determines contribution of each feature to model predictions
+- Bar chart shows most impactful features
+- Helps understand what drives model decisions
+
+Partial Dependence Plots
+- Shows how model predictions change for different feature values
+- Example: age impact on predictions
+- Visual representation of feature influence
+
+Human-Centered AI
+
+Principles
+- Design AI systems prioritizing human needs and values
+- Enhance human abilities rather than replace them
+- Interdisciplinary collaboration (psychologists, ethicists, domain experts)
+- User involvement in development process
+- Ensures AI is genuinely beneficial and user-friendly
+
+Alignment with Ethical AI
+- Incorporates humans in each development stage
+- Ensures AI is transparent, explainable, fair, unbiased
+- Maintains privacy and ethical standards
+
+Amazon Augmented AI (A2I)
+
+Human Review Integration
+- Incorporates human review for sample inferences
+- Configurable to review low-confidence predictions
+- Human feedback added to training data for model re-training
+- Can review random predictions for model auditing
+
+Reviewer Options
+- Pool of reviewers in your organization
+- Amazon Mechanical Turk
+- Configurable number of reviewers per prediction
+
+Use Case Example
+- Amazon Rekognition detecting explicit/offensive content
+- Humans review low-confidence predictions
+- Ensures explicit content doesn't pass through
+
+Reinforcement Learning from Human Feedback (RLHF)
+
+Industry Standard Technique
+- Ensures large language models produce truthful, harmless, helpful content
+- Incorporates human feedback in rewards function
+- Aligns ML model with human goals, wants, and needs
+
+RLHF Process
+- Train separate reward model
+- Humans review multiple LLM responses to same prompt
+- Indicate preferred responses
+- Preferences become training data for reward model
+- Reward model predicts human scoring of prompt responses
+- LLM uses reward model to refine responses for maximum reward
+
+Implementation with SageMaker
+- SageMaker Ground Truth for collecting human preferences
+- Human workers rank responses for clarity
+- Streamlines RLHF data collection process
+
+Key Takeaways
+- Model transparency involves tradeoffs between interpretability, performance, and security
+- Open source provides maximum transparency but raises safety concerns
+- AWS provides multiple tools for transparency: AI service cards, model cards, SageMaker Clarify
+- Human-centered AI ensures ethical development and deployment
+- RLHF incorporates human feedback to align models with human values
+- Balance transparency requirements with business needs and security considerations

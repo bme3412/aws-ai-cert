@@ -1,0 +1,162 @@
+PROMPT ENGINEERING FUNDAMENTALS AND TECHNIQUES
+
+OVERVIEW
+Prompt engineering is the practice of crafting and optimizing input prompts to effectively use Large Language Models (LLMs) for various applications. It involves selecting appropriate words, phrases, sentences, punctuation, and separator characters to guide LLMs toward desired outputs.
+
+PROMPT COMPONENTS AND STRUCTURE (3.2.1)
+
+Core Prompt Components:
+- Task or instruction: What you want the LLM to perform
+- Context: Background information for the task
+- Input text: The specific content for the response
+- Examples: Sample outputs to guide the model
+
+Prompt Types and Techniques:
+
+1. Zero-shot Prompting:
+- No examples provided to the prompt
+- Direct instruction without demonstration
+- Example: Sentiment classification with just the task description
+
+2. Few-shot Prompting:
+- Provides a few examples to help LLMs perform better
+- Calibrates output to meet expectations
+- Improves model performance through demonstration
+
+3. Prompt Templates:
+- Include instructions, few-shot examples, and specific content
+- Structured format for different use cases
+- Consistent prompt structure across applications
+
+4. Chain-of-Thought Prompting:
+- Breaks down reasoning process into intermediate steps
+- Improves quality and coherence of final output
+- Useful for complex tasks requiring logical reasoning
+
+5. Prompt Tuning:
+- Replaces actual prompt text with continuous embedding vectors
+- Optimized during training for specific tasks
+- Keeps model parameters frozen (more efficient than full fine-tuning)
+
+COMMON LLM TASKS ON AMAZON BEDROCK:
+- Classification
+- Question and answer (with and without context)
+- Summarization
+- Open-ended text generation
+- Code generation
+- Math and reasoning
+- Logical thinking
+
+LATENT SPACE AND MODEL KNOWLEDGE (3.2.1 & 3.2.2)
+
+Understanding Latent Space:
+- Encoded knowledge of language in large language models
+- Stored patterns of data that capture relationships
+- Statistical database of information the model can access
+- Reconstructs language from stored patterns when prompted
+
+Latent Space Example:
+- Scuba vacation model trained on destination data
+- Includes depth, visibility, water temperature, weather
+- Model can recommend vacations based on statistical patterns
+- Knowledge base enables informed recommendations
+
+Training Data Sources:
+- RefinedWeb, Common Crawl, StarCoder data
+- BookCorpus, Wikipedia, C4, and other large databases
+- Quality varies across topics and sources
+- Models generate responses based on statistical probability
+
+PROMPT ENGINEERING BEST PRACTICES (3.2.2)
+
+Key Techniques:
+
+1. Be Specific and Clear:
+- Provide clear instructions and specifications
+- Include desired format, examples, style, tone
+- Specify output length and detailed context
+- Avoid vague or ambiguous instructions
+
+2. Include Examples:
+- Sample texts, data formats, templates
+- Code examples, graphs, charts
+- Demonstrate desired behavior and direction
+- Use few-shot learning effectively
+
+3. Iterative Testing:
+- Experiment with different prompt variations
+- Test modifications and understand their impact
+- Use iterative process to refine prompts
+- Monitor and analyze responses
+
+4. Know Your Model:
+- Understand strengths and weaknesses
+- Assess latent space for specific topics
+- Avoid prompting for topics outside model knowledge
+- Prevent hallucinations through informed prompting
+
+5. Balance Simplicity and Complexity:
+- Avoid overly complex prompts
+- Prevent vague, unrelated, or unexpected answers
+- Use multiple comments for context without clutter
+- Maintain clear structure and readability
+
+6. Add Guardrails:
+- Implement safety and privacy controls
+- Define undesirable topics and blocked words
+- Configure thresholds for harmful content
+- Filter sensitive data and prompt attacks
+
+RISKS AND LIMITATIONS OF PROMPT ENGINEERING (3.2.2)
+
+Security Threats:
+
+1. Prompt Injection:
+- Attacks involving prompt manipulation
+- Untrusted user input combined with trusted prompts
+- Can produce malicious or undesired responses
+- Bypasses intended model behavior
+
+2. Jailbreaking:
+- Attempts to bypass established guardrails
+- Targets safety measures and restrictions
+- Can compromise model security
+- Requires robust guardrail implementation
+
+3. Hijacking:
+- Changing or manipulating original prompts
+- Replacing instructions with new directives
+- Can alter model behavior and outputs
+- Undermines intended functionality
+
+4. Poisoning:
+- Harmful instructions embedded in content
+- Can affect messages, emails, web pages
+- Requires content filtering and validation
+- May compromise model training data
+
+AWS SERVICES AND IMPLEMENTATION
+
+Amazon Bedrock and Amazon Titan:
+- Pre-trained language models for customization
+- APIs and tools for prompt construction and refinement
+- Monitoring and analysis of model outputs
+- Built-in safety and control mechanisms
+
+Use Cases:
+- Content creation and summarization
+- Question answering systems
+- Chatbot development
+- High-quality text generation
+- Custom application development
+
+KEY TAKEAWAYS
+
+- Prompt engineering is crucial for effective LLM utilization
+- Understanding latent space helps prevent hallucinations
+- Multiple prompting techniques exist for different use cases
+- Security risks require proper guardrails and validation
+- Iterative testing and refinement improves prompt effectiveness
+- AWS services provide tools for safe and effective prompt engineering
+- Balance between model capabilities and limitations is essential
+- Guardrails protect against various types of prompt attacks

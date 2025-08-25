@@ -1,0 +1,32 @@
+Let's talk about services and features from AWS that you can use to measure and monitor a model's bias, trustworthiness, and truthfulness.
+
+Biases are imbalances in data or disparities in the performance of a model across different groups. SageMaker Clarify helps you mitigate bias by detecting potential bias during the data preparation, after model training, and in your deployed model, by examining specific attributes. A model's explainability is important to be certain that the decisions it makes are unbiased.
+
+SageMaker Clarify can improve explainability by looking at the inputs and outputs for your model, treating the model itself as a black box. By making these observations, it determines the relative importance of each feature.
+
+For example, it can say a loan application was rejected because two of the most important features, income and outstanding debt, did not meet the thresholds. Because SageMaker Clarify treats the model as a black box, it can understand the basis for how deep learning models are making predictions without understanding the inner workings. It can even explain computer vision and natural language processing models, which are using unstructured data. SageMaker Clarify examines your dataset and model by using processing jobs.
+
+A SageMaker Clarify processing job uses this SageMaker Clarify processing container to interact with an Amazon S3 bucket, the S3 bucket would contain your input datasets and a model that is deployed to a SageMaker inference endpoint. The SageMaker Clarify processing container obtains the input dataset and configuration for analysis from an S3 bucket.
+
+For feature analysis, the SageMaker Clarify processing container sends requests to the model container and retrieves model predictions from the response from the model container. After that step, the processing container computes and saves analysis results to the S3 bucket. These results include a JSON file with bias metrics and global feature attributions, a visual report, and additional files for local feature attributions.
+
+You can download the results from the output location and view them. Here are a few examples of metrics that are measured by SageMaker Clarify when analyzing the training dataset. As we've seen, a balanced dataset is important to avoid errors that occur for a particular class.
+
+For example, an ML model trained primarily on data from middle-aged individuals might be less accurate when making predictions that involve younger and older people. Another type of imbalance occurs when the labels favor positive outcomes for one class over another.
+
+For our example, training data might exhibit an unwanted pattern in showing that loans are approved at a higher rate for middle-aged individuals. The demographic disparity metric indicates whether a particular class has a larger proportion of the rejected outcomes in the dataset than the accepted outcomes.
+
+For example, consider the case of college admissions. Women applicants comprised 46% of the rejected applicants, but made up only 32% of the accepted applicants. We say that this result shows demographic disparity, because the rate at which women were rejected exceeds the rate at which women were accepted. Here are some of the metrics that SageMaker Clarify looks at with a trained model.
+
+The difference in positive proportions in predictions metric indicates whether the model predicts positive outcomes differently for each class. This metric can be compared with the label imbalance in the training data. The goal is to see whether the bias in positive proportions changes after the training or whether the bias is also present in the data.
+
+Remember that specificity measures how often the model correctly predicts a negative outcome. If the specificity is lower for middle-aged men than other age groups, the model is showing bias against the other age groups.
+
+The recall difference metric is the difference in recall of the model between two classes. Any difference in these recalls is a potential form of bias. Recall is the true positive rate, TPR, which measures how often the model correctly predicts the cases that should receive a positive outcome.
+
+If the recall rate is high for one class, but low for another, the difference provides a measure for this bias. Model accuracy can also be different between classes, and this difference is also a form of bias.
+
+The accuracy difference metric is the difference between the prediction accuracies for different classes. This result can occur when the data contains class imbalance. The treatment equality is the difference in the ratio of false negatives to false positives. Even if the accuracy of the model is the same for two classes, this ratio could have differences.
+
+A difference in the type of errors that occur for different classes can constitute bias. Consider the loan approval example. More incorrect loan denials for one class and more incorrect loan approvals for another are two very different outcomes that show bias between the classes.
+

@@ -1,0 +1,148 @@
+FINE-TUNING FOUNDATION MODELS
+
+OVERVIEW
+Fine-tuning is a process that extends the training of pre-trained foundation models to improve performance for specific tasks and domains. It involves supervised learning with labeled examples to adapt models to custom datasets and use cases.
+
+FOUNDATION MODEL TRAINING ELEMENTS (3.3.1)
+
+Three Key Components:
+1. Pre-training: Complex process requiring millions of GPUs, terabytes of data, and trillions of tokens
+2. Fine-tuning: Adapts pre-trained models to specific tasks and domains
+3. Continuous pre-training: Ongoing training to improve model capabilities over time
+
+Pre-training vs. Fine-tuning:
+- Pre-training: Uses huge amounts of unstructured data with self-supervised learning
+- Fine-tuning: Supervised learning process using labeled examples to update model weights
+- Foundation models learn language fundamentals during pre-training
+- Fine-tuning adapts models to specific domains, datasets, and human tasks
+
+FINE-TUNING APPROACHES AND TECHNIQUES
+
+Instruction-Based Fine-tuning:
+- Uses labeled examples for performance improvements on specific tasks
+- Adapts models to perform single tasks effectively
+- Risk of catastrophic forgetting when modifying original model weights
+- Consider whether single-task performance is sufficient for your use case
+
+Parameter-Efficient Fine-tuning (PEFT):
+- Freezes original LLM parameters and weights
+- Fine-tunes only a small number of task-specific adaptor layers
+- Reduces compute and memory requirements
+- Popular technique: Low-Rank Adaptation (LoRA)
+
+LoRA (Low-Rank Adaptation):
+- Preserves original foundation model weights
+- Creates new trainable low-rank matrices in transformer layers
+- Modifies weights without changing representations
+- Efficient alternative to full fine-tuning
+
+Representation Fine-tuning (ReFT):
+- Freezes base model parameters
+- Learns task-specific interventions on hidden representations
+- Based on linear representation hypothesis
+- Concepts encoded in linear subspaces of neural network representations
+
+Multitask Fine-tuning:
+- Extends single-task fine-tuning to multiple tasks
+- Requires extensive data with examples for various tasks
+- Produces instruction-tuned models for multiple simultaneous tasks
+- Helps mitigate catastrophic forgetting
+- Calculates losses from multiple task examples
+
+Domain Adaptation Fine-tuning:
+- Adapts pre-trained models to specific domains using limited data
+- Works with domain-specific language, jargon, and technical terms
+- Amazon SageMaker JumpStart provides this capability
+- Improves performance in specific industry or technical domains
+
+Reinforcement Learning from Human Feedback (RLHF):
+- Uses reinforcement learning to fine-tune LLMs with human feedback
+- Better aligns models with human preferences
+- Improves understanding of human-like prompts
+- Generates more human-like responses
+
+FINE-TUNING PROCESS AND DATA PREPARATION (3.3.2)
+
+Training Data Preparation:
+- Use publicly available datasets and prompt template libraries
+- Divide data into training, validation, and test splits
+- Select prompts from training dataset for LLM completions
+- Compare completions with training labels to calculate loss
+- Update model weights based on calculated loss
+
+Evaluation Process:
+- Define separate evaluation steps during fine-tuning
+- Use holdout validation dataset for validation accuracy
+- Perform final performance evaluation with test dataset
+- Obtain test accuracy after fine-tuning completion
+
+AWS DATA PREPARATION TOOLS
+
+Low-Code Data Preparation:
+- Amazon SageMaker Canvas: Create ML data pre-processing flows
+- Feature engineering workflows with minimal coding
+- Visual interface for data preparation
+
+Scalable Data Preparation:
+- Open source frameworks: Apache Spark, Apache Hive, Presto
+- Amazon SageMaker Studio Classic with EMR integration
+- AWS Glue interactive sessions for serverless processing
+
+SQL-Based Preparation:
+- Jupyter Lab in SageMaker Studio
+- Structured query language for data manipulation
+- Direct database interaction capabilities
+
+Feature Management:
+- Amazon SageMaker Feature Store: Search, discover, and retrieve features
+- Centralized repository for standardized feature data
+- Feature discovery and storage capabilities
+
+Bias Detection:
+- Amazon SageMaker Clarify: Analyze data for potential biases
+- Detect imbalanced representations across groups
+- Identify labeling biases (gender, race, age)
+
+Data Labeling:
+- Amazon SageMaker Ground Truth: Manage labeling workflows
+- Structured approach to training dataset preparation
+- Quality control for labeled data
+
+CONTINUOUS PRE-TRAINING
+
+Importance and Benefits:
+- Addresses non-deterministic nature of generative AI outputs
+- Makes validation more challenging but necessary
+- Choose appropriate metrics, benchmarks, and datasets
+- Ensure models don't create harmful outputs
+
+Long-term Improvements:
+- Models become more powerful over time
+- Better use of out-of-domain data
+- Accumulates wider knowledge and adaptability
+- Creates organizational value through improved capabilities
+
+AWS Implementation:
+- Amazon Bedrock supports continuous pre-training
+- Train Amazon Titan Text Express and Titan Text Lite models
+- Customize with unlabeled data in secure environment
+- Managed environment for ongoing model improvement
+
+KEY CONSIDERATIONS
+
+Memory and Compute Requirements:
+- Fine-tuning requires additional GPU memory for optimizer, gradients, and activations
+- Parameter-efficient methods reduce resource requirements
+- Balance between performance improvement and resource costs
+
+Catastrophic Forgetting:
+- Full fine-tuning modifies all original model weights
+- May improve single-task performance but degrade other tasks
+- Consider whether this limitation impacts your use case
+- Multitask fine-tuning can help mitigate this issue
+
+Model Selection:
+- Choose between full fine-tuning and parameter-efficient methods
+- Consider computational resources and memory constraints
+- Evaluate trade-offs between performance and efficiency
+- Select approach based on specific requirements and constraints

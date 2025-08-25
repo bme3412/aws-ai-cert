@@ -1,0 +1,31 @@
+When it comes to AI, compliance standards are still emerging and only beginning to see adoption. ISO 402001 and ISO 23894, both published in 2023, established mechanisms for assessing and managing risk in AI systems.
+
+They establish a framework for organizations to systematically address and control the risks related to the development and deployment of AI. They emphasize a commitment to responsible AI practices, encouraging organizations to adopt controls specific to their AI systems. They are also committed to fostering global interoperability and setting a foundation for the development and deployment of responsible AI.
+
+Keep in mind that although compliance standards are highly recommended, they are not legal requirements. However, the EU AI Act is a European regulation on artificial intelligence, AI. It's the first comprehensive regulation on AI by a major regulator anywhere. The act assigns applications of AI to three risk categories.
+
+First, applications and systems that create an unacceptable risk are banned outright. Some examples of banned applications include social scoring applications that classify individuals or groups based on social behavior They also include facial recognition databases that scrape facial images from the internet and applications that infer emotions in workplaces or educational institutions.
+
+Second, high-risk applications such as CV scanning tool that ranks job applicants are subject to specific legal requirements. Finally, applications not explicitly banned or listed as high risk are largely left unregulated. Most AI systems will fall under the high-risk category. The requirements for these applications include establishing a risk management system, conducting data governance, and documenting compliance.
+
+Even if you will not make your AI system available to EU citizens, EU regulations often become global standards, like the General Data Protection Regulation, or GDPR. Therefore, you should pay attention and attempt to meet them The AI Risk Management framework, RMF, released by the National Institute of Standards and Technology, NIST, provides guidance on promoting trustworthy, responsible development and use of AI systems.
+
+The goal of AI RMF is to offer a resource to organizations that design, develop, deploy, or use AI systems to help manage the risks of AI. It promotes trustworthy and responsible development and use of AI systems. The framework is intended to be voluntary. It describes four specific functions, govern, map, measure, and manage to help organizations address the risk of AI systems in practice.
+
+As we've just seen, the AI compliance standards are mostly about measuring and managing risk of AI systems. According to the NIST, RMF, a risk can be estimated by multiplying the likelihood of an event with the severity of the consequences if it occurs. Using this risk matrix, we can consider an event with low severity and rare likelihood of occurring as very low risk. To estimate the risk of an AI system, you should start by identifying the AI use case and the relevant stakeholders for the use case.
+
+For example, consider how certain users will use the system to achieve a particular goal. Next, you identify potentially harmful events associated with the use case and use the risk matrix to determine the risk for each event. Then you address the inherent risk, which are those things that can be mitigated with proper security controls and monitoring.
+
+For example, by increasing security controls, you reduce the likelihood of an event so it lowers its overall risk. After you mitigate the inherent risk, what remains is the residual risk, which is the risk that is left after mitigations. Finally, you summarize the risk levels for an overall risk rating for the system, which is determined by focusing on the highest residual risk ratings.
+
+The Algorithmic Accountability Act has been introduced several times for consideration by the United States Congress. If enacted, it will require companies to assess the impacts of the AI systems that they use and sell. It will create new transparency about when and how such systems are used and empower consumers to make informed choices when interacting with AI systems.
+
+Its goal is to try to protect Americans from AI systems that can lead to unfair and unexplained results. For example, it expects that consumers have a right to know why their loan application was rejected. They have a right to know whether it was because of some inherent and unfair bias.
+
+Because generative AI models are complex, it is difficult to understand how a model arrives at an output at a deep level. As a minimum level of transparency, consider when to disclose to your users that they are using generative AI and not engaging with a human. However, for many applications, you might need to go deeper and be able to explain how a model arrived at an inference.
+
+Understanding how an AI system arrived at an output is known as its explainability. One visible approach to explainability is to observe a model's behavior with regard to the output and input. With this model agnostic approach, the practitioner can determine which features are given the most consideration and treat the model as a black box. However, by using more interpretable algorithms and techniques such as decision trees or rule-based systems, you can observe the model weights and understand the inner workings.
+
+In the initial stages of AI and ML development, you should consider tradeoffs between interpretability and performance with regulatory requirements in mind. The second major reason for algorithmic accountability is to remove bias from decision making. The goal is to be certain that the results are not influenced by the improper use of a person's various personal attributes. These attributes might include race, sex, gender identity, religious beliefs, political affiliations, and whether they live in the city or a rural community.
+
+This goal of bias removal requires you to test and monitor for bias in the model's results and in its training data. Amazon SageMaker Clarify can help you understand how different variables influence a model's behavior and monitor for bias and feature attribution drift.

@@ -1,0 +1,438 @@
+35. Which option lists core dimensions of responsible AI that teams should address?
+
+A
+Fairness, explainability, robustness, privacy/security, governance, transparency
+
+B
+Latency, throughput, availability, cost, vendor lock-in, portability
+
+C
+Agility, sprints, burn-down charts, velocity, retrospectives, standups
+
+D
+Compression, quantization, pruning, distillation, caching, batching
+
+A
+Fairness, explainability, robustness, privacy/security, governance, transparency
+
+Correct. These are central responsible AI dimensions to ensure safe, trustworthy systems.
+
+B
+Latency, throughput, availability, cost, vendor lock-in, portability
+
+Incorrect. These are general system qualities, not specific to responsible AI.
+
+C
+Agility, sprints, burn-down charts, velocity, retrospectives, standups
+
+Incorrect. These are software process practices.
+
+D
+Compression, quantization, pruning, distillation, caching, batching
+
+Incorrect. These are model efficiency techniques.
+
+
+36. A loan approval model has higher false negatives for Group X than for Group Y.
+
+Which SageMaker Clarify metric MOST directly captures this disparity?
+
+A
+Recall difference between classes
+
+B
+Demographic disparity in the training labels
+
+C
+Difference in positive proportions in predictions
+
+D
+Specificity difference between classes
+
+A
+Recall difference between classes
+
+Correct. Recall is the true positive rate; a gap indicates differential false negatives across groups.
+
+B
+Demographic disparity in the training labels
+
+Incorrect. Label distribution disparity is a training data metric, not the model’s recall difference.
+
+C
+Difference in positive proportions in predictions
+
+Incorrect. This compares predicted positive rates, not specifically false negatives.
+
+D
+Specificity difference between classes
+
+Incorrect. Specificity relates to true negatives; the issue is false negatives.
+
+
+37. A team must document intended use, limits, risk ratings, training datasets, and evaluation results for a model.
+
+Which AWS feature is the BEST fit?
+
+A
+SageMaker Model Cards
+
+B
+AI Service Cards
+
+C
+AWS Artifact
+
+D
+SageMaker Model Monitor
+
+A
+SageMaker Model Cards
+
+Correct. Model Cards capture essential, immutable model information and evaluation details.
+
+B
+AI Service Cards
+
+Incorrect. These document AWS-managed AI APIs and their responsible AI posture for customers.
+
+C
+AWS Artifact
+
+Incorrect. Provides compliance reports and security documents, not model documentation.
+
+D
+SageMaker Model Monitor
+
+Incorrect. Monitors data/model quality in production, not comprehensive model documentation.
+
+
+38. Which statement about transparency, interpretability, and explainability is MOST accurate?
+
+A
+Interpretability reveals inner mechanisms; explainability describes behavior from inputs/outputs
+
+B
+Explainability requires full access to model weights and gradients
+
+C
+Transparency eliminates all model security risks
+
+D
+Deep neural nets are always fully interpretable
+
+A
+Interpretability reveals inner mechanisms; explainability describes behavior from inputs/outputs
+
+Correct. Interpretability is white-box; explainability can be model-agnostic via output analysis.
+
+B
+Explainability requires full access to model weights and gradients
+
+Incorrect. Explainability can be performed as a black-box analysis.
+
+C
+Transparency eliminates all model security risks
+
+Incorrect. Higher transparency can increase attack surface (e.g., reverse engineering).
+
+D
+Deep neural nets are always fully interpretable
+
+Incorrect. DNNs are typically less interpretable than simpler models.
+
+
+39. A data science lead wants to know which features most influenced an individual prediction.
+
+Which technique is MOST appropriate?
+
+A
+Shapley-value–based feature attributions
+
+B
+Partial dependence plots
+
+C
+Confusion matrix
+
+D
+Receiver operating characteristic curve
+
+A
+Shapley-value–based feature attributions
+
+Correct. Shapley values provide local (and global) attributions for feature influence.
+
+B
+Partial dependence plots
+
+Incorrect. PDPs show average effect of a feature across the dataset, not local per-instance attributions.
+
+C
+Confusion matrix
+
+Incorrect. Summarizes classification outcomes, not feature influence.
+
+D
+Receiver operating characteristic curve
+
+Incorrect. ROC characterizes tradeoff across thresholds, not feature contributions.
+
+
+40. A regulated product must ensure users know when they’re interacting with AI.
+
+Which responsible AI dimension does this requirement MOST closely reflect?
+
+A
+Transparency
+
+B
+Robustness
+
+C
+Privacy
+
+D
+Governance
+
+A
+Transparency
+
+Correct. Transparency covers clear disclosures about model capabilities, limits, risks, and AI interactions.
+
+B
+Robustness
+
+Incorrect. Robustness focuses on failure tolerance and minimizing errors.
+
+C
+Privacy
+
+Incorrect. Privacy is about protecting PII and sensitive data.
+
+D
+Governance
+
+Incorrect. Governance focuses on oversight, compliance, and risk management.
+
+
+41. Which statements about Bedrock Guardrails are TRUE? (Select TWO.)
+
+A
+They can block prompts or responses that violate topic filters
+
+B
+They permanently fine-tune the underlying model
+
+C
+They allow threshold-based filtering for categories like hate or sexual content
+
+D
+They require public internet access to operate
+
+E
+They disable model logging
+
+A
+They can block prompts or responses that violate topic filters
+
+Correct. Guardrails enforce safety policies on inputs and outputs.
+
+B
+They permanently fine-tune the underlying model
+
+Incorrect. Guardrails filter and constrain interactions; they do not fine-tune model weights.
+
+C
+They allow threshold-based filtering for categories like hate or sexual content
+
+Correct. Guardrails configure category thresholds to control harmful content.
+
+D
+They require public internet access to operate
+
+Incorrect. No such requirement.
+
+E
+They disable model logging
+
+Incorrect. Guardrails do not disable logging.
+
+
+42. An ML team wants to include human review for low-confidence inferences before returning results.
+
+Which AWS service is MOST suitable?
+
+A
+Amazon Augmented AI (A2I)
+
+B
+Amazon Q Business
+
+C
+Amazon Kendra
+
+D
+AWS Config
+
+A
+Amazon Augmented AI (A2I)
+
+Correct. A2I orchestrates human review for model inferences (e.g., low-confidence routes or random audits).
+
+B
+Amazon Q Business
+
+Incorrect. Q Business is a generative AI assistant for enterprise tasks, not human-review routing.
+
+C
+Amazon Kendra
+
+Incorrect. Kendra is enterprise search, not human-in-the-loop review.
+
+D
+AWS Config
+
+Incorrect. Tracks resource configurations, unrelated to human review of predictions.
+
+
+43. Which dataset characteristic MOST directly helps prevent biased outcomes across demographic groups?
+
+A
+Inclusive and balanced representation across groups
+
+B
+Larger context windows during inference
+
+C
+Lower model temperature
+
+D
+Increasing batch size during training
+
+A
+Inclusive and balanced representation across groups
+
+Correct. Representative data mitigates demographic disparities and bias.
+
+B
+Larger context windows during inference
+
+Incorrect. Context window length is unrelated to dataset representativeness.
+
+C
+Lower model temperature
+
+Incorrect. Decoding settings do not correct dataset bias.
+
+D
+Increasing batch size during training
+
+Incorrect. Batch size affects optimization dynamics, not representativeness.
+
+
+44. A security architect warns that fully transparent models can expose proprietary algorithms.
+
+Which mitigation is MOST appropriate while maintaining some transparency?
+
+A
+Provide model-agnostic explanations and documentation without revealing internal IP
+
+B
+Publish the full training code, data, and weights publicly
+
+C
+Disable explanations in production
+
+D
+Use only rule-based systems
+
+A
+Provide model-agnostic explanations and documentation without revealing internal IP
+
+Correct. Black-box explanations balance transparency with IP protection.
+
+B
+Publish the full training code, data, and weights publicly
+
+Incorrect. Maximizes exposure of proprietary assets.
+
+C
+Disable explanations in production
+
+Incorrect. Eliminates transparency; not aligned with responsible AI.
+
+D
+Use only rule-based systems
+
+Incorrect. Unduly constrains performance and flexibility.
+
+
+45. Which statement about open source vs. proprietary models and transparency is MOST accurate?
+
+A
+Open source increases scrutiny and diversity, but some companies prefer proprietary models for safety/IP reasons
+
+B
+Open source prevents all bias by default
+
+C
+Proprietary models are always more interpretable than open source ones
+
+D
+Open source models cannot be evaluated for bias
+
+A
+Open source increases scrutiny and diversity, but some companies prefer proprietary models for safety/IP reasons
+
+Correct. Open development can improve transparency and bias detection; some organizations restrict OS for risk concerns.
+
+B
+Open source prevents all bias by default
+
+Incorrect. Bias can persist regardless of licensing model.
+
+C
+Proprietary models are always more interpretable than open source ones
+
+Incorrect. Interpretability depends on algorithm and tooling, not license.
+
+D
+Open source models cannot be evaluated for bias
+
+Incorrect. Bias evaluation is independent of licensing.
+
+
+46. Which pair BEST matches technique to purpose?
+
+A
+Partial dependence plot → average effect of one feature on predictions
+
+B
+Shapley values → optimize latency by pruning features
+
+C
+Confusion matrix → selects hyperparameters automatically
+
+D
+ROC AUC → local explanation for a single prediction
+
+A
+Partial dependence plot → average effect of one feature on predictions
+
+Correct. PDPs visualize marginal effects across the dataset.
+
+B
+Shapley values → optimize latency by pruning features
+
+Incorrect. Shapley values quantify feature contributions; they do not directly optimize latency.
+
+C
+Confusion matrix → selects hyperparameters automatically
+
+Incorrect. It summarizes classification results; no automatic tuning.
+
+D
+ROC AUC → local explanation for a single prediction
+
+Incorrect. ROC AUC is a global threshold-free performance metric, not a local explainer.

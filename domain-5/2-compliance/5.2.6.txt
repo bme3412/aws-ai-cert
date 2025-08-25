@@ -1,0 +1,15 @@
+An AI governance strategy begins with identifying the scope of your responsibility. This responsibility can include governance and compliance, legal and privacy, risk management, implementing security controls, and the model resilience.
+
+The Generative AI Security Scoping Matrix shows increased levels of scope, depending on the way AI is consumed or implemented. Scopes 1 and 2 carry the least responsibility because you are consuming a third-party consumer or enterprise application.
+
+With scopes 3, 4, and 5, you are building your own AI solution. Your data can be used in the training, fine-tuning, or output of the model. You are responsible for classifying the data and model for risk, implementing threat modeling, limiting access, implementing security controls, and assuring the model endpoint's resilience.
+
+Here is an example of how the responsibilities for governance and compliance change as the scope increases. If a third-party model has all the data and functionality that you need, scope 1 and scope 2 applications might fit your requirements.
+
+We've seen throughout this course that AWS offers services in each of these scopes. The main takeaway is to look for a solution from left to right, beginning with fully trained AI services, for example, Amazon Comprehend or Amazon Translate. If those services don't meet your needs, then look for pre-trained models, for example, Amazon Bedrock, which can be enhanced with retrieval augmented generation.
+
+Or consider models that are pre-trained, but can be fine-tuned with your own data, such as those that are available in SageMaker JumpStart. Minimizing your scope will minimize your responsibilities for governance and compliance, along with legal and privacy, risk management, implementing security controls, and model resilience.
+
+As soon as your scope has been determined, the next step is to document your AI governance policies and train your employees on their responsibilities. Their responsibilities would be according to their job roles and level of access. This policy includes establishing standards for data governance, access requests, and model transparency.
+
+Use the compliances and certifications that the business requires to guide the policies and best practices. Define mechanisms to monitor AI systems' performance, compliance, and bias, and determine actions based on pre-defined thresholds. Finally, frequently review results and revise existing policies as necessary to ensure alignment with business goals and AI safety.ß

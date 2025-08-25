@@ -1,0 +1,2244 @@
+1. A company processes millions of historical transactions nightly to generate risk scores. The results are not needed in real time, and cost efficiency is important.
+
+Which inference approach should the company choose? (Select TWO.)
+
+A
+Real-time inference
+
+B
+Batch processing (batch transform)
+
+C
+Asynchronous inference
+
+D
+Interactive human-in-the-loop review for every record
+
+E
+Serverless real-time inference
+
+A
+Real-time inference
+
+Incorrect. Real-time inference provides low-latency responses through a persistent endpoint and is best for interactive applications. It is not the most cost-effective for large offline batches.
+
+B
+Batch processing (batch transform)
+
+Correct. Batch processing is ideal for offline, large-scale inference where results can wait. Compute runs only during processing, improving cost efficiency for nightly jobs.
+
+C
+Asynchronous inference
+
+Correct. Asynchronous inference supports large payloads and longer processing times with the ability to scale to zero between requests, improving cost efficiency when immediate responses are not required.
+
+D
+Interactive human-in-the-loop review for every record
+
+Incorrect. Human review increases latency and cost and is not necessary for automated offline scoring at scale.
+
+E
+Serverless real-time inference
+
+Incorrect. Serverless real-time inference handles spiky, interactive traffic. For large offline jobs, batch or asynchronous processing is more cost-effective.
+
+
+2. A security team wants to cluster similar network activity to detect unusual behavior without labeled data.
+
+Which ML learning style is MOST appropriate?
+
+A
+Supervised learning (classification)
+
+B
+Unsupervised learning (clustering/anomaly detection)
+
+C
+Reinforcement learning
+
+D
+Regression
+
+A
+Supervised learning (classification)
+
+Incorrect. Supervised learning requires labeled target values and is not suited for unlabeled anomaly discovery.
+
+B
+Unsupervised learning (clustering/anomaly detection)
+
+Correct. Unsupervised learning groups similar records and can surface deviations as anomalies without labeled targets.
+
+C
+Reinforcement learning
+
+Incorrect. Reinforcement learning optimizes actions via rewards in an environment and is not a fit for clustering logs.
+
+D
+Regression
+
+Incorrect. Regression predicts continuous numeric targets and requires labeled outputs.
+
+
+3. A data scientist is preparing a dataset for training and needs to perform a proper split for model development.
+
+Which split is a common best practice?
+
+A
+90% training, 5% validation, 5% test
+
+B
+80% training, 10% validation, 10% test
+
+C
+70% training, 15% validation, 15% test
+
+D
+60% training, 20% validation, 20% test
+
+A
+90% training, 5% validation, 5% test
+
+Incorrect. While possible, this leaves limited data for evaluation; a more common distribution is 80/10/10.
+
+B
+80% training, 10% validation, 10% test
+
+Correct. A typical recommendation is 80% for training, 10% for validation/model selection, and 10% for final testing.
+
+C
+70% training, 15% validation, 15% test
+
+Incorrect. This can work, but 80/10/10 is the common default cited in the lifecycle guidance.
+
+D
+60% training, 20% validation, 20% test
+
+Incorrect. This reduces training data more than necessary for standard scenarios.
+
+
+4. A model shows very high accuracy on training data but poor accuracy on new, unseen data.
+
+What is the MOST likely cause?
+
+A
+Underfitting
+
+B
+Overfitting
+
+C
+Too much training data
+
+D
+Too few features
+
+A
+Underfitting
+
+Incorrect. Underfitting would typically produce low accuracy on both training and test sets.
+
+B
+Overfitting
+
+Correct. Overfitting occurs when the model learns patterns specific to the training data and fails to generalize to new data.
+
+C
+Too much training data
+
+Incorrect. More high-quality data typically helps generalization rather than harms it.
+
+D
+Too few features
+
+Incorrect. Too few features can limit performance but does not explain the train/test accuracy gap as directly as overfitting.
+
+
+5. A team is concerned about bias in a loan approval model.
+
+Which actions can help mitigate bias? (Select TWO.)
+
+A
+Increase the learning rate during training
+
+B
+Collect and incorporate more diverse, representative training data
+
+C
+Remove or de-emphasize sensitive attributes where appropriate
+
+D
+Reduce the context window during inference
+
+E
+Train longer to reduce loss
+
+A
+Increase the learning rate during training
+
+Incorrect. Learning rate tuning affects optimization dynamics, not fairness directly.
+
+B
+Collect and incorporate more diverse, representative training data
+
+Correct. Improving data representativeness helps reduce demographic disparities and bias.
+
+C
+Remove or de-emphasize sensitive attributes where appropriate
+
+Correct. Removing or down-weighting sensitive attributes (e.g., gender) and monitoring fairness metrics are standard mitigation steps.
+
+D
+Reduce the context window during inference
+
+Incorrect. Context window relates to sequence length in LLMs and is unrelated to fairness mitigation.
+
+E
+Train longer to reduce loss
+
+Incorrect. Longer training can exacerbate overfitting and does not guarantee fairness improvements.
+
+
+6. A team is deploying a containerized ML model behind an HTTP API for interactive predictions.
+
+Which statements are TRUE? (Select TWO.)
+
+A
+Model artifacts are typically stored in Amazon S3 and model code is containerized in Amazon ECR images
+
+B
+Amazon API Gateway can forward POST requests to AWS Lambda that runs model inference code
+
+C
+Batch Transform is the preferred option for low-latency interactive requests
+
+D
+Real-time inference endpoints are not suitable for persistent traffic
+
+E
+Asynchronous inference is limited to processing times under 10 seconds
+
+A
+Model artifacts are typically stored in Amazon S3 and model code is containerized in Amazon ECR images
+
+Correct. A common pattern is to store model artifacts in S3 and package inference code in an ECR image for deployment.
+
+B
+Amazon API Gateway can forward POST requests to AWS Lambda that runs model inference code
+
+Correct. API Gateway can front an HTTP API and route requests to Lambda or other compute that runs the model.
+
+C
+Batch Transform is the preferred option for low-latency interactive requests
+
+Incorrect. Batch Transform is for offline batch jobs, not interactive low-latency inference.
+
+D
+Real-time inference endpoints are not suitable for persistent traffic
+
+Incorrect. Real-time endpoints are designed for persistent traffic and low latency.
+
+E
+Asynchronous inference is limited to processing times under 10 seconds
+
+Incorrect. Asynchronous inference supports long-running requests (up to minutes) and queuing.
+
+
+7. A business wants to predict house prices from features such as bedrooms, bathrooms, and square footage.
+
+Which problem type is the BEST fit?
+
+A
+Binary classification
+
+B
+Multiclass classification
+
+C
+Regression
+
+D
+Clustering
+
+A
+Binary classification
+
+Incorrect. Binary classification produces discrete labels, not continuous prices.
+
+B
+Multiclass classification
+
+Incorrect. Multiclass classification predicts one of several categories, not a continuous value.
+
+C
+Regression
+
+Correct. Regression predicts continuous numeric targets such as price.
+
+D
+Clustering
+
+Incorrect. Clustering groups unlabeled data and does not predict prices.
+
+
+8. A team reduces the number of features used for training by combining related features and removing those with little predictive power.
+
+What are valid benefits of this approach? (Select TWO.)
+
+A
+Reduced training memory and compute requirements
+
+B
+Eliminates the need for a validation set
+
+C
+Improved model generalization by reducing noise
+
+D
+Guarantees higher training accuracy
+
+E
+Guarantees zero bias in predictions
+
+A
+Reduced training memory and compute requirements
+
+Correct. Fewer features can lower memory usage and speed up training.
+
+B
+Eliminates the need for a validation set
+
+Incorrect. You still need a validation set for model selection and tuning.
+
+C
+Improved model generalization by reducing noise
+
+Correct. Removing low-value or noisy features can reduce overfitting and improve generalization.
+
+D
+Guarantees higher training accuracy
+
+Incorrect. Feature reduction often prioritizes generalization, which may not increase training accuracy.
+
+E
+Guarantees zero bias in predictions
+
+Incorrect. Feature engineering alone does not guarantee fairness.
+
+
+9. A manufacturer wants to detect defects from images on an assembly line.
+
+Which approach is MOST appropriate?
+
+A
+Traditional ML with linear regression on tabular sensor data only
+
+B
+Deep learning using computer vision on image data
+
+C
+Unsupervised clustering on text data
+
+D
+Rule-based system with hard-coded thresholds only
+
+A
+Traditional ML with linear regression on tabular sensor data only
+
+Incorrect. Image-based defect detection is better addressed with computer vision models.
+
+B
+Deep learning using computer vision on image data
+
+Correct. Deep learning excels at extracting patterns from unstructured data such as images.
+
+C
+Unsupervised clustering on text data
+
+Incorrect. The data are images, not text, and supervised CV is typically used for defect detection.
+
+D
+Rule-based system with hard-coded thresholds only
+
+Incorrect. Static rules are brittle for complex visual patterns.
+
+
+10. A compliance team requires that identical inputs always produce identical outputs for a business rule.
+
+Which system characteristic BEST matches this requirement? (Select TWO.)
+
+A
+Deterministic rule-based logic
+
+B
+Probabilistic ML model
+
+C
+Stochastic inference with temperature sampling
+
+D
+Auditable decision table with fixed outcomes
+
+E
+Neural network with dropout layers enabled during inference
+
+A
+Deterministic rule-based logic
+
+Correct. Deterministic systems produce the same output for the same input, satisfying strict repeatability.
+
+B
+Probabilistic ML model
+
+Incorrect. Probabilistic models may vary due to randomness, thresholds, or retraining.
+
+C
+Stochastic inference with temperature sampling
+
+Incorrect. Sampling introduces randomness into outputs.
+
+D
+Auditable decision table with fixed outcomes
+
+Correct. Fixed decision tables are deterministic and auditable.
+
+E
+Neural network with dropout layers enabled during inference
+
+Incorrect. Dropout during inference makes outputs non-deterministic.
+
+
+11. A startup needs fast time-to-value for a sentiment analysis feature in its app without hiring ML experts.
+
+Which options are MOST appropriate? (Select TWO.)
+
+A
+Use a pre-trained NLP service (e.g., Amazon Comprehend) via API
+
+B
+Train a custom model from scratch with raw text on EC2
+
+C
+Use a pre-trained foundation model without customization
+
+D
+Build and label a large dataset before any prototyping
+
+E
+Deploy a real-time endpoint before evaluating business value
+
+A
+Use a pre-trained NLP service (e.g., Amazon Comprehend) via API
+
+Correct. Pre-trained services provide immediate capabilities with minimal ML expertise and fast integration.
+
+B
+Train a custom model from scratch with raw text on EC2
+
+Incorrect. Training from scratch is the most complex and costly path.
+
+C
+Use a pre-trained foundation model without customization
+
+Correct. Starting with a pre-trained FM can deliver value quickly; customization can be evaluated later if needed.
+
+D
+Build and label a large dataset before any prototyping
+
+Incorrect. This delays value; evaluate hosted or pre-trained options first.
+
+E
+Deploy a real-time endpoint before evaluating business value
+
+Incorrect. Start by validating fit and value before committing to persistent endpoints.
+
+
+12. A model in production starts to degrade even though the code has not changed. The distribution of incoming data has shifted relative to training data.
+
+What is this issue called, and what action is appropriate? (Select TWO.)
+
+A
+Data drift; alert and retrain the model
+
+B
+Concept drift; reduce the number of features
+
+C
+Data drift; ignore until accuracy drops to zero
+
+D
+Concept drift; reassess target definition and labels
+
+E
+Bias drift; only increase training epochs
+
+A
+Data drift; alert and retrain the model
+
+Correct. Data drift occurs when input distributions change; monitoring should alert and trigger retraining.
+
+B
+Concept drift; reduce the number of features
+
+Incorrect. Concept drift concerns changes in the relationship between inputs and target; reducing features is not the primary remedy.
+
+C
+Data drift; ignore until accuracy drops to zero
+
+Incorrect. Drift should be addressed proactively via monitoring and retraining.
+
+D
+Concept drift; reassess target definition and labels
+
+Correct. Concept drift indicates the target meaning or relationship has changed; review labels and objectives and retrain.
+
+E
+Bias drift; only increase training epochs
+
+Incorrect. Simply increasing epochs does not resolve drift or fairness issues.
+
+
+13. Which statement BEST describes embeddings in language models?
+
+A
+Embeddings encode the semantic meaning of tokens in a high-dimensional vector space
+
+B
+Embeddings primarily reduce file size for model checkpoints
+
+C
+Embeddings encrypt tokens so models can decode them securely at inference
+
+D
+Embeddings assign hard grammar rules to tokens to enforce syntax
+
+A
+Embeddings encode the semantic meaning of tokens in a high-dimensional vector space
+
+Correct. Embeddings are numerical vector representations that capture semantic meaning and relationships; nearby vectors indicate similar meaning.
+
+B
+Embeddings primarily reduce file size for model checkpoints
+
+Incorrect. Compression is not the purpose of embeddings; they represent meaning for computation.
+
+C
+Embeddings encrypt tokens so models can decode them securely at inference
+
+Incorrect. Embeddings are not an encryption scheme.
+
+D
+Embeddings assign hard grammar rules to tokens to enforce syntax
+
+Incorrect. Grammar constraints are not encoded as hard rules by embeddings.
+
+
+14. What is the PRIMARY role of the self-attention mechanism in transformers?
+
+A
+Weigh different parts of the input to capture long-range dependencies and context
+
+B
+Compress model parameters to reduce memory footprint during training
+
+C
+Randomize outputs to improve diversity during inference
+
+D
+Remove the need for tokenization by operating directly on raw text
+
+A
+Weigh different parts of the input to capture long-range dependencies and context
+
+Correct. Self-attention learns which tokens to focus on when generating representations, enabling rich contextual understanding.
+
+B
+Compress model parameters to reduce memory footprint during training
+
+Incorrect. Self-attention is not a parameter compression method.
+
+C
+Randomize outputs to improve diversity during inference
+
+Incorrect. Sampling strategies (temperature, top-k) affect diversity, not self-attention itself.
+
+D
+Remove the need for tokenization by operating directly on raw text
+
+Incorrect. Transformers still rely on tokenization.
+
+
+15. Which task is an example of a MULTIMODAL generative AI use case?
+
+A
+Image captioning from an input image
+
+B
+Credit risk prediction from tabular data
+
+C
+EC2 instance right-sizing from CPU metrics
+
+D
+Sorting arrays of numbers
+
+A
+Image captioning from an input image
+
+Correct. Multimodal models process/generate multiple modalities (e.g., image to text for captioning).
+
+B
+Credit risk prediction from tabular data
+
+Incorrect. This is a classic tabular ML task, typically unimodal.
+
+C
+EC2 instance right-sizing from CPU metrics
+
+Incorrect. This is a capacity planning/forecasting problem.
+
+D
+Sorting arrays of numbers
+
+Incorrect. This is a deterministic programming task, not a multimodal generative task.
+
+
+16. Which statement about DIFFUSION MODELS is TRUE?
+
+A
+They learn to reverse a gradual noising process to generate high-quality outputs
+
+B
+They are trained only with labeled pairs of input and output images
+
+C
+They generally produce lower-quality images and less diversity than GANs
+
+D
+They operate only in pixel space and cannot use latent spaces
+
+A
+They learn to reverse a gradual noising process to generate high-quality outputs
+
+Correct. Diffusion models denoise from random noise step-by-step; Stable Diffusion operates in a latent space.
+
+B
+They are trained only with labeled pairs of input and output images
+
+Incorrect. Diffusion training does not require paired labels like supervised tasks.
+
+C
+They generally produce lower-quality images and less diversity than GANs
+
+Incorrect. Diffusion models often achieve high quality and diversity and are more stable to train.
+
+D
+They operate only in pixel space and cannot use latent spaces
+
+Incorrect. Stable Diffusion uses a latent space representation.
+
+
+17. Which AWS service provides AI-powered code suggestions from natural language comments and existing code?
+
+A
+Amazon Q Developer
+
+B
+Amazon Comprehend
+
+C
+Amazon Titan Text
+
+D
+Amazon Sumerian
+
+A
+Amazon Q Developer
+
+Correct. Amazon Q Developer (formerly CodeWhisperer) generates code suggestions and completions from comments and context.
+
+B
+Amazon Comprehend
+
+Incorrect. Comprehend performs NLP tasks on text (e.g., sentiment, key phrases).
+
+C
+Amazon Titan Text
+
+Incorrect. Titan is a family of foundation models accessible via Amazon Bedrock, not a code suggestion service.
+
+D
+Amazon Sumerian
+
+Incorrect. Sumerian targets AR/VR and 3D content workflows.
+
+
+18. A team wants the model to incorporate up-to-date enterprise knowledge without retraining the model.
+
+Which technique provides this capability with the LEAST development effort?
+
+A
+Fine-tuning on proprietary documents
+
+B
+Retrieval augmented generation (RAG)
+
+C
+Continued pre-training on unlabeled text
+
+D
+Instruction-based fine-tuning with prompt-response pairs
+
+A
+Fine-tuning on proprietary documents
+
+Incorrect. Fine-tuning updates model weights and requires training effort.
+
+B
+Retrieval augmented generation (RAG)
+
+Correct. RAG augments prompts with retrieved knowledge from external systems at inference, avoiding weight updates.
+
+C
+Continued pre-training on unlabeled text
+
+Incorrect. Continued pre-training still requires training and compute.
+
+D
+Instruction-based fine-tuning with prompt-response pairs
+
+Incorrect. Instruction tuning changes model weights to follow instructions; it does not plug in external knowledge on-the-fly.
+
+
+19. A product team wants to generate images for marketing without training or hosting models themselves.
+
+Which AWS service BEST fits this requirement?
+
+A
+Amazon Bedrock
+
+B
+Amazon SageMaker JumpStart
+
+C
+Amazon Rekognition
+
+D
+Amazon Personalize
+
+A
+Amazon Bedrock
+
+Correct. Bedrock provides managed access to multiple foundation models (including image generation) via a unified API without training/hosting.
+
+B
+Amazon SageMaker JumpStart
+
+Incorrect. JumpStart offers pre-trained/open-source models within SageMaker, but you still manage deployment within your account.
+
+C
+Amazon Rekognition
+
+Incorrect. Rekognition analyzes images/videos; it does not generate images.
+
+D
+Amazon Personalize
+
+Incorrect. Personalize builds recommendation systems, not generative image models.
+
+
+20. Which statement BEST describes Reinforcement Learning from Human Feedback (RLHF)?
+
+A
+It trains a reward model from human preferences to align LLM outputs, then optimizes the LLM against that reward
+
+B
+It replaces tokenization by mapping sentences to rules crafted by humans
+
+C
+It disables sampling to make outputs deterministic for every input
+
+D
+It only collects human labels for supervised classification tasks
+
+A
+It trains a reward model from human preferences to align LLM outputs, then optimizes the LLM against that reward
+
+Correct. RLHF uses preference data to train a reward model and fine-tunes the LLM to produce helpful, harmless, and honest responses.
+
+B
+It replaces tokenization by mapping sentences to rules crafted by humans
+
+Incorrect. Tokenization still applies; RLHF is not a rules engine.
+
+C
+It disables sampling to make outputs deterministic for every input
+
+Incorrect. RLHF is unrelated to sampling determinism.
+
+D
+It only collects human labels for supervised classification tasks
+
+Incorrect. RLHF collects pairwise/ranked preferences to guide generative outputs, beyond simple classification labels.
+
+
+21. Which statement about IN-CONTEXT LEARNING is TRUE?
+
+A
+It guides the model with examples in the prompt without updating model weights
+
+B
+It requires labeled datasets and model retraining
+
+C
+It permanently updates the model's vocabulary with new tokens
+
+D
+It disables attention to force strict rule following
+
+A
+It guides the model with examples in the prompt without updating model weights
+
+Correct. Few-shot/one-shot prompts provide exemplars at inference time; the model uses context without weight changes.
+
+B
+It requires labeled datasets and model retraining
+
+Incorrect. No fine-tuning is required for in-context learning.
+
+C
+It permanently updates the model's vocabulary with new tokens
+
+Incorrect. Vocabulary is unchanged during inference.
+
+D
+It disables attention to force strict rule following
+
+Incorrect. Attention remains central to LLM behavior.
+
+
+22. Which AWS capability provides pre-trained, open-source models and example notebooks to quickly start ML projects within SageMaker?
+
+A
+Amazon SageMaker JumpStart
+
+B
+Amazon Bedrock Guardrails
+
+C
+Amazon Kendra
+
+D
+AWS Artifact
+
+A
+Amazon SageMaker JumpStart
+
+Correct. JumpStart offers pre-trained/open-source models and notebooks to accelerate prototyping within SageMaker.
+
+B
+Amazon Bedrock Guardrails
+
+Incorrect. Guardrails control content safety for Bedrock applications.
+
+C
+Amazon Kendra
+
+Incorrect. Kendra is an enterprise search service.
+
+D
+AWS Artifact
+
+Incorrect. Artifact provides access to compliance reports and security documents.
+
+
+23. A team wants the model to show its step-by-step reasoning for complex tasks like multi-part math word problems.
+
+Which prompting technique is MOST appropriate?
+
+A
+Zero-shot prompting
+
+B
+Chain-of-thought prompting
+
+C
+Self-consistency by sampling multiple temperatures
+
+D
+Constrained decoding with a JSON schema
+
+A
+Zero-shot prompting
+
+Incorrect. Zero-shot can work but does not reliably elicit step-by-step reasoning.
+
+B
+Chain-of-thought prompting
+
+Correct. Chain-of-thought encourages the model to decompose problems and show intermediate steps.
+
+C
+Self-consistency by sampling multiple temperatures
+
+Incorrect. Sampling multiple outputs can improve final answers but is not itself a reasoning prompt.
+
+D
+Constrained decoding with a JSON schema
+
+Incorrect. Schemas constrain output format, not reasoning traces.
+
+
+24. A product team requires the LLM to return well-formed JSON that matches a specific schema for downstream ingestion.
+
+Which approach will MOST reliably meet the requirement?
+
+A
+Lower the temperature and ask for JSON
+
+B
+Provide explicit JSON schema and few-shot examples; validate responses; enforce format with structured prompting/tooling
+
+C
+Increase max_tokens and let the model elaborate
+
+D
+Use chain-of-thought to improve formatting
+
+A
+Lower the temperature and ask for JSON
+
+Incorrect. Lower temperature helps stability but does not guarantee schema conformance.
+
+B
+Provide explicit JSON schema and few-shot examples; validate responses; enforce format with structured prompting/tooling
+
+Correct. Showing a schema and exemplars plus validation (and function/tool calling where available) yields consistent structured outputs.
+
+C
+Increase max_tokens and let the model elaborate
+
+Incorrect. More tokens does not ensure valid JSON.
+
+D
+Use chain-of-thought to improve formatting
+
+Incorrect. CoT targets reasoning, not strict formatting.
+
+
+25. A company wants responses in a consistent brand tone across long-form outputs and has a small curated set of instruction examples.
+
+Which method is MOST appropriate to achieve this at scale?
+
+A
+Zero-shot prompting with a style instruction
+
+B
+Instruction-based fine-tuning on prompt–response pairs
+
+C
+RAG with an external knowledge base
+
+D
+Continued pre-training on unlabeled web data
+
+A
+Zero-shot prompting with a style instruction
+
+Incorrect. Zero-shot may drift over long outputs and across prompts.
+
+B
+Instruction-based fine-tuning on prompt–response pairs
+
+Correct. Instruction tuning aligns outputs with desired tone and behavior using paired instruction–response data.
+
+C
+RAG with an external knowledge base
+
+Incorrect. RAG improves factual grounding, not tone alignment per se.
+
+D
+Continued pre-training on unlabeled web data
+
+Incorrect. Unlabeled data does not encode brand tone requirements.
+
+
+26. A safety team needs to evaluate a model for sensitivity to typos, random capitalization, and whitespace changes in prompts.
+
+Which evaluation dimension BEST matches this need?
+
+A
+Toxicity
+
+B
+Factuality
+
+C
+Semantic robustness
+
+D
+Bias/fairness
+
+A
+Toxicity
+
+Incorrect. Toxicity measures harmful language categories.
+
+B
+Factuality
+
+Incorrect. Factuality measures truthfulness relative to references.
+
+C
+Semantic robustness
+
+Correct. Semantic robustness checks output stability under harmless input perturbations.
+
+D
+Bias/fairness
+
+Incorrect. Bias covers demographic disparities, not perturbation sensitivity.
+
+
+27. A team must broaden the model’s domain knowledge on a specific topic using a large unlabeled corpus without changing downstream task formats.
+
+Which approach is MOST suitable?
+
+A
+Instruction fine-tuning on labeled pairs
+
+B
+Continued pre-training on the unlabeled corpus
+
+C
+RAG with enterprise search
+
+D
+Hyperparameter tuning of decoding settings
+
+A
+Instruction fine-tuning on labeled pairs
+
+Incorrect. Requires labeled pairs and targets behavior/tone following.
+
+B
+Continued pre-training on the unlabeled corpus
+
+Correct. Continued pre-training adapts base knowledge using raw text in the target domain.
+
+C
+RAG with enterprise search
+
+Incorrect. RAG augments prompts at inference and does not update base knowledge.
+
+D
+Hyperparameter tuning of decoding settings
+
+Incorrect. Decoding settings affect style/diversity, not knowledge.
+
+
+28. A data team needs a practical, low-effort evaluation plan for a summarization feature before launch.
+
+Which plan is MOST appropriate?
+
+A
+Only manual spot checks by one reviewer
+
+B
+Hybrid: automatic metrics (e.g., ROUGE) + human evaluation with clear rubrics + A/B on task KPIs
+
+C
+Only automatic metrics against synthetic references
+
+D
+Production launch without evaluation; rely on user feedback
+
+A
+Only manual spot checks by one reviewer
+
+Incorrect. Too subjective and low coverage.
+
+B
+Hybrid: automatic metrics (e.g., ROUGE) + human evaluation with clear rubrics + A/B on task KPIs
+
+Correct. Combining automatic, human, and online evaluation gives comprehensive signal at reasonable cost.
+
+C
+Only automatic metrics against synthetic references
+
+Incorrect. Synthetic references and metrics alone are insufficient for quality.
+
+D
+Production launch without evaluation; rely on user feedback
+
+Incorrect. Risks quality and trust.
+
+
+29. Which actions help reduce verbosity and enforce concise responses for an LLM? (Select TWO.)
+
+A
+Include explicit length/style constraints and an example of the desired brevity
+
+B
+Increase temperature to encourage diverse responses
+
+C
+Set a low max_tokens and use stop sequences
+
+D
+Use chain-of-thought to generate more intermediate steps
+
+E
+Remove few-shot examples to simplify the prompt
+
+A
+Include explicit length/style constraints and an example of the desired brevity
+
+Correct. Direct, concrete constraints with exemplars improve compliance.
+
+B
+Increase temperature to encourage diverse responses
+
+Incorrect. Higher temperature increases variability and can increase verbosity.
+
+C
+Set a low max_tokens and use stop sequences
+
+Correct. Hard limits and stops enforce brevity and formatting.
+
+D
+Use chain-of-thought to generate more intermediate steps
+
+Incorrect. CoT typically increases verbosity.
+
+E
+Remove few-shot examples to simplify the prompt
+
+Incorrect. Few-shot examples help establish the desired style.
+
+
+30. A company is building a Bedrock-based app and wants to prevent harmful content and evaluate model behavior on text generation and Q&A tasks.
+
+Which combination meets the need? (Select TWO.)
+
+A
+Amazon Bedrock Guardrails
+
+B
+AWS Artifact
+
+C
+SageMaker Clarify LLM evaluation jobs
+
+D
+Amazon Rekognition
+
+E
+AWS Config
+
+A
+Amazon Bedrock Guardrails
+
+Correct. Guardrails filter/block unsafe prompts/responses and enforce topic and toxicity thresholds.
+
+B
+AWS Artifact
+
+Incorrect. Artifact provides compliance reports, not content safety or eval.
+
+C
+SageMaker Clarify LLM evaluation jobs
+
+Correct. Clarify can evaluate LLMs for text generation/classification/Q&A/summarization across safety and quality dimensions.
+
+D
+Amazon Rekognition
+
+Incorrect. Image/video analysis, not LLM safety evaluation.
+
+E
+AWS Config
+
+Incorrect. Resource configuration tracking, not LLM evaluation.
+
+
+31. A privacy team requires that PII must not be sent to external models.
+
+Which actions are MOST appropriate? (Select TWO.)
+
+A
+Redact or mask PII during ETL and at request time before prompting
+
+B
+Use VPC interface endpoints/PrivateLink to keep traffic private to AWS services
+
+C
+Increase max_tokens to reduce truncation risk
+
+D
+Rely solely on user training to avoid entering PII
+
+E
+Disable TLS to reduce latency for API calls
+
+A
+Redact or mask PII during ETL and at request time before prompting
+
+Correct. Proactive redaction prevents PII egress.
+
+B
+Use VPC interface endpoints/PrivateLink to keep traffic private to AWS services
+
+Correct. Private connectivity reduces exposure and keeps traffic within AWS networking.
+
+C
+Increase max_tokens to reduce truncation risk
+
+Incorrect. Token limits do not address PII exposure.
+
+D
+Rely solely on user training to avoid entering PII
+
+Incorrect. Technical controls are needed in addition to training.
+
+E
+Disable TLS to reduce latency for API calls
+
+Incorrect. TLS must remain enabled for encryption in transit.
+
+
+32. A team wants to adapt a foundation model efficiently with limited GPU budget.
+
+Which method is MOST cost-efficient?
+
+A
+Full fine-tuning of all model parameters
+
+B
+Parameter-efficient fine-tuning (e.g., LoRA/PEFT)
+
+C
+Continued pre-training on generic web data
+
+D
+Only adjust decoding parameters (temperature, top-p)
+
+A
+Full fine-tuning of all model parameters
+
+Incorrect. Full FT is expensive in compute and memory.
+
+B
+Parameter-efficient fine-tuning (e.g., LoRA/PEFT)
+
+Correct. PEFT adapts models by training small adapter layers, reducing cost and footprint.
+
+C
+Continued pre-training on generic web data
+
+Incorrect. Costly and may dilute domain behavior.
+
+D
+Only adjust decoding parameters (temperature, top-p)
+
+Incorrect. Decoding parameters do not adapt model knowledge/skills.
+
+
+33. A prompt engineering guideline is proposed for consistent outputs across teams.
+
+Which structure is MOST effective?
+
+A
+Role + Task + Constraints + Examples + Output format
+
+B
+Task only; keep prompts as short as possible
+
+C
+Provide system prompt only; no examples to avoid biasing
+
+D
+Ask for chain-of-thought in every prompt
+
+A
+Role + Task + Constraints + Examples + Output format
+
+Correct. Clear roles, explicit constraints, exemplars, and required format improve reliability and consistency.
+
+B
+Task only; keep prompts as short as possible
+
+Incorrect. Missing constraints/examples reduces reliability.
+
+C
+Provide system prompt only; no examples to avoid biasing
+
+Incorrect. Examples help establish style and format.
+
+D
+Ask for chain-of-thought in every prompt
+
+Incorrect. CoT is not always necessary and can increase verbosity and latency.
+
+
+34. A team considers three options to improve factual accuracy: (1) few-shot prompting, (2) RAG, (3) fine-tuning on internal facts.
+
+Which ordering from LEAST to MOST engineering effort is MOST accurate?
+
+A
+(2) RAG, (1) few-shot, (3) fine-tuning
+
+B
+(1) few-shot, (2) RAG, (3) fine-tuning
+
+C
+(3) fine-tuning, (2) RAG, (1) few-shot
+
+D
+(1) few-shot, (3) fine-tuning, (2) RAG
+
+A
+(2) RAG, (1) few-shot, (3) fine-tuning
+
+Incorrect. Few-shot is generally less effort than building RAG.
+
+B
+(1) few-shot, (2) RAG, (3) fine-tuning
+
+Correct. Start with prompt examples, then add retrieval, with fine-tuning as the most involved.
+
+C
+(3) fine-tuning, (2) RAG, (1) few-shot
+
+Incorrect. Fine-tuning typically requires the most effort.
+
+D
+(1) few-shot, (3) fine-tuning, (2) RAG
+
+Incorrect. RAG generally requires less effort than full fine-tuning while providing strong factual grounding.
+
+
+35. Which option lists core dimensions of responsible AI that teams should address?
+
+A
+Fairness, explainability, robustness, privacy/security, governance, transparency
+
+B
+Latency, throughput, availability, cost, vendor lock-in, portability
+
+C
+Agility, sprints, burn-down charts, velocity, retrospectives, standups
+
+D
+Compression, quantization, pruning, distillation, caching, batching
+
+A
+Fairness, explainability, robustness, privacy/security, governance, transparency
+
+Correct. These are central responsible AI dimensions to ensure safe, trustworthy systems.
+
+B
+Latency, throughput, availability, cost, vendor lock-in, portability
+
+Incorrect. These are general system qualities, not specific to responsible AI.
+
+C
+Agility, sprints, burn-down charts, velocity, retrospectives, standups
+
+Incorrect. These are software process practices.
+
+D
+Compression, quantization, pruning, distillation, caching, batching
+
+Incorrect. These are model efficiency techniques.
+
+
+36. A loan approval model has higher false negatives for Group X than for Group Y.
+
+Which SageMaker Clarify metric MOST directly captures this disparity?
+
+A
+Recall difference between classes
+
+B
+Demographic disparity in the training labels
+
+C
+Difference in positive proportions in predictions
+
+D
+Specificity difference between classes
+
+A
+Recall difference between classes
+
+Correct. Recall is the true positive rate; a gap indicates differential false negatives across groups.
+
+B
+Demographic disparity in the training labels
+
+Incorrect. Label distribution disparity is a training data metric, not the model’s recall difference.
+
+C
+Difference in positive proportions in predictions
+
+Incorrect. This compares predicted positive rates, not specifically false negatives.
+
+D
+Specificity difference between classes
+
+Incorrect. Specificity relates to true negatives; the issue is false negatives.
+
+
+37. A team must document intended use, limits, risk ratings, training datasets, and evaluation results for a model.
+
+Which AWS feature is the BEST fit?
+
+A
+SageMaker Model Cards
+
+B
+AI Service Cards
+
+C
+AWS Artifact
+
+D
+SageMaker Model Monitor
+
+A
+SageMaker Model Cards
+
+Correct. Model Cards capture essential, immutable model information and evaluation details.
+
+B
+AI Service Cards
+
+Incorrect. These document AWS-managed AI APIs and their responsible AI posture for customers.
+
+C
+AWS Artifact
+
+Incorrect. Provides compliance reports and security documents, not model documentation.
+
+D
+SageMaker Model Monitor
+
+Incorrect. Monitors data/model quality in production, not comprehensive model documentation.
+
+
+38. Which statement about transparency, interpretability, and explainability is MOST accurate?
+
+A
+Interpretability reveals inner mechanisms; explainability describes behavior from inputs/outputs
+
+B
+Explainability requires full access to model weights and gradients
+
+C
+Transparency eliminates all model security risks
+
+D
+Deep neural nets are always fully interpretable
+
+A
+Interpretability reveals inner mechanisms; explainability describes behavior from inputs/outputs
+
+Correct. Interpretability is white-box; explainability can be model-agnostic via output analysis.
+
+B
+Explainability requires full access to model weights and gradients
+
+Incorrect. Explainability can be performed as a black-box analysis.
+
+C
+Transparency eliminates all model security risks
+
+Incorrect. Higher transparency can increase attack surface (e.g., reverse engineering).
+
+D
+Deep neural nets are always fully interpretable
+
+Incorrect. DNNs are typically less interpretable than simpler models.
+
+
+39. A data science lead wants to know which features most influenced an individual prediction.
+
+Which technique is MOST appropriate?
+
+A
+Shapley-value–based feature attributions
+
+B
+Partial dependence plots
+
+C
+Confusion matrix
+
+D
+Receiver operating characteristic curve
+
+A
+Shapley-value–based feature attributions
+
+Correct. Shapley values provide local (and global) attributions for feature influence.
+
+B
+Partial dependence plots
+
+Incorrect. PDPs show average effect of a feature across the dataset, not local per-instance attributions.
+
+C
+Confusion matrix
+
+Incorrect. Summarizes classification outcomes, not feature influence.
+
+D
+Receiver operating characteristic curve
+
+Incorrect. ROC characterizes tradeoff across thresholds, not feature contributions.
+
+
+40. A regulated product must ensure users know when they’re interacting with AI.
+
+Which responsible AI dimension does this requirement MOST closely reflect?
+
+A
+Transparency
+
+B
+Robustness
+
+C
+Privacy
+
+D
+Governance
+
+A
+Transparency
+
+Correct. Transparency covers clear disclosures about model capabilities, limits, risks, and AI interactions.
+
+B
+Robustness
+
+Incorrect. Robustness focuses on failure tolerance and minimizing errors.
+
+C
+Privacy
+
+Incorrect. Privacy is about protecting PII and sensitive data.
+
+D
+Governance
+
+Incorrect. Governance focuses on oversight, compliance, and risk management.
+
+
+41. Which statements about Bedrock Guardrails are TRUE? (Select TWO.)
+
+A
+They can block prompts or responses that violate topic filters
+
+B
+They permanently fine-tune the underlying model
+
+C
+They allow threshold-based filtering for categories like hate or sexual content
+
+D
+They require public internet access to operate
+
+E
+They disable model logging
+
+A
+They can block prompts or responses that violate topic filters
+
+Correct. Guardrails enforce safety policies on inputs and outputs.
+
+B
+They permanently fine-tune the underlying model
+
+Incorrect. Guardrails filter and constrain interactions; they do not fine-tune model weights.
+
+C
+They allow threshold-based filtering for categories like hate or sexual content
+
+Correct. Guardrails configure category thresholds to control harmful content.
+
+D
+They require public internet access to operate
+
+Incorrect. No such requirement.
+
+E
+They disable model logging
+
+Incorrect. Guardrails do not disable logging.
+
+
+42. An ML team wants to include human review for low-confidence inferences before returning results.
+
+Which AWS service is MOST suitable?
+
+A
+Amazon Augmented AI (A2I)
+
+B
+Amazon Q Business
+
+C
+Amazon Kendra
+
+D
+AWS Config
+
+A
+Amazon Augmented AI (A2I)
+
+Correct. A2I orchestrates human review for model inferences (e.g., low-confidence routes or random audits).
+
+B
+Amazon Q Business
+
+Incorrect. Q Business is a generative AI assistant for enterprise tasks, not human-review routing.
+
+C
+Amazon Kendra
+
+Incorrect. Kendra is enterprise search, not human-in-the-loop review.
+
+D
+AWS Config
+
+Incorrect. Tracks resource configurations, unrelated to human review of predictions.
+
+
+43. Which dataset characteristic MOST directly helps prevent biased outcomes across demographic groups?
+
+A
+Inclusive and balanced representation across groups
+
+B
+Larger context windows during inference
+
+C
+Lower model temperature
+
+D
+Increasing batch size during training
+
+A
+Inclusive and balanced representation across groups
+
+Correct. Representative data mitigates demographic disparities and bias.
+
+B
+Larger context windows during inference
+
+Incorrect. Context window length is unrelated to dataset representativeness.
+
+C
+Lower model temperature
+
+Incorrect. Decoding settings do not correct dataset bias.
+
+D
+Increasing batch size during training
+
+Incorrect. Batch size affects optimization dynamics, not representativeness.
+
+
+44. A security architect warns that fully transparent models can expose proprietary algorithms.
+
+Which mitigation is MOST appropriate while maintaining some transparency?
+
+A
+Provide model-agnostic explanations and documentation without revealing internal IP
+
+B
+Publish the full training code, data, and weights publicly
+
+C
+Disable explanations in production
+
+D
+Use only rule-based systems
+
+A
+Provide model-agnostic explanations and documentation without revealing internal IP
+
+Correct. Black-box explanations balance transparency with IP protection.
+
+B
+Publish the full training code, data, and weights publicly
+
+Incorrect. Maximizes exposure of proprietary assets.
+
+C
+Disable explanations in production
+
+Incorrect. Eliminates transparency; not aligned with responsible AI.
+
+D
+Use only rule-based systems
+
+Incorrect. Unduly constrains performance and flexibility.
+
+
+45. Which statement about open source vs. proprietary models and transparency is MOST accurate?
+
+A
+Open source increases scrutiny and diversity, but some companies prefer proprietary models for safety/IP reasons
+
+B
+Open source prevents all bias by default
+
+C
+Proprietary models are always more interpretable than open source ones
+
+D
+Open source models cannot be evaluated for bias
+
+A
+Open source increases scrutiny and diversity, but some companies prefer proprietary models for safety/IP reasons
+
+Correct. Open development can improve transparency and bias detection; some organizations restrict OS for risk concerns.
+
+B
+Open source prevents all bias by default
+
+Incorrect. Bias can persist regardless of licensing model.
+
+C
+Proprietary models are always more interpretable than open source ones
+
+Incorrect. Interpretability depends on algorithm and tooling, not license.
+
+D
+Open source models cannot be evaluated for bias
+
+Incorrect. Bias evaluation is independent of licensing.
+
+
+46. Which pair BEST matches technique to purpose?
+
+A
+Partial dependence plot → average effect of one feature on predictions
+
+B
+Shapley values → optimize latency by pruning features
+
+C
+Confusion matrix → selects hyperparameters automatically
+
+D
+ROC AUC → local explanation for a single prediction
+
+A
+Partial dependence plot → average effect of one feature on predictions
+
+Correct. PDPs visualize marginal effects across the dataset.
+
+B
+Shapley values → optimize latency by pruning features
+
+Incorrect. Shapley values quantify feature contributions; they do not directly optimize latency.
+
+C
+Confusion matrix → selects hyperparameters automatically
+
+Incorrect. It summarizes classification results; no automatic tuning.
+
+D
+ROC AUC → local explanation for a single prediction
+
+Incorrect. ROC AUC is a global threshold-free performance metric, not a local explainer.
+
+
+47. Under the AWS Shared Responsibility Model, which responsibilities belong to the CUSTOMER? (Select TWO.)
+
+A
+Physical security of data centers
+
+B
+Patching the guest operating system on EC2 instances
+
+C
+Securing the hypervisor layer
+
+D
+Configuring IAM policies with least privilege
+
+E
+Maintaining power/cooling in AWS Regions
+
+A
+Physical security of data centers
+
+Incorrect. AWS is responsible for security OF the cloud including facilities, hardware, and regions.
+
+B
+Patching the guest operating system on EC2 instances
+
+Correct. Customers are responsible for security IN the cloud for services like EC2, including OS patching.
+
+C
+Securing the hypervisor layer
+
+Incorrect. AWS secures the virtualization layer.
+
+D
+Configuring IAM policies with least privilege
+
+Correct. Customers must configure access controls and policies within their accounts.
+
+E
+Maintaining power/cooling in AWS Regions
+
+Incorrect. AWS handles data center operations.
+
+
+48. Which actions are BEST PRACTICES for the AWS root user? (Select TWO.)
+
+A
+Enable MFA on the root user
+
+B
+Create access keys for root for automation
+
+C
+Use root daily for administrative tasks
+
+D
+Do not share root credentials; create admin IAM users instead
+
+E
+Rotate root password weekly and distribute to the team
+
+A
+Enable MFA on the root user
+
+Correct. MFA adds a critical protection layer for the highly privileged root user.
+
+B
+Create access keys for root for automation
+
+Incorrect. Do not create root access keys; use IAM roles/users for automation.
+
+C
+Use root daily for administrative tasks
+
+Incorrect. Avoid using root except for a few account-level tasks.
+
+D
+Do not share root credentials; create admin IAM users instead
+
+Correct. Use individual IAM users/roles with permissions, never share root credentials.
+
+E
+Rotate root password weekly and distribute to the team
+
+Incorrect. Root credentials should not be shared.
+
+
+49. A company with many AWS accounts wants centralized workforce authentication and account access without creating IAM users in each account.
+
+Which service is the BEST fit?
+
+A
+AWS IAM Identity Center (AWS Single Sign-On)
+
+B
+AWS Directory Service
+
+C
+Amazon Cognito user pools
+
+D
+AWS Organizations Service Control Policies (SCPs)
+
+A
+AWS IAM Identity Center (AWS Single Sign-On)
+
+Correct. IAM Identity Center integrates with external identity providers and grants roles across multiple accounts.
+
+B
+AWS Directory Service
+
+Incorrect. Provides managed Microsoft AD/AD Connector, not cross-account SSO.
+
+C
+Amazon Cognito user pools
+
+Incorrect. Used for application end-user auth, not workforce access across AWS accounts.
+
+D
+AWS Organizations Service Control Policies (SCPs)
+
+Incorrect. SCPs set permission guardrails, not authentication and sign-in flows.
+
+
+50. A security team needs to log who called Amazon Bedrock APIs and when.
+
+Which service should they use?
+
+A
+Amazon CloudWatch metrics
+
+B
+AWS CloudTrail
+
+C
+AWS Config
+
+D
+Amazon Inspector
+
+A
+Amazon CloudWatch metrics
+
+Incorrect. CloudWatch tracks metrics/logs; it doesn’t provide API caller identity/audit trails by default.
+
+B
+AWS CloudTrail
+
+Correct. CloudTrail records API calls, including the caller identity, time, and event details.
+
+C
+AWS Config
+
+Incorrect. Config tracks resource configuration changes, not API caller identity.
+
+D
+Amazon Inspector
+
+Incorrect. Inspector scans for vulnerabilities; it doesn’t log API calls.
+
+
+51. Which statements about S3 Block Public Access are TRUE? (Select TWO.)
+
+A
+Account-level Block Public Access overrides bucket ACLs and policies that allow public access
+
+B
+It prevents any access to S3, public or private
+
+C
+It can be enabled at the account or bucket level
+
+D
+It automatically encrypts S3 objects with a KMS key
+
+E
+It is required to use VPC interface endpoints
+
+A
+Account-level Block Public Access overrides bucket ACLs and policies that allow public access
+
+Correct. Account-level BPA enforces blocking public access even if a bucket policy/ACL allows it.
+
+B
+It prevents any access to S3, public or private
+
+Incorrect. It blocks public access; private, authorized access still works.
+
+C
+It can be enabled at the account or bucket level
+
+Correct. You can configure BPA either per bucket or across the entire account.
+
+D
+It automatically encrypts S3 objects with a KMS key
+
+Incorrect. BPA is about access control, not encryption.
+
+E
+It is required to use VPC interface endpoints
+
+Incorrect. PrivateLink usage is independent of BPA.
+
+
+52. Which statements about encryption with AWS KMS are TRUE? (Select TWO.)
+
+A
+S3, DynamoDB, and SageMaker can provide default server-side encryption without configuration
+
+B
+Customer-managed CMKs allow you to control key policies and rotation
+
+C
+KMS replaces TLS for API calls
+
+D
+Server-side encryption requires the application to encrypt data before upload
+
+E
+Service-managed keys cannot be disabled by customers
+
+A
+S3, DynamoDB, and SageMaker can provide default server-side encryption without configuration
+
+Correct. These services can encrypt at rest by default with service-managed keys.
+
+B
+Customer-managed CMKs allow you to control key policies and rotation
+
+Correct. CMKs you create grant control over policies, rotation, and enable/disable status.
+
+C
+KMS replaces TLS for API calls
+
+Incorrect. KMS is for key management; TLS secures data in transit.
+
+D
+Server-side encryption requires the application to encrypt data before upload
+
+Incorrect. That describes client-side encryption; server-side encrypts on the service side.
+
+E
+Service-managed keys cannot be disabled by customers
+
+Incorrect. This statement is too broad and depends on the service; not a general KMS truth.
+
+
+53. A data science team launches SageMaker Studio in a VPC without internet access. They still need access to S3, CloudWatch, and SageMaker APIs privately.
+
+What should they configure?
+
+A
+NAT gateway and internet gateway for the subnets
+
+B
+VPC interface endpoints (AWS PrivateLink) for S3, CloudWatch, and SageMaker endpoints
+
+C
+VPC peering to the AWS service VPCs
+
+D
+Transit gateway attachments to AWS services
+
+A
+NAT gateway and internet gateway for the subnets
+
+Incorrect. This allows internet egress; the requirement is private access only.
+
+B
+VPC interface endpoints (AWS PrivateLink) for S3, CloudWatch, and SageMaker endpoints
+
+Correct. Interface endpoints keep traffic within AWS private networking for supported services.
+
+C
+VPC peering to the AWS service VPCs
+
+Incorrect. AWS services are accessed via PrivateLink, not direct peering.
+
+D
+Transit gateway attachments to AWS services
+
+Incorrect. TGW is for VPC/VPN interconnects, not for private service endpoints.
+
+
+54. Which scenarios align with Amazon Macie? (Select TWO.)
+
+A
+Discover and alert on PII in S3 buckets
+
+B
+Scan ECR images for vulnerabilities
+
+C
+Inventory S3 buckets and their public access/encryption status
+
+D
+Monitor IAM access key usage events
+
+E
+Detect anomalous console login patterns
+
+A
+Discover and alert on PII in S3 buckets
+
+Correct. Macie uses ML and pattern matching to identify PII and generate findings.
+
+B
+Scan ECR images for vulnerabilities
+
+Incorrect. This is Amazon Inspector, not Macie.
+
+C
+Inventory S3 buckets and their public access/encryption status
+
+Correct. Macie generates an S3 bucket inventory including access and encryption posture.
+
+D
+Monitor IAM access key usage events
+
+Incorrect. Use CloudTrail/CloudWatch/GuardDuty for such monitoring.
+
+E
+Detect anomalous console login patterns
+
+Incorrect. This falls under GuardDuty/CloudTrail analytics.
+
+
+55. Which are common AI-specific security risks and appropriate mitigations? (Select TWO pairs.)
+
+A
+Adversarial inputs → validate/sanitize inputs; train with adversarial examples
+
+B
+Model inversion → limit output detail; restrict access; monitor usage
+
+C
+Prompt injection → disable TLS for faster inspection
+
+D
+Data poisoning → only increase training epochs
+
+E
+Reverse engineering → provide full model internals to users
+
+A
+Adversarial inputs → validate/sanitize inputs; train with adversarial examples
+
+Correct. Input validation and adversarial training help mitigate adversarial perturbations.
+
+B
+Model inversion → limit output detail; restrict access; monitor usage
+
+Correct. Reduce information leakage and access surface; watch for abusive usage patterns.
+
+C
+Prompt injection → disable TLS for faster inspection
+
+Incorrect. TLS must remain enabled; develop detection and guardrail strategies.
+
+D
+Data poisoning → only increase training epochs
+
+Incorrect. Training longer does not fix poisoned data; you must validate and clean data.
+
+E
+Reverse engineering → provide full model internals to users
+
+Incorrect. This increases exposure; restrict details and access.
+
+
+56. A team wants to continuously monitor production model inputs and predictions for drift and trigger alerts.
+
+Which service is the BEST fit?
+
+A
+SageMaker Model Monitor with data capture
+
+B
+AWS Config conformance packs
+
+C
+AWS Trusted Advisor
+
+D
+Amazon Kendra
+
+A
+SageMaker Model Monitor with data capture
+
+Correct. Model Monitor compares live data to baselines and can emit metrics/alerts.
+
+B
+AWS Config conformance packs
+
+Incorrect. Evaluate resource configuration compliance, not model drift.
+
+C
+AWS Trusted Advisor
+
+Incorrect. Provides best-practice checks for the account, not model drift.
+
+D
+Amazon Kendra
+
+Incorrect. Enterprise search, not model monitoring.
+
+
+57. Which statements about SageMaker Model Registry and lineage are TRUE? (Select TWO.)
+
+A
+Model Registry stores model versions with metadata and approval status
+
+B
+Models can be deployed directly from the registry
+
+C
+Model lineage is only available for training jobs, not processing or batch transform
+
+D
+Lineage lets you query relationships like which datasets produced a model
+
+E
+Model Registry automatically deletes older versions when a new one is added
+
+A
+Model Registry stores model versions with metadata and approval status
+
+Correct. The registry tracks model artifacts, metrics, and statuses (e.g., pending/approved).
+
+B
+Models can be deployed directly from the registry
+
+Correct. You can deploy registry versions to endpoints or batch jobs.
+
+C
+Model lineage is only available for training jobs, not processing or batch transform
+
+Incorrect. Lineage spans multiple SageMaker job types and artifacts.
+
+D
+Lineage lets you query relationships like which datasets produced a model
+
+Correct. Lineage tracking enables queries across datasets, jobs, and models.
+
+E
+Model Registry automatically deletes older versions when a new one is added
+
+Incorrect. Versioning is retained unless explicitly cleaned up.
+
+
+58. A compliance team needs on-demand access to third-party audit reports (e.g., SOC, ISO) for AWS services.
+
+Which AWS service provides this access?
+
+A
+AWS Artifact
+
+B
+AWS Security Hub
+
+C
+AWS Config
+
+D
+Amazon Inspector
+
+A
+AWS Artifact
+
+Correct. Artifact provides on-demand access to security and compliance documents and reports.
+
+B
+AWS Security Hub
+
+Incorrect. Security Hub aggregates/security findings across services.
+
+C
+AWS Config
+
+Incorrect. Config tracks resource configurations and compliance to your own rules.
+
+D
+Amazon Inspector
+
+Incorrect. Inspector is for vulnerability scanning, not audit reports.

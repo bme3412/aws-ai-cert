@@ -1,0 +1,105 @@
+AWS INFRASTRUCTURE AND TECHNOLOGIES FOR GENERATIVE AI APPLICATIONS
+
+OVERVIEW
+This section covers AWS infrastructure and technologies for building generative AI applications, including advantages, security considerations, cost trade-offs, and specific AWS services.
+
+ADVANTAGES OF USING AWS GENERATIVE AI SERVICES
+- Accessibility and lower barrier to entry
+- Efficiency and cost-effectiveness
+- Speed to market
+- Ability to meet business objectives
+- Transfer learning capabilities for faster model training
+- Pre-trained models available through SageMaker JumpStart
+
+AWS INFRASTRUCTURE FOR GENERATIVE AI
+AWS provides a three-layer generative AI stack:
+
+Bottom Layer - Foundation Tools:
+- Tools for building and training LLMs and foundation models
+- Specialized hardware for AI workloads (AWS Inferentia, Trainium, GPUs)
+- AWS Nitro System for security enforcement
+- Hardware optimized for price-performance compared to traditional CPUs/GPUs
+
+Middle Layer - Models and Development Tools:
+- Access to foundation models
+- Tools for building and scaling generative AI applications
+- ML services for training and tuning foundation models
+- Platform design for development, deployment, and iteration
+
+Top Layer - Applications:
+- Applications using LLMs and foundation models
+- Dashboards and prompt engineering tools
+- Specific architectures like Retrieval-Augmented Generation (RAG)
+- Code writing, debugging, content generation, and insight derivation
+
+SECURITY AND COMPLIANCE
+AWS prioritizes security across all layers:
+- Zero access to sensitive AI data by unauthorized personnel
+- Protection of AI model weights and processed data
+- Security policies, standards, and guidelines for AI workloads
+- Protection against vulnerabilities like prompt injection, data poisoning, and model inversion
+- Implementation of encryption, multi-factor authentication, and continuous monitoring
+
+COST TRADE-OFFS AND PRICING MODELS
+Two main pricing approaches for LLMs:
+
+1. Self-Hosted Infrastructure:
+- Pay for computing resources required to run models
+- Potential license fees for the LLM itself
+- Requires infrastructure investment and maintenance
+
+2. Token-Based Pricing:
+- Pay per token processed (input and output)
+- Tokens represent discrete units of information (characters, words, pixels)
+- Provides scalability without infrastructure investment
+- AWS pay-by-token model offers flexibility
+
+AWS GLOBAL INFRASTRUCTURE
+- Regions, edge locations, and Availability Zones
+- Globally resilient, regionally resilient, and availability zone resilient services
+- High availability and fault tolerance built into managed services
+- Layered architecture: Infrastructure → Machine Learning → AI Services
+
+KEY AWS SERVICES FOR GENERATIVE AI
+
+SageMaker JumpStart:
+- Model hub for quickly deploying foundation models
+- Provides fine-tuning and deployment capabilities
+- Includes blogs, videos, and example notebooks
+- Requires GPUs for fine-tuning and deployment
+- Cost optimization through endpoint management
+
+Amazon Bedrock:
+- Managed service for accessing multiple foundation models via APIs
+- Includes AWS-curated models and third-party models (Cohere, Stability AI)
+- Custom weights import for supported model architectures
+- On-demand pricing with no time-based commitments
+- Playgrounds for experimentation and model evaluation
+- PartyRock playground for building applications and learning techniques
+
+Amazon Titan:
+- Amazon's own foundation model
+- General-purpose foundation model
+- Strong text generation capabilities
+
+VECTOR DATABASES AND EMBEDDINGS
+- Generative AI applications can use vector databases
+- Data stored as embeddings (compressed, indexed vectors)
+- Enables advanced searches and data retrieval
+
+BEST PRACTICES AND CONSIDERATIONS
+- Most organizations won't train their own LLMs due to cost and complexity
+- Self-hosting requires significant hardware expenses and data storage costs
+- AWS helps build and scale applications with enterprise-grade security
+- Customization of data and use cases
+- Access to industry-leading foundation models of all sizes and types
+- Cost monitoring and optimization through proper endpoint management
+
+BUSINESS VALUE
+AWS generative ai services enable organizations to:
+- Deliver new customer and employee experiences
+- Customize data and use cases
+- Use industry-leading foundation models
+- Implement enterprise-grade security and privacy
+- Scale applications effectively
+- Focus on business objectives rather than infrastructure management
