@@ -1,0 +1,33 @@
+Now that we know what it is, let's talk about the available tools to help us choose models that meet our transparency and explainability objectives. Open source software is developed collaboratively and out in the open. Platforms like GitHub service repositories for these open source AI projects. Because everything is shared, users obtain an understanding of the model's construction and inner workings, which maximizes its transparency.
+
+Because an AI model's inner workings are open for scrutiny, it instills confidence in its fairness. Many users across the globe contribute to open source projects, which results in increased diversity of the developers and less bias. Also, because more people are involved in development, issues with bias or coding are more likely to be caught.
+
+However, with maximum transparency through open source projects, some companies have concerns about model safety. They block their employees from developing with open source code or even using models that are developed with it. They prefer proprietary development and therefore, limit the transparency of their models for safety reasons.
+
+When using a fully trained model that's hosted by AWS, you only interact with APIs and have no direct access to the model. So AWS needs to be transparent about how the core dimensions of responsible AI are addressed. AI service cards are a form of responsible AI documentation. They provide customers with a single place to learn about the intended use cases, limitations, responsible AI design choices, and deployment and performance optimization best practices, AI service cards currently exist for several of their AI service APIs.
+
+These APIs include matching faces with Amazon Rekognition, analyzing IDs with Amazon Textract, detecting PII with Amazon Comprehend and more. There is also an AI service card for Amazon's foundation model in Amazon Bedrock, Amazon Titan Text.
+
+For models that you create, you can use SageMaker Model Cards to help document the lifecycle of a model from designing, building, training, and evaluation. When you create a model card, SageMaker autopopulates details about your SageMaker trained model in the card. For example, these details can include how the model was trained, along with the datasets and containers that are used.
+
+Besides reporting on bias, SageMaker Clarify model processing jobs can also report on explainability. SageMaker Clarify provides feature attributions based on the concept of Shapley values. You can use Shapley values to determine the contribution that each feature made to the model predictions. This bar chart shows the top four most impactful features used by a model.
+
+Another type of analysis available in SageMaker Clarify is a partial dependence plot. This plot shows you how a model's predictions changes for different values of a feature. In this case, it looks at age.
+
+Now let's focus on how we can get more human involvement in AI development and design. Human-centered AI refers to designing AI systems that prioritize the needs and values of humans.
+
+In human-centered AI, designers and developers engage in interdisciplinary collaboration and often involve psychologists, ethicists, and domain experts to collect diverse perspectives and expertise. Users are involved in the development process to make sure that the AI will be genuinely beneficial and user-friendly.
+
+The goal of human-centered AI is to enhance human abilities rather than replace them. Human-centered AI aligns with the principles of ethical AI that we have discussed. It incorporates humans in each stage of development to make sure that AI is transparent, explainable, fair, unbiased, and maintains privacy.
+
+This service, Amazon Augmented AI or Amazon A2I, incorporates human review for samples of the inferences made by an AWS AI service or a custom model. You can configure Amazon A2I to send inferences with low-confidence scores to human reviewers before sending them to the client. Their feedback can then be added to training data to re-train the model. Besides reviewing low-confidence inferences, you can have the human reviewers review random predictions as a way to audit the model.
+
+With Amazon A2I, you can use a pool of reviewers in your own organization or use Mechanical Turk. You can figure how many reviewers need to review each prediction. For an example use case, consider that you are using Amazon Rekognition to detect images containing explicit or offensive content.
+
+Humans can review the predictions from Amazon Rekognition that have low confidence to be certain that explicit content does not pass through. Reinforcement learning from human feedback, or RLHF, is an industry standard technique for ensuring that large language models produce content that is truthful, harmless, and helpful.
+
+Recall that reinforcement learning techniques train models to make decisions that maximize rewards, which makes their output more accurate. RLHF incorporates human feedback in the rewards function, so the ML model can perform tasks that are more aligned with human goals, wants, and needs.
+
+To use this technique, you train a separate model which serves as a reward model. The reward model is trained by humans who review multiple responses from the large language model for the same prompt and indicate their preferred response. Their preferences become the training data for the reward model, which when trained, can predict how high a human would score a prompt response.
+
+The large language model then uses the reward model to refine its responses for maximum reward. Collecting the preferences from humans for RLHF can be accomplished most readily with SageMaker Ground Truth, which we discussed when we covered labeling training data. In this screenshot, you can see that human workers are presented with multiple responses and asked to rank each one for clarity.

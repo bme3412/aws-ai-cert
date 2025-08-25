@@ -1,0 +1,33 @@
+Data quality management addresses data quality issues that are found in data profiling or through other means. Wherever possible, we need to get to the root of what's causing the data quality problems. To this end, we need business and technical knowledge of the data and its role in the targeted initiative.
+
+If the problem involves the source, we must alert and report the issues to the data steward and business users who can correct the issues. Data integration is about collecting and merging data from a variety of sources. We need to ensure that data from different sources links together coherently so that they can be combined to gain a more complete picture.
+
+An AWS Glue Data Catalog stores metadata about your data sources. This metadata includes information about the locations and schemas, including data types and table definitions. You can populate the data catalog manually, or you can define an AWS Glue crawler job that scans data sources and populates the catalog automatically.
+
+AWS Glue Data Quality evaluates objects that are stored in the AWS Glue Data Catalog. It offers non-coders a straightforward way to set up data quality rules, including recommending quality rules and automatically using machine learning to detect data anomalies.
+
+After you define the rule set, you run an AWS Glue Data Quality job. You then review the results in the console that show which rules did or did not pass. Data security means defining who can have access to data and when they should have access to data.
+
+For example, certain customer data needs to be automatically accessible by certain roles like customer service or sales. Typically, the data steward helps to enable a role-based and temporary access guided by policy decisions established by the data owner.
+
+Compliance means understanding government regulations and making sure that we comply with those regulations. To ensure compliance, data owners must work with the security and legal teams to make policy decisions for sensitive data domains. The rules often require interpretation, judgment, and knowledge of how the data is used in the business.
+
+Data lifecycle management means being intentional about storing data for straightforward access and optimized cost.
+
+Data governance is about making data available to the right people and applications when they need it, while keeping the data safe and secure with appropriate controls in place. So it's a balance between control and access. Too much control and your data becomes locked in silos and difficult to use for insights and innovation that can help the business. Not enough control and your data and business are at risk.
+
+With AWS Lake Formation, you can manage fine-grained access control for a data lake built in Amazon S3 and cataloged using AWS Glue Data Catalog. Lake Formation permissions are enforced using granular controls at the column, row, and cell levels across AWS analytics and machine learning services. Lake Formation helps you break down data in silos and combine different types of structured and unstructured data into a centralized repository.
+
+You can identify existing data stores in Amazon S3 or relational and NoSQL databases, and move the data into your data lake. Then you catalog the data and set up the permissions. A user might try to access the data by using an integrated analytical engine like Athena, AWS Glue, Amazon EMR, or Amazon Redshift.
+
+In that case, the AWS Glue Data Catalog checks the permissions with Lake Formation before granting access. Training data for your models is typically stored in S3 buckets. After using it to train your model, you might not need to access it again, but still need to retain it for compliance reasons. Amazon S3 offers different storage classes, which are optimized for cost based on the frequency of access.
+
+Amazon S3 Standard is the storage class that you use for frequently accessed data. S3 Standard-IA and S3 One Zone-IA are for storing data that is less frequently accessed, but must be quickly retrievable when needed. These classes are less costly for storage, but more costly for retrieval than S3 Standard.
+
+The S3 Intelligent-Tiering class is for data with unknown or changing access patterns. It will automatically move less frequently accessed objects into lower-cost infrequent access tiers. S3 Glacier storage classes are for rarely accessed data and used primarily to retain data in a long-term archive for data retention or compliance reasons.
+
+The different classes of S3 Glacier provide options for how quickly you can retrieve your data from an archive when needed. When you know your data's access patterns, you should create lifecycle rules on your buckets. These rules will move your data into the infrequent access and archive tiers as the rule conditions are met.
+
+For each lifecycle rule, you specify the target storage class and the number of days after creation that the data should be transitioned. You can also choose to create a rule that deletes the data when it is no longer needed to be retained.
+
+For example, you could create a lifecycle rule that transitions your data from S3 Standard to S3 Standard-IA 5 days after creation. Then it would move the data into S3 Glacier Deep Archive, 120 days after creation and delete the data after 5 years.

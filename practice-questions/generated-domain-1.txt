@@ -1,0 +1,498 @@
+1. A company processes millions of historical transactions nightly to generate risk scores. The results are not needed in real time, and cost efficiency is important.
+
+Which inference approach should the company choose? (Select TWO.)
+
+A
+Real-time inference
+
+B
+Batch processing (batch transform)
+
+C
+Asynchronous inference
+
+D
+Interactive human-in-the-loop review for every record
+
+E
+Serverless real-time inference
+
+A
+Real-time inference
+
+Incorrect. Real-time inference provides low-latency responses through a persistent endpoint and is best for interactive applications. It is not the most cost-effective for large offline batches.
+
+B
+Batch processing (batch transform)
+
+Correct. Batch processing is ideal for offline, large-scale inference where results can wait. Compute runs only during processing, improving cost efficiency for nightly jobs.
+
+C
+Asynchronous inference
+
+Correct. Asynchronous inference supports large payloads and longer processing times with the ability to scale to zero between requests, improving cost efficiency when immediate responses are not required.
+
+D
+Interactive human-in-the-loop review for every record
+
+Incorrect. Human review increases latency and cost and is not necessary for automated offline scoring at scale.
+
+E
+Serverless real-time inference
+
+Incorrect. Serverless real-time inference handles spiky, interactive traffic. For large offline jobs, batch or asynchronous processing is more cost-effective.
+
+
+2. A security team wants to cluster similar network activity to detect unusual behavior without labeled data.
+
+Which ML learning style is MOST appropriate?
+
+A
+Supervised learning (classification)
+
+B
+Unsupervised learning (clustering/anomaly detection)
+
+C
+Reinforcement learning
+
+D
+Regression
+
+A
+Supervised learning (classification)
+
+Incorrect. Supervised learning requires labeled target values and is not suited for unlabeled anomaly discovery.
+
+B
+Unsupervised learning (clustering/anomaly detection)
+
+Correct. Unsupervised learning groups similar records and can surface deviations as anomalies without labeled targets.
+
+C
+Reinforcement learning
+
+Incorrect. Reinforcement learning optimizes actions via rewards in an environment and is not a fit for clustering logs.
+
+D
+Regression
+
+Incorrect. Regression predicts continuous numeric targets and requires labeled outputs.
+
+
+3. A data scientist is preparing a dataset for training and needs to perform a proper split for model development.
+
+Which split is a common best practice?
+
+A
+90% training, 5% validation, 5% test
+
+B
+80% training, 10% validation, 10% test
+
+C
+70% training, 15% validation, 15% test
+
+D
+60% training, 20% validation, 20% test
+
+A
+90% training, 5% validation, 5% test
+
+Incorrect. While possible, this leaves limited data for evaluation; a more common distribution is 80/10/10.
+
+B
+80% training, 10% validation, 10% test
+
+Correct. A typical recommendation is 80% for training, 10% for validation/model selection, and 10% for final testing.
+
+C
+70% training, 15% validation, 15% test
+
+Incorrect. This can work, but 80/10/10 is the common default cited in the lifecycle guidance.
+
+D
+60% training, 20% validation, 20% test
+
+Incorrect. This reduces training data more than necessary for standard scenarios.
+
+
+4. A model shows very high accuracy on training data but poor accuracy on new, unseen data.
+
+What is the MOST likely cause?
+
+A
+Underfitting
+
+B
+Overfitting
+
+C
+Too much training data
+
+D
+Too few features
+
+A
+Underfitting
+
+Incorrect. Underfitting would typically produce low accuracy on both training and test sets.
+
+B
+Overfitting
+
+Correct. Overfitting occurs when the model learns patterns specific to the training data and fails to generalize to new data.
+
+C
+Too much training data
+
+Incorrect. More high-quality data typically helps generalization rather than harms it.
+
+D
+Too few features
+
+Incorrect. Too few features can limit performance but does not explain the train/test accuracy gap as directly as overfitting.
+
+
+5. A team is concerned about bias in a loan approval model.
+
+Which actions can help mitigate bias? (Select TWO.)
+
+A
+Increase the learning rate during training
+
+B
+Collect and incorporate more diverse, representative training data
+
+C
+Remove or de-emphasize sensitive attributes where appropriate
+
+D
+Reduce the context window during inference
+
+E
+Train longer to reduce loss
+
+A
+Increase the learning rate during training
+
+Incorrect. Learning rate tuning affects optimization dynamics, not fairness directly.
+
+B
+Collect and incorporate more diverse, representative training data
+
+Correct. Improving data representativeness helps reduce demographic disparities and bias.
+
+C
+Remove or de-emphasize sensitive attributes where appropriate
+
+Correct. Removing or down-weighting sensitive attributes (e.g., gender) and monitoring fairness metrics are standard mitigation steps.
+
+D
+Reduce the context window during inference
+
+Incorrect. Context window relates to sequence length in LLMs and is unrelated to fairness mitigation.
+
+E
+Train longer to reduce loss
+
+Incorrect. Longer training can exacerbate overfitting and does not guarantee fairness improvements.
+
+
+6. A team is deploying a containerized ML model behind an HTTP API for interactive predictions.
+
+Which statements are TRUE? (Select TWO.)
+
+A
+Model artifacts are typically stored in Amazon S3 and model code is containerized in Amazon ECR images
+
+B
+Amazon API Gateway can forward POST requests to AWS Lambda that runs model inference code
+
+C
+Batch Transform is the preferred option for low-latency interactive requests
+
+D
+Real-time inference endpoints are not suitable for persistent traffic
+
+E
+Asynchronous inference is limited to processing times under 10 seconds
+
+A
+Model artifacts are typically stored in Amazon S3 and model code is containerized in Amazon ECR images
+
+Correct. A common pattern is to store model artifacts in S3 and package inference code in an ECR image for deployment.
+
+B
+Amazon API Gateway can forward POST requests to AWS Lambda that runs model inference code
+
+Correct. API Gateway can front an HTTP API and route requests to Lambda or other compute that runs the model.
+
+C
+Batch Transform is the preferred option for low-latency interactive requests
+
+Incorrect. Batch Transform is for offline batch jobs, not interactive low-latency inference.
+
+D
+Real-time inference endpoints are not suitable for persistent traffic
+
+Incorrect. Real-time endpoints are designed for persistent traffic and low latency.
+
+E
+Asynchronous inference is limited to processing times under 10 seconds
+
+Incorrect. Asynchronous inference supports long-running requests (up to minutes) and queuing.
+
+
+7. A business wants to predict house prices from features such as bedrooms, bathrooms, and square footage.
+
+Which problem type is the BEST fit?
+
+A
+Binary classification
+
+B
+Multiclass classification
+
+C
+Regression
+
+D
+Clustering
+
+A
+Binary classification
+
+Incorrect. Binary classification produces discrete labels, not continuous prices.
+
+B
+Multiclass classification
+
+Incorrect. Multiclass classification predicts one of several categories, not a continuous value.
+
+C
+Regression
+
+Correct. Regression predicts continuous numeric targets such as price.
+
+D
+Clustering
+
+Incorrect. Clustering groups unlabeled data and does not predict prices.
+
+
+8. A team reduces the number of features used for training by combining related features and removing those with little predictive power.
+
+What are valid benefits of this approach? (Select TWO.)
+
+A
+Reduced training memory and compute requirements
+
+B
+Eliminates the need for a validation set
+
+C
+Improved model generalization by reducing noise
+
+D
+Guarantees higher training accuracy
+
+E
+Guarantees zero bias in predictions
+
+A
+Reduced training memory and compute requirements
+
+Correct. Fewer features can lower memory usage and speed up training.
+
+B
+Eliminates the need for a validation set
+
+Incorrect. You still need a validation set for model selection and tuning.
+
+C
+Improved model generalization by reducing noise
+
+Correct. Removing low-value or noisy features can reduce overfitting and improve generalization.
+
+D
+Guarantees higher training accuracy
+
+Incorrect. Feature reduction often prioritizes generalization, which may not increase training accuracy.
+
+E
+Guarantees zero bias in predictions
+
+Incorrect. Feature engineering alone does not guarantee fairness.
+
+
+9. A manufacturer wants to detect defects from images on an assembly line.
+
+Which approach is MOST appropriate?
+
+A
+Traditional ML with linear regression on tabular sensor data only
+
+B
+Deep learning using computer vision on image data
+
+C
+Unsupervised clustering on text data
+
+D
+Rule-based system with hard-coded thresholds only
+
+A
+Traditional ML with linear regression on tabular sensor data only
+
+Incorrect. Image-based defect detection is better addressed with computer vision models.
+
+B
+Deep learning using computer vision on image data
+
+Correct. Deep learning excels at extracting patterns from unstructured data such as images.
+
+C
+Unsupervised clustering on text data
+
+Incorrect. The data are images, not text, and supervised CV is typically used for defect detection.
+
+D
+Rule-based system with hard-coded thresholds only
+
+Incorrect. Static rules are brittle for complex visual patterns.
+
+
+10. A compliance team requires that identical inputs always produce identical outputs for a business rule.
+
+Which system characteristic BEST matches this requirement? (Select TWO.)
+
+A
+Deterministic rule-based logic
+
+B
+Probabilistic ML model
+
+C
+Stochastic inference with temperature sampling
+
+D
+Auditable decision table with fixed outcomes
+
+E
+Neural network with dropout layers enabled during inference
+
+A
+Deterministic rule-based logic
+
+Correct. Deterministic systems produce the same output for the same input, satisfying strict repeatability.
+
+B
+Probabilistic ML model
+
+Incorrect. Probabilistic models may vary due to randomness, thresholds, or retraining.
+
+C
+Stochastic inference with temperature sampling
+
+Incorrect. Sampling introduces randomness into outputs.
+
+D
+Auditable decision table with fixed outcomes
+
+Correct. Fixed decision tables are deterministic and auditable.
+
+E
+Neural network with dropout layers enabled during inference
+
+Incorrect. Dropout during inference makes outputs non-deterministic.
+
+
+11. A startup needs fast time-to-value for a sentiment analysis feature in its app without hiring ML experts.
+
+Which options are MOST appropriate? (Select TWO.)
+
+A
+Use a pre-trained NLP service (e.g., Amazon Comprehend) via API
+
+B
+Train a custom model from scratch with raw text on EC2
+
+C
+Use a pre-trained foundation model without customization
+
+D
+Build and label a large dataset before any prototyping
+
+E
+Deploy a real-time endpoint before evaluating business value
+
+A
+Use a pre-trained NLP service (e.g., Amazon Comprehend) via API
+
+Correct. Pre-trained services provide immediate capabilities with minimal ML expertise and fast integration.
+
+B
+Train a custom model from scratch with raw text on EC2
+
+Incorrect. Training from scratch is the most complex and costly path.
+
+C
+Use a pre-trained foundation model without customization
+
+Correct. Starting with a pre-trained FM can deliver value quickly; customization can be evaluated later if needed.
+
+D
+Build and label a large dataset before any prototyping
+
+Incorrect. This delays value; evaluate hosted or pre-trained options first.
+
+E
+Deploy a real-time endpoint before evaluating business value
+
+Incorrect. Start by validating fit and value before committing to persistent endpoints.
+
+
+12. A model in production starts to degrade even though the code has not changed. The distribution of incoming data has shifted relative to training data.
+
+What is this issue called, and what action is appropriate? (Select TWO.)
+
+A
+Data drift; alert and retrain the model
+
+B
+Concept drift; reduce the number of features
+
+C
+Data drift; ignore until accuracy drops to zero
+
+D
+Concept drift; reassess target definition and labels
+
+E
+Bias drift; only increase training epochs
+
+A
+Data drift; alert and retrain the model
+
+Correct. Data drift occurs when input distributions change; monitoring should alert and trigger retraining.
+
+B
+Concept drift; reduce the number of features
+
+Incorrect. Concept drift concerns changes in the relationship between inputs and target; reducing features is not the primary remedy.
+
+C
+Data drift; ignore until accuracy drops to zero
+
+Incorrect. Drift should be addressed proactively via monitoring and retraining.
+
+D
+Concept drift; reassess target definition and labels
+
+Correct. Concept drift indicates the target meaning or relationship has changed; review labels and objectives and retrain.
+
+E
+Bias drift; only increase training epochs
+
+Incorrect. Simply increasing epochs does not resolve drift or fairness issues.

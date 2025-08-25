@@ -1,0 +1,280 @@
+Domain 5.1: Secure AI Implementation and Best Practices
+
+5.1.1: AWS Shared Responsibility Model and IAM Fundamentals
+
+AWS Shared Responsibility Model
+- Security and compliance shared between AWS and customer
+- AWS responsibilities: security of the cloud (infrastructure, hardware, software, networking)
+- Customer responsibilities: security in the cloud (service configuration, data security, access management)
+- AWS secures global infrastructure, regions, availability zones, data centers
+- Customers responsible for secure service usage, access limitation, encryption, best practices
+
+Service-Level Responsibilities
+- Level of customer responsibility depends on service chosen
+- Example: EC2 deployment requires managing OS, security patches, scaling, application security
+- SageMaker Serverless Inferencing: fully managed, minimal customer management
+- AWS manages underlying infrastructure, no need to manage instances or scaling policies
+
+AWS Identity and Access Management (IAM)
+- Web service for managing and securing access to AWS accounts and resources
+- Create and manage AWS users with specific permissions
+- Control actions through IAM permission policies
+- Global resource, not region-specific
+- Integrated with all AWS services
+- Supports multifactor authentication (MFA)
+- Enables identity federation
+- No additional charge, only pay for accessed services
+
+Root User Security
+- Single identity with complete access to all AWS services and resources
+- Cannot restrict permissions
+- Must keep credentials safe
+- Best practices: strong password, enable MFA, never share credentials
+- Disable/delete access keys
+- Use only for billing account management
+- Create IAM user with administrative permissions for everyday tasks
+
+Authentication Security
+- Single-factor authentication: username/password (at risk)
+- Multifactor authentication (MFA) recommended
+- MFA prevents access even if password compromised
+- Requires physical/virtual MFA device
+- Enable MFA immediately after account creation
+
+5.1.2: IAM Policies, Groups, and Roles
+
+IAM Policies
+- JSON documents allowing or denying permissions to AWS services and resources
+- Follow principle of least privilege: grant only required permissions
+- Example: policy permitting start/stop EC2 instances
+- Can be assigned at user level
+
+IAM Groups
+- Collections of IAM users
+- Assign policies to groups for efficient permission management
+- Organize by job functions (developers, testers, administrators)
+- Users can belong to multiple groups
+- Groups cannot belong to other groups
+- Best practice: attach policies to groups, unique permissions to users
+
+IAM Roles
+- Identity that can be assumed for temporary access
+- Provides temporary security credentials that automatically expire
+- Used by IAM users, AWS services, or external identity providers
+- Associated trust policy determines who can assume role
+- Better practice than long-lived credentials
+
+Policy Types
+- Identity-based policies: attached to users, groups, and roles
+- Resource-based policies: applied at resource level (e.g., S3 bucket policies)
+- Total permissions: combination of both policy types
+- Explicit deny in either policy overrides allow
+
+5.1.3: Identity Federation and Monitoring
+
+Identity Federation
+- Alternative to managing IAM users in account
+- Users authenticate with external identity provider (e.g., Active Directory)
+- Given temporary credentials for AWS
+- AWS IAM Identity Center enables external identity provider integration
+
+AWS IAM Identity Center
+- Use external identity provider or create directory within IAM Identity Center
+- Workforce users/identities directed to portal
+- Access AWS console or obtain temporary access keys
+- Advantage for organizations with multiple AWS accounts
+- Central repository for managing permissions across accounts
+- Uses roles for temporary permissions (better than long-lived credentials)
+- AWS recommends IAM Identity Center over IAM for user management
+
+Auditing and Monitoring
+- Must log and review user actions for security validation
+- AWS CloudTrail captures API calls and related events
+- Delivers log files to specified S3 bucket
+- SageMaker integrated with CloudTrail
+- Captures all SageMaker API calls except endpoint invocation
+- Logs include: request details, IP address, user identity, timestamp
+
+Data Security Responsibilities
+- Customers responsible for managing access to data
+- Keep training data and artifacts private and secure
+- Amazon S3 Block Public Access feature
+- Block public access at bucket or account level
+- Account-level setting overrides bucket policies and access control lists
+
+SageMaker Role Manager
+- Simplifies creating IAM roles for ML activities
+- Three pre-configured role personas with predefined permissions
+- 12 ML activities covered
+- Permissions for other services: S3, Glue, Athena, CloudWatch
+- Personas: data scientist, MLOps, SageMaker compute
+- Customizable activities and additional IAM policies
+
+5.1.4: Data Encryption and Network Security
+
+Data Encryption Requirements
+- Customer responsibility to ensure data encryption
+- Common requirement in compliance standards
+- All AWS services offer encryption at rest and in transit
+- Encryption prevents data reading even if storage accessed
+- Encryption keys required for decryption
+
+Encryption Implementation
+- Client-side encryption: customer encrypts before sending to AWS
+- Server-side encryption: AWS service encrypts data
+- Server-side encryption: easiest, most consistent implementation
+- Default encryption in S3, DynamoDB, SageMaker
+- Default encryption uses service-owned keys
+
+AWS Key Management Service (KMS)
+- Create, manage, and use encryption keys in AWS account
+- Control key usage through IAM policies
+- Additional layer of protection for data
+- Customer-managed keys: control policies, rotation, enable/disable
+- Service-managed keys: AWS manages automatically
+
+Network Security
+- All AWS service endpoints support TLS for secure HTTPS connections
+- API and console requests encrypted
+- SageMaker distributed training: inter-node traffic encryption optional
+- Enabling inter-node encryption may increase training times
+
+Amazon Macie
+- Continually evaluates S3 buckets
+- Generates inventory of size, state, access, encryption status
+- Uses ML and pattern matching to identify sensitive data (PII)
+- Alerts integrated in ML workflow for automated remediation
+- PII should be removed from training data at ingestion/transformation
+
+VPC Configuration
+- AWS provides Virtual Private Clouds (VPCs) for private networks
+- SageMaker Studio and notebook instances launched in SageMaker-managed VPC
+- Default direct internet access (risks malicious code download)
+- Best practice: create own VPC and specify when launching SageMaker
+- Control traffic through security groups, network ACLs, firewalls
+- VPC only mode prevents internet access
+
+VPC Interface Endpoints
+- Connect VPC directly to AWS services using AWS PrivateLink
+- Keep network traffic over private network
+- SageMaker Studio can access external services through VPC endpoints
+- Maintains security while enabling necessary service access
+
+5.1.5: AI-Specific Security Threats and Mitigation
+
+AI System Vulnerabilities
+
+Training Data Attacks
+- Malicious actors can introduce data to change model predictions
+- Example: fraud detection model trained with mislabeled fraudulent transactions
+- Model misclassifies transactions, allowing fraud without detection
+
+Adversarial Inputs
+- Attackers manipulate input data to cause misclassification
+- Example: subtle image modifications to fool face recognition
+- Model recognizes attacker as someone else
+
+Model Inversion
+- Sophisticated attackers infer training data from model outputs
+- Repeatedly feed data, study outputs, make changes
+- Example: facial recognition model reveals employee images
+- High-confidence outputs indicate successful attack
+
+Model Reverse Engineering
+- Attackers create reverse model from input/output pairs
+- Train new model on original model's outputs
+- Infer training input data
+- More model information = more accurate copy
+
+Prompt Injection (LLMs)
+- Attackers give malicious instructions in prompts
+- Goal: influence model output, ignore prompt templates
+- Gain sensitive information through manipulated responses
+
+Mitigation Strategies
+
+Access Control and Monitoring
+- Secure and limit access to data and models
+- Monitor models in production for drift and anomalies
+- Follow principle of least privilege
+- Configure appropriate permissions policies
+- Block public access
+
+Data Protection
+- Encrypt data and artifacts
+- Limit and control model access to prevent reverse engineering
+- Inspect and validate user input data
+- Look for unusual patterns in model inputs
+
+Model Training and Validation
+- Train models with adversarial inputs
+- Frequent re-training on new data
+- Separate validation dataset
+- Validate model after each re-training
+- Scan and monitor data for quality and anomalies
+
+SageMaker Model Monitor
+- Monitors quality of ML models in production
+- Continuous real-time monitoring
+- Automated alert system for deviations
+- Monitors data quality and model performance
+- Generates statistics and metrics
+- Results visible in SageMaker Studio and CloudWatch
+
+5.1.6: Model Artifact Tracking and Governance
+
+Model Artifact Tracking
+- Essential requirement for model reproduction
+- Meet regulatory and control requirements
+- All development artifacts must be versioned and tracked
+- Code repositories: GitHub, AWS CodeCommit
+- Datasets: Amazon S3 with partitioned prefixes
+- Container images: Amazon ECR with unique IDs and tags
+
+SageMaker Model Registry
+- Catalog models in model groups with different versions
+- Each model package corresponds to trained model
+- Associate and view model metadata and training metrics
+- Deploy models directly from registry
+- Maintain model status: pending, approved, rejected
+
+SageMaker Model Cards
+- Document, retrieve, and share essential model information
+- Immutable record from conception to deployment
+- Include intended uses, risk ratings, training details, evaluation results
+- Exportable to PDF for stakeholder sharing
+- Used by risk managers, data scientists, ML engineers
+
+ML Lineage Tracking
+- Automatic graphical representation of end-to-end ML workflow
+- Establish model governance and reproduce workflows
+- Maintain work history record
+- Creates tracking entities for trial components, trials, experiments
+- Query lineage data to discover entity relationships
+- Example: find models using particular dataset or container image
+
+SageMaker Feature Store
+- Centralized store for features and associated metadata
+- Features easily discovered and reused
+- Reduces repetitive data processing and curation
+- Workflow pipelines convert raw data to features
+- View feature group lineage
+- Point-in-time queries for historical feature states
+
+SageMaker Model Dashboard
+- Centralized portal for viewing all models in account
+- Aggregates information from Model Monitor and Model Cards
+- Visualize workflow lineage and track endpoint performance
+- Track deployed models and batch transform usage
+- Monitor real-time prediction performance
+- Identify models violating thresholds for data quality, model quality, bias, explainability
+
+Key Takeaways
+- AWS shared responsibility model: AWS secures cloud infrastructure, customers secure data and access
+- IAM provides comprehensive access control with policies, groups, and roles
+- Identity federation enables external authentication while maintaining security
+- Data encryption essential for compliance and security (at rest and in transit)
+- VPC configuration critical for network security and access control
+- AI systems vulnerable to specific attacks requiring proactive mitigation strategies
+- Comprehensive monitoring and tracking essential for model governance and security
+- SageMaker provides integrated tools for security, monitoring, and artifact tracking

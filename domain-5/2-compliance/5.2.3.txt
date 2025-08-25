@@ -1,0 +1,25 @@
+To help customers achieve compliance, AWS provides services and features to help audit, monitor, control and report on relevant security controls that customers must configure correctly.
+
+AWS Audit Manager maps your compliance requirements to your AWS usage data. It collects evidence of compliance or noncompliance and produces assessment reports that can be given to auditors. Audit Manager will create an assessment based on a chosen framework, which is a grouping of controls that are related to your audit. It has built-in frameworks including ones for generative AI best practices and SOC 2.
+
+You also can define your own framework tailored to assess your specific controls of concern. When you create an assessment, Audit Manager automatically assesses resources in your AWS accounts and services based on controls that are defined in the framework. Then it collects the relevant evidence and converts it into an auditor-friendly format. Next, it attaches the evidence to the controls in your assessment. When it's time for an audit, you can review the collected evidence and then add it to an assessment report. This report helps you demonstrate that your controls are working as intended.
+
+Guardrails is a feature for Amazon Bedrock that you use to implement application-specific safeguards based on your use cases and responsible AI policies. Guardrails for Amazon Bedrock provides content filters with configurable thresholds to filter harmful content across hate, insults, sexual, and violence categories. Using short natural language description, Guardrails for Amazon Bedrock permits you to define a set of topics to avoid within the context of your application.
+
+You can optionally provide some example phrases to help guardrails recognize the topics. Guardrails detects and blocks user inputs and FM responses that fall into the restricted topics. Guardrails for Amazon Bedrock also allows you to detect personally identifiable information, PII, in user inputs and FM responses. Based on the use case, you can selectively reject inputs that contain PII or redact PII in FM responses.
+
+You can use guardrails to configure thresholds across the different categories to filter out harmful interactions. Guardrails will automatically evaluate both user queries and FM responses to detect and help prevent content that falls into restricted categories.
+
+For example, an ecommerce site can design its online assistant to avoid using inappropriate language such as hate speech or insults. Also, you can easily block specific topics. For example, if you want to block your model from giving investment advice, you can add a denied topic and describe it in simple terms.
+
+You can also specify two messages to give as responses. One, when prompt is blocked and one when a response by the model is blocked. One example response could be, "We are sorry, but that topic is outside our area of expertise." While achieving compliance is the goal, be aware if something changes in a resource configuration such as misconfiguration that makes it noncompliant.
+
+AWS Config provides a detailed inventory of the current configuration of AWS resources. Whenever a resource configuration change occurs, AWS Config captures and records the change in a configuration history snapshot. The change is evaluated by configuration rules. If a change is noncompliant with the rules, it can be automatically remediated with an AWS Systems Manager automation document.
+
+You can choose to use prebuilt rules or create a custom rule by using a Lambda function. Conformance packs package together AWS Config rules and remediation actions to help deploy the rules and remediations to meet your compliance needs. You can create a conformance pack yourself or select from a library of conformance pack templates. Two useful conformance packs are the operational best practices for AI and ML and the security best practices for Amazon SageMaker.
+
+Whereas AWS Config monitors configurations at the resource level, Amazon Inspector works at the application level. It checks applications and containers for security vulnerabilities and deviations from security best practices, such as open access to EC2 instances and installations of vulnerable software versions.
+
+Amazon Inspector helps to improve the security and compliance of applications by running automated security assessments. After Amazon Inspector has performed an assessment, it provides you with a list of security findings. The list prioritizes by severity level, including a detailed description of each security issue and the recommendation of how to fix it.
+
+AWS Trusted Advisor helps you optimize costs, increase performance, improve security and resilience, and operate at scale in the cloud. Trusted Advisor continuously evaluates your AWS environment by using best practice checks across the categories of cost optimization, performance, resilience, security, operational excellence, and service limits. It recommends actions to remediate any deviations from best practices.

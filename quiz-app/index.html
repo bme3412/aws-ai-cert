@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AWS AI Exam Practice Quiz</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div id="app">
+    <header class="app-header">
+      <h1>AWS AI Exam Practice Quiz</h1>
+      <div class="controls">
+        <select id="source-select" title="Question set">
+          <option value="official">Official</option>
+          <option value="generated">Generated (All)</option>
+          <option value="generated-domain-1">Generated – Domain 1</option>
+          <option value="generated-domain-2">Generated – Domain 2</option>
+          <option value="generated-domain-3">Generated – Domain 3</option>
+          <option value="generated-domain-4">Generated – Domain 4</option>
+          <option value="generated-domain-5">Generated – Domain 5</option>
+        </select>
+        <button id="load-btn" title="Reload questions from source">Reload</button>
+        <label class="file-input">
+          <input type="file" id="file-input" accept=".txt">
+          Load .txt
+        </label>
+      </div>
+    </header>
+
+    <section class="status-bar">
+      <div id="progress">Question 0 / 0</div>
+      <div id="score">Score: 0</div>
+    </section>
+
+    <main id="quiz" class="hidden">
+      <div id="question-meta"></div>
+      <div id="question-text" class="question"></div>
+      <form id="options-form" class="options"></form>
+
+      <div class="actions">
+        <button id="prev-btn" type="button">Prev</button>
+        <button id="submit-btn" type="button">Submit</button>
+        <button id="next-btn" type="button">Next</button>
+      </div>
+
+      <details id="explanations" class="explanations">
+        <summary>Explanations</summary>
+        <div id="explanations-content"></div>
+      </details>
+    </main>
+
+    <section id="results" class="hidden">
+      <h2>Results</h2>
+      <div id="results-summary"></div>
+      <button id="restart-btn" type="button">Restart</button>
+    </section>
+
+    <footer class="app-footer">
+      <small>Source: practice questions file parsed locally in your browser.</small>
+    </footer>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>

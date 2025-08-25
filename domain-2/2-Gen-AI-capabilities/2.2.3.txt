@@ -1,0 +1,33 @@
+In this lesson, we'll talk about various factors to select appropriate generative AI models, such as model type, performance, requirements, capabilities, constraints, and compliance.
+
+How do you choose the correct model architecture to ensure the success of your generative AI project? We covered different architectures under task statement 2.1 and I also provided flashcards for review. But for this task statement, let's dive a bit deeper.
+
+Generative AI foundation models are designed to generate different types of content, such as text and chat, images, code, video, and embeddings. You can modify these models to fit specific domains and tasks by adjusting the algorithms or model structures.
+
+When it comes to data generation, it's important to select the most appropriate model because it can significantly impact the quality of data. The most used models are variational autoencoder, VAEs, generative adversarial networks, GANs, and auto regressive models.
+
+Each of these models has advantages and disadvantages depending on the complexity and quality of the data. These are just some of the types of generative AI models and ongoing research and development leads to more new advanced generative models. The number and size of foundation models on the market have grown at a rapid pace. Dozens of models are now available.
+
+According to AWS, this list contains the prominent foundation models released since 2018. Let's wrap up this task statement and talk about how to determine business metrics for generative AI applications. Examples of these metrics include cross-domain performance, efficiency, conversion rate, average revenue per user, accuracy, customer lifetime value, and more.
+
+Foundation models are trained on huge, unlabeled broad datasets and they underpin the capabilities of generative AI. As a result, they are considerably larger than traditional machine learning models, which are generally used for more specific functions. FMs are used as the baseline starting point for developing and creating models. These models can be used to interpret and understand language, have conversational messaging, and create and generate images. Different foundation models specialize in different areas.
+
+For example, the stable diffusion model by Stability AI is great for image generation. And the GPT-4 model is used by ChatGPT for natural language. FMs are able to produce a range of outputs based on prompts with high levels of accuracy. But we need to ensure that we understand the metrics or key performance indicators, KPIs, to use.
+
+These metrics evaluate the performance, impact, and success of our generative AI applications.
+
+Earlier in this lesson, we mentioned accuracy. By tracking, monitoring, and analyzing the right business metrics, you can learn from the past, monitor the present, and plan for the future. By analyzing large amounts of business data to forecast their future values or to detect outliers and understand the root cause is complex, time consuming, and not always accurate.
+
+Foundation models are creating opportunities and challenges for organizations. Some of these are ensuring high-quality outputs that align with business needs and minimizing hallucinations or false information. For FMs to be truly useful in an enterprise context, they need to integrate and inter-operate with existing business systems and workflows.
+
+For example, they must access data from databases and use enterprise resource planning, ERP, and customer relationship management, CRM. To gain real business value, organizations need employees with strong technical skills to implement, customize, and maintain FMs. They also require computational resources and infrastructure to deploy the model cost effectively and ensure that customers are receiving value.
+
+The quality of the outputs of the FMS will determine the adoption and use particularly in customer-facing applications like chatbots. Output quality metrics are relevance, accuracy, coherence, and appropriateness, which all contribute to overall user satisfaction. Your output quality should be measured with predefined standards to ensure that AI systems meet efficiency requirements.
+
+Efficiency impacts the generative AI workflow. It can be tracked with metrics such as task completion rates and reduction in manual efforts, making a direct contribution to operational productivity. Also, a low error rate helps to maintain both accuracy and credibility of the AI applications.
+
+Organizations need to evaluate potential return on investment and weigh in the cost and benefits of FMs considering their application. Additionally, it's important to understand the metrics for comparing operational costs and efficiencies gained.
+
+Here's a question. What are strategies to maximize customer lifetime value, CLTV, which is a key metric for scaling your business? Loyalty programs, creating brand loyalty, collecting feedback, cross selling, personalized experiences, and more. You also need metrics for cross-domain performance to evaluate the transfer and application of knowledge and skills across different domains to generate or predict cross-domain data and content.
+
+Remember that AI is also evolving, so ensure that you measure, monitor, review, and reevaluate your model to ensure that you are meeting your business requirements and goals.

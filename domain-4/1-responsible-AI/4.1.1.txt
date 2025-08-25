@@ -1,0 +1,41 @@
+Let's get started by describing what responsible AI is and the core dimensions of a responsible AI model. Responsible AI is a set of guidelines and principles to ensure that AI systems operate in a safe, trustworthy, and responsible manner.
+
+One of the core dimensions of responsible AI is fairness. Fairness aims to ensure that models treat everyone equitably and impartially regardless of their age, where they live, their gender, or their ethnicity. It's important to be able to explain in human terms why a model made a particular decision, which is known as explainability.
+
+For example, what was the main reason or reasons that a loan application was rejected? As users put their trust in and rely on AI, robustness makes sure that AI systems are tolerant of failures and minimize errors. Privacy and security are primarily about protecting user privacy and not exposing personal identifiable information, or PII.
+
+Governance is about meeting and auditing compliance with industry standards and best practices, including estimating properly and mitigating risk. Transparency is about providing clear information about model capabilities, limitations, and potential risks to stakeholders.
+
+Transparency includes making sure that users know when they are interacting with AI. Fairness avoids perpetuating or amplifying societal biases and discrimination through AI systems. Fairness of a model is measured by the bias and variance of outcomes across different groups.
+
+Demographic disparities can lead to unequal outcomes or treatment of different groups based on age, race, sex, and more. And model's accuracy could also show bias, but by being more accurate for some groups and less accurate for others.
+
+Overfitting becomes a problem when the training dataset is not representative of the real world. As a result, the model only performs well on inputs that resemble the training data. Groups not properly represented in the training data will potentially experience more negative outcomes.
+
+Underfitting can occur for some groups when there wasn't enough training data that matched their characteristics so the model doesn't perform well for them. User trust can erode because of biased or inconsistent output, and ethical concerns arise when AI systems violate principles of fairness, non-discrimination, and equal treatment.
+
+It is crucial that we understand and address the effects of bias and variance in our AI models. By doing so, we can ensure that our systems are accurate, fair, and trustworthy. One of the main reasons for model bias is class imbalance.
+
+Class imbalance occurs when a feature value has fewer training samples when compared with another value in the dataset. In this example, the feature for sex shows that women constitute 32.4% of the training data, whereas men constitute 67.6%. As a result.
+
+The model saw more data records for men than for women during training, so it performs better with inferences associated with men, and the model could overfit the women records because it might have undersampled them.
+
+As a result, the model could have a higher error rate for women. If this was for predicting whether someone has a disease, it could cause a higher rate of inaccurately diagnosing women.
+
+Responsible datasets are the foundation of responsible AI because biases in the training dataset will become biases in the output. Responsible datasets need to avoid class imbalances and demonstrate other important characteristics.
+
+Inclusivity is about representing diverse populations, perspectives, and experiences in our training data. Diversity means incorporating a wide range of attributes, features, and variables to avoid bias. Curated data sources are carefully selected and varied to ensure quality and integrity.
+
+Balanced datasets ensure equal representation of different groups and avoid skewed distributions. Privacy protection is a must, safeguarding sensitive information and adhering to data protection regulations.
+
+Consent and transparency involve obtaining informed consent from data subjects and providing clear information about data usage. And regular audits are crucial for conducting periodic reviews of datasets to identify and address potential issues or biases.
+
+As AI experts, it's our responsibility to ensure that the datasets we use for training our models possess these characteristics. By doing so, we can build AI systems that are fair, unbiased, and respectful of individual privacy and consent.
+
+When it comes to selecting AI models, several practices and other factors must be considered. Environmental impact is a big one because the compute resources for training a large and complex model are substantial. Therefore, we need to assess the carbon footprint and energy consumption of our models.
+
+Consider using an already trained model as a starting point to reduce the amount of training that your model needs. Sustainability is about prioritizing models with minimal environmental impact and long-term viability. Reuse of existing work is the key principle of sustainability.
+
+Transparency is about providing clear information about model capabilities, limitations, and potential risks. It also means making sure that users know when they are using AI. Accountability means establishing clear lines of responsibility for AI model outcomes and decision-making.
+
+Stakeholder engagement is all about involving diverse perspectives in the model selection and deployment process. It's your responsibility to consider these practices when choosing AI models to ensure that systems are not only technically sound but also socially responsible.

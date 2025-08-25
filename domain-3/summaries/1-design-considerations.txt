@@ -1,0 +1,136 @@
+DESIGN CONSIDERATIONS FOR FOUNDATION MODEL APPLICATIONS
+
+OVERVIEW
+This section covers the design considerations for applications that use foundation models, including model selection criteria, risk mitigation, inference parameters, and advanced techniques like RAG and agents.
+
+MODEL SELECTION CRITERIA (3.1.1)
+
+Key Selection Factors:
+- Cost considerations and training expenses
+- Latency constraints and real-time requirements
+- Required modalities (text, image, audio, etc.)
+- Model size and complexity
+- Customization capabilities
+- Input and output length requirements
+- Multilingual support needs
+
+Cost vs. Performance Trade-offs:
+- Balance between accuracy and training costs
+- Example: 98% accurate model costing hundreds of thousands vs. 97% accurate model costing thousands
+- Consider training time, cost, and model performance together
+- Architect scalable solutions that maintain performance
+
+Latency and Inference Speed:
+- Real-time processing requirements
+- Inference speed considerations for time-sensitive applications
+- Example: Self-driving vehicles need instant decisions
+- Choose models that meet latency requirements for your use case
+
+Modality Considerations:
+- Each modality has specific embeddings
+- Ensemble methods can combine multiple models
+- Multilingual models for relevant languages
+- Architecture selection based on task type (CNNs for images, RNNs for NLP)
+
+Performance Metrics:
+- Standard metrics: accuracy, precision, recall, F1 score, RMSE, MAP, MAE
+- Choose metrics relevant to your specific task
+- Example: MAP is better than accuracy for object detection
+- Consider trade-offs between different metrics
+
+RISK MITIGATION AND ETHICAL CONCERNS (3.1.2)
+
+Model Availability and Compatibility:
+- Check compatibility with framework, language, and environment
+- Verify license and documentation
+- Ensure regular updates and maintenance
+- Check for known issues or limitations
+
+Customization and Explainability:
+- Look for flexible, modular, and transparent models
+- Models should provide tools for visualization and interpretation
+- Foundation models are not interpretable by design (black boxes)
+- Explainability attempts to approximate black box behavior locally
+
+Model Complexity Trade-offs:
+- Greater complexity can enhance performance but increase costs
+- More complex models are harder to explain
+- Consider hardware constraints, maintenance, and data privacy
+- Foundation models may not be suitable if interpretability is required
+
+INFERENCE PARAMETERS AND PROMPT ENGINEERING (3.1.3)
+
+Inference Parameters:
+- Control behavior and output characteristics of foundation models
+- Amazon Bedrock supports temperature, Top K, Top P for randomness control
+- Response length, penalties, and stop sequences for length control
+- Experiment to find optimal balance between diversity and coherence
+
+Prompt Engineering Fundamentals:
+- Prompts guide LLMs to generate appropriate responses
+- Can integrate contextual data from internal databases
+- Domain-specific data from vector data stores
+- Retrieval Augmented Generation (RAG) for enhanced prompts
+
+Vector Databases vs. Machine Learning Models:
+- Vector database: collection of data stored as mathematical representations
+- Vector embeddings convert words/sentences into numbers
+- ML model is prerequisite to create vector database
+- Vector databases provide factual reference for foundation model applications
+
+RAG (RETRIEVAL AUGMENTED GENERATION) AND ADVANCED TECHNIQUES (3.1.4)
+
+RAG Components and Process:
+- Retriever component: searches through knowledge base
+- Generator component: produces outputs based on retrieved information
+- Combines external knowledge with model training data
+- Helps prevent hallucinations by providing factual references
+
+RAG Workflow:
+1. Query is encoded into embeddings
+2. Embeddings search vector database for similar data
+3. Retrieved data is attached to original prompt
+4. Enhanced prompt sent to LLM for completion
+
+AWS Services for Vector Storage:
+- Amazon OpenSearch Service: low-latency search with vector capabilities
+- Amazon Aurora with pgvector extension
+- Amazon Neptune, DocumentDB, RDS PostgreSQL
+- OpenSearch Serverless for managed vector infrastructure
+
+Knowledge Bases for Amazon Bedrock:
+- Fully managed RAG solution
+- Securely connect foundation models to company data
+- Store embeddings in vector engine
+- Provide context-specific and accurate responses
+
+AGENTS FOR COMPLEX TASKS
+
+Agent Capabilities:
+- Break down multi-step tasks automatically
+- Generate orchestration logic and custom code
+- Connect to databases through APIs
+- Ingest and structure data for machine consumption
+
+Agent Use Cases:
+- Process reservations and bookings
+- Handle purchase orders
+- Automate complex workflows
+- Bridge gap between foundation models and real-world tasks
+
+Agent Architecture:
+- Orchestrates prompt completion workflows
+- Manages interactions between user requests, foundation models, and external data
+- Automatically calls APIs and invokes knowledge bases
+- Provides secure access to organizational data and workflows
+
+KEY TAKEAWAYS
+
+- Model selection requires balancing cost, performance, and requirements
+- Foundation models are powerful but not interpretable by design
+- RAG enhances models with external knowledge to prevent hallucinations
+- Agents enable foundation models to complete real-world tasks
+- Vector databases provide efficient storage and retrieval of embeddings
+- AWS offers managed services for RAG, vector storage, and agent orchestration
+- Consider inference parameters for optimal model behavior
+- Continuous monitoring and adjustment of parameters in production

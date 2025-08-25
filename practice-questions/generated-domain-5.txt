@@ -1,0 +1,484 @@
+47. Under the AWS Shared Responsibility Model, which responsibilities belong to the CUSTOMER? (Select TWO.)
+
+A
+Physical security of data centers
+
+B
+Patching the guest operating system on EC2 instances
+
+C
+Securing the hypervisor layer
+
+D
+Configuring IAM policies with least privilege
+
+E
+Maintaining power/cooling in AWS Regions
+
+A
+Physical security of data centers
+
+Incorrect. AWS is responsible for security OF the cloud including facilities, hardware, and regions.
+
+B
+Patching the guest operating system on EC2 instances
+
+Correct. Customers are responsible for security IN the cloud for services like EC2, including OS patching.
+
+C
+Securing the hypervisor layer
+
+Incorrect. AWS secures the virtualization layer.
+
+D
+Configuring IAM policies with least privilege
+
+Correct. Customers must configure access controls and policies within their accounts.
+
+E
+Maintaining power/cooling in AWS Regions
+
+Incorrect. AWS handles data center operations.
+
+
+48. Which actions are BEST PRACTICES for the AWS root user? (Select TWO.)
+
+A
+Enable MFA on the root user
+
+B
+Create access keys for root for automation
+
+C
+Use root daily for administrative tasks
+
+D
+Do not share root credentials; create admin IAM users instead
+
+E
+Rotate root password weekly and distribute to the team
+
+A
+Enable MFA on the root user
+
+Correct. MFA adds a critical protection layer for the highly privileged root user.
+
+B
+Create access keys for root for automation
+
+Incorrect. Do not create root access keys; use IAM roles/users for automation.
+
+C
+Use root daily for administrative tasks
+
+Incorrect. Avoid using root except for a few account-level tasks.
+
+D
+Do not share root credentials; create admin IAM users instead
+
+Correct. Use individual IAM users/roles with permissions, never share root credentials.
+
+E
+Rotate root password weekly and distribute to the team
+
+Incorrect. Root credentials should not be shared.
+
+
+49. A company with many AWS accounts wants centralized workforce authentication and account access without creating IAM users in each account.
+
+Which service is the BEST fit?
+
+A
+AWS IAM Identity Center (AWS Single Sign-On)
+
+B
+AWS Directory Service
+
+C
+Amazon Cognito user pools
+
+D
+AWS Organizations Service Control Policies (SCPs)
+
+A
+AWS IAM Identity Center (AWS Single Sign-On)
+
+Correct. IAM Identity Center integrates with external identity providers and grants roles across multiple accounts.
+
+B
+AWS Directory Service
+
+Incorrect. Provides managed Microsoft AD/AD Connector, not cross-account SSO.
+
+C
+Amazon Cognito user pools
+
+Incorrect. Used for application end-user auth, not workforce access across AWS accounts.
+
+D
+AWS Organizations Service Control Policies (SCPs)
+
+Incorrect. SCPs set permission guardrails, not authentication and sign-in flows.
+
+
+50. A security team needs to log who called Amazon Bedrock APIs and when.
+
+Which service should they use?
+
+A
+Amazon CloudWatch metrics
+
+B
+AWS CloudTrail
+
+C
+AWS Config
+
+D
+Amazon Inspector
+
+A
+Amazon CloudWatch metrics
+
+Incorrect. CloudWatch tracks metrics/logs; it doesn’t provide API caller identity/audit trails by default.
+
+B
+AWS CloudTrail
+
+Correct. CloudTrail records API calls, including the caller identity, time, and event details.
+
+C
+AWS Config
+
+Incorrect. Config tracks resource configuration changes, not API caller identity.
+
+D
+Amazon Inspector
+
+Incorrect. Inspector scans for vulnerabilities; it doesn’t log API calls.
+
+
+51. Which statements about S3 Block Public Access are TRUE? (Select TWO.)
+
+A
+Account-level Block Public Access overrides bucket ACLs and policies that allow public access
+
+B
+It prevents any access to S3, public or private
+
+C
+It can be enabled at the account or bucket level
+
+D
+It automatically encrypts S3 objects with a KMS key
+
+E
+It is required to use VPC interface endpoints
+
+A
+Account-level Block Public Access overrides bucket ACLs and policies that allow public access
+
+Correct. Account-level BPA enforces blocking public access even if a bucket policy/ACL allows it.
+
+B
+It prevents any access to S3, public or private
+
+Incorrect. It blocks public access; private, authorized access still works.
+
+C
+It can be enabled at the account or bucket level
+
+Correct. You can configure BPA either per bucket or across the entire account.
+
+D
+It automatically encrypts S3 objects with a KMS key
+
+Incorrect. BPA is about access control, not encryption.
+
+E
+It is required to use VPC interface endpoints
+
+Incorrect. PrivateLink usage is independent of BPA.
+
+
+52. Which statements about encryption with AWS KMS are TRUE? (Select TWO.)
+
+A
+S3, DynamoDB, and SageMaker can provide default server-side encryption without configuration
+
+B
+Customer-managed CMKs allow you to control key policies and rotation
+
+C
+KMS replaces TLS for API calls
+
+D
+Server-side encryption requires the application to encrypt data before upload
+
+E
+Service-managed keys cannot be disabled by customers
+
+A
+S3, DynamoDB, and SageMaker can provide default server-side encryption without configuration
+
+Correct. These services can encrypt at rest by default with service-managed keys.
+
+B
+Customer-managed CMKs allow you to control key policies and rotation
+
+Correct. CMKs you create grant control over policies, rotation, and enable/disable status.
+
+C
+KMS replaces TLS for API calls
+
+Incorrect. KMS is for key management; TLS secures data in transit.
+
+D
+Server-side encryption requires the application to encrypt data before upload
+
+Incorrect. That describes client-side encryption; server-side encrypts on the service side.
+
+E
+Service-managed keys cannot be disabled by customers
+
+Incorrect. This statement is too broad and depends on the service; not a general KMS truth.
+
+
+53. A data science team launches SageMaker Studio in a VPC without internet access. They still need access to S3, CloudWatch, and SageMaker APIs privately.
+
+What should they configure?
+
+A
+NAT gateway and internet gateway for the subnets
+
+B
+VPC interface endpoints (AWS PrivateLink) for S3, CloudWatch, and SageMaker endpoints
+
+C
+VPC peering to the AWS service VPCs
+
+D
+Transit gateway attachments to AWS services
+
+A
+NAT gateway and internet gateway for the subnets
+
+Incorrect. This allows internet egress; the requirement is private access only.
+
+B
+VPC interface endpoints (AWS PrivateLink) for S3, CloudWatch, and SageMaker endpoints
+
+Correct. Interface endpoints keep traffic within AWS private networking for supported services.
+
+C
+VPC peering to the AWS service VPCs
+
+Incorrect. AWS services are accessed via PrivateLink, not direct peering.
+
+D
+Transit gateway attachments to AWS services
+
+Incorrect. TGW is for VPC/VPN interconnects, not for private service endpoints.
+
+
+54. Which scenarios align with Amazon Macie? (Select TWO.)
+
+A
+Discover and alert on PII in S3 buckets
+
+B
+Scan ECR images for vulnerabilities
+
+C
+Inventory S3 buckets and their public access/encryption status
+
+D
+Monitor IAM access key usage events
+
+E
+Detect anomalous console login patterns
+
+A
+Discover and alert on PII in S3 buckets
+
+Correct. Macie uses ML and pattern matching to identify PII and generate findings.
+
+B
+Scan ECR images for vulnerabilities
+
+Incorrect. This is Amazon Inspector, not Macie.
+
+C
+Inventory S3 buckets and their public access/encryption status
+
+Correct. Macie generates an S3 bucket inventory including access and encryption posture.
+
+D
+Monitor IAM access key usage events
+
+Incorrect. Use CloudTrail/CloudWatch/GuardDuty for such monitoring.
+
+E
+Detect anomalous console login patterns
+
+Incorrect. This falls under GuardDuty/CloudTrail analytics.
+
+
+55. Which are common AI-specific security risks and appropriate mitigations? (Select TWO pairs.)
+
+A
+Adversarial inputs → validate/sanitize inputs; train with adversarial examples
+
+B
+Model inversion → limit output detail; restrict access; monitor usage
+
+C
+Prompt injection → disable TLS for faster inspection
+
+D
+Data poisoning → only increase training epochs
+
+E
+Reverse engineering → provide full model internals to users
+
+A
+Adversarial inputs → validate/sanitize inputs; train with adversarial examples
+
+Correct. Input validation and adversarial training help mitigate adversarial perturbations.
+
+B
+Model inversion → limit output detail; restrict access; monitor usage
+
+Correct. Reduce information leakage and access surface; watch for abusive usage patterns.
+
+C
+Prompt injection → disable TLS for faster inspection
+
+Incorrect. TLS must remain enabled; develop detection and guardrail strategies.
+
+D
+Data poisoning → only increase training epochs
+
+Incorrect. Training longer does not fix poisoned data; you must validate and clean data.
+
+E
+Reverse engineering → provide full model internals to users
+
+Incorrect. This increases exposure; restrict details and access.
+
+
+56. A team wants to continuously monitor production model inputs and predictions for drift and trigger alerts.
+
+Which service is the BEST fit?
+
+A
+SageMaker Model Monitor with data capture
+
+B
+AWS Config conformance packs
+
+C
+AWS Trusted Advisor
+
+D
+Amazon Kendra
+
+A
+SageMaker Model Monitor with data capture
+
+Correct. Model Monitor compares live data to baselines and can emit metrics/alerts.
+
+B
+AWS Config conformance packs
+
+Incorrect. Evaluate resource configuration compliance, not model drift.
+
+C
+AWS Trusted Advisor
+
+Incorrect. Provides best-practice checks for the account, not model drift.
+
+D
+Amazon Kendra
+
+Incorrect. Enterprise search, not model monitoring.
+
+
+57. Which statements about SageMaker Model Registry and lineage are TRUE? (Select TWO.)
+
+A
+Model Registry stores model versions with metadata and approval status
+
+B
+Models can be deployed directly from the registry
+
+C
+Model lineage is only available for training jobs, not processing or batch transform
+
+D
+Lineage lets you query relationships like which datasets produced a model
+
+E
+Model Registry automatically deletes older versions when a new one is added
+
+A
+Model Registry stores model versions with metadata and approval status
+
+Correct. The registry tracks model artifacts, metrics, and statuses (e.g., pending/approved).
+
+B
+Models can be deployed directly from the registry
+
+Correct. You can deploy registry versions to endpoints or batch jobs.
+
+C
+Model lineage is only available for training jobs, not processing or batch transform
+
+Incorrect. Lineage spans multiple SageMaker job types and artifacts.
+
+D
+Lineage lets you query relationships like which datasets produced a model
+
+Correct. Lineage tracking enables queries across datasets, jobs, and models.
+
+E
+Model Registry automatically deletes older versions when a new one is added
+
+Incorrect. Versioning is retained unless explicitly cleaned up.
+
+
+58. A compliance team needs on-demand access to third-party audit reports (e.g., SOC, ISO) for AWS services.
+
+Which AWS service provides this access?
+
+A
+AWS Artifact
+
+B
+AWS Security Hub
+
+C
+AWS Config
+
+D
+Amazon Inspector
+
+A
+AWS Artifact
+
+Correct. Artifact provides on-demand access to security and compliance documents and reports.
+
+B
+AWS Security Hub
+
+Incorrect. Security Hub aggregates/security findings across services.
+
+C
+AWS Config
+
+Incorrect. Config tracks resource configurations and compliance to your own rules.
+
+D
+Amazon Inspector
+
+Incorrect. Inspector is for vulnerability scanning, not audit reports.

@@ -1,0 +1,352 @@
+13. Which statement BEST describes embeddings in language models?
+
+A
+Embeddings encode the semantic meaning of tokens in a high-dimensional vector space
+
+B
+Embeddings primarily reduce file size for model checkpoints
+
+C
+Embeddings encrypt tokens so models can decode them securely at inference
+
+D
+Embeddings assign hard grammar rules to tokens to enforce syntax
+
+A
+Embeddings encode the semantic meaning of tokens in a high-dimensional vector space
+
+Correct. Embeddings are numerical vector representations that capture semantic meaning and relationships; nearby vectors indicate similar meaning.
+
+B
+Embeddings primarily reduce file size for model checkpoints
+
+Incorrect. Compression is not the purpose of embeddings; they represent meaning for computation.
+
+C
+Embeddings encrypt tokens so models can decode them securely at inference
+
+Incorrect. Embeddings are not an encryption scheme.
+
+D
+Embeddings assign hard grammar rules to tokens to enforce syntax
+
+Incorrect. Grammar constraints are not encoded as hard rules by embeddings.
+
+
+14. What is the PRIMARY role of the self-attention mechanism in transformers?
+
+A
+Weigh different parts of the input to capture long-range dependencies and context
+
+B
+Compress model parameters to reduce memory footprint during training
+
+C
+Randomize outputs to improve diversity during inference
+
+D
+Remove the need for tokenization by operating directly on raw text
+
+A
+Weigh different parts of the input to capture long-range dependencies and context
+
+Correct. Self-attention learns which tokens to focus on when generating representations, enabling rich contextual understanding.
+
+B
+Compress model parameters to reduce memory footprint during training
+
+Incorrect. Self-attention is not a parameter compression method.
+
+C
+Randomize outputs to improve diversity during inference
+
+Incorrect. Sampling strategies (temperature, top-k) affect diversity, not self-attention itself.
+
+D
+Remove the need for tokenization by operating directly on raw text
+
+Incorrect. Transformers still rely on tokenization.
+
+
+15. Which task is an example of a MULTIMODAL generative AI use case?
+
+A
+Image captioning from an input image
+
+B
+Credit risk prediction from tabular data
+
+C
+EC2 instance right-sizing from CPU metrics
+
+D
+Sorting arrays of numbers
+
+A
+Image captioning from an input image
+
+Correct. Multimodal models process/generate multiple modalities (e.g., image to text for captioning).
+
+B
+Credit risk prediction from tabular data
+
+Incorrect. This is a classic tabular ML task, typically unimodal.
+
+C
+EC2 instance right-sizing from CPU metrics
+
+Incorrect. This is a capacity planning/forecasting problem.
+
+D
+Sorting arrays of numbers
+
+Incorrect. This is a deterministic programming task, not a multimodal generative task.
+
+
+16. Which statement about DIFFUSION MODELS is TRUE?
+
+A
+They learn to reverse a gradual noising process to generate high-quality outputs
+
+B
+They are trained only with labeled pairs of input and output images
+
+C
+They generally produce lower-quality images and less diversity than GANs
+
+D
+They operate only in pixel space and cannot use latent spaces
+
+A
+They learn to reverse a gradual noising process to generate high-quality outputs
+
+Correct. Diffusion models denoise from random noise step-by-step; Stable Diffusion operates in a latent space.
+
+B
+They are trained only with labeled pairs of input and output images
+
+Incorrect. Diffusion training does not require paired labels like supervised tasks.
+
+C
+They generally produce lower-quality images and less diversity than GANs
+
+Incorrect. Diffusion models often achieve high quality and diversity and are more stable to train.
+
+D
+They operate only in pixel space and cannot use latent spaces
+
+Incorrect. Stable Diffusion uses a latent space representation.
+
+
+17. Which AWS service provides AI-powered code suggestions from natural language comments and existing code?
+
+A
+Amazon Q Developer
+
+B
+Amazon Comprehend
+
+C
+Amazon Titan Text
+
+D
+Amazon Sumerian
+
+A
+Amazon Q Developer
+
+Correct. Amazon Q Developer (formerly CodeWhisperer) generates code suggestions and completions from comments and context.
+
+B
+Amazon Comprehend
+
+Incorrect. Comprehend performs NLP tasks on text (e.g., sentiment, key phrases).
+
+C
+Amazon Titan Text
+
+Incorrect. Titan is a family of foundation models accessible via Amazon Bedrock, not a code suggestion service.
+
+D
+Amazon Sumerian
+
+Incorrect. Sumerian targets AR/VR and 3D content workflows.
+
+
+18. A team wants the model to incorporate up-to-date enterprise knowledge without retraining the model.
+
+Which technique provides this capability with the LEAST development effort?
+
+A
+Fine-tuning on proprietary documents
+
+B
+Retrieval augmented generation (RAG)
+
+C
+Continued pre-training on unlabeled text
+
+D
+Instruction-based fine-tuning with prompt-response pairs
+
+A
+Fine-tuning on proprietary documents
+
+Incorrect. Fine-tuning updates model weights and requires training effort.
+
+B
+Retrieval augmented generation (RAG)
+
+Correct. RAG augments prompts with retrieved knowledge from external systems at inference, avoiding weight updates.
+
+C
+Continued pre-training on unlabeled text
+
+Incorrect. Continued pre-training still requires training and compute.
+
+D
+Instruction-based fine-tuning with prompt-response pairs
+
+Incorrect. Instruction tuning changes model weights to follow instructions; it does not plug in external knowledge on-the-fly.
+
+
+19. A product team wants to generate images for marketing without training or hosting models themselves.
+
+Which AWS service BEST fits this requirement?
+
+A
+Amazon Bedrock
+
+B
+Amazon SageMaker JumpStart
+
+C
+Amazon Rekognition
+
+D
+Amazon Personalize
+
+A
+Amazon Bedrock
+
+Correct. Bedrock provides managed access to multiple foundation models (including image generation) via a unified API without training/hosting.
+
+B
+Amazon SageMaker JumpStart
+
+Incorrect. JumpStart offers pre-trained/open-source models within SageMaker, but you still manage deployment within your account.
+
+C
+Amazon Rekognition
+
+Incorrect. Rekognition analyzes images/videos; it does not generate images.
+
+D
+Amazon Personalize
+
+Incorrect. Personalize builds recommendation systems, not generative image models.
+
+
+20. Which statement BEST describes Reinforcement Learning from Human Feedback (RLHF)?
+
+A
+It trains a reward model from human preferences to align LLM outputs, then optimizes the LLM against that reward
+
+B
+It replaces tokenization by mapping sentences to rules crafted by humans
+
+C
+It disables sampling to make outputs deterministic for every input
+
+D
+It only collects human labels for supervised classification tasks
+
+A
+It trains a reward model from human preferences to align LLM outputs, then optimizes the LLM against that reward
+
+Correct. RLHF uses preference data to train a reward model and fine-tunes the LLM to produce helpful, harmless, and honest responses.
+
+B
+It replaces tokenization by mapping sentences to rules crafted by humans
+
+Incorrect. Tokenization still applies; RLHF is not a rules engine.
+
+C
+It disables sampling to make outputs deterministic for every input
+
+Incorrect. RLHF is unrelated to sampling determinism.
+
+D
+It only collects human labels for supervised classification tasks
+
+Incorrect. RLHF collects pairwise/ranked preferences to guide generative outputs, beyond simple classification labels.
+
+
+21. Which statement about IN-CONTEXT LEARNING is TRUE?
+
+A
+It guides the model with examples in the prompt without updating model weights
+
+B
+It requires labeled datasets and model retraining
+
+C
+It permanently updates the model's vocabulary with new tokens
+
+D
+It disables attention to force strict rule following
+
+A
+It guides the model with examples in the prompt without updating model weights
+
+Correct. Few-shot/one-shot prompts provide exemplars at inference time; the model uses context without weight changes.
+
+B
+It requires labeled datasets and model retraining
+
+Incorrect. No fine-tuning is required for in-context learning.
+
+C
+It permanently updates the model's vocabulary with new tokens
+
+Incorrect. Vocabulary is unchanged during inference.
+
+D
+It disables attention to force strict rule following
+
+Incorrect. Attention remains central to LLM behavior.
+
+
+22. Which AWS capability provides pre-trained, open-source models and example notebooks to quickly start ML projects within SageMaker?
+
+A
+Amazon SageMaker JumpStart
+
+B
+Amazon Bedrock Guardrails
+
+C
+Amazon Kendra
+
+D
+AWS Artifact
+
+A
+Amazon SageMaker JumpStart
+
+Correct. JumpStart offers pre-trained/open-source models and notebooks to accelerate prototyping within SageMaker.
+
+B
+Amazon Bedrock Guardrails
+
+Incorrect. Guardrails control content safety for Bedrock applications.
+
+C
+Amazon Kendra
+
+Incorrect. Kendra is an enterprise search service.
+
+D
+AWS Artifact
+
+Incorrect. Artifact provides access to compliance reports and security documents.

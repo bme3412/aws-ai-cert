@@ -1,0 +1,27 @@
+One of the biggest challenges facing AI and its ability to be trusted is the ability to understand how and why AI models make decisions. So let's look at what this means and what tradeoffs we need to make when designing a model.
+
+A model's transparency measures the degree to which ML owners and stakeholders can understand how a model works and why it produces its outputs. The degree of transparency that is required often depends upon regulatory requirements so that consumers are protected against bias and unfairness. Transparency has two measures, interpretability and explainability.
+
+A model that is highly transparent uses an algorithm that is straightforward to interpret, such as linear regression. In its most basic form, we can see the slope and intercept of a line and how it's used by the model. Slightly more complex algorithms like decision trees also produce basic and understandable rules.
+
+On the other end of the spectrum are neural networks, which emulate the way a human brain works. We might understand that the brain works by electrical signals propagating over a network of nearly 100 billion neurons, but we can't really understand how that process translates into certain thoughts.
+
+However, models that are less interpretable can still be explained by observing their outputs relative to certain inputs. Explainability is being able to describe what a model is doing without knowing exactly how. It treats the model as a black box, so every model can be observed and explained. You can use model agnostic approaches to answer real-world questions.
+
+For example, you might want to know why an email got flagged as spam or why a person's loan application was rejected. This level of explainability is often enough to meet business objectives.
+
+When starting a new AI or ML project, we need to know whether interpretability is a hard business requirement. If these are regulations or business requirements, for complete model transparency, you need to select an interpretable model.
+
+With interpretability, you can document how the inner mechanisms of the model impact the output, but explainability does not consider the inner mechanisms. However, you should consider some tradeoffs when choosing a model with high transparency. These tradeoffs are performance and security.
+
+Models with low complexity will be easier to interpret. However, simple models are limited in their capabilities and performance. For example, consider a language translation model that can look up each word in a sentence, replace it with a word in another language. It might also follow some basic grammar rules, however, it won't likely generate fluent translations.
+
+But a neural network that can understand the context of the entire sentence well. Though model transparency can be improved by choosing a less complex algorithm, it usually involves a compromise in model performance as shown in this graph.
+
+From a model safety perspective, a lack of transparency has advantages. Transparent AI models are more susceptible to attacks because hackers have more information about the inner mechanisms and can find vulnerabilities in the model.
+
+More opaque models limit the attacker to only what they can learn from studying the model outputs. Properly securing model artifacts is crucial for transparent models. Another concern with AI transparency is the exposure of proprietary algorithms.
+
+The more explanations of the AI model's behavior that attackers can access, the more easily they can reverse engineer the AI model. Ensuring customer data privacy while maintaining transparency can also be challenging.
+
+Transparency might require sharing details about the data that is used to train the model, which raises concerns about data privacy.
